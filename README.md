@@ -34,6 +34,9 @@ El sistema permite:
 
 El objetivo principal es facilitar la **gestión, trazabilidad y transparencia** del proceso de participación en proyectos de investigación.
 
+
+[Rúbrica](https://github.com/mmasias/25-26-IdSw1-SdR/blob/main/documents/l'Rubrica.md)
+
 ---
 
 
