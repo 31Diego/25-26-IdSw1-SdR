@@ -1,49 +1,40 @@
-# Sesiones de requisitado
+# 🧠 Sistema de Gestión de Convocatorias de Investigación — FUNIBER
 
-<div align=right>
 
-|<sub><i>Se ha demostrado, empírica y académicamente,<br>que un porcentaje no menor de proyectos de software que fracasan<br>lo hacen porque está mal llevada la fase de captura de los requisitos.</i></sub>
-|-:
+## 📚 Navegación 
 
-</div>
+Esta sección permite acceder rápidamente a los principales artefactos conceptuales del proyecto.  
+Todo el repositorio está orientado a **análisis, modelado y documentación**, sin implementación de código.
 
-Este es el repositorio de las sesiones de requisitado de la asignatura de Ingeniería del Software I de UNEATLANTICO.
+| 🔖 Sección | 📄 Descripción |
+|------------|----------------|
+| 🧠 [Modelo del Dominio](./documents/ModeloDelDominio/) | Diagramas conceptuales y definición de las entidades principales (*Investigador*, *Convocatoria*, *Documento*, etc.). |
+| 🧩 [Casos de Uso](./documents/CasosDeUso/) | Escenarios funcionales con actores, flujos de interacción y resultados esperados. |
+| 📊 [Diagramas de Análisis y Diseño](./documents/Diagramas/) | Diagramas UML, diagramas de flujo, y representaciones visuales de procesos y relaciones. |
+| 📝 [Requisitos y Especificaciones](./documents/Especificaciones/) | Requisitos funcionales y no funcionales del sistema, criterios de elegibilidad y documentación de filtros. |
+| 🧾 [Informes y Entregables](./documents/Informes/) | Memorias, informes de avance y entregas formales del proyecto. |
+| 🖼️ [Recursos Visuales](./documents/RecursosVisuales/) | Imágenes de maquetas, pizarras, diagramas, esquemas y cualquier recurso gráfico utilizado en el modelado. |
+| 🗂️ [Actas y Reuniones](./documents/Reuniones/) | Registro de sesiones de análisis, decisiones de diseño y acuerdos de equipo. |
+| 🤖 [Uso Responsable de IA](./AI-uso.md) | Documenta el uso de IA en el proyecto, incluyendo: declaración completa de secciones asistidas, herramientas utilizadas (modelos de lenguaje), enlaces a conversaciones , commits donde se aplicó contenido de IA, explicación de qué se aceptó y rechazó, errores detectados y correcciones.
 
-Se desarrolla, en un caso real, la disciplina de requisitado, que es la puerta de entrada al desarrollo de una solución basada en software. 
 
-Se evalúa de acuerdo a la [rúbrica](documents/l'Rubrica.md) indicada.
 
-<div align=center>
 
-| |Coordinador|Cliente|Estadísticas|
-|-|-|-|:-:|
-|1|@Camila-Lesly|Lucía Terán|[👁️](https://github.com/Camila-Lesly/25-26-IdSw1-SdR) / 📒
-|2|@31diego|Mar Pacheco|[👁️](https://github.com/31diego/25-26-IdSw1-SdR) / 📒
-|3|@martinlopez7|Jorge Crespo|[👁️](https://github.com/martinlopez7/25-26-IdSw1-SdR) / 📒
-|4|@Sergiorl2|Jose Breñosa|[👁️](https://github.com/Sergiorl2/25-26-IdSw1-SdR) / 📒
-|5|@Alejandrojuarez0105|David García|[👁️](https://github.com/Alejandrojuarez0105/25-26-IdSw1-SdR) / 📒
-|6|@enmabry|Jose Breñosa|[👁️](https://github.com/enmabry/25-26-IdSw1-SdR) / 📒
+## 📘 Descripción general
 
-</div>
+Este proyecto implementa un **sistema de gestión de convocatorias de investigación** orientado a la organización **FUNIBER**.  
+El sistema permite:
 
-<div align=center>
+- Registrar y mantener los datos de los **investigadores** de la organización.  
+- Gestionar **convocatorias de investigación** procedentes de diferentes organismos (UE, Gobierno de Cantabria, España, etc.).  
+- Aplicar **filtros** para determinar la elegibilidad de cada investigador según criterios definidos.  
+- Notificar las convocatorias relevantes a los investigadores **aptos**.  
+- Gestionar la **documentación requerida** por los participantes en cada convocatoria.
+- Reflejar la **recompensa** al investigador/docente por su investigación en caso de que se complete exitosamente.
 
-||
-|-|
-![](/images/modelosUML/modelosUML/trabajoRepos.svg)
+El objetivo principal es facilitar la **gestión, trazabilidad y transparencia** del proceso de participación en proyectos de investigación.
 
-</div>
+---
 
-## Algunas reglas
 
-- Reuniones oficiales (en horas de clase)
-  - A estas debe asistir el 100% de los integrantes de los grupos.
-  - Si a las reuniones asiste menos del 80% del grupo, la reunión se cancela y el grupo se da por cerrado. La evaluación se realiza de la forma tradicional (examen parcial, examen final).
-- Reuniones extra: de acuerdo a lo pautado con el cliente.
-- Se debe utilizar el repo del coordinador del grupo y las herramientas de GitHub para gestionar las reuniones y comunicaciones con el cliente, haciendo un racional uso de la trazabilidad.
-- Las imágenes, en la medida de lo posible en formato plantUML. 
-  - Todas las fuentes en la carpeta modelosUML y las imágenes exportadas, en formato svg.
 
-## Rúbrica de revisión
-
-[Rúbrica](documents/l'Rubrica.md)
