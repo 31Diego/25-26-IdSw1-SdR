@@ -1,0 +1,23 @@
+@startuml
+title Diagrama de clases - Plataforma FUNIBER
+
+class Usuario {}
+class Convocatoria {}
+class Propuesta {}
+class Proyecto {}
+class Entregable {}
+class Compensacion {}
+class Colaborador {}
+class DepartamentoProyectos {}
+
+Usuario --> Propuesta : presenta
+Convocatoria --> Propuesta : origina
+Propuesta --> Proyecto : se convierte en
+Proyecto --> Entregable : tiene
+Proyecto --> Compensacion : genera
+Proyecto --> Colaborador : incluye
+DepartamentoProyectos --> Convocatoria : gestiona
+DepartamentoProyectos --> Proyecto : supervisa
+Usuario --> Proyecto : participa en
+
+@enduml
