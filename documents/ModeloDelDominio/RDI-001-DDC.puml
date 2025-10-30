@@ -1,0 +1,25 @@
+@startuml
+
+abstract Usuario
+class Propuestas
+class Investigador
+class Docente
+class DatosPersonales
+class DepaProyectos
+class Antena
+class RedDeInvestigadores
+note right: Todavia por definir\n el nombre oficial
+
+RedDeInvestigadores *-- Usuario : "forma parte"
+Usuario *.. Investigador
+Usuario *.. Docente
+Usuario *.. DepaProyectos
+Usuario -> Id
+DepaProyectos ---> DatosPersonales
+Docente --> DatosPersonales
+Investigador ---> DatosPersonales
+Docente *-- HorasLaborales
+Antena *-- DepaProyectos : "forma parte"
+Antena --> Propuestas : "Buscan"
+
+@enduml
