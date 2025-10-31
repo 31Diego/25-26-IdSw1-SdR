@@ -1,4 +1,4 @@
-# SISTEMA DE CONVOCATORIAS DE INVESTIGACIÓN - FUNIBER
+# SISTEMA DE CONVOCATORIAS DE INVESTIGACIÓN 
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&weight=500&size=25&duration=4000&pause=800&color=007ACC&center=true&vCenter=true&width=600&lines=Sistema+de+Gesti%C3%B3n+de+Convocatorias;Modelo+del+Dominio;Casos+de+Uso)](#)
 
