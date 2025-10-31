@@ -1,3 +1,5 @@
+[![Banner FUNIBER](./assets/banner.gif)](#)
+
 # 🧠 Sistema de Gestión de Convocatorias de Investigación — FUNIBER
 
 
@@ -8,14 +10,11 @@ Todo el repositorio está orientado a **análisis, modelado y documentación**, 
 
 | 🔖 Sección | 📄 Descripción |
 |------------|----------------|
-| 🧠 [Modelo del Dominio](./documents/ModeloDelDominio/) | Diagramas conceptuales y definición de las entidades principales (*Investigador*, *Convocatoria*, *Documento*, etc.). |
-| 🧩 [Casos de Uso](./documents/CasosDeUso/) | Escenarios funcionales con actores, flujos de interacción y resultados esperados. |
-| 📊 [Diagramas de Análisis y Diseño](./documents/Diagramas/) | Diagramas UML, diagramas de flujo, y representaciones visuales de procesos y relaciones. |
-| 📝 [Requisitos y Especificaciones](./documents/Especificaciones/) | Requisitos funcionales y no funcionales del sistema, criterios de elegibilidad y documentación de filtros. |
-| 🧾 [Informes y Entregables](./documents/Informes/) | Memorias, informes de avance y entregas formales del proyecto. |
-| 🖼️ [Recursos Visuales](./documents/RecursosVisuales/) | Imágenes de maquetas, pizarras, diagramas, esquemas y cualquier recurso gráfico utilizado en el modelado. |
-| 🗂️ [Actas y Reuniones](./documents/Reuniones/) | Registro de sesiones de análisis, decisiones de diseño y acuerdos de equipo. |
+| 🧠 [Modelo del Dominio](./documents/modelos/) | Diagramas conceptuales y definición de las entidades principales (*Investigador*, *Convocatoria*, *Documento*, etc.). |
+| 🧩 [Casos de Uso](./documents/casos-de-uso/) | Escenarios funcionales con actores, flujos de interacción y resultados esperados. |
 | 🤖 [Uso Responsable de IA](./AI-uso.md) | Documenta el uso de IA en el proyecto, incluyendo: declaración completa de secciones asistidas, herramientas utilizadas (modelos de lenguaje), enlaces a conversaciones , commits donde se aplicó contenido de IA, explicación de qué se aceptó y rechazó, errores detectados y correcciones.
+| 🗂️ [Extra](./documents/extra/) | Documentación adicional |
+
 
 
 
