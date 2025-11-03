@@ -132,8 +132,4 @@ El sistema deberá permitir ver **indicadores globales**, como:
 - Nº de proyectos financiados  
 - Estado actual de cada proyecto (en curso, finalizado, rechazado, etc.)  
 - Distribución por sede e investigador  
-
----
-
-**En resumen:**  
-Este proyecto busca que FUNIBER tenga una herramienta propia que combine **gestión de proyectos** y **red profesional interna**, con control de horas, seguimiento automático, trazabilidad completa y una interfaz clara para todo el personal implicado.
+ 
