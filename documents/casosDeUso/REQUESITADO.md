@@ -96,7 +96,3 @@ En resumen, un sistema que sirva tanto como **gestor de proyectos** para el Depa
 6. Debe mantener disponibilidad mínima del 99 % y tiempos de respuesta razonables.  
 7. La interfaz debe ser intuitiva y fácil de usar para personal no técnico.
 
----
-
-## 7. Posible Diagrama de Actores y Casos de Uso (boceto)
-
