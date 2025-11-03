@@ -1,98 +1,78 @@
-# Proyecto FUNIBER – Avance del Requesitado
+# Proyecto FUNIBER – Requesitado
 
-## 1. Introducción
-El proyecto consiste en el desarrollo de una **plataforma interna para FUNIBER** (Fundación Universitaria Iberoamericana), una institución con varias sedes internacionales vinculada a la **Universidad Europea del Atlántico (UNEATLANTICO)**.
+## Introducción
+El proyecto consiste en el desarrollo de una **plataforma interna para FUNIBER** (Fundación Universitaria Iberoamericana), vinculada a la **Universidad Europea del Atlántico (UNEATLANTICO)**.
 
-El objetivo es crear una herramienta tipo **“LinkedIn interno”** que permita a los investigadores y docentes de FUNIBER:
-- Gestionar sus **perfiles académicos y de investigación**.  
-- Controlar **convocatorias y propuestas**.  
-- Hacer **seguimiento de proyectos**, entregables y compensaciones.  
-
-En resumen, un sistema que sirva tanto como **gestor de proyectos** para el Departamento de Investigación como **red profesional** para el personal de FUNIBER.
+El objetivo es crear una herramienta tipo **“LinkedIn interno”** que centralice la información de los investigadores y docentes, sus proyectos, convocatorias, propuestas y entregables.  
+De esta forma, la plataforma permitirá mejorar la **organización, trazabilidad y comunicación** dentro del Departamento de Proyectos de Investigación.
 
 ---
 
-## 2. Actores del Sistema
+## Actores del sistema
 
 | Actor | Descripción |
 |-------|--------------|
-| **Investigador** | Participa en proyectos, sube entregables y consulta convocatorias. |
-| **Docente-Investigador** | Igual que el investigador, pero con control de carga docente (máximo 16 horas semanales). |
-| **Antena** | Persona que detecta convocatorias y presenta propuestas. |
-| **Departamento de Proyectos** | Gestiona convocatorias, asigna responsables y da seguimiento a los proyectos. |
-| **Vicerrector/a de Investigación** | Supervisa proyectos y aprueba o rechaza propuestas. |
-| **Finanzas** | Gestiona los gastos, nóminas y compensaciones. |
-| **Colaborador** | Forma parte del equipo del proyecto, pero no tiene acceso directo al sistema. |
+| **Investigador** | Participa en proyectos, sube entregables y puede ser propuesto para nuevas convocatorias. |
+| **Docente-Investigador** | Además de investigar, imparte docencia. El sistema controla que no supere las 16 horas semanales. |
+| **Antena** | Detecta convocatorias de interés y presenta propuestas. |
+| **Departamento de Proyectos** | Supervisa convocatorias, asigna responsables y da seguimiento a los proyectos. |
+| **Vicerrector/a de Investigación** | Revisa las propuestas y aprueba o rechaza proyectos. |
+| **Finanzas** | Controla gastos, nóminas y compensaciones. |
+| **Colaborador** | Forma parte del equipo de un proyecto, pero sin acceso directo al sistema. |
 
 ---
 
-## 3. Casos de Uso Principales
+## Descripción de los casos de uso principales
 
-1. **Gestionar Perfiles**  
-   - Los usuarios pueden crear, editar y consultar perfiles con su información académica y profesional.  
-   - El sistema controla automáticamente que los docentes no superen 16 h/semana.
+### Registrar perfil de usuario
+La plataforma permite registrar un nuevo perfil de investigador o docente con su información básica (nombre, sede, área de investigación, currículum, publicaciones, idiomas, proyectos previos, etc.).  
+El perfil queda disponible en el sistema y puede ser actualizado o consultado más adelante.
 
-2. **Registrar Convocatorias**  
-   - El Departamento de Proyectos registra convocatorias activas (tipo, fechas, requisitos, etc.).  
-   - El sistema notifica automáticamente a los investigadores cuyos perfiles coincidan.
+### Actualizar información de perfil
+Cada usuario puede modificar sus datos cuando sea necesario, por ejemplo al añadir nuevas publicaciones o proyectos.  
+El sistema controla de forma automática que los docentes no superen las **16 horas semanales** de carga docente.
 
-3. **Presentar Propuestas**  
-   - La Antena presenta una propuesta a partir de una convocatoria.  
-   - Si se rechaza, se guarda como histórico.
+### Registrar convocatorias
+El Departamento de Proyectos puede añadir al sistema todas las convocatorias activas, indicando la entidad que financia, las fechas, los requisitos y el tipo de financiación.  
+El sistema identifica los perfiles que encajan con cada convocatoria y envía notificaciones a los investigadores o docentes correspondientes.
 
-4. **Aprobar o Rechazar Propuestas**  
-   - El Vicerrector/a revisa y decide sobre las propuestas.  
-   - Las aprobadas pasan a ser proyectos activos.
+### Presentar propuestas
+La persona que actúa como Antena puede elaborar y enviar propuestas directamente desde la plataforma.  
+Si una propuesta es rechazada, el sistema la guarda como histórico.  
+Si es aceptada, se convierte en un proyecto activo y se le asignan responsables.
 
-5. **Crear Proyecto Activo**  
-   - El sistema crea un registro con título, responsables, participantes, entregables y plazos.  
-   - Se definen roles y responsabilidades.
+### Crear y administrar proyectos activos
+Cuando una propuesta es aprobada, se genera un registro de proyecto que incluye:
+- Información básica (título, objetivos, duración, entidad financiadora).  
+- Investigador principal y equipo asociado.  
+- Entregables con sus fechas límite.  
+- Seguimiento del progreso.  
 
-6. **Subir Entregables y Seguimiento**  
-   - Los investigadores suben los entregables del proyecto.  
-   - El sistema envía alertas automáticas antes de cada deadline.
+El sistema envía **alertas automáticas** cuando se acercan los plazos o existen retrasos, y guarda los proyectos finalizados en una memoria histórica accesible.
 
-7. **Registrar Compensaciones**  
-   - Una vez finalizado un proyecto, se registra la compensación:  
-     - Reducción de horas docentes, o  
-     - Compensación económica.  
+### Subir entregables y realizar seguimiento
+Los investigadores pueden subir los entregables correspondientes a su proyecto (informes, documentos, resultados, etc.).  
+El sistema marca automáticamente su estado (pendiente, entregado o retrasado) y notifica tanto al investigador como al departamento responsable.
+
+### Registrar compensaciones
+Cuando un proyecto se finaliza, se registra la compensación correspondiente para los participantes:  
+- En el caso de los investigadores, se aplica una **compensación económica**.  
+- En el caso de los investigadores-docentes, pueden elegir entre **compensación económica** o **reducción de horas docentes**.
+
+### Consultar proyectos y convocatorias
+Todos los usuarios con permisos pueden consultar proyectos activos o pasados, así como convocatorias abiertas o finalizadas.  
+El sistema ofrece filtros por sede, investigador, estado del proyecto o tipo de financiación.
 
 ---
 
-## 4. Entidades Principales
+## Entidades principales del sistema
 
 | Entidad | Descripción | Atributos principales |
 |----------|--------------|----------------------|
-| **Investigador** | Persona que participa en proyectos. | Nombre, sede, CV, publicaciones, idiomas, carga docente/investigadora. |
-| **Proyecto** | Actividad de investigación aprobada. | Título, responsables, duración, objetivos, estado, entregables. |
-| **Convocatoria** | Oportunidad de financiación. | Entidad, tipo, requisitos, fechas, presupuesto. |
-| **Entregable** | Resultado o documento asociado a un proyecto. | Nombre, fecha límite, estado, responsable. |
-| **Compensación** | Beneficio recibido tras completar un proyecto. | Tipo (económica o reducción de horas), monto, fecha. |
+| **Usuario** | Representa a investigadores y docentes. | Nombre, sede, CV, publicaciones, idiomas, carga docente/investigadora. |
+| **Proyecto** | Contiene la información de los proyectos aprobados. | Título, responsables, fechas, estado, entregables, resultados. |
+| **Convocatoria** | Oportunidad de financiación o investigación. | Entidad, tipo, requisitos, fechas, presupuesto. |
+| **Entregable** | Documento o resultado de un proyecto. | Título, fecha límite, estado, responsable. |
+| **Compensación** | Registro del beneficio tras completar un proyecto. | Tipo (económica o reducción de horas), monto, fecha. |
 
----
-
-## 5. Requisitos Funcionales (RF)
-
-1. El sistema debe permitir registrar y actualizar perfiles de usuarios.  
-2. El sistema debe controlar automáticamente que ningún docente supere las 16 horas semanales.  
-3. El sistema debe permitir registrar y clasificar convocatorias.  
-4. El sistema debe notificar automáticamente a los investigadores compatibles con cada convocatoria.  
-5. El sistema debe permitir la presentación de propuestas desde la herramienta.  
-6. El sistema debe almacenar propuestas rechazadas como histórico.  
-7. El sistema debe crear registros de proyectos activos con todos los datos asociados.  
-8. El sistema debe permitir subir y consultar entregables con sus fechas límite.  
-9. El sistema debe generar alertas automáticas cuando se acerquen los plazos.  
-10. El sistema debe registrar compensaciones y permitir elegir entre reducción de horas o compensación económica.
-
----
-
-## 6. Requisitos No Funcionales (RNF)
-
-1. La interfaz debe ser accesible desde cualquier navegador moderno.  
-2. El sistema debe ofrecer acceso multiusuario con roles y permisos diferenciados.  
-3. Los datos deben almacenarse de manera segura y trazable.  
-4. El sistema debe generar notificaciones automáticas (internas o por correo).  
-5. Debe permitir escalar fácilmente para incluir más sedes o usuarios.  
-6. Debe mantener disponibilidad mínima del 99 % y tiempos de respuesta razonables.  
-7. La interfaz debe ser intuitiva y fácil de usar para personal no técnico.
 
