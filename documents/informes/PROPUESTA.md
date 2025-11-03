@@ -20,8 +20,8 @@ En cuanto a las **compensaciones**, depende del tipo de perfil:
 
 - Si es **solo investigador**: cuando termina un proyecto, recibe **una compensación económica**.
 - Si es **investigador y docente**: puede elegir entre  
-  1️⃣ una **reducción de horas docentes**, o  
-  2️⃣ **una compensación económica**.  
+  1.- Una **reducción de horas docentes**, o  
+  2️.- **Una compensación económica**.  
 
 Esta compensación se da **al finalizar el proyecto**, no durante su desarrollo.
 
