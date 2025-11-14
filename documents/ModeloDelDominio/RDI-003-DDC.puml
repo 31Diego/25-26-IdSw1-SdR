@@ -1,0 +1,41 @@
+@startuml
+
+class Antena
+class Convocatorias
+class DatosPersonales
+class DepaProyectos
+class HabilidadesTecnicas
+class Investigador
+class Docente {
+  HorasLaborales
+}
+class Propuestas
+class Proyecto
+class RedDeInvestigadores
+note right: Todavia por definir\nel nombre oficial
+abstract Usuario
+entity ColaboradorExterno
+entity EntidadConvocante
+entity Financiador
+
+RedDeInvestigadores *-- Usuario : "forma parte"
+
+Usuario <-- Investigador
+Usuario <- DepaProyectos
+Usuario *-l DatosPersonales
+
+Investigador *-- HabilidadesTecnicas
+Investigador *-- Proyecto : "Forma parte de un"
+Investigador *-- Propuestas : "Hace una"
+Investigador <-l Docente
+
+DepaProyectos *-- Antena
+Antena *-- Convocatorias : "Busca"
+EntidadConvocante *-- Convocatorias : "Organizan"
+Convocatorias --> Propuestas : "Se hacen"
+Propuestas --> Proyecto : "De ser aceptada"
+
+Proyecto *-l- ColaboradorExterno : "Ayuda en un"
+Proyecto *- Financiador : "Es financiado"
+
+@enduml
