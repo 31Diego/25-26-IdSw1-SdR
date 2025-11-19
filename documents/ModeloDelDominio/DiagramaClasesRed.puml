@@ -1,0 +1,47 @@
+@startuml DiagramaClasesRed
+
+
+title: Sistema de red de investigadores
+
+
+
+class InvestigadorDocente <<Principal>> #FFAAAA{
+
+}
+
+
+class Proyecto{
+
+}
+
+
+class Coordinador{
+
+}
+
+
+
+
+class CargaTrabajo{
+
+}
+
+
+
+class PerfilInvestigador{
+
+}
+
+
+
+
+InvestigadorDocente --o Proyecto: puede participar
+InvestigadorDocente --o CargaTrabajo: tiene
+InvestigadorDocente --* PerfilInvestigador: tiene
+InvestigadorDocente --> InvestigadorDocente: puede interactuar
+
+Proyecto --> CargaTrabajo: genera
+
+Coordinador --> InvestigadorDocente: recluta
+
+@enduml
