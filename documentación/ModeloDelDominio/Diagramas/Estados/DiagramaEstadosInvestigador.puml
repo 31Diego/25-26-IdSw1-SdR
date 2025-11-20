@@ -1,0 +1,19 @@
+@startuml EstadoInvestigador
+
+title Ciclo de vida de un InvestigadorDocente en la red
+
+[*] --> Registrado
+
+Registrado --> Activo : validarPerfil
+Activo --> Inactivo : pausarActividad
+Inactivo --> Activo : reactivarActividad
+
+
+
+Registrado --> Eliminado : eliminarCuenta
+Inactivo --> Eliminado : eliminarCuenta
+
+
+Eliminado --> [*]
+
+@enduml

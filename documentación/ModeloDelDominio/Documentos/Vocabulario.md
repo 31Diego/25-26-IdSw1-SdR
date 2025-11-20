@@ -4,7 +4,7 @@ Este glosario define los términos principales utilizados en el desarrollo y ope
 
 ---
 
-##  Términos Generales
+##  Estados de un proyecto
 
 | **Término** | **Definición** | **Notas / Ejemplo** |
 |--------------|----------------|----------------------|
