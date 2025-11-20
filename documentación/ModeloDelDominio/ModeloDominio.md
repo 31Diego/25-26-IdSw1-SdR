@@ -1,5 +1,13 @@
 # Modelo del dominio Gestor Investigadores y Proyectos Funiber (GIPF)
 
+## Objetivo
+
+#### El objetivo de este proyecto es diseñar un solo sistema en donde:
+#### 1. Estén registradas las diferentes entidades de la red de Funiber (investigador, coordinador, etc), los cuales podrán interactuar entre ellos.
+#### 2. Se pueda llevar una gestión de los proyectos asociados con los investigadores, en donde entre otras cosas se podrán revisar los entregables de un proyecto.
+
+
+
 
 ## Vocabulario del proyecto
 
