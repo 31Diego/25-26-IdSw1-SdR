@@ -3,7 +3,7 @@
 
 ## Vocabulario del proyecto
 
-#### En base a nuestra primera reunión definimos los términos clave del proyecto y los explicamos, a continuación los términos mas importantes del [vocabulario](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documents/ModeloDelDominio/Vocabulario.md)
+#### En base a nuestra primera reunión definimos los términos clave del proyecto y los explicamos, a continuación los términos mas importantes del [vocabulario](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Documentos/Vocabulario.md)
 
 ---
 
