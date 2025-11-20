@@ -1,4 +1,4 @@
-#  Glosario de Términos – Sistema de Convocatorias e Investigación FUNIBER
+#  Glosario de Términos – Gestor Investigadores y Proyectos Funiber (GIPF)
 
 Este glosario define los términos principales utilizados en el desarrollo y operación del sistema de gestión de convocatorias e investigaciones de FUNIBER.
 

@@ -1,4 +1,4 @@
-# SISTEMA DE CONVOCATORIAS DE INVESTIGACIÓN 
+# GESTOR INVESTIGADORES Y PROYECTOS FUNIBER (GIPF) 
 
 Este proyecto implementa un **sistema de gestión de convocatorias de investigación** orientado a la organización **FUNIBER**.  
 
