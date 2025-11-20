@@ -3,7 +3,7 @@
 
 ## Vocabulario del proyecto
 
-### En base a nuestra primera reunión definimos los términos clave del proyecto y los explicamos, a continuación los términos mas importantes del [vocabulario](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documents/ModeloDelDominio/Vocabulario.md)
+#### En base a nuestra primera reunión definimos los términos clave del proyecto y los explicamos, a continuación los términos mas importantes del [vocabulario](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documents/ModeloDelDominio/Vocabulario.md)
 
 ---
 
@@ -31,14 +31,14 @@
 
 
 
-### Una vez definido el vocabulario nos damos cuenta de que nuestro sistema se divide en dos subsistemas, uno relacionado con los investigadores/docentes y otro relacionado con los proyectos.
+#### Una vez definido el vocabulario nos damos cuenta de que nuestro sistema se divide en dos subsistemas, uno relacionado con los investigadores/docentes y otro relacionado con los proyectos.
 
 
 ## Diagramas de clases
 
-### En el caso de los investigadores/docentes se modela como estos pueden interactuar entre si, estar participando en un proyecto o ser reclutados por un coordinador para participar en uno, etc. 
+#### En el caso de los investigadores/docentes se modela como estos pueden interactuar entre si, estar participando en un proyecto o ser reclutados por un coordinador para participar en uno, etc. 
 
-### En el caso del subsistema de los proyectos se modela las diferentes fases del mismo, como pasa de convocatoria a propuesta y en ultima instancia a proyecto, tambien se representa lo que tiene asociado un proyecto como los entregables o el estado del mismo.
+#### En el caso del subsistema de los proyectos se modela las diferentes fases del mismo, como pasa de convocatoria a propuesta y en ultima instancia a proyecto, tambien se representa lo que tiene asociado un proyecto como los entregables o el estado del mismo.
 
 
 
@@ -52,7 +52,7 @@
 
 ## Diagramas de estados
 
-### En los diagramas de estado se ha modelado el ciclo de vida de las entidades investigador/docente y proyecto, las cuales son las principales en sus diagramas de clases.
+#### En los diagramas de estado se ha modelado el ciclo de vida de las entidades investigador/docente y proyecto, las cuales son las principales en sus diagramas de clases.
 
 
 

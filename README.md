@@ -3,7 +3,7 @@
 Este proyecto implementa un **sistema de gestión de convocatorias de investigación** orientado a la organización **FUNIBER**.  
 
 
-[![Modelo del Dominio](https://img.shields.io/badge/Modelo%20Del%20Dominio-blueviolet?style=for-the-badge&logo=github)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documents/ModeloDelDominio/ModeloDominio.md)
+[![Modelo del Dominio](https://img.shields.io/badge/Modelo%20Del%20Dominio-blueviolet?style=for-the-badge&logo=github)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/ModeloDominio.md)
 [![Estado](https://img.shields.io/badge/En%20desarrollo-yellow?style=for-the-badge)](#)
 
 
