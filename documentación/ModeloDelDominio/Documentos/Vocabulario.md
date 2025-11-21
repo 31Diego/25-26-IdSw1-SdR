@@ -22,7 +22,7 @@ Este glosario define los términos principales utilizados en el desarrollo y ope
 | **Investigador / Docente** | Usuario registrado que busca, participa o coordina proyectos de investigación. | Incluye personal académico afiliado a FUNIBER. |
 | **Perfil de investigador** | Conjunto de datos que describen la especialización, intereses, experiencia y criterios de elegibilidad del usuario. | Se utiliza para filtrar y recomendar convocatorias. |
 | **Coordinador** | Rol o proceso encargado de revisar que la información (convocatorias, proyectos, documentación) sea correcta antes de su publicación. | Puede ser un rol administrativo dentro del sistema. |
-| **Antena** | Rol o proceso encargado de estar al tanto de nuevas convocatorias | Puede ser un rol administrativo dentro del sistema (coordinador y antena están en el mismo nivel de permisos dentro del sistema)|
+| **Antena** | Labor de un coordinador, en donde se está al tanto de nuevas convocatorias| Rol de coordinador|
 
 ---
 

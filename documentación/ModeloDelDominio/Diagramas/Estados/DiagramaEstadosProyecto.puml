@@ -4,17 +4,17 @@ title Ciclo de vida de un Proyecto
 
 [*] --> Creado
 
-Creado --> Planificado : definirPlan
-Planificado --> EnCurso : iniciar
+Creado --> Aprobado : definirPlan
+Aprobado --> EnCurso : iniciar
 EnCurso --> EnRevision : entregarDocumentacion
 EnRevision --> EnCurso : solicitarCorrecciones
 EnRevision --> Finalizado : aprobar
-Creado --> Cancelado : cancelar
-Planificado --> Cancelado : cancelar
-EnCurso --> Cancelado : cancelar
-EnRevision --> Cancelado : cancelar
+Creado --> Denegado : cancelar
+Aprobado --> Denegado : cancelar
+EnCurso --> Denegado : cancelar
+EnRevision --> Denegado : cancelar
 
 Finalizado --> [*]
-Cancelado --> [*]
+Denegado --> [*]
 
 @enduml

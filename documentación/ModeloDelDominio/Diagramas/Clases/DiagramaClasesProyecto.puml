@@ -27,9 +27,6 @@ class Coordinador{
 
 }
 
-class Antena{
-
-}
 
 class Colaborador{
 
@@ -38,9 +35,7 @@ class Colaborador{
 
 
 
-class EstadoProyecto{
 
-}
 
 class CargaTrabajo{
 
@@ -60,14 +55,14 @@ Convocatoria --|> Propuesta: genera
 Propuesta --|> Proyecto: genera
 
 Proyecto --o InvestigadorDocente: está formado por
-Proyecto --* EstadoProyecto: tiene
 Proyecto --* Entregables: tiene
 Proyecto --* CargaTrabajo: genera
 Proyecto --* Recompensa: genera
 
 Coordinador --o Proyecto: coordina
+Coordinador --o Convocatoria: busca
 
-Antena --o Convocatoria: busca
+
 
 Colaborador --o Proyecto: puede participar
 
@@ -75,6 +70,8 @@ InvestigadorDocente --> CargaTrabajo: tiene
 InvestigadorDocente --o Proyecto: trabaja en
 
 Recompensa --> InvestigadorDocente: beneficia a
+Recompensa --> CargaTrabajo: puede reducir
+
 
 
 
