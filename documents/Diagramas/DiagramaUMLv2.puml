@@ -1,0 +1,95 @@
+@startuml FUNIBER_Domain_Model_V2
+title Diagrama de Clases
+skinparam style strict
+
+' ACTORES/USUARIOS (Persona reemplaza a Usuario)
+entity Persona {
+    + id_interno : Código único
+    + nombre_apellidos
+    + rol_general : Docente / Investigador / Ambos
+}
+
+entity PerfilAcademico {
+    + linea_investigacion
+    + publicaciones_cientificas
+}
+
+entity CargaDeTrabajo {
+    + carga_docente_actual : Horas (Max 16h)
+}
+
+entity DepartamentoProyectos {
+    - nombre_unidad
+}
+
+' ROL ESPECÍFICO DEL DOMINIO
+entity Antena {
+    + fecha_deteccion
+    + observaciones
+}
+
+' CICLO DE PROYECTOS
+entity Convocatoria {
+    + nombre
+    + plazos_limite
+}
+
+entity Propuesta {
+    + titulo
+    + estado : Aceptada / Rechazada
+}
+
+entity Proyecto {
+    + importe_financiacion
+    + estado : Activo / Finalizado
+}
+
+entity Entregable {
+    + fecha_limite (Deadline)
+}
+
+entity Compensacion {
+    + tipo : Económica / Reducción Horaria
+}
+
+entity RolProyecto {
+    + rol : Principal / Asociado / Finanzas
+}
+
+entity Colaborador {
+    + nombre
+    + sede
+    + sin_acceso : Boolean (True)
+}
+
+' RELACIONES '
+' Detalles de la Persona '
+Persona "1" -- "1" PerfilAcademico : Tiene
+Persona "1" -- "0..1" CargaDeTrabajo : Tiene
+
+' La Antena (Persona) presenta una Propuesta '
+Persona "1" -- "0..*" Antena : Es
+Antena "1" -- "1" Propuesta : Presenta
+
+' Flujo del Proyecto '
+Convocatoria "1" -- "0..*" Propuesta : Origina
+Propuesta "1" -- "0..1" Proyecto : Se convierte en (al ser aceptada)
+
+' Roles y Participación '
+Persona "1" -- "0..*" RolProyecto : Asume
+Proyecto "1" -- "1..*" RolProyecto : Requiere (mínimo un responsable)
+
+' Colaboradores (externos o sin acceso) '
+Proyecto "1" -- "0..*" Colaborador : Incluye
+
+' Seguimiento y Cierre '
+Proyecto "1" -- "1..*" Entregable : Define
+Proyecto "1" -- "0..*" Compensacion : Genera
+Persona "1" -- "0..*" Compensacion : Recibe
+
+' Interacción del Dpto. de Proyectos '
+DepartamentoProyectos "1" -- "0..*" Convocatoria : Gestiona
+DepartamentoProyectos "1" -- "0..*" Proyecto : Supervisa
+' El DP también selecciona al Antena, implicando a Antena, Propuesta y Persona.
+
+@enduml
