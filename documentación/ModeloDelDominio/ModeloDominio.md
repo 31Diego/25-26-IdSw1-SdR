@@ -58,6 +58,19 @@
 </div>
 
 
+#### Si nos damos cuenta, ambos diagramas tienen muchas entidades en común, por lo que en un principio los podriamos fusionar, quedando como resultado este diagrama.
+
+
+<div align=center>
+
+|![](/documentación/ModeloDelDominio/Imagenes/Clases/ClasesProyectoRed.svg)|
+|:-:|
+|**Diagrama de clases de los proyectos + red de investigadores**| 
+</div>
+
+#### Sin embargo para realizar los diagramas de estados utilizaremos los diagramas que indiquen el contexto de la gestión de los proyectos o la red de investigadores, no el que fusiona a los dos.
+
+
 ## Diagramas de estados
 
 #### En los diagramas de estado se ha modelado el ciclo de vida de las entidades investigador/docente y proyecto, las cuales son las principales en sus diagramas de clases.
