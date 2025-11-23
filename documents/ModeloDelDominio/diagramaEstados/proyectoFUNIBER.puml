@@ -1,0 +1,20 @@
+@startuml
+hide empty description
+
+[*] --> Propuesto
+
+Propuesto --> Aprobado : Propuesta aceptada por Departamento de Proyectos
+
+Aprobado --> EnEjecucion : Equipo de investigadores asignado
+
+EnEjecucion --> EnRevisionDeEntregable : Entregable generado (parcial o final)
+
+EnRevisionDeEntregable --> EnEjecucion : Ajustes requeridos
+
+EnRevisionDeEntregable --> Finalizado : Último entregable aprobado
+
+EnEjecucion --> Cancelado : Incumplimiento grave o abandono del equipo
+
+Finalizado --> [*]
+Cancelado --> [*]
+@enduml
