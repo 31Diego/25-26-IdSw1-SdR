@@ -1,0 +1,27 @@
+@startuml DiagramaEstadosInvestigadorDocente
+
+title Diagrama de estados - Investigador/Docente
+
+[*] --> SinProyecto
+
+SinProyecto --> AnalizandoConvocatoria : nueva convocatoria
+AnalizandoConvocatoria --> PreparandoPropuesta : decide participar
+AnalizandoConvocatoria --> SinProyecto : descarta Convocatoria
+
+PreparandoPropuesta --> PropuestaEnviada : propuesta generada
+
+PropuestaEnviada --> PropuestaAceptada : convocatoria aprueba
+PropuestaEnviada --> PropuestaRechazada : convocatoria rechaza
+
+PropuestaRechazada --> SinProyecto
+
+PropuestaAceptada --> ProyectoEnCurso
+
+ProyectoEnCurso --> RevisandoEntregables : entregables preparados
+
+RevisandoEntregables --> ProyectoEnCurso : necesita cambios
+RevisandoEntregables --> ProyectoFinalizado : entregables aceptados
+
+ProyectoFinalizado --> SinProyecto : listo para nueva convocatoria
+
+@enduml
