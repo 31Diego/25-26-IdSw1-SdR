@@ -1,0 +1,78 @@
+@startuml DiagramaObjetosRed
+title: Instancia Específica de la Red de Investigadores
+
+' --- Objetos InvestigadorDocente ---
+object "ID-001: Dr. Pérez" as Perez #FFAAAA {
+  Nombre = "Dr. Juan Pérez"
+  Departamento = "Ingeniería"
+}
+
+object "ID-002: Dra. Gómez" as Gomez #FFAAAA {
+  Nombre = "Dra. Ana Gómez"
+  Departamento = "Ciencias Sociales"
+}
+
+' --- Objetos Proyecto ---
+object "P-2025-01: IA Aplicada" as ProyectoIA {
+  Título = "Inteligencia Artificial Aplicada a la Medicina"
+  Estado = "Activo"
+}
+
+object "P-2024-05: Educación" as ProyectoEdu {
+  Título = "Nuevos Modelos Educativos"
+  Estado = "Finalizado"
+}
+
+' --- Objetos Coordinador ---
+object "C-001: Msc. Lara" as CoordinadorLara {
+  Nombre = "Msc. Sofía Lara"
+  Oficina = "Decanato de Investigación"
+}
+
+' --- Objetos CargaTrabajo ---
+object "CT-Pérez: 30 Horas" as CTPerez {
+  Dedicación_Semanal = 30
+  Rol = "Investigador Principal"
+}
+
+object "CT-Gómez: 15 Horas" as CTGomez {
+  Dedicación_Semanal = 15
+  Rol = "Investigador Asociado"
+}
+
+' --- Objetos PerfilInvestigador ---
+object "Perf-Pérez" as PerfPerez {
+  Especialidad = "Aprendizaje Automático"
+  Publicaciones = 45
+}
+
+object "Perf-Gómez" as PerfGomez {
+  Especialidad = "Metodología Cualitativa"
+  Publicaciones = 12
+}
+
+' --- Enlaces (Basados en las Asociaciones del Diagrama de Clases) ---
+
+' InvestigadorDocente --o Proyecto: puede participar
+Perez "participa" o-- "IA Aplicada": 60% dedicación
+Gomez "participa" o-- "Educación": 100% dedicación
+
+' InvestigadorDocente --o CargaTrabajo: tiene
+Perez "tiene" o-- CTPerez
+Gomez "tiene" o-- CTGomez
+
+' InvestigadorDocente --* PerfilInvestigador: tiene
+Perez *-- PerfPerez
+Gomez *-- PerfGomez
+
+' InvestigadorDocente --> InvestigadorDocente: puede interactuar (colaboración)
+Perez "colabora_con" --> Gomez
+
+' Proyecto --> CargaTrabajo: genera
+ProyectoIA --> CTPerez : requiere
+
+' Coordinador --> InvestigadorDocente: recluta
+CoordinadorLara --> Perez : reclutó_2020
+CoordinadorLara --> Gomez : reclutó_2022
+
+@enduml
