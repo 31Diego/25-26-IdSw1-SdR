@@ -56,7 +56,7 @@ InvestigadorDocente --> CargaTrabajo : tiene
 InvestigadorDocente --o Proyecto : trabaja en
 
 Recompensa --> InvestigadorDocente : beneficia
-Recompensa --> CargaTrabajo : puede reducir
+
 
 
 
