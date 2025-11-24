@@ -85,4 +85,19 @@
 </div>
 
 
+## Diagrama de objetos
+
+#### En este diagrama se implementa una instancia de la gestión de proyectos, en donde hay varios investigadores y cada uno tiene asociada su recompensa, sus cargas de trabajo, etc.
+
+
+<div align=center>
+
+|![](/documentación/ModeloDelDominio/Imagenes/Objetos/ObjetosProyecto.svg)|
+|:-:|
+|**Diagrama de objetos de la gestión de un proyecto**| 
+</div>
+
+
+
+
 
