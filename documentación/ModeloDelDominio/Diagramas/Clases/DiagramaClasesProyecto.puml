@@ -51,8 +51,8 @@ class Recompensa{
 
 
 
-Convocatoria --|> Propuesta: genera
-Propuesta --|> Proyecto: genera
+Convocatoria --> Propuesta: genera
+Propuesta --> Proyecto: genera
 
 Proyecto --o InvestigadorDocente: está formado por
 Proyecto --* Entregables: tiene
