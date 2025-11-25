@@ -1,0 +1,91 @@
+@startuml DiagramaObjetosProyecto
+
+title: Objetos del Sistema de Gestión de Proyectos
+
+object Convocatoria_2025 {
+    nombre = "Convocatoria Innovación 2025"
+}
+
+object Propuesta_IA {
+    titulo = "Sistema IA Educativa"
+}
+
+object Proyecto_IA {
+    nombre = "IA para aprendizaje adaptativo"
+    estado = "En desarrollo"
+}
+
+object Investigador_Principal {
+    nombre = "Dr. Carlos Rivas"
+}
+object Investigador_Apoyo {
+    nombre = "Dra. Elena Torres"
+}
+
+object Coordinador_General {
+    nombre = "Mtro. José Márquez"
+}
+
+object Colaborador1 {
+    nombre = "Luis Pérez"
+}
+object Colaborador2 {
+    nombre = "María López"
+}
+
+object Entregable_Demo {
+    descripcion = "Prototipo funcional"
+}
+object Entregable_Informe {
+    descripcion = "Informe técnico final"
+}
+
+object CargaTrabajo_Principal {
+    horas = 40
+}
+object CargaTrabajo_Apoyo {
+    horas = 30
+}
+
+object Recompensa_Monetaria_1 {
+    tipo = "Pago de 20.000 €"
+}
+object Recompensa_Monetaria_2 {
+    tipo = "Dos pagos de 3.000 €"
+}
+
+' Relaciones según el diagrama de clases
+Convocatoria_2025 --> Propuesta_IA : genera
+Propuesta_IA --> Proyecto_IA : genera
+
+Proyecto_IA o-- Investigador_Principal : está formado por
+Proyecto_IA o-- Investigador_Apoyo : está formado por
+
+Proyecto_IA *-- Entregable_Demo : tiene
+Proyecto_IA *-- Entregable_Informe : tiene
+
+Proyecto_IA *-- CargaTrabajo_Principal : genera
+Proyecto_IA *-- CargaTrabajo_Apoyo : genera
+
+Proyecto_IA *-- Recompensa_Monetaria_1 : genera
+Proyecto_IA *-- Recompensa_Monetaria_2 : genera
+
+Coordinador_General o-- Proyecto_IA : coordina
+Coordinador_General o-- Convocatoria_2025 : busca
+
+Colaborador1 o-- Proyecto_IA : participa
+Colaborador2 o-- Proyecto_IA : participa
+
+Investigador_Principal --> CargaTrabajo_Principal : tiene
+Investigador_Apoyo --> CargaTrabajo_Apoyo : tiene
+
+Investigador_Principal o-- Proyecto_IA : trabaja en
+Investigador_Apoyo o-- Proyecto_IA : trabaja en
+
+Recompensa_Monetaria_1 --> Investigador_Principal : beneficia
+Recompensa_Monetaria_2 --> Investigador_Apoyo : beneficia
+
+Recompensa_Monetaria_1 --> CargaTrabajo_Principal : reduce
+Recompensa_Monetaria_2 --> CargaTrabajo_Apoyo : reduce
+
+@enduml
