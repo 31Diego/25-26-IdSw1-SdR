@@ -1,0 +1,92 @@
+@startuml DiagramaClasesProyecto
+
+title: Sistema de gestión de proyectos
+
+
+class Proyecto <<Principal>> #FFAAAA{
+
+}
+
+class Convocatoria{
+
+}
+
+class Propuesta{
+
+}
+
+
+
+
+
+class InvestigadorDocente{
+
+}
+
+class Coordinador{
+
+}
+
+
+class Colaborador{
+
+}
+
+
+
+
+
+
+class CargaTrabajo{
+
+}
+
+class Entregables{
+
+}
+
+class Recompensa{
+
+}
+
+
+
+Convocatoria --> Propuesta: genera
+Propuesta --> Proyecto: genera
+
+Proyecto --o InvestigadorDocente: está formado por
+Proyecto --* Entregables: tiene
+Proyecto --* CargaTrabajo: genera
+Proyecto --* Recompensa: genera
+
+Coordinador --o Proyecto: coordina
+Coordinador --o Convocatoria: busca
+
+
+
+Colaborador --o Proyecto: puede participar
+
+InvestigadorDocente --> CargaTrabajo: tiene
+InvestigadorDocente --o Proyecto: trabaja en
+
+Recompensa --> InvestigadorDocente: beneficia a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml

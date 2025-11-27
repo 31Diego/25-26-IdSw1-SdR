@@ -1,0 +1,105 @@
+@startuml DiagramaInstanciasProyecto
+
+title: Instancias del sistema de gestión de proyectos 
+
+
+class ID2025 <<Convocatoria>> {
+    descripcion = "Convocatoria de investigación sobre la IA... "
+}
+
+
+class DeepVision <<Propuesta>> {
+    descripcion = "Un sistema capaz de realizar mediante el uso de IA..."
+}
+
+
+class ProyectoIA <<Proyecto>> #FFAAAA{
+    descripción = "Implementar un modelo de lenguaje... "
+    fechaLimite = 31/12/2026
+}
+
+
+class Manuel <<InvestigadorDocente>> {
+    nombre "Manuel"
+    id = 1234567
+    campo = "Informática"
+}
+
+class Lázaro <<InvestigadorDocente>> {
+    nombre = "Lázaro"
+    id = 12345678
+    campo = "Sistemas"
+}
+
+class Mar <<Coordinador>> {
+    nombre = "Mar"
+    ubicación = "Santander"
+    id = 12345
+}
+
+class Mariano <<Colaborador>> {
+    nombre = "Mariano"
+    id = 123456
+    asociación = "Universidad de cantabria"
+}
+
+
+class Entregable01Manuel <<Entregables>> {
+    descripcion = "Informe inicial"
+}
+
+class Entregable02Lázaro <<Entregables>> {
+    descripcion = "primera implementación"
+}
+
+
+class RemuneraciónManuel <<Recompensa>> {
+    cantidad = 20000
+}
+
+class ReducciónHorarioLázaro <<Recompensa>>{
+    reducción = -4
+}
+
+class CargaTrabajoManuel <<CargaTrabajo>>{
+    horasClase = 40
+    horasInvestigacion = 10
+}
+
+class CargaTrabajoLazaro <<CargaTrabajo>>{
+    horasClase = 30
+    horasInvestigacion = 20
+}
+
+
+ID2025 --> DeepVision : genera
+DeepVision --> ProyectoIA : genera
+
+
+ProyectoIA --o Manuel : está formado por
+ProyectoIA --o Lázaro : está formado por
+ProyectoIA --* Entregable01Manuel : tiene
+ProyectoIA --* RemuneraciónManuel: genera
+ProyectoIA --* ReducciónHorarioLázaro: genera
+ProyectoIA --* Entregable02Lázaro: tiene
+ProyectoIA --* CargaTrabajoLazaro: genera
+ProyectoIA --* CargaTrabajoManuel: genera
+
+
+Mar --o ProyectoIA : coordina
+Mar --o ID2025 : busca
+
+Mariano --o ProyectoIA : participa
+
+
+
+Manuel --o ProyectoIA : trabaja en
+Lázaro --o ProyectoIA : trabaja en
+Manuel --> CargaTrabajoManuel: tiene
+Lázaro --> CargaTrabajoLazaro: tiene
+
+
+RemuneraciónManuel --> Manuel: beneficia a
+ReducciónHorarioLázaro --> Lázaro: beneficia a
+
+@enduml
