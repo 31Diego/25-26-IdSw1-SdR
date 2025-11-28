@@ -1,6 +1,6 @@
-@startuml DiagramaInstanciasProyecto
+@startuml 
 
-title: Instancias del sistema de gestión de proyectos 
+title: Instancia del sistema de gestión de proyectos 
 
 
 class ID2025 <<Convocatoria>> {

@@ -3,10 +3,8 @@
 ## Objetivo
 
 #### El objetivo de este proyecto es diseñar un solo sistema en donde:
-#### 1. Estén registradas las diferentes entidades de la red de Funiber (investigador, coordinador, etc), los cuales podrán interactuar entre ellos.
-#### 2. Se pueda llevar una gestión de los proyectos asociados con los investigadores, en donde entre otras cosas se podrán revisar los entregables de un proyecto.
-
-
+#### 1. Se pueda llevar una gestión de los proyectos asociados con los investigadores, en donde entre otras cosas se podrán revisar los entregables de un proyecto.
+#### 2. Estén registradas las diferentes entidades de la red de Funiber (investigador, coordinador, etc), los cuales podrán interactuar entre ellos.
 
 
 ## Vocabulario del proyecto
@@ -39,64 +37,76 @@
 
 
 
-#### Una vez definido el vocabulario nos damos cuenta de que nuestro sistema se divide en dos subsistemas, uno relacionado con los investigadores/docentes y otro relacionado con los proyectos.
-
-
 ## Diagramas de clases
 
-#### En el caso de los investigadores/docentes se modela como estos pueden interactuar entre si, estar participando en un proyecto o ser reclutados por un coordinador para participar en uno, etc. 
+#### A continuación el diagrama de clases principal del proyecto, en donde se resalta que la entidad principal es proyecto.
 
-#### En el caso del subsistema de los proyectos se modela las diferentes fases del mismo, como pasa de convocatoria a propuesta y en ultima instancia a proyecto, tambien se representa lo que tiene asociado un proyecto como los entregables o el estado del mismo.
+<div align=center>
 
+|![](/documentación/ModeloDelDominio/Imagenes/Clases/ClasesProyectoRed.svg)|
+|:-:|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesProyectoRed.puml)**| 
+</div>
+
+
+#### De este diagrama elaboramos dos subdiagramas, los cuales reflejan mejor las necesidades de nuestro sistema y en donde cada uno tiene un contexto muy diferenciado del otro, los cuales son: la gestión de proyectos para el primer diagrama y la red de investigadores para el segundo diagrama.
 
 
 <div align=center>
 
 |![](/documentación/ModeloDelDominio/Imagenes/Clases/ClasesProyecto.svg)|![](/documentación/ModeloDelDominio/Imagenes/Clases/ClasesRed.svg)|
 |:-:|:-:|
-|**Diagrama de clases de los proyectos**| **Diagrama de clases de la red de investigadores**|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesProyecto.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesRed.puml)**|
 </div>
 
 
-#### Si nos damos cuenta, ambos diagramas tienen muchas entidades en común, por lo que en un principio los podriamos fusionar, quedando como resultado este diagrama.
+#### De estos dos diagramas elaboramos los siguientes diagramas de estados de las entidades principales de cada uno de ellos, es decir proyecto e investigador/docente, sin olvidarnos de los dos diferentes contextos que puede tener cada entidad.
 
 
-<div align=center>
 
-|![](/documentación/ModeloDelDominio/Imagenes/Clases/ClasesProyectoRed.svg)|
-|:-:|
-|**Diagrama de clases de los proyectos + red de investigadores**| 
-</div>
+## Diagramas de estado
 
-#### Sin embargo para realizar los diagramas de estados utilizaremos los diagramas que indiquen el contexto de la gestión de los proyectos o la red de investigadores, no el que fusiona a los dos.
-
-
-## Diagramas de estados
-
-#### En los diagramas de estado se ha modelado el ciclo de vida de las entidades investigador/docente y proyecto, las cuales son las principales en sus diagramas de clases.
-
-
+#### En los siguientes diagramas de estado se modelan los diferentes comportamientos que puede tener un proyecto.
 
 <div align=center>
 
-|![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadoProyecto.svg)|![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadoInvestigador.svg)|
+|![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadoProyectoGestion.svg)|![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadosProyectoRed.svg)|
 |:-:|:-:|
-|**Diagrama de estados del ciclo de vida de un proyecto**| **Diagrama de estados del ciclo de vida de un investigador**|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosProyectoGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaEstadosProyectoRed.puml)**|
 </div>
+
+
+#### En los siguientes diagramas de estado se modelan los diferentes comportamientos que puede tener un investigador.
+
+<div align=center>
+
+|![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadosInvestigadorGestion.svg)|![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadoInvestigadorRed.svg)|
+|:-:|:-:|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosInvestigadorGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaEstadosInvestigadorRed.puml)**|
+</div>
+
 
 
 ## Diagrama de objetos
 
-#### En este diagrama se implementa una instancia de la gestión de proyectos, en donde hay varios investigadores y cada uno tiene asociada su recompensa, sus cargas de trabajo, etc.
-
+#### En el siguiente diagrama se implementa una instancia del sistema de gestión de proyectos, en donde hay varios investigadores participando en un proyecto en donde destacan varios aspectos del proyecto como los entregables o las recompensas del mismo hacia los investigadores.
 
 <div align=center>
 
 |![](/documentación/ModeloDelDominio/Imagenes/Objetos/ObjetosProyecto.svg)|
 |:-:|
-|**Diagrama de objetos de la gestión de un proyecto**| 
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosProyecto)**| 
 </div>
 
+
+#### En el siguiente diagrama se implementa una instancia del sistema de red de investigadores, en donde de nuevo hay varios investigadores participando en un proyecto pero en este caso destacan aspectos relacionados con los investigadores como los perfiles de los mismos.
+
+<div align=center>
+
+|![](/documentación/ModeloDelDominio/Imagenes/Objetos/ObjetosInvestigador.svg)|
+|:-:|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosInvestigador)**| 
+</div>
 
 
 

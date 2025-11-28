@@ -1,6 +1,6 @@
 @startuml EstadoProyecto
 
-title Ciclo de vida de un Proyecto
+title Diagrama de estados de un proyecto (contexto de gestión de proyectos)
 
 [*] --> Creado
 

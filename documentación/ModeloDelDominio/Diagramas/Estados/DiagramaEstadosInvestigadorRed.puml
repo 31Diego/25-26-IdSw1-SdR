@@ -1,6 +1,6 @@
 @startuml EstadoInvestigador
 
-title Ciclo de vida de un InvestigadorDocente en la red
+title Diagrama de estados de un investigador/docente (contexto de red de investigadores)
 
 [*] --> Registrado
 
@@ -11,7 +11,7 @@ Inactivo --> Activo : reactivarActividad
 
 
 Registrado --> Eliminado : eliminarCuenta
-Inactivo --> Eliminado : eliminarCuenta
+Activo --> Eliminado : eliminarCuenta
 
 
 Eliminado --> [*]
