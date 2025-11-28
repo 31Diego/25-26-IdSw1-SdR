@@ -9,7 +9,7 @@
 
 ## Vocabulario del proyecto
 
-#### En base a nuestra primera reunión definimos los términos clave del proyecto y los explicamos, a continuación los términos mas importantes del [vocabulario](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Documentos/Vocabulario.md)
+#### En base a nuestra primera reunión definimos los términos clave del proyecto y los explicamos, a continuación los términos mas importantes del [vocabulario](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Documentos/Vocabulario.md)
 
 ---
 
@@ -45,7 +45,7 @@
 
 |![](/documentación/ModeloDelDominio/Imagenes/Clases/ClasesProyectoRed.svg)|
 |:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesProyectoRed.puml)**| 
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesProyectoRed.puml)**| 
 </div>
 
 
@@ -56,7 +56,7 @@
 
 |![](/documentación/ModeloDelDominio/Imagenes/Clases/ClasesProyecto.svg)|![](/documentación/ModeloDelDominio/Imagenes/Clases/ClasesRed.svg)|
 |:-:|:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesProyecto.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesRed.puml)**|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesProyecto.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaClasesRed.puml)**|
 </div>
 
 
@@ -72,7 +72,7 @@
 
 |![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadoProyectoGestion.svg)|![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadosProyectoRed.svg)|
 |:-:|:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosProyectoGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaEstadosProyectoRed.puml)**|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosProyectoGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaEstadosProyectoRed.puml)**|
 </div>
 
 
@@ -82,7 +82,7 @@
 
 |![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadosInvestigadorGestion.svg)|![](/documentación/ModeloDelDominio/Imagenes/Estados/EstadoInvestigadorRed.svg)|
 |:-:|:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosInvestigadorGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaEstadosInvestigadorRed.puml)**|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosInvestigadorGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaEstadosInvestigadorRed.puml)**|
 </div>
 
 
@@ -95,7 +95,7 @@
 
 |![](/documentación/ModeloDelDominio/Imagenes/Objetos/ObjetosProyecto.svg)|
 |:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosProyecto)**| 
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosProyecto)**| 
 </div>
 
 
@@ -105,7 +105,7 @@
 
 |![](/documentación/ModeloDelDominio/Imagenes/Objetos/ObjetosInvestigador.svg)|
 |:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Diego/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosInvestigador)**| 
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosInvestigador)**| 
 </div>
 
 
