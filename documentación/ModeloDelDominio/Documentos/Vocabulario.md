@@ -11,7 +11,7 @@ Este glosario define los términos principales utilizados en el desarrollo y ope
 | **Entidad convocante** | Organización o institución que emite una convocatoria. | Puede ser la Unión Europea, el Ministerio de Ciencia, el Gobierno de Cantabria, etc. |
 | **Convocatoria** | Anuncio oficial de una oportunidad de financiación o participación en un proyecto de investigación. | Ejemplo: “Convocatoria Horizonte Europa 2025”. |
 | **Propuesta** | Siguiente fase de una convocatoria, en donde se concretan los detalles de la misma | Ejemplo: Investigación sobre enfermedad rara.|
-| **Proyecto** | Última fase de una convocatoria, en donde se tienen unos objetivos, un grupo de investigadores/docentes, una fecha de entrega y una documentación del mismo| ----- |
+| **Proyecto** | Última fase de una convocatoria, en donde se tienen unos objetivos, un grupo de investigadores/docentes, una fecha de entrega y una documentación/entregables del mismo| ----- |
 
 ---
 
@@ -19,10 +19,11 @@ Este glosario define los términos principales utilizados en el desarrollo y ope
 
 | **Término** | **Definición** | **Notas / Ejemplo** |
 |--------------|----------------|----------------------|
-| **Investigador / Docente** | Usuario registrado que busca, participa o coordina proyectos de investigación. | Incluye personal académico afiliado a FUNIBER. |
+| **Investigador / Docente** | Usuario registrado que participa en proyectos de investigación. | Incluye personal académico afiliado a FUNIBER. |
 | **Perfil de investigador** | Conjunto de datos que describen la especialización, intereses, experiencia y criterios de elegibilidad del usuario. | Se utiliza para filtrar y recomendar convocatorias. |
-| **Coordinador** | Rol o proceso encargado de revisar que la información (convocatorias, proyectos, documentación) sea correcta antes de su publicación. | Puede ser un rol administrativo dentro del sistema. |
+| **Coordinador** | Rol o proceso encargado de reclutar a los investigadores de un proyecto y de verificar si los entregables que estos entregan son correctos. | Puede ser un rol administrativo dentro del sistema. |
 | **Antena** | Labor de un coordinador, en donde se está al tanto de nuevas convocatorias| Rol de coordinador|
+|**Colaborador**| Entidad externa al sistema del que solo se tienen datos básicos, la cual puede colaborar en un proyecto si asi se requiere| Investigador de la Universidad de Cantabria |
 
 ---
 
@@ -32,11 +33,10 @@ Este glosario define los términos principales utilizados en el desarrollo y ope
 | **Término** | **Definición** | **Notas / Ejemplo** |
 |--------------|----------------|----------------------|
 | **Estado de convocatoria** | Etapa en la que se encuentra una convocatoria dentro del sistema. | Ejemplos: “Pendiente de validación”, “Aprobada”, “Archivada”. |
-| **Proyecto de investigación** | Actividad derivada de una convocatoria aprobada en la que participan uno o varios investigadores. | Contiene documentación, cronograma y resultados. |
 | **Línea de tiempo de investigación** | Registro cronológico de la documentación, avances y entregables de un proyecto. | Permite consultar la evolución del trabajo de cada investigador. |
 | **Entregables** | Conjunto de archivos y reportes que registran el progreso y resultados de un proyecto. | Ejemplo: informes técnicos, publicaciones, memorias de avance. |
 | **Seguimiento de proyecto** | Proceso mediante el cual se supervisa la ejecución y cumplimiento de las metas del proyecto. | Incluye revisión de hitos, entregas y plazos. |
-| **Carga de trabajo** | Conjunto de labores que el investigador/docente tiene que realizar. | Impartir clase o formar parte de un proyecto. |
+| **Carga de trabajo** | Conjunto de labores que el investigador/docente tiene que realizar. | Impartir clase, formar parte de un proyecto u otros. |
 
 ---
 
