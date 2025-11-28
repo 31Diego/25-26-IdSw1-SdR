@@ -4,7 +4,7 @@ Este proyecto implementa un **sistema de gestión de convocatorias de investigac
 
 
 [![Modelo del Dominio](https://img.shields.io/badge/Modelo%20Del%20Dominio-blueviolet?style=for-the-badge&logo=github)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/ModeloDominio.md)
-[![Estado](https://img.shields.io/badge/En%20desarrollo-yellow?style=for-the-badge)](#)
+[![Estado](https://img.shields.io/badge/Terminado-Red?style=for-the-badge)](#)
 
 
 [![Casos de Uso](https://img.shields.io/badge/Casos%20De%20Uso-blueviolet?style=for-the-badge&logo=github)](https://github.com/31Diego/25-26-IdSw1-SdR/tree/Diego/documents/CasosDeUso)
