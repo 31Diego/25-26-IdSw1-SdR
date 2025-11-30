@@ -1,0 +1,40 @@
+@startuml
+
+left to right direction
+
+actor "Coordinador" as coordinador
+
+
+package "Gestión de proyectos" {
+    usecase crearProyecto as "crearProyecto()"
+    usecase abrirProyecto as "abrirProyecto()"
+    usecase editarProyecto as "editarProyecto()"
+    usecase eliminarProyecto as "eliminarProyecto()"
+}
+
+package "Gestion de investigadores" {
+    usecase agregarInvestigador as "agregarInvestigador()"
+    usecase verInvestigadores as "verInvestigadores()"
+    usecase modificarInvestigadores as "modificarInvestigadores()"
+    usecase eliminarInvestigador as "eliminarInvestigador()"
+}
+
+package "Convocatorias" {
+    usecase buscarConvocatoria as "buscarConvocatoria()"
+}
+
+
+coordinador --> (crearProyecto)
+coordinador --> (abrirProyecto)
+coordinador --> (editarProyecto)
+coordinador --> (eliminarProyecto)
+
+(agregarInvestigador) <-- coordinador
+(verInvestigadores) <-- coordinador
+(modificarInvestigadores) <-- coordinador
+(eliminarInvestigador) <-- coordinador
+
+
+(buscarConvocatoria) <-- coordinador
+
+@enduml
