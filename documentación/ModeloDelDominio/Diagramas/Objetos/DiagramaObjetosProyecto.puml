@@ -1,105 +1,95 @@
-@startuml 
+@startuml
 
-title: Instancia del sistema de gestión de proyectos 
+title Instancia del sistema de gestión de proyectos
 
-
-class ID2025 <<Convocatoria>> {
-    descripcion = "Convocatoria de investigación sobre la IA... "
+object ID2025 <<Convocatoria>> {
+    descripcion = "Convocatoria de investigación sobre IA..."
 }
 
-
-class DeepVision <<Propuesta>> {
-    descripcion = "Un sistema capaz de realizar mediante el uso de IA..."
+object DeepVision <<Propuesta>> {
+    descripcion = "Un sistema capaz de realizar análisis mediante IA..."
 }
 
-
-class ProyectoIA <<Proyecto>> #FFAAAA{
-    descripción = "Implementar un modelo de lenguaje... "
-    fechaLimite = 31/12/2026
+object ProyectoIA <<Proyecto>> #FFAAAA {
+    descripcion = "Implementar un modelo de lenguaje..."
+    fechaLimite = "31/12/2026"
 }
 
-
-class Manuel <<InvestigadorDocente>> {
-    nombre "Manuel"
+object Manuel <<InvestigadorDocente>> {
+    nombre = "Manuel"
     id = 1234567
     campo = "Informática"
 }
 
-class Lázaro <<InvestigadorDocente>> {
+object Lazaro <<InvestigadorDocente>> {
     nombre = "Lázaro"
     id = 12345678
     campo = "Sistemas"
 }
 
-class Mar <<Coordinador>> {
+object Mar <<Coordinador>> {
     nombre = "Mar"
-    ubicación = "Santander"
+    ubicacion = "Santander"
     id = 12345
 }
 
-class Mariano <<Colaborador>> {
+object Mariano <<Colaborador>> {
     nombre = "Mariano"
     id = 123456
-    asociación = "Universidad de cantabria"
+    asociacion = "Universidad de Cantabria"
 }
 
-
-class Entregable01Manuel <<Entregables>> {
+object Entregable01Manuel <<Entregables>> {
     descripcion = "Informe inicial"
 }
 
-class Entregable02Lázaro <<Entregables>> {
-    descripcion = "primera implementación"
+object Entregable02Lazaro <<Entregables>> {
+    descripcion = "Primera implementación"
 }
 
-
-class RemuneraciónManuel <<Recompensa>> {
+object RemuneracionManuel <<Recompensa>> {
     cantidad = 20000
 }
 
-class ReducciónHorarioLázaro <<Recompensa>>{
-    reducción = -4
+object ReduccionHorarioLazaro <<Recompensa>> {
+    reduccion = -4
 }
 
-class CargaTrabajoManuel <<CargaTrabajo>>{
+object CargaTrabajoManuel <<CargaTrabajo>> {
     horasClase = 40
     horasInvestigacion = 10
 }
 
-class CargaTrabajoLazaro <<CargaTrabajo>>{
+object CargaTrabajoLazaro <<CargaTrabajo>> {
     horasClase = 30
     horasInvestigacion = 20
 }
 
+'--- Relaciones ---
 
 ID2025 --> DeepVision : genera
 DeepVision --> ProyectoIA : genera
 
+ProyectoIA o-- Manuel : investigador
+ProyectoIA o-- Lazaro : investigador
 
-ProyectoIA --o Manuel : está formado por
-ProyectoIA --o Lázaro : está formado por
-ProyectoIA --* Entregable01Manuel : tiene
-ProyectoIA --* RemuneraciónManuel: genera
-ProyectoIA --* ReducciónHorarioLázaro: genera
-ProyectoIA --* Entregable02Lázaro: tiene
-ProyectoIA --* CargaTrabajoLazaro: genera
-ProyectoIA --* CargaTrabajoManuel: genera
+ProyectoIA *-- Entregable01Manuel : tiene
+ProyectoIA *-- Entregable02Lazaro : tiene
 
+ProyectoIA *-- RemuneracionManuel : genera
+ProyectoIA *-- ReduccionHorarioLazaro : genera
 
-Mar --o ProyectoIA : coordina
-Mar --o ID2025 : busca
+Mar --> ProyectoIA : coordina
+Mar --> ID2025 : busca
 
-Mariano --o ProyectoIA : participa
+Mariano --> ProyectoIA : participa
 
+Manuel --> CargaTrabajoManuel : tiene
+Manuel --> Entregable01Manuel : genera
+Lazaro --> CargaTrabajoLazaro : tiene
+Lazaro --> Entregable02Lazaro : genera
 
-
-Manuel --o ProyectoIA : trabaja en
-Lázaro --o ProyectoIA : trabaja en
-Manuel --> CargaTrabajoManuel: tiene
-Lázaro --> CargaTrabajoLazaro: tiene
-
-
-RemuneraciónManuel --> Manuel: beneficia a
-ReducciónHorarioLázaro --> Lázaro: beneficia a
+RemuneracionManuel --> Manuel : beneficia
+ReduccionHorarioLazaro --> Lazaro : beneficia
 
 @enduml

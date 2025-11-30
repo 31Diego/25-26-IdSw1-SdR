@@ -2,73 +2,70 @@
 
 title Instancia del sistema de red de investigadores
 
-
-class Mar <<Coordinador>>{
+object Mar <<Coordinador>> {
     nombre = "Mar"
     ubicacion = "Santander"
-    id= 12345
+    id = 12345
 }
 
-
-class Manuel <<InvestigadorDocente>> #FFAAAA{
-    nombre= "Manuel"
-    id=1234567
-    campo= "Informática"
+object Manuel <<InvestigadorDocente>> #FFAAAA {
+    nombre = "Manuel"
+    id = 1234567
+    campo = "Informática"
 }
 
-class PerfilManuel <<PerfilInvestigador>> {
-    nombre= "Manuel"
-    apellido="Masias"
-    dni=*********
-    carrera= "Ing. Informática"
-    master= "Dirección proyectos software"
+object PerfilManuel <<PerfilInvestigador>> {
+    nombre = "Manuel"
+    apellido = "Masias"
+    dni = "********"
+    carrera = "Ing. Informática"
+    master = "Dirección de proyectos software"
 }
 
-class CargaTrabajoManuel <<CargaTrabajo>>{
-    horasClase= 40
-    horasInvestigacion= 10
+object CargaTrabajoManuel <<CargaTrabajo>> {
+    horasClase = 40
+    horasInvestigacion = 10
 }
 
-
-class Lazaro <<InvestigadorDocente>> #FFAAAA{
-    nombre= "Lazaro"
-    id=12345678
-    campo= "Sistemas"
+object Lazaro <<InvestigadorDocente>> #FFAAAA {
+    nombre = "Lázaro"
+    id = 12345678
+    campo = "Sistemas"
 }
 
-class PerfilLazaro <<PerfilInvestigador>> {
-    nombre= "Lazaro"
-    apellido="Hernandez"
-    dni=*********
-    carrera= "Ing. Informática"
-    master= "Sistemas informáticos"
+object PerfilLazaro <<PerfilInvestigador>> {
+    nombre = "Lázaro"
+    apellido = "Hernandez"
+    dni = "********"
+    carrera = "Ing. Informática"
+    master = "Sistemas informáticos"
 }
 
-class CargaTrabajoLazaro <<CargaTrabajo>>{
-    horasClase= 30
-    horasInvestigacion= 20
+object CargaTrabajoLazaro <<CargaTrabajo>> {
+    horasClase = 30
+    horasInvestigacion = 20
 }
 
-class ProyectoIA <<Proyecto>> {
-
-    descripcion= "Implementar un modelo de lenguaje..."
-    fechaLimite: 31/12/2026
+object ProyectoIA <<Proyecto>> {
+    descripcion = "Implementar un modelo de lenguaje..."
+    fechaLimite = "31/12/2026"
 }
 
-Mar --> Manuel: recluta
-Mar --> Lazaro: recluta
+'--- Relaciones ---
 
+Mar --> Manuel : recluta
+Mar --> Lazaro : recluta
 
-Manuel --> Lazaro: puede interactuar
-Manuel --o ProyectoIA: puede participar
-ProyectoIA --> CargaTrabajoManuel: genera
-Manuel --* PerfilManuel: tiene
-Manuel --o CargaTrabajoManuel: tiene
+Manuel --> Lazaro : interactúa
+Lazaro --> Manuel : interactúa
 
-Lazaro --> Manuel: puede interactuar
-Lazaro --o ProyectoIA: puede participar
-Lazaro --o CargaTrabajoLazaro: tiene
-Lazaro --* PerfilLazaro: tiene
-ProyectoIA --> CargaTrabajoLazaro: genera
+Manuel --> ProyectoIA : participa
+Lazaro --> ProyectoIA : participa
+
+Manuel --* PerfilManuel : tiene
+Lazaro --* PerfilLazaro : tiene
+
+Manuel --> CargaTrabajoManuel : tiene
+Lazaro --> CargaTrabajoLazaro : tiene
 
 @enduml

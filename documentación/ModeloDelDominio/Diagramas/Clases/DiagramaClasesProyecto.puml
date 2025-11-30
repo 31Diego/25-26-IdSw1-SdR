@@ -1,92 +1,57 @@
 @startuml DiagramaClasesProyecto
 
-title: Sistema de gestión de proyectos
+title Sistema de gestión de proyectos
 
-
-class Proyecto <<Principal>> #FFAAAA{
-
+class Proyecto <<Principal>> #FFAAAA {
 }
 
-class Convocatoria{
-
+class Convocatoria {
 }
 
-class Propuesta{
-
+class Propuesta {
 }
 
-
-
-
-
-class InvestigadorDocente{
-
+class InvestigadorDocente {
 }
 
-class Coordinador{
-
+class Coordinador {
 }
 
-
-class Colaborador{
-
+class Colaborador {
 }
 
-
-
-
-
-
-class CargaTrabajo{
-
+class CargaTrabajo {
 }
 
-class Entregables{
-
+class Entregables {
 }
 
-class Recompensa{
-
+class Recompensa {
 }
 
+'--- Convocatoria y Propuesta ---
+Convocatoria --> Propuesta : genera
+Propuesta --> Proyecto : genera
+
+'--- Proyecto con sus partes ---
+Proyecto o-- InvestigadorDocente : formado por
+Proyecto *-- Entregables : tiene
+Proyecto *-- CargaTrabajo : genera
+Proyecto *-- Recompensa : genera
+
+'--- Coordinador ---
+Coordinador --> Proyecto : coordina
+Coordinador --> Convocatoria : busca
+
+'--- Colaborador (solo participa, NO es parte del proyecto) ---
+Colaborador --> Proyecto : participa
+
+'--- Investigador y otros elementos ---
+InvestigadorDocente --> CargaTrabajo : tiene
+InvestigadorDocente --> Entregables : genera
 
 
-Convocatoria --> Propuesta: genera
-Propuesta --> Proyecto: genera
-
-Proyecto --o InvestigadorDocente: está formado por
-Proyecto --* Entregables: tiene
-Proyecto --* CargaTrabajo: genera
-Proyecto --* Recompensa: genera
-
-Coordinador --o Proyecto: coordina
-Coordinador --o Convocatoria: busca
-
-
-
-Colaborador --o Proyecto: puede participar
-
-InvestigadorDocente --> CargaTrabajo: tiene
-InvestigadorDocente --o Proyecto: trabaja en
-
-Recompensa --> InvestigadorDocente: beneficia a
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'--- Recompensa sobre investigadores ---
+Recompensa --> InvestigadorDocente : beneficia
 
 @enduml
