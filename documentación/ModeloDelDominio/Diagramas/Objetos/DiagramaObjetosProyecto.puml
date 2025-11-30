@@ -65,7 +65,7 @@ object CargaTrabajoLazaro <<CargaTrabajo>> {
     horasInvestigacion = 20
 }
 
-'--- Relaciones ---
+
 
 ID2025 --> DeepVision : genera
 DeepVision --> ProyectoIA : genera

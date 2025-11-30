@@ -32,31 +32,31 @@ class Recompensa {
 class PerfilInvestigador {
 }
 
-'--- Relaciones de Convocatoria y Propuesta ---
+
 Convocatoria --> Propuesta : genera
 Propuesta --> Proyecto : genera
 
-'--- Relación Proyecto con sus partes ---
+
 Proyecto o-- InvestigadorDocente : "está formado por"
 Proyecto *-- Entregables : tiene
 Proyecto *-- CargaTrabajo : genera
 Proyecto *-- Recompensa : genera
 
-'--- Relaciones del Coordinador ---
+
 Coordinador --> Proyecto : coordina
 Coordinador --> Convocatoria : busca
 Coordinador --> InvestigadorDocente : recluta
 
-'--- Relaciones de Colaborador ---
+
 Colaborador --> Proyecto : participa
 
-'--- Relación Investigador con otros elementos ---
+
 InvestigadorDocente --> CargaTrabajo : tiene
 InvestigadorDocente *-- PerfilInvestigador : tiene
 InvestigadorDocente --> InvestigadorDocente : interactúa con
 InvestigadorDocente --> Entregables : genera
 
-'--- Recompensa sobre investigadores ---
+
 Recompensa --> InvestigadorDocente : beneficia
 
 @enduml

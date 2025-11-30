@@ -17,7 +17,7 @@ class CargaTrabajo {
 class PerfilInvestigador {
 }
 
-'--- Relaciones correctas ---
+
 InvestigadorDocente --> Proyecto : participa en
 InvestigadorDocente --> CargaTrabajo : tiene carga asignada
 InvestigadorDocente *-- PerfilInvestigador : tiene

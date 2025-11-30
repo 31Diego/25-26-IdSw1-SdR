@@ -51,7 +51,8 @@ object ProyectoIA <<Proyecto>> {
     fechaLimite = "31/12/2026"
 }
 
-'--- Relaciones ---
+
+
 
 Mar --> Manuel : recluta
 Mar --> Lazaro : recluta
@@ -62,8 +63,8 @@ Lazaro --> Manuel : interactúa
 Manuel --> ProyectoIA : participa
 Lazaro --> ProyectoIA : participa
 
-Manuel --* PerfilManuel : tiene
-Lazaro --* PerfilLazaro : tiene
+Manuel *-- PerfilManuel : tiene
+Lazaro *-- PerfilLazaro : tiene
 
 Manuel --> CargaTrabajoManuel : tiene
 Lazaro --> CargaTrabajoLazaro : tiene

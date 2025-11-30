@@ -29,29 +29,28 @@ class Entregables {
 class Recompensa {
 }
 
-'--- Convocatoria y Propuesta ---
+
 Convocatoria --> Propuesta : genera
 Propuesta --> Proyecto : genera
 
-'--- Proyecto con sus partes ---
+
 Proyecto o-- InvestigadorDocente : formado por
 Proyecto *-- Entregables : tiene
 Proyecto *-- CargaTrabajo : genera
 Proyecto *-- Recompensa : genera
 
-'--- Coordinador ---
+
 Coordinador --> Proyecto : coordina
 Coordinador --> Convocatoria : busca
 
-'--- Colaborador (solo participa, NO es parte del proyecto) ---
+
 Colaborador --> Proyecto : participa
 
-'--- Investigador y otros elementos ---
+
 InvestigadorDocente --> CargaTrabajo : tiene
 InvestigadorDocente --> Entregables : genera
 
 
-'--- Recompensa sobre investigadores ---
 Recompensa --> InvestigadorDocente : beneficia
 
 @enduml
