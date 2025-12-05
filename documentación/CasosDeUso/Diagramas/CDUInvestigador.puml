@@ -1,0 +1,43 @@
+@startuml
+
+title Casos de uso para el actor "Investigador"
+
+left to right direction
+
+actor "Investigador" as investigador
+
+package "Gestión perfil de investigador" {
+    usecase verPerfil as "verPerfil()"
+    usecase modificarPerfil as "modificarPerfil()"
+}
+
+package "Gestión de entregables" {
+    usecase crearEntregable as "crearEntregable()"
+    usecase editarEntregable as "editarEntregable()"
+    usecase verEntregable as "verEntregable()"
+    usecase eliminarEntregable as "eliminarEntregable()"
+}
+
+package "Carga de trabajo" {
+    usecase editarCarga as "editarCarga()"
+    usecase verCarga as "verCarga()"
+}
+
+package "Proyecto" {
+    usecase verProyecto as "verProyecto()"
+}
+
+package "Gestión de interacciones" {
+    usecase verPerfilAjeno as "verPerfilAjeno()"
+    usecase enviarMensaje as "enviarMensaje()"
+}
+
+
+
+
+
+
+
+
+
+@enduml

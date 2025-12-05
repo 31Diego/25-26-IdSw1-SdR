@@ -1,4 +1,6 @@
-@startuml
+@startuml CDUCoordinador
+
+title Casos de uso para el actor "Coordinador"
 
 left to right direction
 
@@ -12,15 +14,21 @@ package "Gestión de proyectos" {
     usecase eliminarProyecto as "eliminarProyecto()"
 }
 
-package "Gestion de investigadores" {
+package "Gestión de investigadores" {
     usecase agregarInvestigador as "agregarInvestigador()"
     usecase verInvestigadores as "verInvestigadores()"
-    usecase modificarInvestigadores as "modificarInvestigadores()"
+    usecase modificarInvestigador as "modificarInvestigador()"
     usecase eliminarInvestigador as "eliminarInvestigador()"
 }
 
 package "Convocatorias" {
     usecase buscarConvocatoria as "buscarConvocatoria()"
+    usecase analizarConvocatoria as "analizarConvocatoria()"
+}
+
+package "Propuesta" {
+    usecase elaborarPropuesta as "elaborarPropuesta()"
+    usecase presentarPropuesta as "presentarPropuesta()"
 }
 
 
@@ -31,10 +39,14 @@ coordinador --> (eliminarProyecto)
 
 (agregarInvestigador) <-- coordinador
 (verInvestigadores) <-- coordinador
-(modificarInvestigadores) <-- coordinador
+(modificarInvestigador) <-- coordinador
 (eliminarInvestigador) <-- coordinador
 
 
 (buscarConvocatoria) <-- coordinador
+(analizarConvocatoria) <-- coordinador
+
+coordinador --> (elaborarPropuesta)
+coordinador --> (presentarPropuesta)
 
 @enduml

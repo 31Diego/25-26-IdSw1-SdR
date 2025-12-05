@@ -1,0 +1,64 @@
+@startuml DiagramaContextoCoordinador
+
+left to right direction
+
+
+[*] --> SESION_CERRADA
+SESION_CERRADA --> SESION_CERRADA: denegarInicioSesion()
+SESION_CERRADA --> PERFIL: iniciarSesion()
+PERFIL --> SESION_CERRADA: cerrarSesion()
+
+
+PERFIL --> OPCIONES_PERFIL: abrirOpcionesPerfil()
+PERFIL --> OPCIONES_CARGA_TRABAJO: abrirOpcionesCargaTrabajo()
+PERFIL --> PROYECTOS_ABIERTOS: abrirProyectos()
+PERFIL --> INVESTIGADORES_ABIERTOS: abrirInvestigadores()
+
+
+OPCIONES_PERFIL --> OPCIONES_PERFIL: editarPerfil()
+OPCIONES_PERFIL --> SESION_CERRADA: eliminarPerfil()
+
+
+
+
+OPCIONES_CARGA_TRABAJO --> OPCIONES_CARGA_TRABAJO: editarCargaTrabajo()
+
+
+
+PROYECTOS_ABIERTOS --> PROYECTO_ABIERTO: abrirProyecto()
+PROYECTOS_ABIERTOS --> PROYECTO_ABIERTO: crearProyecto()
+
+PROYECTO_ABIERTO --> PROYECTO_ABIERTO: editarProyecto()
+PROYECTO_ABIERTO --> PROYECTOS_ABIERTOS: eliminarProyecto()
+PROYECTO_ABIERTO --> PROYECTO_ABIERTO: agregarInvestigador()
+PROYECTO_ABIERTO --> PROYECTO_ABIERTO: eliminarInvestigador()
+
+
+PROYECTO_ABIERTO --> ENTREGABLES_ABIERTOS: abirEntregables()
+PROYECTO_ABIERTO --> ENTREGABLES_ABIERTOS: crearEntregable()
+ENTREGABLES_ABIERTOS --> ENTREGABLES_ABIERTOS: editarEntregable()
+ENTREGABLES_ABIERTOS --> PROYECTO_ABIERTO: eliminarEntregable()
+
+
+PROYECTO_ABIERTO --> INVESTIGADORES_ABIERTOS: abrirInvestigadores()
+
+INVESTIGADORES_ABIERTOS --> INVESTIGADOR_ABIERTO: abrirInvestigador()
+INVESTIGADORES_ABIERTOS --> INVESTIGADOR_ABIERTO: crearInvestigador()
+
+
+INVESTIGADOR_ABIERTO --> OPCIONES_PERFIL: abrirOpcionesPerfil()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml
