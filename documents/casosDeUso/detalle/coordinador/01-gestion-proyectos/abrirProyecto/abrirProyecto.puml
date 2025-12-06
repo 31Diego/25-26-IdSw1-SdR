@@ -1,0 +1,58 @@
+@startuml abrirProyecto
+
+skinparam linetype polyline
+
+state abrirProyecto as "abrirProyecto()" {
+
+    state " " as MostrandoLista
+    state " " as FiltrandoLista
+
+    [*] -[#green]-> MostrandoLista 
+    note on link
+    <b>Coordinador</b> solicita abrir proyectos
+    end note    
+    
+    MostrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta lista de proyectos
+    • ID, título, estado, coordinador, fechas
+    • Permite solicitar filtrar lista
+    • Permite solicitar crear proyecto nuevo
+    • Permite solicitar eliminar proyecto
+    • Permite solicitar editar proyecto
+    • Permite solicitar abrir proyecto
+    end note
+    
+    FiltrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Coordinador</b> solicita filtrar lista
+    <b>Sistema</b> presenta lista filtrada de proyectos
+    end note
+    
+    FiltrandoLista -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita una de las opciones
+    end note
+}
+
+abrirProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+editarProyecto()
+end note
+
+abrirProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+crearProyecto()
+end note
+
+abrirProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+eliminarProyecto()
+end note
+
+abrirProyecto -[#green]-> PERFIL
+note on link
+abrirPerfil()
+end note
+
+@enduml
