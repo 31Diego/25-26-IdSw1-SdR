@@ -1,4 +1,4 @@
-##  Detalle y Prototipado del Caso de Uso: `crearProyecto()`
+##  Detallado y Prototipado del Caso de Uso: `crearProyecto()`
 
 ### Información del Artefacto
 
