@@ -112,8 +112,8 @@ Aquí se visualiza la conversación completa entre el Coordinador y el Sistema.
 ## Conexión con Diagrama de Contexto
 
 Este caso de uso corresponde a la transición:
-$$\text{PROYECTOS\_ABIERTOS} \xrightarrow{\text{crearProyecto()}} \text{PROYECTO\_ABIERTO}$$
-(Nota: En tu diagrama, `crearProyecto()` lleva de `PROYECTOS_ABIERTOS` a `PROYECTO_ABIERTO`. Mi detalle finaliza volviendo a la lista, lo que es un flujo común después de la creación, asumo que `PROYECTO_ABIERTO` es la vista detallada del proyecto recién creado o que se vuelve a la lista `PROYECTOS_ABIERTOS`).
+
+![Imagen transicción](image.png)
 
 ### Características Metodológicas
 
