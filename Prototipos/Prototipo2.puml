@@ -1,0 +1,23 @@
+@startsalt crearProyecto-wireframe-error
+{
+  ====
+  GIPF - Gestor Investigadores y Proyectos
+  ====
+  {^" Crear Nuevo Proyecto "
+    
+    **Error: El Título es obligatorio.**
+    
+    Título      | "                              "
+    Descripción | <| "Resumen de objetivos y alcance..."
+    
+    ---- Fechas Clave ----
+    Fecha de Inicio      | [2025-12-07 v]
+    Fecha de Fin Estimada| [2026-06-30 v]
+    
+    {
+      [Cancelar] | [ Crear Proyecto ]
+    }
+  }
+  ====
+}
+@endsalt
