@@ -1,4 +1,4 @@
-##  Detallado y Prototipado del Caso de Uso: `crearProyecto()`
+# Detallado y Prototipado del Caso de Uso: `crearProyecto()`
 
 ### Información del Artefacto
 
@@ -7,10 +7,11 @@
 | **Proyecto** | Gestor Investigadores y Proyectos Funiber (GIPF) |
 | **Fase RUP** | Elaboración |
 | **Disciplina** | Requisitos |
+| **Versión** | 2.0 |
 
 ### Propósito
 
-Especificación detallada del caso de uso **crearProyecto()** mediante diagrama de estado, mostrando la conversación completa entre el **Coordinador** y el Sistema para el proceso de registro de un nuevo proyecto de investigación.
+Especificación detallada del caso de uso **crearProyecto()** mostrando la conversación completa entre el **Coordinador** y el Sistema para el proceso de registro de un nuevo proyecto de investigación.
 
 ### Información del Caso de Uso
 
@@ -27,56 +28,9 @@ Especificación detallada del caso de uso **crearProyecto()** mediante diagrama 
 
 ---
 
-## Diagrama de Especificación
+## Especificación Detallada del Flujo
 
-Aquí se visualiza la conversación completa entre el Coordinador y el Sistema.
-
-![Diagrama de Especificación](diagramaEstadoCrearProyecto.png)
-
-## Prototipo de Interfaz
-
-### Propósito del Prototipo
-
-**Objetivo:** Obtener validación de la especificación y la usabilidad de la interfaz de entrada de datos clave antes de la inversión en desarrollo.
-
-### Wireframes
-
-#### Pantalla 1: Formulario de Creación de Proyecto (Estado Normal)
-
-**Estado:** SolicitandoDatosProyecto → ProporcionandoDatosProyecto
-
-**Correspondencia con especificación:**
-* Actor "crea proyecto" (transición previa).
-* Sistema "permite ingresar datos" (se presenta la interfaz).
-
-| Elemento | Tipo de Campo | Ejemplo/Nota |
-| :--- | :--- | :--- |
-| **Título del Proyecto** | Texto Obligatorio | "Investigación sobre IA en salud" |
-| **Descripción** | Área de Texto | Resumen del objetivo y alcance. |
-| **Fecha de Inicio** | Selector de Fecha | Por defecto: Fecha actual. |
-| **Fecha de Fin Estimada** | Selector de Fecha | Fecha límite del proyecto. |
-| **Botón de Acción** | Primario | "Crear Proyecto" |
-
-#### Pantalla 2: Formulario de Creación de Proyecto (Estado de Error)
-
-**Estado:** Choice point → regreso a SolicitandoDatosProyecto (por validación fallida)
-
-**Correspondencia con especificación:**
-* Choice point evalúa: "usuario:datos inválidos" (ej. Título vacío).
-* Sistema presenta mismo diálogo + mensaje de error.
-
-**Mensaje de Error:** "Error: El Título del Proyecto es obligatorio. Por favor, revísalo."
-
-### Validaciones del Wireframe
-
-* ¿Los campos clave (título, fechas) son suficientes para registrar un proyecto inicial?
-* ¿El mensaje de error indica claramente al Coordinador qué debe corregir?
-* ¿La terminología utilizada (e.g., "Crear Proyecto") es consistente con el dominio?
-* ¿La especificación carece de algún dato obligatorio que el wireframe revela (ej. ¿se necesita un campo de "Presupuesto"?)?
-
----
-
-## Conversación Detallada
+*Nota: Esta sección detalla la conversación Actor-Sistema, que define los estados internos del caso de uso.*
 
 ### Flujo Principal (Éxito)
 
@@ -92,6 +46,51 @@ Aquí se visualiza la conversación completa entre el Coordinador y el Sistema.
 | **Coordinador** | selecciona la opción **"Crear Proyecto"** | **Sistema** | Muestra el formulario de entrada de datos (Título, Descripción, Fechas). |
 | **Coordinador** | **introduce** datos, dejando el campo *Título* vacío, y **confirma**. | **usuario:datos inválidos** | **Sistema** presenta el formulario nuevamente con un mensaje de error que indica que el Título es obligatorio. |
 
+---
+
+## Prototipo de Interfaz
+
+### Propósito del Prototipo
+
+**Objetivo:** Obtener validación de la especificación y la usabilidad de la interfaz de entrada de datos clave antes de la inversión en desarrollo.
+
+### Wireframes
+
+#### Pantalla 1: Formulario de Creación de Proyecto (Estado Normal)
+
+**Estado:** SolicitandoDatosProyecto → ProporcionandoDatosProyecto
+
+**Correspondencia con especificación:**
+* Actor "selecciona la opción 'Crear Proyecto'" (transición previa).
+* Sistema "permite ingresar datos" (se presenta la interfaz).
+
+| Elemento | Tipo de Campo | Ejemplo/Nota |
+| :--- | :--- | :--- |
+| **Título del Proyecto** | Texto Obligatorio | "Investigación sobre IA en salud" |
+| **Descripción** | Área de Texto | Resumen del objetivo y alcance. |
+| **Fecha de Inicio** | Selector de Fecha | Por defecto: Fecha actual. |
+| **Fecha de Fin Estimada** | Selector de Fecha | Fecha límite del proyecto. |
+| **Botón de Acción** | Primario | "Crear Proyecto" |
+
+#### Pantalla 2: Formulario de Creación de Proyecto (Estado de Error)
+
+**Estado:** PuntoDeDecision → regreso a SolicitandoDatosProyecto (por validación fallida)
+
+**Correspondencia con especificación:**
+* Punto de decisión evalúa: "usuario:datos inválidos" (ej. Título vacío).
+* Sistema presenta mismo diálogo + mensaje de error.
+
+**Mensaje de Error:** "Error: El Título del Proyecto es obligatorio. Por favor, revísalo."
+
+### Validaciones del Wireframe
+
+* ¿Los campos clave (título, fechas) son suficientes para registrar un proyecto inicial?
+* ¿El mensaje de error indica claramente al Coordinador qué debe corregir?
+* ¿La terminología utilizada (e.g., "Crear Proyecto") es consistente con el dominio?
+* ¿La especificación carece de algún dato obligatorio que el wireframe revela (ej. ¿se necesita un campo de "Presupuesto"?)?
+
+## Estados y Validaciones Internas
+
 ### Estados Internos del Caso de Uso
 
 | Estado | Descripción | Responsabilidad |
@@ -106,8 +105,6 @@ Aquí se visualiza la conversación completa entre el Coordinador y el Sistema.
 | :--- | :--- | :--- |
 | **Datos de Proyecto Válidos** | Campos obligatorios completados y con formato correcto (ej. Título no vacío, Fechas coherentes). | Se guarda el proyecto. Transición a `RegistroExitoso`. |
 | **Datos de Proyecto Inválidos** | Falta un campo obligatorio o un formato es incorrecto. | El proyecto no se guarda. Transición a `RegistroFallido` y regreso a `SolicitandoDatosProyecto` con error. |
-
----
 
 ## Conexión con Diagrama de Contexto
 
