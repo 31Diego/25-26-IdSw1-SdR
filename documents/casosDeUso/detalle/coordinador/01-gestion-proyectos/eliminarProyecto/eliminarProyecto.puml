@@ -1,0 +1,44 @@
+@startuml eliminarProyecto
+
+skinparam linetype polyline
+
+state eliminarProyecto as "eliminarProyecto()" {
+
+    state " " as MostrandoProyecto
+    state " " as ConfirmandoEliminacion
+
+    [*] -[#green]-> MostrandoProyecto
+    note on link
+    <b>Coordinador</b> tiene un proyecto abierto
+    <b>Coordinador</b> solicita eliminar proyecto
+    end note
+
+    MostrandoProyecto -[#green]-> ConfirmandoEliminacion
+    note on link
+    <b>Sistema</b> solicita confirmación
+    • ¿Está seguro de eliminar el proyecto?
+    • Advertencia: esta acción no se puede deshacer
+    end note
+
+    ConfirmandoEliminacion -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> confirma eliminación
+    <b>Sistema</b> elimina el proyecto
+    • Elimina entregables asociados
+    • Quita asociaciones con investigadores
+    • Actualiza vista general de proyectos
+    end note
+
+    ConfirmandoEliminacion -[#red]-> MostrandoProyecto
+    note on link
+    <b>Coordinador</b> cancela eliminación
+    <b>Sistema</b> mantiene el proyecto sin cambios
+    end note
+}
+
+eliminarProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
+end note
+
+@enduml
