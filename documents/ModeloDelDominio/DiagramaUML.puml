@@ -1,0 +1,31 @@
+@startuml 
+
+title Modelo de Dominio Funiber
+skinparam style strict
+
+entity Persona
+entity PerfilAcademico
+entity CargaDeTrabajo
+entity Convocatoria
+entity Propuesta
+entity Proyecto
+entity Entregable
+entity Compensacion
+entity RolProyecto
+
+Persona -- PerfilAcademico : Tiene
+Persona -- CargaDeTrabajo : Aplica_A
+
+Convocatoria -- Propuesta : Genera
+Propuesta -- Proyecto : Aceptada_Se_Convierte_En
+
+Persona -- RolProyecto : Asume
+Proyecto -- RolProyecto : Requiere
+
+Proyecto -- Entregable : Define
+Proyecto -- Compensacion : Genera_Al_Cierre
+Persona -- Compensacion : Recibe
+
+Persona -- Propuesta : Antena_Presenta
+
+@enduml
