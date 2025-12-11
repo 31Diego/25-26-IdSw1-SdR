@@ -1,0 +1,53 @@
+@startuml abrirEntregable
+
+skinparam linetype polyline
+
+state abrirEntregable as "abrirEntregables()" {
+
+    state " " as MostrandoEntregable
+    state " " as FiltrandoEntregable
+
+    [*] -[#green]-> MostrandoEntregable 
+    note on link
+    <b>Investigador</b> solicita abrir entregables
+    end note    
+    
+    MostrandoEntregable -[#green]-> FiltrandoEntregable
+    note on link
+    <b>Sistema</b> presenta lista de entregables
+    • ID, título, estado, coordinador, fechas
+    • Permite solicitar abrir entregable
+    • Permite solicitar abrir entregable
+    • Permite solicitar abrir entregable
+    • Permite solicitar filtrar lista
+    end note
+    
+    FiltrandoEntregable -[#green]-> FiltrandoEntregable
+    note on link
+    <b>Investigador</b> solicita filtrar lista
+    <b>Sistema</b> presenta lista filtrada de entregables
+    end note
+    
+    FiltrandoEntregable -[#green]-> [*]
+    note on link
+    <b>Investigador</b> solicita una de las opciones
+    end note
+}
+
+abrirEntregable -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+editarEntregable()
+end note
+
+abrirEntregable -[#green]-> PROYECTO_ABIERTO
+note on link
+eliminarEntregable()
+end note
+
+abrirEntregable -[#green]-> PROYECTO_ABIERTO
+note on link
+abrirProyecto()
+end note
+
+
+@enduml
