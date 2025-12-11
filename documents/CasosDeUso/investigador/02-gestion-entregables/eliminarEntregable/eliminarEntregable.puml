@@ -1,0 +1,45 @@
+@startuml eliminarEntregable
+
+skinparam linetype polyline
+
+state eliminarEntregable as "eliminarEntregable()" {
+
+    state " " as MostrandoEntregable
+    state " " as ConfirmandoEliminacion
+
+    [*] -[#green]-> MostrandoEntregable
+    note on link
+    <b>Investigador</b> tiene un entregable abierto
+    <b>Investigador</b> solicita eliminar entregable
+    end note
+
+    MostrandoEntregable -[#green]-> ConfirmandoEliminacion
+    note on link
+    <b>Sistema</b> presenta información del entregable a eliminar
+    • Presenta advertencia de eliminación
+    • Permite solicitar confirmar eliminación
+    • Permite solicitar cancelar eliminación
+    end note
+
+    ConfirmandoEliminacion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> permite confirmar eliminación
+    <b>Investigador</b> solicita confirmar la eliminación
+    <b>Sistema</b> elimina el entregable
+    • Elimina entregables asociados
+    • Quita asociaciones con investigadores
+    • Actualiza vista general de entregable
+    end note
+}
+
+eliminarEntregable -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirEntregables() - entregable actualizado
+end note
+
+eliminarEntregable -[#blue]-> PROYECTOS_ABIERTOS
+note on link
+abrirEntregables() - eliminacion cancelada
+end note
+
+@enduml
