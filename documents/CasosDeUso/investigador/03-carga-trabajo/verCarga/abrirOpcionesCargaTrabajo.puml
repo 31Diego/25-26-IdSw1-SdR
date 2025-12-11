@@ -1,0 +1,33 @@
+@startuml abrirOpcionesCargaTrabajo
+
+skinparam linetype polyline
+
+state abrirOpcionesCargaTrabajo as "abrirOpcionesCargaTrabajo()" {
+
+    state " " as MostrandoEntregable
+    state " " as FiltrandoEntregable
+
+    [*] -[#green]-> MostrandoEntregable 
+    note on link
+    <b>Investigador</b> solicita abrir carga de trabajo
+    end note    
+    
+    MostrandoEntregable -[#green]-> FiltrandoEntregable
+    note on link
+    <b>Sistema</b> presenta opciones de carga de trabajo
+    • Carga de trabajo
+    • Permite solicitar editar carga de trabajo
+    end note
+    
+    FiltrandoEntregable -[#green]-> [*]
+    note on link
+    <b>Investigador</b> solicita una de las opciones
+    end note
+}
+
+abrirOpcionesCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+editarCargaTrabajo()
+end note
+
+@enduml
