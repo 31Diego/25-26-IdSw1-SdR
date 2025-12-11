@@ -1,0 +1,60 @@
+@startuml editarEntregable
+
+skinparam linetype polyline
+
+state editarEntregable as "editarEntregable()" {
+
+    state " " as MostrandoEntregable
+    state " " as EditandoEntregable
+    state " " as ValidandoCambios
+
+    [*] -[#green]-> MostrandoEntregable
+    note on link
+    <b>Invstigador</b> tiene un entregable abierto
+    <b>Invstigador</b> solicita editar entregable
+    end note
+
+    MostrandoEntregable -[#green]-> EditandoEntregable
+    note on link
+    <b>Sistema</b> presenta datos actuales del entregable
+    • Título
+    • Fechas
+    • Descripción
+    • Permite modificar los campos editables
+    end note
+
+    EditandoEntregable -[#green]-> ValidandoCambios
+    note on link
+    <b>Invstigador</b> solicita guardar cambios
+    <b>Sistema</b> valida la información modificada
+    end note
+
+    ValidandoCambios -[#green]-> EditandoEntregable
+    note on link
+    Cambios no válidos
+    <b>Sistema</b> muestra mensajes de error
+    • Campos obligatorios vacíos
+    • Fechas incoherentes
+    • Formato incorrecto en algún campo
+    end note
+
+    ValidandoCambios -[#green]-> [*]
+    note on link
+    Cambios válidos
+    <b>Sistema</b> actualiza el entregable
+    • Guarda la nueva información
+    • Muestra el entregable actualizado
+    end note
+}
+
+editarEntregable -[#green]-> ENTREGABLE_ABIERTO
+note on link
+entregable actualizado
+end note
+
+editarEntregable -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+@enduml
