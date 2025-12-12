@@ -1,0 +1,61 @@
+@startuml DiagramaContextoInvestigador
+
+title Diagrama de contexto del Investigador/Docente
+
+left to right direction
+
+[*] --> SESION_CERRADA
+SESION_CERRADA --> SESION_CERRADA : denegarInicioSesion()
+SESION_CERRADA --> PERFIL : iniciarSesion()
+
+PERFIL --> SESION_CERRADA : cerrarSesion()
+PERFIL --> OPCIONES_PERFIL_ABIERTO : abrirOpcionesPerfil()
+PERFIL --> MI_CARGA_TRABAJO : verMiCargaTrabajo()
+PERFIL --> PROYECTOS_ABIERTOS : verMisProyectos()
+PERFIL --> CONVOCATORIAS_ABIERTAS : verConvocatorias()
+PERFIL --> MIS_PUBLICACIONES_ABIERTAS : abrirMisPublicaciones()
+PERFIL --> PUBLICACIONES_ABIERTAS : abrirPublicaciones()
+
+' --- Gestión de Publicaciones ---
+PUBLICACIONES_ABIERTAS --> PUBLICACION_ABIERTA : abrirPublicacion()
+PUBLICACION_ABIERTA --> PUBLICACION_ABIERTA : responderPublicacion()
+PUBLICACION_ABIERTA --> PUBLICACIONES_ABIERTAS : volverAPublicaciones()
+
+MIS_PUBLICACIONES_ABIERTAS --> MI_PUBLICACION_ABIERTA : abrirMiPublicacion()
+MIS_PUBLICACIONES_ABIERTAS --> MI_PUBLICACION_ABIERTA : crearPublicacion()
+MI_PUBLICACION_ABIERTA --> MI_PUBLICACION_ABIERTA : editarPublicacion()
+MI_PUBLICACION_ABIERTA --> MIS_PUBLICACIONES_ABIERTAS : eliminarPublicacion()
+
+' --- Gestión de Perfil y Carga de Trabajo ---
+OPCIONES_PERFIL_ABIERTO --> OPCIONES_PERFIL_ABIERTO : editarPerfil()
+OPCIONES_PERFIL_ABIERTO --> PERFIL : volverAlPerfil()
+
+MI_CARGA_TRABAJO --> MI_CARGA_TRABAJO : solicitarCompensacion() ' Genera una Recompensa
+MI_CARGA_TRABAJO --> PERFIL : volverAlPerfil()
+
+' --- Gestión de Proyectos (solo lectura y seguimiento) ---
+PROYECTOS_ABIERTOS --> PROYECTO_ABIERTO : abrirProyecto()
+PROYECTO_ABIERTO --> PROYECTO_ABIERTO : subirEntregable() ' Afecta a Entregables
+PROYECTO_ABIERTO --> PROYECTOS_ABIERTOS : volverAMisProyectos()
+
+' --- Gestión de Convocatorias ---
+CONVOCATORIAS_ABIERTAS --> CONVOCATORIA_ABIERTA : verConvocatoria()
+CONVOCATORIA_ABIERTA --> CONVOCATORIAS_ABIERTAS : volverAConvocatorias()
+CONVOCATORIA_ABIERTA --> PROPUESTAS_ABIERTAS : crearPropuesta() ' Genera una Propuesta
+
+' --- Gestión de Propuestas ---
+PROPUESTAS_ABIERTAS --> PROPUESTA_ABIERTA : abrirPropuesta()
+PROPUESTAS_ABIERTAS --> PROPUESTA_ABIERTA : crearPropuesta()
+
+PROPUESTA_ABIERTA --> PROPUESTA_ABIERTA : editarPropuesta()
+PROPUESTA_ABIERTA --> PROPUESTAS_ABIERTAS : eliminarPropuesta()
+PROPUESTA_ABIERTA --> CONVOCATORIAS_ABIERTAS : volverAConvocatorias()
+
+' --- Transiciones de retorno ---
+PUBLICACIONES_ABIERTAS --> PERFIL : volverAlPerfil()
+MIS_PUBLICACIONES_ABIERTAS --> PERFIL : volverAlPerfil()
+PROYECTOS_ABIERTOS --> PERFIL : volverAlPerfil()
+CONVOCATORIAS_ABIERTAS --> PERFIL : volverAlPerfil()
+PROPUESTAS_ABIERTAS --> PERFIL : volverAlPerfil()
+
+@enduml
