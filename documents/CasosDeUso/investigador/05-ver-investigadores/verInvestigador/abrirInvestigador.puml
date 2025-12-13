@@ -16,7 +16,7 @@ state abrirInvestigador as "abrirInvestigador()" {
     note on link
     <b>Sistema</b> presenta el perfil del Investigador
     • Nombre de investigador, Proyecto actuales
-    • Permite solicitar abrir todos los investigadors
+    • Permite solicitar abrir todos los investigador
     end note
     
     DetallesDeInvestigador -[#green]-> [*]
