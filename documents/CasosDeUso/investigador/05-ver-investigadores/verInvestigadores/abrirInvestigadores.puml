@@ -1,0 +1,47 @@
+@startuml abrirInvestigadores
+
+skinparam linetype polyline
+
+state abrirInvestigadores as "abrirInvestigadores()" {
+
+    state " " as MostrandoInvestigadores
+    state " " as FiltrarInvestigadores
+
+    [*] -[#green]-> MostrandoInvestigadores 
+    note on link
+    <b>Investigador</b> solicita abrir todos los investigadores
+    end note    
+    
+    MostrandoInvestigadores -[#green]-> FiltrarInvestigadores
+    note on link
+    <b>Sistema</b> presenta la lista de investigadores
+    • Nombre de investigador, proyectos actuales
+    • Permite solicitar abrir un perfil de un investigador
+    • Permite solicitar abrir el perfil del investigador
+    • Permite solicitar una lista filtrada
+    end note
+    
+    FiltrarInvestigadores -[#green]-> FiltrarInvestigadores
+    note on link
+    <b>Sistema</b> presenta filtros por selecionar
+    • Permite solicitar filtrar por nombre de investigador
+    • Permite solicitar filtrar por nombre de proyecto
+    end note
+    
+    FiltrarInvestigadores -[#green]-> [*]
+    note on link
+    <b>Investigador</b> solicita una de las opciones
+    end note
+}
+
+abrirInvestigadores -[#green]-> INVESTIGADOR_ABIERTO
+note on link
+abrirInvestigadores()
+end note
+
+abrirInvestigadores -[#green]-> PERFIL
+note on link
+abrirPerfil()
+end note
+
+@enduml
