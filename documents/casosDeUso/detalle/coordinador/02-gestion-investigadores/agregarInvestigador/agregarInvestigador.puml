@@ -1,0 +1,83 @@
+@startuml agregarInvestigador
+
+skinparam linetype polyline
+
+state agregarInvestigador as "agregarInvestigador()" {
+
+    state " " as MostrandoInvestigadores
+    state " " as FiltrandoLista
+    state " " as SeleccionandoInvestigador
+    state " " as ConfirmandoAsignacion
+    state " " as ValidandoAsignacion
+
+    [*] -[#green]-> MostrandoInvestigadores
+    note on link
+    <b>Coordinador</b> tiene un proyecto abierto
+    <b>Coordinador</b> solicita agregar investigador al proyecto
+    end note
+
+    MostrandoInvestigadores -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta lista de investigadores
+    end note
+
+    FiltrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Coordinador</b> solicita filtrar lista
+    <b>Sistema</b> presenta lista filtrada de investigadores
+    end note
+
+    FiltrandoLista -[#green]-> SeleccionandoInvestigador
+    note on link
+    <b>Coordinador</b> selecciona investigador
+    end note
+
+    MostrandoInvestigadores -[#green]-> SeleccionandoInvestigador
+    note on link
+    <b>Coordinador</b> selecciona investigador sin filtrar
+    end note
+
+    SeleccionandoInvestigador -[#green]-> ConfirmandoAsignacion
+    note on link
+    <b>Sistema</b> muestra resumen
+    • Investigador seleccionado
+    • Carga actual vs. carga máxima
+    • Rol en el proyecto
+    • Permite confirmar o cancelar asignación
+    end note
+
+    ConfirmandoAsignacion -[#green]-> ValidandoAsignacion
+    note on link
+    <b>Coordinador</b> confirma asignación
+    <b>Sistema</b> valida la asignación al proyecto
+    end note
+
+    ConfirmandoAsignacion -[#red]-> MostrandoInvestigadores
+    note on link
+    <b>Coordinador</b> cancela asignación
+    <b>Sistema</b> mantiene el proyecto sin cambios
+    end note
+
+    ValidandoAsignacion -[#green]-> [*]
+    note on link
+    Asignación válida
+    <b>Sistema</b> agrega el investigador al proyecto
+    • Actualiza lista de investigadores del proyecto
+    • Actualiza carga de trabajo del investigador
+    end note
+
+    ValidandoAsignacion -[#red]-> MostrandoInvestigadores
+    note on link
+    Asignación no válida
+    <b>Sistema</b> presenta mensajes de error
+    • Investigador ya está asignado al proyecto
+    • Supera la carga máxima permitida
+    end note
+}
+
+agregarInvestigador -[#green]-> PROYECTO_ABIERTO
+note on link
+proyecto actualizado con nuevo investigador
+end note
+
+@enduml
