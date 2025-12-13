@@ -1,0 +1,51 @@
+@startuml abrirProyecto
+
+skinparam linetype polyline
+
+state abrirProyecto as "abrirProyecto()" {
+
+    state " " as MostrandoProyecto
+    state " " as OpcionesDeProyecto
+
+    [*] -[#green]-> MostrandoProyecto 
+    note on link
+    <b>Investigador</b> solicita abrir proyecto
+    end note    
+    
+    MostrandoProyecto -[#green]-> OpcionesDeProyecto
+    note on link
+    <b>Sistema</b> presenta detalles del proyecto
+    • ID, titulo de proyecto, Descripcion, Estado, Investigadores y Colaboradores
+    • Permite solicitar abrir todos los proyectos actuales
+    • Permite solicitar abrir los investigadores asosciados al proyecto
+    • Permite solicitar abrir los entregables del proyecto
+    • Permite solicitar crear un entregable para el proyecto
+    end note
+    
+    OpcionesDeProyecto -[#green]-> [*]
+    note on link
+    <b>Investigador</b> solicita una de las opciones
+    end note
+}
+
+abrirProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
+end note
+
+abrirProyecto -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+abrirProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+abrirProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+crearEntregable()
+end note
+
+@enduml
