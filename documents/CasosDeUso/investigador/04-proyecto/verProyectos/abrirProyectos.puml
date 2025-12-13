@@ -1,0 +1,39 @@
+@startuml abrirProyectos
+
+skinparam linetype polyline
+
+state abrirProyectos as "abrirProyectos()" {
+
+    state " " as MostrandoProyectos
+    state " " as ProyectoSelecionado
+
+    [*] -[#green]-> MostrandoProyectos
+    note on link
+    <b>Investigador</b> solicita ver los proyectos actuales
+    end note    
+    
+    MostrandoProyectos -[#green]-> ProyectoSelecionado
+    note on link
+    <b>Sistema</b> presenta los proyectos del investigador
+    • Titulo de proyecto, Descripcion
+    • Permite solicitar abrir un proyecto
+    • Permite solicitar abrir el perfil del investigador
+    end note
+    
+    ProyectoSelecionado -[#green]-> [*]
+    note on link
+    <b>Investigador</b> solicita una de las opciones
+    end note
+}
+
+abrirProyectos -[#green]-> PROYECTO_ABIERTO
+note on link
+abrirProyecto()
+end note
+
+abrirProyectos -[#green]-> PERFIL
+note on link
+abrirPerfil()
+end note
+
+@enduml
