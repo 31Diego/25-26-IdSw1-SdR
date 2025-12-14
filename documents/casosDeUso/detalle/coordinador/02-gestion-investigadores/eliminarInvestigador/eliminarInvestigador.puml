@@ -1,0 +1,57 @@
+@startuml eliminarInvestigador
+
+skinparam linetype polyline
+
+state eliminarInvestigador as "eliminarInvestigador()" {
+
+    state " " as MostrandoProyecto
+    state " " as SeleccionandoInvestigador
+    state " " as ConfirmandoEliminacion
+    state " " as ValidandoEliminacion
+
+    [*] -[#green]-> MostrandoProyecto
+    note on link
+    <b>Coordinador</b> tiene un proyecto abierto
+    <b>Coordinador</b> solicita eliminar investigador del proyecto
+    end note
+
+    MostrandoProyecto -[#green]-> SeleccionandoInvestigador
+    note on link
+    <b>Sistema</b> presenta lista de investigadores del proyecto
+    • Permite seleccionar investigador a eliminar
+    end note
+
+    SeleccionandoInvestigador -[#green]-> ConfirmandoEliminacion
+    note on link
+    <b>Sistema</b> solicita confirmación
+    • ¿Eliminar investigador del proyecto?
+    • Se actualizará la carga de trabajo
+    end note
+
+    ConfirmandoEliminacion -[#red]-> MostrandoProyecto
+    note on link
+    <b>Coordinador</b> cancela la eliminación
+    <b>Sistema</b> mantiene el proyecto sin cambios
+    end note
+
+    ConfirmandoEliminacion -[#green]-> ValidandoEliminacion
+    note on link
+    <b>Coordinador</b> confirma eliminación
+    <b>Sistema</b> valida la operación
+    end note
+
+    ValidandoEliminacion -[#green]-> [*]
+    note on link
+    Eliminación válida
+    <b>Sistema</b> elimina al investigador del proyecto
+    • Actualiza lista de investigadores del proyecto
+    • Actualiza carga de trabajo del investigador
+    end note
+}
+
+eliminarInvestigador -[#green]-> PROYECTO_ABIERTO
+note on link
+proyecto actualizado (investigador eliminado)
+end note
+
+@enduml
