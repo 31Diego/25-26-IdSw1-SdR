@@ -1,0 +1,58 @@
+@startuml verInvestigadores
+
+skinparam linetype polyline
+
+state verInvestigadores as "verInvestigadores()" {
+
+    state " " as MostrandoLista
+    state " " as FiltrandoLista
+
+    [*] -[#green]-> MostrandoLista
+    note on link
+    <b>Coordinador</b> solicita ver investigadores
+    end note
+
+    MostrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta lista de investigadores
+    • ID, nombre
+    • Carga de trabajo
+    • Permite solicitar filtrar lista
+    • Permite solicitar agregar investigador
+    • Permite solicitar modificar investigador
+    • Permite solicitar eliminar investigador
+    end note
+
+    FiltrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Coordinador</b> solicita filtrar lista
+    <b>Sistema</b> presenta lista filtrada de investigadores
+    end note
+
+    FiltrandoLista -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita un investigador
+    end note
+}
+
+verInvestigadores -[#green]-> INVESTIGADOR_ABIERTO
+note on link
+modificarInvestigador()
+end note
+
+verInvestigadores -[#green]-> INVESTIGADOR_ABIERTO
+note on link
+crearInvestigador()
+end note
+
+verInvestigadores -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+eliminarInvestigador()
+end note
+
+verInvestigadores -[#green]-> PERFIL
+note on link
+abrirPerfil()
+end note
+
+@enduml

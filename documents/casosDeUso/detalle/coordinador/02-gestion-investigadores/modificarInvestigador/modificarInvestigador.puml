@@ -1,0 +1,56 @@
+@startuml modificarInvestigador
+
+skinparam linetype polyline
+
+state modificarInvestigador as "modificarInvestigador()" {
+
+    state " " as MostrandoInvestigador
+    state " " as EditandoInvestigador
+    state " " as ValidandoCambios
+
+    [*] -[#green]-> MostrandoInvestigador
+    note on link
+    <b>Coordinador</b> tiene un investigador abierto
+    <b>Coordinador</b> solicita modificar investigador
+    end note
+
+    MostrandoInvestigador -[#green]-> EditandoInvestigador
+    note on link
+    <b>Sistema</b> presenta datos actuales del investigador
+    • Permite modificar los campos editables
+    end note
+
+    EditandoInvestigador -[#green]-> ValidandoCambios
+    note on link
+    <b>Coordinador</b> solicita guardar cambios
+    <b>Sistema</b> valida la información modificada
+    end note
+
+    ValidandoCambios -[#green]-> EditandoInvestigador
+    note on link
+    Cambios no válidos
+    <b>Sistema</b> muestra mensajes de error
+    • Campos obligatorios vacíos
+    • Formato incorrecto
+    end note
+
+    ValidandoCambios -[#green]-> [*]
+    note on link
+    Cambios válidos
+    <b>Sistema</b> actualiza el investigador
+    • Guarda la nueva información
+    • Muestra el investigador actualizado
+    end note
+}
+
+modificarInvestigador -[#green]-> INVESTIGADOR_ABIERTO
+note on link
+investigador actualizado
+end note
+
+modificarInvestigador -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+@enduml
