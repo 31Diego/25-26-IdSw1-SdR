@@ -1,0 +1,41 @@
+@startuml CU_Coordinador
+title Casos de uso del Coordinador
+
+left to right direction
+actor "Coordinador /\nDepto. Proyectos" as Coordinador
+
+rectangle "Plataforma FUNIBER" {
+
+  rectangle "Gestión de Convocatorias" {
+    usecase "RegistrarConvocatoria()" as CU_RegConv
+    usecase "AsignarInvestigadoresAConvocatoria()" as CU_AsignarInv
+  }
+
+  rectangle "Gestión de Propuestas" {
+    usecase "CrearPropuesta()" as CU_CrearProp
+    usecase "ArchivarPropuestaRechazada()" as CU_ArchivarProp
+    usecase "ConvertirPropuestaEnProyecto()" as CU_ConvertirProy
+  }
+
+  rectangle "Gestión de Proyectos" {
+    usecase "CrearProyecto()" as CU_CrearProy
+    usecase "AsignarResponsables()" as CU_AsignarResp
+    usecase "AgregarColaborador()" as CU_AgregarColab
+    usecase "ConfigurarEntregables()" as CU_ConfigEntreg
+    usecase "RegistrarCompensacion()" as CU_RegComp
+  }
+
+}
+
+Coordinador --> CU_RegConv
+Coordinador --> CU_AsignarInv
+Coordinador --> CU_CrearProp
+Coordinador --> CU_ArchivarProp
+Coordinador --> CU_ConvertirProy
+Coordinador --> CU_CrearProy
+Coordinador --> CU_AsignarResp
+Coordinador --> CU_AgregarColab
+Coordinador --> CU_ConfigEntreg
+Coordinador --> CU_RegComp
+
+@enduml

@@ -1,0 +1,86 @@
+@startuml ActoresFUNIBER
+title Actores del sistema de gestión de proyectos
+
+left to right direction
+skinparam actorStyle stickman
+skinparam noteBackgroundColor #FFF9C4
+skinparam noteBorderColor #BDB76B
+
+' =========================
+' Actores principales
+' =========================
+
+actor "Coordinador /\nDepto. de Proyectos" as Coordinador
+actor "Investigador" as Investigador
+actor "Docente-\nInvestigador" as DocenteInv
+
+' =========================
+' Especializaciones
+' =========================
+
+Coordinador <|-- Investigador
+Investigador <|-- DocenteInv
+Coordinador <|-- Antena
+
+' =========================
+' Actores externos
+' =========================
+
+actor "Entidad financiadora /\nFinanzas" as Finanzas
+actor "Colaborador" as Colaborador
+
+' =========================
+' Notas descriptivas
+' =========================
+
+note right of Coordinador
+  Coordinador / Depto. de Proyectos:
+  - Registra convocatorias
+  - Crea y supervisa proyectos
+  - Asigna investigadores y colaboradores
+  - Gestiona la carga y compensación docente
+  - Administra usuarios y roles del sistema
+  - Configura parámetros de la plataforma
+end note
+
+note right of Investigador
+  Investigador:
+  - Participa en proyectos
+  - Sube entregables
+  - Puede ser propuesto
+    para nuevas convocatorias
+end note
+
+note right of DocenteInv
+  Docente-Investigador:
+  Investigador que además
+  imparte docencia.
+  El sistema controla:
+  - Máx. 16 h/semana
+  - Compensación económica
+    o reducción de horas
+end note
+
+note right of Antena
+  Antena:
+  Rol especializado del
+  Departamento de Proyectos.
+  Detecta convocatorias y
+  elabora/presenta propuestas.
+end note
+
+note left of Finanzas
+  Entidad financiadora:
+  Organismo externo que
+  aporta los fondos del
+  proyecto o convocatoria.
+end note
+
+note left of Colaborador
+  Colaborador:
+  Miembro del equipo del
+  proyecto que NO interactúa
+  directamente con el sistema.
+end note
+
+@enduml
