@@ -1,13 +1,13 @@
-@startuml VerCargaAcademica
-title Ver carga académica
+@startuml ConsultarCargaAcademica
+title Consultar carga académica
 skinparam linetype polyline
 
 state MI_CARGA_TRABAJO_INICIAL as "MI_CARGA_TRABAJO"
 state MI_CARGA_TRABAJO_FINAL   as "MI_CARGA_TRABAJO"
 
-MI_CARGA_TRABAJO_INICIAL -[#green]-> verCargaAcademica
+MI_CARGA_TRABAJO_INICIAL -[#green]-> consultarCargaAcademica
 
-state verCargaAcademica as "verCargaAcademica()" {
+state consultarCargaAcademica as "consultarCargaAcademica()" {
 
     state " " as MostrarResumen
 
@@ -30,6 +30,6 @@ state verCargaAcademica as "verCargaAcademica()" {
     end note
 }
 
-verCargaAcademica -[#green]-> MI_CARGA_TRABAJO_FINAL : volverAlPerfil()
+consultarCargaAcademica -[#green]-> MI_CARGA_TRABAJO_FINAL : volverAlPerfil()
 
 @enduml

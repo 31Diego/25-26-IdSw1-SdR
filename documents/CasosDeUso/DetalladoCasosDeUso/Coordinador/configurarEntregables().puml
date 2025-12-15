@@ -9,28 +9,28 @@ PROYECTO_ABIERTO_INICIAL -[#green]-> configurarEntregables
 
 state configurarEntregables as "configurarEntregables()" {
 
-    state " " as VerListaEntregables
-    state " " as EditarEntregables
+    state " " as ConsultarListaEntregables
+    state " " as ActualizarEntregables
 
-    [*] -[#green]-> VerListaEntregables
+    [*] -[#green]-> ConsultarListaEntregables
     note on link
     <b>Coordinador</b> se encuentra en PROYECTO_ABIERTO
     y selecciona "Entregables".
     end note
 
-    VerListaEntregables -[#green]-> EditarEntregables
+    ConsultarListaEntregables -[#green]-> ActualizarEntregables
     note on link
     <b>Sistema</b> muestra la lista de entregables
     definidos para el proyecto, con sus fechas
     límite y responsables.
 
     <b>Coordinador</b> puede:
-    • añadir un nuevo entregable,
-    • modificar fecha o descripción, o
+    • crear un entregable,
+    • actualizar fecha o descripción, o
     • eliminar un entregable aún no entregado.
     end note
 
-    EditarEntregables -[#green]-> [*]
+    ActualizarEntregables -[#green]-> [*]
     note on link
     <b>Sistema</b> guarda los cambios realizados
     y actualiza las alertas asociadas

@@ -1,25 +1,25 @@
-@startuml VerEstadoEntregable
-title Ver estado de entregable
+@startuml ConsultarEstadoEntregable
+title Consultar estado de entregable
 skinparam linetype polyline
 
 state PROYECTO_ABIERTO_INICIAL as "PROYECTO_ABIERTO"
 state PROYECTO_ABIERTO_FINAL   as "PROYECTO_ABIERTO"
 
-PROYECTO_ABIERTO_INICIAL -[#green]-> verEstadoEntregable
+PROYECTO_ABIERTO_INICIAL -[#green]-> consultarEstadoEntregable
 
-state verEstadoEntregable as "verEstadoEntregable()" {
+state consultarEstadoEntregable as "consultarEstadoEntregable()" {
 
-    state " " as VerLista
-    state " " as VerDetalleEnt
+    state " " as ConsultarLista
+    state " " as ConsultarDetalleEnt
 
-    [*] -[#green]-> VerLista
+    [*] -[#green]-> ConsultarLista
     note on link
     <b>Investigador/Docente-Investigador</b>
     se encuentra en PROYECTO_ABIERTO y
     abre la sección de entregables.
     end note
 
-    VerLista -[#green]-> VerDetalleEnt
+    ConsultarLista -[#green]-> ConsultarDetalleEnt
     note on link
     <b>Sistema</b> muestra la lista de entregables
     del proyecto con su estado
@@ -28,10 +28,10 @@ state verEstadoEntregable as "verEstadoEntregable()" {
     si existe.
 
     El usuario selecciona un entregable
-    concreto para ver más información.
+    concreto para consultar más información.
     end note
 
-    VerDetalleEnt -[#green]-> [*]
+    ConsultarDetalleEnt -[#green]-> [*]
     note on link
     <b>Sistema</b> muestra el detalle del entregable,
     incluyendo comentarios del Departamento
@@ -39,6 +39,6 @@ state verEstadoEntregable as "verEstadoEntregable()" {
     end note
 }
 
-verEstadoEntregable -[#green]-> PROYECTO_ABIERTO_FINAL : volverAProyecto()
+consultarEstadoEntregable -[#green]-> PROYECTO_ABIERTO_FINAL : volverAProyecto()
 
 @enduml

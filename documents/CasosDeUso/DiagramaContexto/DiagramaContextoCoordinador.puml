@@ -17,15 +17,15 @@ PERFIL --> MIS_PUBLICACIONES_ABIERTAS : abrirMisPublicaciones()
 PERFIL --> PUBLICACIONES_ABIERTAS : abrirPublicaciones()
 
 ' --- Dashboard / Acciones Rápidas ---
-PERFIL --> ACCIONES_RAPIDAS : verAccionesRapidas()
+PERFIL --> ACCIONES_RAPIDAS : consultarAccionesRapidas()
 
-ACCIONES_RAPIDAS --> PROYECTOS_ABIERTOS : nuevoProyecto() ' Genera un Proyecto
+ACCIONES_RAPIDAS --> PROYECTOS_ABIERTOS : crearProyecto() ' Genera un Proyecto
 ACCIONES_RAPIDAS --> PROPUESTAS_ABIERTAS : crearPropuesta() ' Genera una Propuesta
-ACCIONES_RAPIDAS --> INVESTIGADORES_ABIERTOS : verInvestigadores()
-ACCIONES_RAPIDAS --> CONVOCATORIAS_ABIERTAS : verConvocatorias()
+ACCIONES_RAPIDAS --> INVESTIGADORES_ABIERTOS : consultarInvestigadores()
+ACCIONES_RAPIDAS --> CONVOCATORIAS_ABIERTAS : consultarConvocatorias()
 
 ' --- Estadísticas y Alertas (desde el Dashboard) ---
-PERFIL --> ESTADISTICAS : verIndicadores()
+PERFIL --> ESTADISTICAS : consultarIndicadores()
 ESTADISTICAS --> PERFIL : volverAlPerfil()
 
 PERFIL --> ALERTAS : gestionarAlertas()
@@ -44,48 +44,48 @@ INVESTIGADOR_ABIERTO --> INVESTIGADOR_ABIERTO : gestionarCompensacion() ' Genera
 PROYECTOS_ABIERTOS --> PROYECTO_ABIERTO : abrirProyecto()
 PROYECTOS_ABIERTOS --> PROYECTO_ABIERTO : crearProyecto()
 
-PROYECTO_ABIERTO --> PROYECTO_ABIERTO : editarProyecto()
+PROYECTO_ABIERTO --> PROYECTO_ABIERTO : actualizarProyecto()
 PROYECTO_ABIERTO --> PROYECTOS_ABIERTOS : eliminarProyecto()
 PROYECTO_ABIERTO --> ENTREGABLES_ABIERTOS : abrirEntregables()
 PROYECTO_ABIERTO --> PROYECTO_ABIERTO : agregarInvestigador() ' Afecta al InvestigadorDocente
 PROYECTO_ABIERTO --> PROYECTO_ABIERTO : eliminarInvestigador()
 
-ENTREGABLES_ABIERTOS --> ENTREGABLES_ABIERTOS : editarEntregable()
+ENTREGABLES_ABIERTOS --> ENTREGABLES_ABIERTOS : actualizarEntregable()
 ENTREGABLES_ABIERTOS --> PROYECTO_ABIERTO : eliminarEntregable()
 
 ' --- Gestión de Convocatorias ---
 CONVOCATORIAS_ABIERTAS --> CONVOCATORIA_ABIERTA : abrirConvocatoria()
 CONVOCATORIAS_ABIERTAS --> CONVOCATORIA_ABIERTA : crearConvocatoria()
 
-CONVOCATORIA_ABIERTA --> CONVOCATORIA_ABIERTA : editarConvocatoria()
+CONVOCATORIA_ABIERTA --> CONVOCATORIA_ABIERTA : actualizarConvocatoria()
 CONVOCATORIA_ABIERTA --> CONVOCATORIAS_ABIERTAS : eliminarConvocatoria()
-CONVOCATORIA_ABIERTA --> PROPUESTAS_ABIERTAS : generarPropuesta() ' Genera una Propuesta
+CONVOCATORIA_ABIERTA --> PROPUESTAS_ABIERTAS : crearPropuesta() ' Crea una Propuesta
 
 ' --- Gestión de Propuestas ---
 PROPUESTAS_ABIERTAS --> PROPUESTA_ABIERTA : abrirPropuesta()
 PROPUESTAS_ABIERTAS --> PROPUESTA_ABIERTA : crearPropuesta()
 
-PROPUESTA_ABIERTA --> PROPUESTA_ABIERTA : editarPropuesta()
+PROPUESTA_ABIERTA --> PROPUESTA_ABIERTA : actualizarPropuesta()
 PROPUESTA_ABIERTA --> PROPUESTAS_ABIERTAS : eliminarPropuesta()
 PROPUESTA_ABIERTA --> PROYECTOS_ABIERTOS : convertirEnProyecto() ' Genera un Proyecto
 
 ' --- Gestión de Publicaciones ---
 PUBLICACIONES_ABIERTAS --> PUBLICACION_ABIERTA : abrirPublicacion()
 PUBLICACION_ABIERTA --> PUBLICACION_ABIERTA : responderPublicacion()
-PUBLICACION_ABIERTA --> PUBLICACION_ABIERTA : editarPublicacion()
+PUBLICACION_ABIERTA --> PUBLICACION_ABIERTA : actualizarPublicacion()
 PUBLICACION_ABIERTA --> PUBLICACIONES_ABIERTAS : eliminarPublicacion()
 
 MIS_PUBLICACIONES_ABIERTAS --> MI_PUBLICACION_ABIERTA : abrirMiPublicacion()
 MIS_PUBLICACIONES_ABIERTAS --> MI_PUBLICACION_ABIERTA : crearPublicacion()
-MI_PUBLICACION_ABIERTA --> MI_PUBLICACION_ABIERTA : editarPublicacion()
+MI_PUBLICACION_ABIERTA --> MI_PUBLICACION_ABIERTA : actualizarPublicacion()
 MI_PUBLICACION_ABIERTA --> MIS_PUBLICACIONES_ABIERTAS : eliminarPublicacion()
 
 ' --- Opciones del Perfil ---
-OPCIONES_PERFIL_ABIERTO --> OPCIONES_PERFIL_ABIERTO : editarPerfil()
+OPCIONES_PERFIL_ABIERTO --> OPCIONES_PERFIL_ABIERTO : actualizarPerfil()
 OPCIONES_PERFIL_ABIERTO --> SESION_CERRADA : eliminarPerfil()
 
 ' --- Opciones de Carga de Trabajo ---
-OPCIONES_CARGA_TRABAJO_ABIERTAS --> OPCIONES_CARGA_TRABAJO_ABIERTAS : editarCargaTrabajo()
+OPCIONES_CARGA_TRABAJO_ABIERTAS --> OPCIONES_CARGA_TRABAJO_ABIERTAS : actualizarCargaTrabajo()
 
 ' --- Transiciones de retorno ---
 PUBLICACIONES_ABIERTAS --> PERFIL : volverAlPerfil()

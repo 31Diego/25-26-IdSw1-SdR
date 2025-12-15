@@ -9,21 +9,21 @@ PERFIL_INICIAL -[#green]-> gestionarPerfil
 
 state gestionarPerfil as "gestionarPerfil()" {
 
-    state " " as EditarDatos
+    state " " as ActualizarDatos
     state " " as DecidirAccion
 
-    [*] -[#green]-> EditarDatos
+    [*] -[#green]-> ActualizarDatos
     note on link
     <b>Investigador</b> se encuentra en PERFIL
-    y selecciona "Editar perfil".
+    y selecciona "Actualizar perfil".
     end note
 
-    EditarDatos -[#green]-> DecidirAccion
+    ActualizarDatos -[#green]-> DecidirAccion
     note on link
     <b>Sistema</b> muestra el formulario de perfil
     con los datos actuales.
 
-    <b>Investigador</b> modifica la información:
+    <b>Investigador</b> actualiza la información:
     • Datos personales y sede
     • CV y publicaciones
     • Idiomas

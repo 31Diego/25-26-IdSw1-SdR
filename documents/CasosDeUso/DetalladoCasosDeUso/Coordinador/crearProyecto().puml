@@ -16,7 +16,7 @@ state crearProyecto as "crearProyecto()" {
     note on link
     <b>Coordinador</b> se encuentra en PROYECTOS_ABIERTOS
     (listado de proyectos) y selecciona
-    "Nuevo proyecto".
+    "Crear proyecto".
     end note
 
     FormularioProyecto -[#green]-> DecisionUsuario

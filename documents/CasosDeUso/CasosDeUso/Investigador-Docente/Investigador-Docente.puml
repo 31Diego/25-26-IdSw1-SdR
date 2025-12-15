@@ -8,28 +8,28 @@ rectangle "Plataforma FUNIBER" {
 
   rectangle "Gestión de Perfil y Carga" {
     usecase "GestionarPerfil()" as CU_GestionarPerfil
-    usecase "VerCargaAcademica()" as CU_VerCarga
+    usecase "ConsultarCargaAcademica()" as CU_ConsultarCarga
     usecase "SolicitarCompensacion()" as CU_SolicitarComp
   }
 
   rectangle "Participación en Convocatorias" {
-    usecase "ConsultarConvocatoriasAsignadas()" as CU_VerConv
+    usecase "ConsultarConvocatoriasAsignadas()" as CU_ConsultarConv
   }
 
   rectangle "Participación en Proyectos" {
-    usecase "ConsultarMisProyectos()" as CU_VerProyectos
+    usecase "ConsultarMisProyectos()" as CU_ConsultarProyectos
     usecase "SubirEntregable()" as CU_SubirEntregable
-    usecase "VerEstadoEntregable()" as CU_VerEstado
+    usecase "ConsultarEstadoEntregable()" as CU_ConsultarEstado
   }
 
 }
 
 Inv --> CU_GestionarPerfil
-Inv --> CU_VerCarga
+Inv --> CU_ConsultarCarga
 Inv --> CU_SolicitarComp
-Inv --> CU_VerConv
-Inv --> CU_VerProyectos
+Inv --> CU_ConsultarConv
+Inv --> CU_ConsultarProyectos
 Inv --> CU_SubirEntregable
-Inv --> CU_VerEstado
+Inv --> CU_ConsultarEstado
 
 @enduml

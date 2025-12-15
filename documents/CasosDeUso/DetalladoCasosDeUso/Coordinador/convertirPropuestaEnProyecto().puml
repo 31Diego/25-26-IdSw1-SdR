@@ -32,7 +32,7 @@ state convertirPropuestaEnProyecto as "convertirPropuestaEnProyecto()" {
     ConfirmarConversion -[#green]-> [*]
     note on link
     <b>Sistema</b> ejecuta la acción elegida:
-    • si convertirEnProyecto(): crea un nuevo proyecto
+    • si convertirEnProyecto(): crea un proyecto
       a partir de la propuesta y lo deja en estado "Creado".
     • si volverAPropuestas(): no realiza cambios.
     end note
