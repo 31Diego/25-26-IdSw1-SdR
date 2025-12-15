@@ -1,0 +1,37 @@
+@startuml analizarConvocatoria
+
+skinparam linetype polyline
+
+state analizarConvocatoria as "analizarConvocatoria()" {
+
+    state " " as SeleccionandoConvocatoria
+    state " " as MostrandoDetalle
+
+    [*] -[#green]-> SeleccionandoConvocatoria
+    note on link
+    <b>Coordinador</b> solicita analizar convocatoria
+    end note
+
+    SeleccionandoConvocatoria -[#green]-> MostrandoDetalle
+    note on link
+    <b>Sistema</b> muestra información de la convocatoria
+    end note
+
+    MostrandoDetalle -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> revisa la convocatoria
+    y decide la siguiente acción
+    end note
+}
+
+analizarConvocatoria -[#green]-> PERFIL
+note on link
+volver
+end note
+
+analizarConvocatoria -[#green]-> PROYECTO_ABIERTO
+note on link
+elaborarPropuesta()
+end note
+
+@enduml

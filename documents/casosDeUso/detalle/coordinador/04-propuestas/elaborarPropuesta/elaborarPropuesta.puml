@@ -1,0 +1,50 @@
+@startuml elaborarPropuesta
+
+skinparam linetype polyline
+
+state elaborarPropuesta as "elaborarPropuesta()" {
+
+    state " " as MostrandoFormulario
+    state " " as EditandoPropuesta
+    state " " as ValidandoDatos
+
+    [*] -[#green]-> MostrandoFormulario
+    note on link
+    <b>Coordinador</b> solicita elaborar propuesta
+    end note
+
+    MostrandoFormulario -[#green]-> EditandoPropuesta
+    note on link
+    <b>Sistema</b> muestra formulario de propuesta
+    end note
+
+    EditandoPropuesta -[#green]-> ValidandoDatos
+    note on link
+    <b>Coordinador</b> solicita guardar propuesta
+    <b>Sistema</b> valida la información introducida
+    end note
+
+    ValidandoDatos -[#green]-> EditandoPropuesta
+    note on link
+    Datos no válidos
+    <b>Sistema</b> muestra mensajes de error
+    end note
+
+    ValidandoDatos -[#green]-> [*]
+    note on link
+    Datos válidos
+    <b>Sistema</b> guarda la propuesta
+    end note
+}
+
+elaborarPropuesta -[#green]-> PROYECTO_ABIERTO
+note on link
+propuesta guardada
+end note
+
+elaborarPropuesta -[#green]-> PERFIL
+note on link
+volver
+end note
+
+@enduml
