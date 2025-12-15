@@ -1,0 +1,40 @@
+@startuml AgregarColaborador
+title Agregar colaborador a proyecto
+skinparam linetype polyline
+
+state PROYECTO_ABIERTO_INICIAL as "PROYECTO_ABIERTO"
+state PROYECTO_ABIERTO_FINAL   as "PROYECTO_ABIERTO"
+
+PROYECTO_ABIERTO_INICIAL -[#green]-> agregarColaborador
+
+state agregarColaborador as "agregarColaborador()" {
+
+    state " " as SeleccionarPersona
+    state " " as ConfirmarAlta
+
+    [*] -[#green]-> SeleccionarPersona
+    note on link
+    <b>Coordinador</b> se encuentra en PROYECTO_ABIERTO
+    y selecciona la opción "Agregar colaborador".
+    end note
+
+    SeleccionarPersona -[#green]-> ConfirmarAlta
+    note on link
+    <b>Sistema</b> muestra un listado/buscador de
+    posibles colaboradores (investigadores,
+    docentes u otros perfiles externos).
+
+    <b>Coordinador</b> selecciona la persona a añadir
+    y define su rol dentro del proyecto.
+    end note
+
+    ConfirmarAlta -[#green]-> [*]
+    note on link
+    <b>Sistema</b> añade el colaborador al equipo
+    del proyecto y actualiza la ficha del mismo.
+    end note
+}
+
+agregarColaborador -[#green]-> PROYECTO_ABIERTO_FINAL : colaboradorAgregado()
+
+@enduml

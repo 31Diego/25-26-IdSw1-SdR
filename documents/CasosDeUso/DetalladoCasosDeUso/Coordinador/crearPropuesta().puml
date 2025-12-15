@@ -1,0 +1,49 @@
+@startuml CrearPropuesta
+title Crear propuesta
+skinparam linetype polyline
+
+state PROPUESTAS_ABIERTAS_INICIAL as "PROPUESTAS_ABIERTAS"
+state PROPUESTA_ABIERTA_FINAL     as "PROPUESTA_ABIERTA"
+
+PROPUESTAS_ABIERTAS_INICIAL -[#green]-> crearPropuesta
+
+state crearPropuesta as "crearPropuesta()" {
+
+    state FormularioProp as " "
+    state DecisionUsuario <<choice>>
+
+    [*] -[#green]-> FormularioProp
+    note on link
+    <b>Coordinador</b> se encuentra en PROPUESTAS_ABIERTAS
+    y selecciona "Nueva propuesta".
+    end note
+
+    FormularioProp -[#green]-> DecisionUsuario
+    note on link
+    <b>Sistema</b> muestra un formulario en blanco.
+
+    <b>Coordinador</b> introduce los datos requeridos
+    (título, descripción, convocatoria, presupuesto,
+    equipo propuesto) y al finalizar puede:
+    • guardarPropuesta(), o
+    • cancelarPropuesta().
+    end note
+
+    DecisionUsuario -[#green]-> [*]
+    note on link
+    <b>Sistema</b> valida y guarda la propuesta
+    con estado inicial adecuado.
+    end note
+
+    DecisionUsuario -[#red]-> [*]
+    note on link
+    <b>Si el Coordinador cancelaPropuesta():</b>
+    se descartan los cambios y la propuesta
+    no se crea; se vuelve al listado de
+    PROPUESTAS_ABIERTAS.
+    end note
+}
+
+crearPropuesta -[#green]-> PROPUESTA_ABIERTA_FINAL : guardarPropuesta() / cancelarPropuesta()
+
+@enduml

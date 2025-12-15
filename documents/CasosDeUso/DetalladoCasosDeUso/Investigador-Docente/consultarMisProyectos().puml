@@ -1,0 +1,42 @@
+@startuml ConsultarMisProyectos
+title Consultar mis proyectos
+skinparam linetype polyline
+
+state PROYECTOS_ABIERTOS_INICIAL as "PROYECTOS_ABIERTOS"
+state PROYECTO_ABIERTO_FINAL     as "PROYECTO_ABIERTO"
+
+PROYECTOS_ABIERTOS_INICIAL -[#green]-> consultarMisProyectos
+
+state consultarMisProyectos as "consultarMisProyectos()" {
+
+    state " " as VerListadoProy
+    state " " as AbrirProyectoSel
+
+    [*] -[#green]-> VerListadoProy
+    note on link
+    <b>Investigador/Docente-Investigador</b>
+    accede a PROYECTOS_ABIERTOS
+    desde su PERFIL.
+    end note
+
+    VerListadoProy -[#green]-> AbrirProyectoSel
+    note on link
+    <b>Sistema</b> muestra el listado de proyectos
+    en los que el usuario participa, indicando
+    estado, rol y fechas clave.
+
+    El usuario selecciona un proyecto
+    del listado para ver sus detalles.
+    end note
+
+    AbrirProyectoSel -[#green]-> [*]
+    note on link
+    <b>Sistema</b> abre la vista PROYECTO_ABIERTO
+    con la información completa del proyecto:
+    objetivos, equipo, entregables y estado.
+    end note
+}
+
+consultarMisProyectos -[#green]-> PROYECTO_ABIERTO_FINAL : abrirProyecto()
+
+@enduml

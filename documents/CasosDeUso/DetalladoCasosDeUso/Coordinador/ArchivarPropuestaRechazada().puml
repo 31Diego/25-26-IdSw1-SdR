@@ -1,0 +1,31 @@
+@startuml ArchivarPropuesta
+title Archivar propuesta rechazada
+skinparam linetype polyline
+
+state PROPUESTA_ABIERTA_INICIAL as "PROPUESTA_ABIERTA"
+state PROPUESTAS_ABIERTAS_FINAL as "PROPUESTAS_ABIERTAS"
+
+PROPUESTA_ABIERTA_INICIAL -[#green]-> archivarPropuestaRechazada
+
+state archivarPropuestaRechazada as "archivarPropuestaRechazada()" {
+
+    state " " as ConfirmarArchivado
+
+    [*] -[#green]-> ConfirmarArchivado
+    note on link
+    <b>Coordinador</b> consulta una propuesta con
+    estado "Rechazada" y selecciona
+    "Archivar propuesta".
+    end note
+
+    ConfirmarArchivado -[#green]-> [*]
+    note on link
+    <b>Sistema</b> mueve la propuesta al histórico,
+    la marca como "Archivada" y deja de mostrarla
+    en el listado principal de PROPUESTAS_ABIERTAS.
+    end note
+}
+
+archivarPropuestaRechazada -[#green]-> PROPUESTAS_ABIERTAS_FINAL : propuestaArchivada()
+
+@enduml

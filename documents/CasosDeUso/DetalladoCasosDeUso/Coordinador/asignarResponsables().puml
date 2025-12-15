@@ -1,0 +1,40 @@
+@startuml AsignarResponsables
+title Asignar responsables de proyecto
+skinparam linetype polyline
+
+state PROYECTO_ABIERTO_INICIAL as "PROYECTO_ABIERTO"
+state PROYECTO_ABIERTO_FINAL   as "PROYECTO_ABIERTO"
+
+PROYECTO_ABIERTO_INICIAL -[#green]-> asignarResponsables
+
+state asignarResponsables as "asignarResponsables()" {
+
+    state " " as SeleccionarResponsables
+    state " " as GuardarCambiosResp
+
+    [*] -[#green]-> SeleccionarResponsables
+    note on link
+    <b>Coordinador</b> se encuentra en PROYECTO_ABIERTO
+    y selecciona "Gestionar responsables".
+    end note
+
+    SeleccionarResponsables -[#green]-> GuardarCambiosResp
+    note on link
+    <b>Sistema</b> muestra el equipo del proyecto y
+    los posibles candidatos a Responsable Principal
+    y otros roles clave.
+
+    <b>Coordinador</b> asigna o modifica los responsables
+    y confirma la operación.
+    end note
+
+    GuardarCambiosResp -[#green]-> [*]
+    note on link
+    <b>Sistema</b> actualiza los responsables del proyecto
+    y registra los cambios en el historial.
+    end note
+}
+
+asignarResponsables -[#green]-> PROYECTO_ABIERTO_FINAL : responsablesActualizados()
+
+@enduml

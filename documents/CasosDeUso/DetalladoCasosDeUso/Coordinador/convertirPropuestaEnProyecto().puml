@@ -1,0 +1,43 @@
+@startuml ConvertirPropuestaEnProyecto
+title Convertir propuesta en proyecto
+skinparam linetype polyline
+
+state PROPUESTAS_ABIERTAS_INICIAL as "PROPUESTAS_ABIERTAS"
+state PROYECTO_ABIERTO_FINAL      as "PROYECTO_ABIERTO"
+
+PROPUESTAS_ABIERTAS_INICIAL -[#green]-> convertirPropuestaEnProyecto
+
+state convertirPropuestaEnProyecto as "convertirPropuestaEnProyecto()" {
+
+    state " " as RevisarPropuesta
+    state " " as ConfirmarConversion
+
+    [*] -[#green]-> RevisarPropuesta
+    note on link
+    <b>Coordinador</b> se encuentra en PROPUESTAS_ABIERTAS
+    y abre una propuesta aceptada
+    por la entidad financiadora.
+    end note
+
+    RevisarPropuesta -[#green]-> ConfirmarConversion
+    note on link
+    <b>Sistema</b> muestra el detalle de la propuesta
+    (título, objetivos, presupuesto, equipo propuesto).
+
+    <b>Coordinador</b> revisa la información y decide:
+    • convertirEnProyecto(), o
+    • volverAPropuestas() sin convertir.
+    end note
+
+    ConfirmarConversion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> ejecuta la acción elegida:
+    • si convertirEnProyecto(): crea un nuevo proyecto
+      a partir de la propuesta y lo deja en estado "Creado".
+    • si volverAPropuestas(): no realiza cambios.
+    end note
+}
+
+convertirPropuestaEnProyecto -[#green]-> PROYECTO_ABIERTO_FINAL : convertirEnProyecto() / volverAPropuestas()
+
+@enduml

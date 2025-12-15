@@ -1,0 +1,52 @@
+@startuml CrearProyecto
+title Crear proyecto
+skinparam linetype polyline
+
+state PROYECTOS_ABIERTOS_INICIAL  as "PROYECTOS_ABIERTOS"
+state PROYECTO_ABIERTO_FINAL      as "PROYECTO_ABIERTO"
+
+PROYECTOS_ABIERTOS_INICIAL -[#green]-> crearProyecto
+
+state crearProyecto as "crearProyecto()" {
+
+    state FormularioProyecto as " "
+    state DecisionUsuario <<choice>>
+
+    [*] -[#green]-> FormularioProyecto
+    note on link
+    <b>Coordinador</b> se encuentra en PROYECTOS_ABIERTOS
+    (listado de proyectos) y selecciona
+    "Nuevo proyecto".
+    end note
+
+    FormularioProyecto -[#green]-> DecisionUsuario
+    note on link
+    <b>Sistema</b> presenta un formulario en blanco.
+
+    <b>Coordinador</b> introduce los datos requeridos
+    (título, objetivos, fechas, entidad financiadora,
+    equipo inicial, etc.) y al finalizar puede:
+    • guardarProyecto(), o
+    • cancelarCreacion().
+    end note
+
+    ' Flujo básico: guarda proyecto
+    DecisionUsuario -[#green]-> [*]
+    note on link
+    <b>Sistema</b> valida los datos y, si son correctos,
+    crea el proyecto con estado "Creado".
+    end note
+
+    ' Flujo alternativo: cancela
+    DecisionUsuario -[#red]-> [*]
+    note on link
+    <b>Si el Coordinador cancelaCreacion():</b>
+    el caso de uso termina sin crear
+    ningún proyecto y se mantiene el
+    listado de PROYECTOS_ABIERTOS.
+    end note
+}
+
+crearProyecto -[#green]-> PROYECTO_ABIERTO_FINAL : guardarProyecto() / cancelarCreacion()
+
+@enduml

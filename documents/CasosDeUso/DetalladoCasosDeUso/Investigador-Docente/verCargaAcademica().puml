@@ -1,0 +1,35 @@
+@startuml VerCargaAcademica
+title Ver carga académica
+skinparam linetype polyline
+
+state MI_CARGA_TRABAJO_INICIAL as "MI_CARGA_TRABAJO"
+state MI_CARGA_TRABAJO_FINAL   as "MI_CARGA_TRABAJO"
+
+MI_CARGA_TRABAJO_INICIAL -[#green]-> verCargaAcademica
+
+state verCargaAcademica as "verCargaAcademica()" {
+
+    state " " as MostrarResumen
+
+    [*] -[#green]-> MostrarResumen
+    note on link
+    <b>Investigador/Docente-Investigador</b>
+    accede a MI_CARGA_TRABAJO desde PERFIL.
+    end note
+
+    MostrarResumen -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta un resumen de carga:
+    • Horas de docencia planificadas
+    • Horas de investigación
+    • Proyectos activos/asignados
+
+    En el caso de Docente-Investigador,
+    indica si se aproxima al límite
+    de 16 h/semana de docencia.
+    end note
+}
+
+verCargaAcademica -[#green]-> MI_CARGA_TRABAJO_FINAL : volverAlPerfil()
+
+@enduml

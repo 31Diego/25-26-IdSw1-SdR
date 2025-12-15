@@ -1,0 +1,53 @@
+@startuml SubirEntregable
+title Subir entregable
+skinparam linetype polyline
+
+state PROYECTO_ABIERTO_INICIAL as "PROYECTO_ABIERTO"
+state PROYECTO_ABIERTO_FINAL   as "PROYECTO_ABIERTO"
+
+PROYECTO_ABIERTO_INICIAL -[#green]-> subirEntregable
+
+state subirEntregable as "subirEntregable()" {
+
+    state SeleccionarArchivo as " "
+    state DecisionUsuario <<choice>>
+
+    [*] -[#green]-> SeleccionarArchivo
+    note on link
+    <b>Investigador</b> se encuentra en PROYECTO_ABIERTO
+    y selecciona un entregable pendiente, pulsando
+    "Subir archivo".
+    end note
+
+    SeleccionarArchivo -[#green]-> DecisionUsuario
+    note on link
+    <b>Sistema</b> abre el cuadro de selección
+    de fichero.
+
+    <b>Investigador</b> elige el documento y puede:
+    • confirmarSubida(), o
+    • cancelarSubida().
+    end note
+
+    ' Flujo básico
+    DecisionUsuario -[#green]-> [*]
+    note on link
+    <b>Si confirmaSubida():</b>
+    el Sistema guarda el archivo, marca el
+    entregable como "Entregado" y registra
+    fecha/hora (y notifica al Depto. de Proyectos).
+    end note
+
+    ' Flujo alternativo
+    DecisionUsuario -[#red]-> [*]
+    note on link
+    <b>Si cancelarSubida():</b>
+    el caso de uso termina sin subir
+    ningún fichero y el entregable
+    sigue pendiente.
+    end note
+}
+
+subirEntregable -[#green]-> PROYECTO_ABIERTO_FINAL : confirmarSubida() / cancelarSubida()
+
+@enduml

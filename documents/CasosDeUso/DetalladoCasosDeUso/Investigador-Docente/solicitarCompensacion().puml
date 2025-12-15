@@ -1,0 +1,49 @@
+@startuml SolicitarCompensacion
+title Solicitar compensación
+skinparam linetype polyline
+
+state MI_CARGA_TRABAJO_INICIAL as "MI_CARGA_TRABAJO"
+state MI_CARGA_TRABAJO_FINAL   as "MI_CARGA_TRABAJO"
+
+MI_CARGA_TRABAJO_INICIAL -[#green]-> solicitarCompensacion
+
+state solicitarCompensacion as "solicitarCompensacion()" {
+
+    state " " as VerOpciones
+    state " " as ConfirmarSolicitud
+
+    [*] -[#green]-> VerOpciones
+    note on link
+    <b>Investigador/Docente-Investigador</b>
+    se encuentra en MI_CARGA_TRABAJO y
+    selecciona "Solicitar compensación"
+    para un proyecto finalizado.
+    end note
+
+    VerOpciones -[#green]-> ConfirmarSolicitud
+    note on link
+    <b>Sistema</b> muestra las opciones
+    de compensación disponibles:
+
+    • Para Investigador:
+      - compensacionEconomica()
+
+    • Para Docente-Investigador:
+      - compensacionEconomica()
+      - reduccionHorasDocentes()
+
+    El usuario elige una de las opciones.
+    end note
+
+    ConfirmarSolicitud -[#green]-> [*]
+    note on link
+    <b>Sistema</b> registra la solicitud de
+    compensación seleccionada y la deja
+    pendiente de validación por el
+    Departamento de Proyectos.
+    end note
+}
+
+solicitarCompensacion -[#green]-> MI_CARGA_TRABAJO_FINAL : registrarSolicitudCompensacion()
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml GestionarPerfil
+title Gestionar perfil
+skinparam linetype polyline
+
+state PERFIL_INICIAL as "PERFIL"
+state PERFIL_FINAL   as "PERFIL"
+
+PERFIL_INICIAL -[#green]-> gestionarPerfil
+
+state gestionarPerfil as "gestionarPerfil()" {
+
+    state " " as EditarDatos
+    state " " as DecidirAccion
+
+    [*] -[#green]-> EditarDatos
+    note on link
+    <b>Investigador</b> se encuentra en PERFIL
+    y selecciona "Editar perfil".
+    end note
+
+    EditarDatos -[#green]-> DecidirAccion
+    note on link
+    <b>Sistema</b> muestra el formulario de perfil
+    con los datos actuales.
+
+    <b>Investigador</b> modifica la información:
+    • Datos personales y sede
+    • CV y publicaciones
+    • Idiomas
+    • Áreas de investigación
+
+    Al finalizar, el Investigador puede:
+    • guardarPerfil(), o
+    • cancelarEdicion() sin guardar cambios.
+    end note
+
+    DecidirAccion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> ejecuta la acción elegida
+    (guardarPerfil() o cancelarEdicion()).
+    end note
+}
+
+gestionarPerfil -[#green]-> PERFIL_FINAL : guardarPerfil() / cancelarEdicion()
+
+@enduml

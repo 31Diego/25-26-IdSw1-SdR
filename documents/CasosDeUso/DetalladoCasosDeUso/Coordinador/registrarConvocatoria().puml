@@ -1,0 +1,46 @@
+@startuml RegistrarConvocatoria
+title Registrar convocatoria
+skinparam linetype polyline
+
+state CONVOCATORIAS_ABIERTAS_INICIAL as "CONVOCATORIAS_ABIERTAS"
+state CONVOCATORIA_ABIERTA_FINAL     as "CONVOCATORIA_ABIERTA"
+
+CONVOCATORIAS_ABIERTAS_INICIAL -[#green]-> registrarConvocatoria
+
+state registrarConvocatoria as "registrarConvocatoria()" {
+
+    state " " as FormularioConv
+    state " " as DecidirAccion
+
+    [*] -[#green]-> FormularioConv
+    note on link
+    <b>Coordinador</b> se encuentra en CONVOCATORIAS_ABIERTAS
+    (listado de convocatorias) y selecciona
+    "Nueva convocatoria".
+    end note
+
+    FormularioConv -[#green]-> DecidirAccion
+    note on link
+    <b>Sistema</b> presenta un formulario en blanco.
+
+    <b>Coordinador</b> introduce los datos requeridos:
+    • Entidad financiadora
+    • Fechas de apertura y cierre
+    • Requisitos principales
+    • Tipo y presupuesto de financiación
+
+    Al finalizar, el Coordinador puede:
+    • guardarConvocatoria(), o
+    • cancelarConvocatoria() sin guardar cambios.
+    end note
+
+    DecidirAccion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> ejecuta la acción elegida
+    (guardarConvocatoria() o cancelarConvocatoria()).
+    end note
+}
+
+registrarConvocatoria -[#green]-> CONVOCATORIA_ABIERTA_FINAL : guardarConvocatoria() / cancelarConvocatoria()
+
+@enduml

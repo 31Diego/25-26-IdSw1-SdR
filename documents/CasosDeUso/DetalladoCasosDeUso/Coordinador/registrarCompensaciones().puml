@@ -1,0 +1,44 @@
+@startuml RegistrarCompensaciones
+title Registrar compensaciones de proyecto
+skinparam linetype polyline
+
+state PROYECTO_ABIERTO_INICIAL as "PROYECTO_ABIERTO"
+state PROYECTO_ABIERTO_FINAL   as "PROYECTO_ABIERTO"
+
+PROYECTO_ABIERTO_INICIAL -[#green]-> registrarCompensaciones
+
+state registrarCompensaciones as "registrarCompensaciones()" {
+
+    state " " as VerParticipantes
+    state " " as GrabarCompensacion
+
+    [*] -[#green]-> VerParticipantes
+    note on link
+    <b>Coordinador</b> abre un proyecto finalizado
+    en PROYECTO_ABIERTO y selecciona
+    "Registrar compensaciones".
+    end note
+
+    VerParticipantes -[#green]-> GrabarCompensacion
+    note on link
+    <b>Sistema</b> muestra el listado de participantes
+    (investigadores y docentes-investigadores) junto
+    con las opciones de compensación.
+
+    <b>Coordinador</b> introduce para cada uno:
+    • Importe económico, o
+    • Reducción de horas docentes (solo docentes),
+    y confirma el registro.
+    end note
+
+    GrabarCompensacion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> guarda las compensaciones
+    asociadas al proyecto y actualiza
+    el historial de cada participante.
+    end note
+}
+
+registrarCompensaciones -[#green]-> PROYECTO_ABIERTO_FINAL : compensacionesRegistradas()
+
+@enduml

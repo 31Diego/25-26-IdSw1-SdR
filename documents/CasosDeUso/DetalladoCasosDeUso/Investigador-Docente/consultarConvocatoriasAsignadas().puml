@@ -1,0 +1,44 @@
+@startuml ConsultarConvocatoriasAsignadas
+title Consultar convocatorias asignadas
+skinparam linetype polyline
+
+state CONVOCATORIAS_ABIERTAS_INICIAL as "CONVOCATORIAS_ABIERTAS"
+state CONVOCATORIAS_ABIERTAS_FINAL   as "CONVOCATORIAS_ABIERTAS"
+
+CONVOCATORIAS_ABIERTAS_INICIAL -[#green]-> consultarConvocatoriasAsignadas
+
+state consultarConvocatoriasAsignadas as "consultarConvocatoriasAsignadas()" {
+
+    state " " as VerListado
+    state " " as VerDetalle
+
+    [*] -[#green]-> VerListado
+    note on link
+    <b>Investigador/Docente-Investigador</b>
+    entra en CONVOCATORIAS_ABIERTAS
+    desde su PERFIL.
+    end note
+
+    VerListado -[#green]-> VerDetalle
+    note on link
+    <b>Sistema</b> muestra el listado de convocatorias
+    en las que el usuario encaja o ha sido propuesto,
+    con filtros por estado y fecha.
+
+    El usuario selecciona una convocatoria
+    concreta para ver su detalle.
+    end note
+
+    VerDetalle -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta la información detallada
+    de la convocatoria (requisitos, fechas,
+    entidad financiadora, presupuesto) y
+    las opciones disponibles (p.ej. mostrar
+    la propuesta asociada si existe).
+    end note
+}
+
+consultarConvocatoriasAsignadas -[#green]-> CONVOCATORIAS_ABIERTAS_FINAL : volverAConvocatorias()
+
+@enduml

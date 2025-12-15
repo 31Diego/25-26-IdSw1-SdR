@@ -1,0 +1,44 @@
+@startuml VerEstadoEntregable
+title Ver estado de entregable
+skinparam linetype polyline
+
+state PROYECTO_ABIERTO_INICIAL as "PROYECTO_ABIERTO"
+state PROYECTO_ABIERTO_FINAL   as "PROYECTO_ABIERTO"
+
+PROYECTO_ABIERTO_INICIAL -[#green]-> verEstadoEntregable
+
+state verEstadoEntregable as "verEstadoEntregable()" {
+
+    state " " as VerLista
+    state " " as VerDetalleEnt
+
+    [*] -[#green]-> VerLista
+    note on link
+    <b>Investigador/Docente-Investigador</b>
+    se encuentra en PROYECTO_ABIERTO y
+    abre la sección de entregables.
+    end note
+
+    VerLista -[#green]-> VerDetalleEnt
+    note on link
+    <b>Sistema</b> muestra la lista de entregables
+    del proyecto con su estado
+    (Pendiente, Entregado, Retrasado),
+    fecha límite y fecha de entrega
+    si existe.
+
+    El usuario selecciona un entregable
+    concreto para ver más información.
+    end note
+
+    VerDetalleEnt -[#green]-> [*]
+    note on link
+    <b>Sistema</b> muestra el detalle del entregable,
+    incluyendo comentarios del Departamento
+    de Proyectos y el historial de cambios.
+    end note
+}
+
+verEstadoEntregable -[#green]-> PROYECTO_ABIERTO_FINAL : volverAProyecto()
+
+@enduml

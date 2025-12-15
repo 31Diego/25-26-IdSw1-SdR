@@ -1,0 +1,40 @@
+@startuml GestionarConvocatoriaInvestigadores
+title Gestionar investigadores de convocatoria
+skinparam linetype polyline
+
+state CONVOCATORIA_ABIERTA_INICIAL as "CONVOCATORIA_ABIERTA"
+state CONVOCATORIA_ABIERTA_FINAL   as "CONVOCATORIA_ABIERTA"
+
+CONVOCATORIA_ABIERTA_INICIAL -[#green]-> gestionarConvocatoriaInvestigadores
+
+state gestionarConvocatoriaInvestigadores as "gestionarConvocatoriaInvestigadores()" {
+
+    state " " as SeleccionarPerfiles
+    state " " as ConfirmarAsignacion
+
+    [*] -[#green]-> SeleccionarPerfiles
+    note on link
+    <b>Coordinador</b> se encuentra en CONVOCATORIA_ABIERTA
+    y selecciona "Gestionar investigadores".
+    end note
+
+    SeleccionarPerfiles -[#green]-> ConfirmarAsignacion
+    note on link
+    <b>Sistema</b> muestra una lista de perfiles
+    compatibles con la convocatoria, junto con
+    filtros por sede, área y disponibilidad.
+
+    <b>Coordinador</b> marca los investigadores que
+    quiere asociar y activa la opción de notificar.
+    end note
+
+    ConfirmarAsignacion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> guarda la relación investigadores–convocatoria
+    y envía notificaciones a los seleccionados.
+    end note
+}
+
+gestionarConvocatoriaInvestigadores -[#green]-> CONVOCATORIA_ABIERTA_FINAL : asignacionesActualizadas()
+
+@enduml
