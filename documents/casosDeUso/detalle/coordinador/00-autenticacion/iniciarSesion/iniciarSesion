@@ -3,9 +3,6 @@
 skinparam linetype polyline
 
 SESION_CERRADA -[#green]-> iniciarSesion
-note on link
-<b>Coordinador</b> selecciona iniciarSesion()
-end note
 
 state iniciarSesion as "iniciarSesion()" {
 

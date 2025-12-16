@@ -1,0 +1,20 @@
+@startsalt cerrarSesion-wireframe
+{
+    ====
+    GIPF - Gestor Investigadores y Proyectos de FUNIBER
+    ====
+    {^" Cerrar sesión "
+        ¿Desea cerrar la sesión activa?
+
+        Usuario actual: **Coordinador**
+
+        .
+        {
+            [Cancelar] | [Cerrar sesión]
+        }
+    }
+    ====
+    Sistema: Activo
+    ====
+}
+@endsalt
