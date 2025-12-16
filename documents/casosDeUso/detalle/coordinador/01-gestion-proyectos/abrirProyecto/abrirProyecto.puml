@@ -9,7 +9,7 @@ state abrirProyecto as "abrirProyecto()" {
 
     [*] -[#green]-> MostrandoLista 
     note on link
-    <b>Coordinador</b> solicita abrir proyectos
+    <b>Coordinador</b> solicita abrir proyecto
     end note    
     
     MostrandoLista -[#green]-> FiltrandoLista
