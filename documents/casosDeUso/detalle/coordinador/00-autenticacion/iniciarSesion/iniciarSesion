@@ -1,0 +1,51 @@
+@startuml iniciarSesion
+
+skinparam linetype polyline
+
+SESION_CERRADA -[#green]-> iniciarSesion
+note on link
+<b>Coordinador</b> selecciona iniciarSesion()
+end note
+
+state iniciarSesion as "iniciarSesion()" {
+
+    state " " as SolicitandoAcceso
+    state " " as ProporcionandoCredenciales
+    state c <<choice>>
+
+    [*] -[#green]-> SolicitandoAcceso
+    note on link
+    <b>Coordinador</b> solicita acceder al sistema
+    end note
+
+    SolicitandoAcceso -[#green]-> ProporcionandoCredenciales
+    note on link
+    <b>Sistema</b> permite introducir
+    • usuario
+    • contraseña
+    end note
+
+    ProporcionandoCredenciales -[#green]-> c
+    note on link
+    <b>Coordinador</b> introduce
+    • usuario
+    • contraseña
+    end note
+
+    c -[#red]-> SolicitandoAcceso
+    note on link
+    credenciales incorrectas
+    end note
+
+    c -[#green]-> [*]
+    note on link
+    credenciales correctas
+    end note
+}
+
+iniciarSesion -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+<b>Coordinador</b> accede al panel principal
+end note
+
+@enduml

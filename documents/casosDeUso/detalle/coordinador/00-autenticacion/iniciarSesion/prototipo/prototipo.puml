@@ -1,0 +1,48 @@
+@startsalt iniciarSesion-wireframe
+{
+    ====
+    FUNIBER - Plataforma de Investigación
+    ====
+    {^" Iniciar sesión "
+        Usuario    | "coordinador@funiber.org   "
+        Contraseña | "********                 "
+        {
+            [Cancel] | [  OK   ]
+        }
+    }
+}
+@endsalt
+
+@startsalt iniciarSesion-credenciales-incorrectas-wireframe
+{
+    ====
+    FUNIBER - Plataforma de Investigación
+    ====
+    {^" Iniciar sesión "
+        Usuario    | "coordinador@funiber.org   "
+        Contraseña | "********                 "
+        {
+            [Cancel] | [  OK   ]
+        }
+    }
+    **Credenciales incorrectas**
+    ====
+}
+@endsalt
+
+@startsalt iniciarSesion-credenciales-correctas-wireframe
+{
+    ====
+    FUNIBER - Plataforma de Investigación
+    ====
+    {^" Iniciar sesión "
+        Usuario    | "coordinador@funiber.org   "
+        Contraseña | "********                 "
+        {
+            [Cancel] | [  OK   ]
+        }
+    }
+    **Acceso correcto. Redirigiendo al Panel Principal...**
+    ====
+}
+@endsalt
