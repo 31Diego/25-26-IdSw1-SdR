@@ -51,6 +51,12 @@ object ProyectoIA <<Proyecto>> {
     fechaLimite = "31/12/2026"
 }
 
+object PublicacionManuel <<Publicacion>> {
+    tituloPublicacion = "Nueva funcion de los modelos de lenguaje, util para el proyecto"
+    respuestasPublicacion = "Muchas gracias, lo revisaré"
+    idsRespuestas = 12345678
+}
+
 
 
 
@@ -68,5 +74,8 @@ Lazaro *-- PerfilLazaro : tiene
 
 Manuel --> CargaTrabajoManuel : tiene
 Lazaro --> CargaTrabajoLazaro : tiene
+
+Manuel --> PublicacionManuel: publica
+Lazaro --> PublicacionManuel: responde
 
 @enduml

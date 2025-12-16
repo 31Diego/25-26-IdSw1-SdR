@@ -110,4 +110,16 @@
 
 
 
+#### Por último el diagrama de objetos unificado, basado en el diagrama de clases de la red de investigadores + gestión de proyectos
+
+
+<div align=center>
+
+|![](/documentación/ModeloDelDominio/Imagenes/Objetos/ObjetosInvestigadorProyecto.svg)|
+|:-:|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosInvestigadorProyecto)**| 
+</div>
+
+
+
 

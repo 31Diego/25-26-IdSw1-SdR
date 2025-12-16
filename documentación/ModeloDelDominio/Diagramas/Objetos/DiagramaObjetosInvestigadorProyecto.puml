@@ -1,0 +1,163 @@
+@startuml 
+
+title Instancia unificada del sistema de investigadores y gestión de proyectos
+
+' =========================
+' PERSONAS
+' =========================
+object Mar <<Coordinador>> {
+    nombre = "Mar"
+    ubicacion = "Santander"
+    id = 12345
+}
+
+object Manuel <<InvestigadorDocente>> #FFAAAA {
+    nombre = "Manuel"
+    id = 1234567
+    campo = "Informática"
+}
+
+object Lazaro <<InvestigadorDocente>> #FFAAAA {
+    nombre = "Lázaro"
+    id = 12345678
+    campo = "Sistemas"
+}
+
+object Mariano <<Colaborador>> {
+    nombre = "Mariano"
+    id = 123456
+    asociacion = "Universidad de Cantabria"
+}
+
+' =========================
+' PERFILES Y CARGA DE TRABAJO
+' =========================
+object PerfilManuel <<PerfilInvestigador>> {
+    nombre = "Manuel"
+    apellido = "Masias"
+    dni = "********"
+    carrera = "Ing. Informática"
+    master = "Dirección de proyectos software"
+}
+
+object PerfilLazaro <<PerfilInvestigador>> {
+    nombre = "Lázaro"
+    apellido = "Hernandez"
+    dni = "********"
+    carrera = "Ing. Informática"
+    master = "Sistemas informáticos"
+}
+
+object CargaTrabajoManuel <<CargaTrabajo>> {
+    horasClase = 40
+    horasInvestigacion = 10
+}
+
+object CargaTrabajoLazaro <<CargaTrabajo>> {
+    horasClase = 30
+    horasInvestigacion = 20
+}
+
+' =========================
+' CONVOCATORIA Y PROYECTO
+' =========================
+object ID2025 <<Convocatoria>> {
+    descripcion = "Convocatoria de investigación sobre IA..."
+}
+
+object DeepVision <<Propuesta>> {
+    descripcion = "Un sistema capaz de realizar análisis mediante IA..."
+}
+
+object ProyectoIA <<Proyecto>> {
+    descripcion = "Implementar un modelo de lenguaje..."
+    fechaLimite = "31/12/2026"
+}
+
+' =========================
+' PUBLICACIONES
+' =========================
+object PublicacionManuel <<Publicacion>> {
+    tituloPublicacion = "Nueva funcion de los modelos de lenguaje, util para el proyecto"
+    respuestasPublicacion = "Muchas gracias, lo revisaré"
+    idsRespuestas = 12345678
+}
+
+' =========================
+' ENTREGABLES
+' =========================
+object Entregable01Manuel <<Entregables>> {
+    descripcion = "Informe inicial"
+}
+
+object Entregable02Lazaro <<Entregables>> {
+    descripcion = "Primera implementación"
+}
+
+' =========================
+' RECOMPENSAS
+' =========================
+object RemuneracionManuel <<Recompensa>> {
+    cantidad = 20000
+}
+
+object ReduccionHorarioLazaro <<Recompensa>> {
+    reduccion = -4
+}
+
+' =========================
+' RELACIONES SOCIALES
+' =========================
+Mar --> Manuel : recluta
+Mar --> Lazaro : recluta
+
+Manuel --> Lazaro : interactúa
+Lazaro --> Manuel : interactúa
+
+' =========================
+' RELACIONES DE PROYECTO
+' =========================
+ID2025 --> DeepVision : genera
+DeepVision --> ProyectoIA : genera
+
+Mar --> ProyectoIA : coordina
+Mar --> ID2025 : busca
+
+ProyectoIA o-- Manuel : investigador
+ProyectoIA o-- Lazaro : investigador
+Mariano --> ProyectoIA : participa
+
+Manuel --> ProyectoIA : participa
+Lazaro --> ProyectoIA : participa
+
+' =========================
+' PERFIL Y CARGA
+' =========================
+Manuel *-- PerfilManuel : tiene
+Lazaro *-- PerfilLazaro : tiene
+
+Manuel --> CargaTrabajoManuel : tiene
+Lazaro --> CargaTrabajoLazaro : tiene
+
+' =========================
+' ENTREGABLES Y RECOMPENSAS
+' =========================
+ProyectoIA *-- Entregable01Manuel : tiene
+ProyectoIA *-- Entregable02Lazaro : tiene
+
+Manuel --> Entregable01Manuel : genera
+Lazaro --> Entregable02Lazaro : genera
+
+ProyectoIA *-- RemuneracionManuel : genera
+ProyectoIA *-- ReduccionHorarioLazaro : genera
+
+RemuneracionManuel --> Manuel : beneficia
+ReduccionHorarioLazaro --> Lazaro : beneficia
+
+' =========================
+' PUBLICACIONES
+' =========================
+Manuel --> PublicacionManuel : publica
+Lazaro --> PublicacionManuel : responde
+
+@enduml

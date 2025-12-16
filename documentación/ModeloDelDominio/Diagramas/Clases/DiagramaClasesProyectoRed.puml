@@ -32,6 +32,10 @@ class Recompensa {
 class PerfilInvestigador {
 }
 
+class Publicacion {
+    
+}
+
 
 Convocatoria --> Propuesta : genera
 Propuesta --> Proyecto : genera
@@ -55,6 +59,8 @@ InvestigadorDocente --> CargaTrabajo : tiene
 InvestigadorDocente *-- PerfilInvestigador : tiene
 InvestigadorDocente --> InvestigadorDocente : interactúa con
 InvestigadorDocente --> Entregables : genera
+InvestigadorDocente --> Publicacion: publica
+InvestigadorDocente --> Publicacion: responde
 
 
 Recompensa --> InvestigadorDocente : beneficia

@@ -17,13 +17,20 @@ class CargaTrabajo {
 class PerfilInvestigador {
 }
 
+class Publicacion {
+
+}
 
 InvestigadorDocente --> Proyecto : participa en
-InvestigadorDocente --> CargaTrabajo : tiene carga asignada
+InvestigadorDocente --> CargaTrabajo : tiene
 InvestigadorDocente *-- PerfilInvestigador : tiene
 InvestigadorDocente --> InvestigadorDocente : interactúa con
+InvestigadorDocente --> Publicacion: publica
+InvestigadorDocente --> Publicacion: responde
+
 
 Proyecto --> CargaTrabajo : genera
+
 
 Coordinador --> InvestigadorDocente : recluta
 
