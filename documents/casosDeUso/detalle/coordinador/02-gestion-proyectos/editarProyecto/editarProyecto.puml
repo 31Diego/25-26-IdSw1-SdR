@@ -2,50 +2,45 @@
 
 skinparam linetype polyline
 
+PROYECTO_ABIERTO -[#green]-> editarProyecto
+
 state editarProyecto as "editarProyecto()" {
 
-    state " " as MostrandoProyecto
-    state " " as EditandoProyecto
-    state " " as ValidandoCambios
+    state " " as EditandoDatos
+    state " " as GuardandoDatos
 
-    [*] -[#green]-> MostrandoProyecto
+    [*] -[#green]-> EditandoDatos
     note on link
-    <b>Coordinador</b> tiene un proyecto abierto
     <b>Coordinador</b> solicita editar proyecto
     end note
 
-    MostrandoProyecto -[#green]-> EditandoProyecto
+    EditandoDatos -[#green]-> GuardandoDatos
     note on link
-    <b>Sistema</b> presenta datos actuales del proyecto
+    <b>Sistema</b> presenta datos de edición del proyecto
     • Título
     • Descripción
-    • Fechas
-    • Estado
-    • Coordinador e investigadores asociados
-    • Permite modificar los campos editables
+    • Fechas de inicio y fin
+    • Estado del proyecto
+
+    <b>Sistema</b> permite solicitar:
+    • modificar campos
+    • guardar proyecto
+    • cancelar edición
     end note
 
-    EditandoProyecto -[#green]-> ValidandoCambios
+    GuardandoDatos -[#green]-> EditandoDatos
     note on link
-    <b>Coordinador</b> solicita guardar cambios
-    <b>Sistema</b> valida la información modificada
+    <b>Coordinador</b> solicita modificar campos
     end note
 
-    ValidandoCambios -[#green]-> EditandoProyecto
+    GuardandoDatos -[#green]-> [*]
     note on link
-    Cambios no válidos
-    <b>Sistema</b> muestra mensajes de error
-    • Campos obligatorios vacíos
-    • Fechas incoherentes
-    • Formato incorrecto en algún campo
+    <b>Coordinador</b> solicita guardar y salir
     end note
 
-    ValidandoCambios -[#green]-> [*]
+    GuardandoDatos -[#red]-> [*]
     note on link
-    Cambios válidos
-    <b>Sistema</b> actualiza el proyecto
-    • Guarda la nueva información
-    • Muestra el proyecto actualizado
+    <b>Coordinador</b> solicita cancelar edición
     end note
 }
 
@@ -54,9 +49,9 @@ note on link
 proyecto actualizado
 end note
 
-editarProyecto -[#green]-> PROYECTOS_ABIERTOS
+editarProyecto -[#red]-> PROYECTO_ABIERTO
 note on link
-abrirProyectos()
+edición cancelada
 end note
 
 @enduml

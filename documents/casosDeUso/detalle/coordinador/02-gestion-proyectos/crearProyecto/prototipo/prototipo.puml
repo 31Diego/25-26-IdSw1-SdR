@@ -1,0 +1,21 @@
+@startsalt crearProyecto-wireframe
+{
+    ====
+    <b>GIPF - CREAR NUEVO PROYECTO</b>
+    ====
+    {
+        <b>Título del proyecto:</b> | [                                              ]
+        --
+        <b>Descripción breve:</b> | [                                              ]
+        --
+        <b>Estado inicial:</b> | { "Borrador" | "En curso" | "Finalizado" }
+        --
+        <i>El identificador del proyecto se generará automáticamente</i>
+        <i>Tras crearlo, el proyecto se abrirá para continuar la edición</i>
+    }
+
+    ~~
+
+    {[Crear proyecto] | [Cancelar]}
+}
+@endsalt

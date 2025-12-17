@@ -1,9 +1,9 @@
 @startsalt iniciarSesion-wireframe
 {
     ====
-    GIPF - Gestor Investigadores y Proyectos de FUNIBER
+    <b>GIPF - Gestor Investigadores y Proyectos de FUNIBER
     ====
-    {^" Iniciar sesión "
+    {^<b>Iniciar sesión
         Usuario    | "coordinador@funiber.org   "
         Contraseña | "********                 "
         {
@@ -16,9 +16,9 @@
 @startsalt iniciarSesion-credenciales-incorrectas-wireframe
 {
     ====
-    GIPF - Gestor Investigadores y Proyectos de FUNIBER
+    <b>GIPF - Gestor Investigadores y Proyectos de FUNIBER
     ====
-    {^" Iniciar sesión "
+    {^<b>Iniciar sesión
         Usuario    | "coordinador@funiber.org   "
         Contraseña | "********                 "
         {
@@ -33,9 +33,9 @@
 @startsalt iniciarSesion-credenciales-correctas-wireframe
 {
     ====
-    GIPF - Gestor Investigadores y Proyectos de FUNIBER
+    <b>GIPF - Gestor Investigadores y Proyectos de FUNIBER
     ====
-    {^" Iniciar sesión "
+    {^<b>Iniciar sesión
         Usuario    | "coordinador@funiber.org   "
         Contraseña | "********                 "
         {
