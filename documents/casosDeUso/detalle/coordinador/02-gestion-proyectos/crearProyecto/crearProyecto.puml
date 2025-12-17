@@ -17,22 +17,24 @@ state crearProyecto as "crearProyecto()" {
     SolicitandoDatos -[#green]-> CreandoProyecto
     note on link
     <b>Sistema</b> solicita datos del nuevo proyecto
+    • ID
     • Título
+    • Estado del proyecto
+    • Nombre del coordinador
+    • Fechas de inicio y fin
     • Descripción
-    • Fechas
-    • Estado
     end note
 
     CreandoProyecto -[#green]-> [*]
     note on link
-    <b>Coordinador</b> proporciona datos
-    <b>Sistema</b> crea el proyecto
+    <b>Coordinador</b> proporciona los datos solicitados
+    <b>Sistema</b> registra el nuevo proyecto
     end note
 }
 
 crearProyecto -[#green]-> PROYECTO_ABIERTO
 note on link
-proyecto creado
+Proyecto creado correctamente
 end note
 
 @enduml

@@ -4,55 +4,52 @@ skinparam linetype polyline
 
 state abrirProyecto as "abrirProyecto()" {
 
-    state " " as MostrandoLista
-    state " " as FiltrandoLista
+    state " " as MostrandoListaProyectos
+    state " " as SeleccionandoProyecto
 
-    [*] -[#green]-> MostrandoLista 
+    [*] -[#green]-> MostrandoListaProyectos
     note on link
-    <b>Coordinador</b> solicita abrir proyecto
-    end note    
-    
-    MostrandoLista -[#green]-> FiltrandoLista
-    note on link
-    <b>Sistema</b> presenta lista de proyectos
-    • ID, título, estado, coordinador, fechas
-    • Permite solicitar filtrar lista
-    • Permite solicitar crear proyecto nuevo
-    • Permite solicitar eliminar proyecto
-    • Permite solicitar editar proyecto
-    • Permite solicitar abrir proyecto
+    <b>Coordinador</b> solicita abrir proyectos
     end note
-    
-    FiltrandoLista -[#green]-> FiltrandoLista
+
+    MostrandoListaProyectos -[#green]-> SeleccionandoProyecto
     note on link
-    <b>Coordinador</b> solicita filtrar lista
-    <b>Sistema</b> presenta lista filtrada de proyectos
+    <b>Sistema</b> presenta lista de proyectos de investigación
+    • ID
+    • Título
+    • Estado del proyecto
+    • Nombre del coordinador
+    • Fechas de inicio y fin
+    • Descripción
+    • Permite solicitar filtrar/buscar
+    • Permite solicitar abrir un proyecto
     end note
-    
-    FiltrandoLista -[#green]-> [*]
+
+    SeleccionandoProyecto -[#green]-> SeleccionandoProyecto
     note on link
-    <b>Coordinador</b> solicita una de las opciones
+    <b>Coordinador</b> solicita filtrar/buscar proyectos
+    <b>Sistema</b> presenta lista filtrada
+    end note
+
+    SeleccionandoProyecto -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita abrir un proyecto de la lista
     end note
 }
 
-abrirProyecto -[#green]-> PROYECTO_ABIERTO
+PROYECTOS_ABIERTOS -[#green]-> abrirProyecto
 note on link
-editarProyecto()
+abrirProyecto()
+end note
+
+ENTREGABLES_ABIERTOS -[#green]-> abrirProyecto
+note on link
+abrirProyecto()
 end note
 
 abrirProyecto -[#green]-> PROYECTO_ABIERTO
 note on link
-crearProyecto()
-end note
-
-abrirProyecto -[#green]-> PROYECTOS_ABIERTOS
-note on link
-eliminarProyecto()
-end note
-
-abrirProyecto -[#green]-> PERFIL
-note on link
-abrirPerfil()
+proyecto abierto
 end note
 
 @enduml

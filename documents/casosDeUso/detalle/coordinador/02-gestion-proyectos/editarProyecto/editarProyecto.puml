@@ -17,10 +17,12 @@ state editarProyecto as "editarProyecto()" {
     EditandoDatos -[#green]-> GuardandoDatos
     note on link
     <b>Sistema</b> presenta datos de edición del proyecto
+    • ID
     • Título
-    • Descripción
-    • Fechas de inicio y fin
     • Estado del proyecto
+    • Nombre de coordinador
+    • Fechas de inicio y fin
+    • Descripción
 
     <b>Sistema</b> permite solicitar:
     • modificar campos
