@@ -1,0 +1,44 @@
+@startuml abrirOpcionesPerfil
+
+skinparam linetype polyline
+
+state abrirOpcionesPerfil as "abrirOpcionesPerfil()" {
+
+    state " " as MostrandoLista
+    state " " as FiltrandoLista
+
+    [*] -[#green]-> MostrandoLista 
+    note on link
+    <b>Coordinador</b> solicita abrir opciones perfil
+    end note    
+    
+    MostrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta las opciones disponibles en perfil
+    • ID, nombre, campo de cada investigador
+    • Permite solicitar editar perfil
+    • Permite solicitar resolver solicitud eliminacion
+   
+    
+    
+    end note
+    
+    FiltrandoLista -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita una de las opciones
+    end note
+}
+
+abrirOpcionesPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+editarPerfil()
+end note
+
+
+abrirOpcionesPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+resolverSolicitudEliminacionPerfil()
+end note
+
+
+@enduml

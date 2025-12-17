@@ -1,0 +1,55 @@
+@startuml crearRecompensa
+
+skinparam linetype polyline
+
+state crearRecompensa as "crearRecompensa()" {
+
+    state " " as IntroduciendoDatos
+    state " " as RecompensaCreada
+
+    [*] -[#green]-> IntroduciendoDatos
+    note on link
+    <b>Coordinador</b> solicita crear recompensa
+    end note
+
+    IntroduciendoDatos -[#green]-> RecompensaCreada
+    note on link
+    <b>Sistema</b> presenta formulario de recompensa
+    <b>Sistema</b> permite introducir datos
+    • Tipo
+    • Cantidad
+    <b>Coordinador</b> introduce datos y solicita guardar
+    <b>Sistema</b> presenta el registro de la recompensa
+    end note
+
+    IntroduciendoDatos -[#red]-> [*]
+    note on link
+    <b>Coordinador</b> solicita cancelar la operación
+    end note
+
+    RecompensaCreada -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta confirmación de creación
+    end note
+}
+
+crearRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
+note on link
+abrirRecompensas()
+end note
+
+crearRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
+note on link
+eliminarRecompensa()
+end note
+
+
+crearRecompensa -[#green]-> RECOMPENSA_ABIERTA
+note on link
+editarRecompensa()
+end note
+
+
+
+
+@enduml

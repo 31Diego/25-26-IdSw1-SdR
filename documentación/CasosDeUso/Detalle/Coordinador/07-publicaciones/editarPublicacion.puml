@@ -1,0 +1,40 @@
+@startuml editarPublicacion
+
+skinparam linetype polyline
+
+state editarPublicacion as "editarPublicacion()" {
+
+    state " " as EditandoContenido
+    state " " as CambiosGuardados
+
+    [*] -[#green]-> EditandoContenido
+    note on link
+    <b>Coordinador</b> solicita editar publicación
+    end note
+
+    EditandoContenido -[#green]-> CambiosGuardados
+    note on link
+    <b>Sistema</b> presenta contenido editable
+    • Título
+    • Texto
+    <b>Sistema</b> permite introducir modificaciones
+    <b>Coordinador</b> introduce cambios y solicita guardar
+    end note
+
+    EditandoContenido -[#red]-> [*]
+    note on link
+    <b>Coordinador</b> solicita cancelar edición
+    end note
+
+    CambiosGuardados -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta confirmación de cambios guardados
+    end note
+}
+
+editarPublicacion -[#green]-> PUBLICACION_ABIERTA
+note on link
+abrirPublicacion()
+end note
+
+@enduml

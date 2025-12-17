@@ -1,0 +1,39 @@
+@startuml editarRecompensa
+
+skinparam linetype polyline
+
+state editarRecompensa as "editarRecompensa()" {
+
+    state " " as EditandoDatos
+    state " " as CambiosGuardados
+
+    [*] -[#green]-> EditandoDatos
+    note on link
+    <b>Coordinador</b> solicita editar recompensa
+    end note
+
+    EditandoDatos -[#green]-> CambiosGuardados
+    note on link
+    <b>Sistema</b> presenta datos editables de la recompensa
+    <b>Sistema</b> permite introducir modificaciones
+    <b>Coordinador</b> introduce cambios y solicita guardar
+    <b>Sistema</b> registra los cambios
+    end note
+
+    EditandoDatos -[#red]-> [*]
+    note on link
+    <b>Coordinador</b> solicita cancelar edición
+    end note
+
+    CambiosGuardados -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta confirmación de cambios guardados
+    end note
+}
+
+editarRecompensa -[#green]-> RECOMPENSA_ABIERTA
+note on link
+abrirRecompensa()
+end note
+
+@enduml

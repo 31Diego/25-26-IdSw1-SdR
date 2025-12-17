@@ -1,0 +1,38 @@
+@startuml eliminarPublicacion
+
+skinparam linetype polyline
+
+state eliminarPublicacion as "eliminarPublicacion()" {
+
+    state " " as ConfirmandoEliminacion
+    state " " as PublicacionEliminada
+
+    [*] -[#green]-> ConfirmandoEliminacion
+    note on link
+    <b>Coordinador</b> solicita eliminar publicación
+    end note
+
+    ConfirmandoEliminacion -[#green]-> PublicacionEliminada
+    note on link
+    <b>Sistema</b> presenta confirmación de eliminación
+    <b>Coordinador</b> solicita confirmar eliminación
+    <b>Sistema</b> presenta la eliminación de la publicación
+    end note
+
+    ConfirmandoEliminacion -[#red]-> [*]
+    note on link
+    <b>Coordinador</b> solicita cancelar la operación
+    end note
+
+    PublicacionEliminada -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta confirmación de eliminación
+    end note
+}
+
+eliminarPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+abrirPublicaciones()
+end note
+
+@enduml
