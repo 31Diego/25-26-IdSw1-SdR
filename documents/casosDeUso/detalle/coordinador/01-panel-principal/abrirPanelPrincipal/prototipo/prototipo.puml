@@ -1,0 +1,29 @@
+@startsalt abrirPanelPrincipal-wireframe
+{
+    ====
+    GIPF - Panel principal
+    ====
+    {^" Panel principal "
+        Bienvenido, Coordinador
+
+        .
+        Accesos principales:
+        {
+            [Proyectos] | [Investigadores] | [Convocatorias] | [Recompensas]
+        }
+        .
+        Publicaciones:
+        {
+            [Mis publicaciones] | [Publicaciones]
+        }
+        .
+        Ajustes:
+        {
+            [Opciones de perfil] | [Carga de trabajo de investigadores] | [Cerrar sesión]
+        }
+    }
+    ====
+    Sistema: Activo
+    ====
+}
+@endsalt

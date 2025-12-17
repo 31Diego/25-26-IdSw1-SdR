@@ -1,0 +1,33 @@
+@startuml abrirPanelPrincipal
+
+skinparam linetype polyline
+
+INVESTIGADORES_ABIERTOS -[#green]-> abrirPanelPrincipal
+OPCIONES_CARGA_TRABAJO_ABIERTAS -[#green]-> abrirPanelPrincipal
+OPCIONES_PERFIL_ABIERTO -[#green]-> abrirPanelPrincipal
+MIS_PUBLICACIONES_ABIERTAS -[#green]-> abrirPanelPrincipal
+PUBLICACIONES_ABIERTAS -[#green]-> abrirPanelPrincipal
+CONVOCATORIAS_ABIERTAS -[#green]-> abrirPanelPrincipal
+RECOMPENSAS_ABIERTAS -[#green]-> abrirPanelPrincipal
+
+state abrirPanelPrincipal as "abrirPanelPrincipal()" {
+
+    state " " as MostrandoPanel
+
+    [*] -[#green]-> MostrandoPanel
+    note on link
+    <b>Coordinador</b> solicita abrir el panel principal
+    end note
+
+    MostrandoPanel -[#green]-> [*]
+    note on link
+    <b>Sistema</b> muestra el panel principal
+    end note
+}
+
+abrirPanelPrincipal -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+panel principal visible
+end note
+
+@enduml
