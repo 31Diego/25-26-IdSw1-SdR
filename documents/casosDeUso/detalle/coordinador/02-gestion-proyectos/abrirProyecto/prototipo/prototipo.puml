@@ -7,9 +7,9 @@
         <b>Filtrar / buscar:</b>
         {
             {<b>ID:</b> | [         ]
-             <b>Título:</b> | [                              ]}
+            <b>Título:</b> | [                              ]}
             {<b>Estado:</b> | { "Todos" | "Borrador" | "En curso" | "Finalizado" }
-             <b>Coordinador:</b> | [                    ]}
+            <b>Coordinador:</b> | [                    ]}
         }
 
         ~~

@@ -1,0 +1,65 @@
+@startuml abrirProyectos
+
+skinparam linetype polyline
+
+state abrirProyectos as "abrirProyectos()" {
+
+    state " " as MostrandoLista
+    state " " as FiltrandoLista
+
+    [*] -[#green]-> MostrandoLista
+    note on link
+    <b>Coordinador</b> solicita abrir proyectos
+    end note
+
+    MostrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta un listado de proyectos de investigación
+    • ID
+    • Título
+    • Estado del proyecto
+    • Nombre del coordinador
+    • Fechas de inicio y fin
+    • Descripción
+    • Permite solicitar filtrar/buscar proyectos
+
+    <b>Regla de presentación del listado:</b>
+    • Si se accede desde PANEL_PRINCIPAL_ABIERTO o PROYECTO_ABIERTO:
+    se muestra el listado global de proyectos
+    • Si se accede desde INVESTIGADOR_ABIERTO:
+    se muestra únicamente el listado de proyectos asociados al investigador
+    end note
+
+    FiltrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Coordinador</b> solicita filtrar/buscar proyectos
+    <b>Sistema</b> actualiza el listado según los criterios indicados
+    end note
+
+    FiltrandoLista -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> finaliza la consulta del listado
+    end note
+}
+
+PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirProyectos
+note on link
+abrirProyectos()
+end note
+
+PROYECTO_ABIERTO -[#green]-> abrirProyectos
+note on link
+abrirProyectos()
+end note
+
+INVESTIGADOR_ABIERTO -[#green]-> abrirProyectos
+note on link
+abrirProyectos()
+end note
+
+abrirProyectos -[#green]-> PROYECTOS_ABIERTOS
+note on link
+Listado de proyectos abierto
+end note
+
+@enduml

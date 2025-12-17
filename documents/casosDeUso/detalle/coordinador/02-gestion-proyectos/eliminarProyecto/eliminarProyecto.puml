@@ -2,6 +2,8 @@
 
 skinparam linetype polyline
 
+PROYECTO_ABIERTO -[#green]-> eliminarProyecto
+
 state eliminarProyecto as "eliminarProyecto()" {
 
     state " " as MostrandoProyecto
@@ -25,8 +27,8 @@ state eliminarProyecto as "eliminarProyecto()" {
     <b>Coordinador</b> confirma eliminación
     <b>Sistema</b> elimina el proyecto
     • Elimina entregables asociados
-    • Quita asociaciones con investigadores
-    • Actualiza vista general de proyectos
+    • Elimina asociaciones con investigadores
+    • Actualiza el listado de proyectos
     end note
 
     ConfirmandoEliminacion -[#red]-> MostrandoProyecto

@@ -1,0 +1,38 @@
+@startsalt abrirConvocatoria-wireframe
+{
+    ====
+    <b>GIPF - CONVOCATORIAS</b>
+    ====
+    {
+        <b>Filtrar / buscar convocatorias</b>
+        --
+        {
+            {
+            {<b>ID:</b> | [            ]
+            <b>Título:</b> | [                              ]}
+
+            {<b>Estado:</b> | { "Todos" | "Abierta" | "Cerrada" | "En evaluación" | "Resuelta" }
+            <b>Fecha inicio:</b> | [            ]}
+
+            {<b>Fecha fin:</b> | [            ]
+            <b> </b> | " " }
+            }
+        }
+
+        ~~
+
+        <b>Listado de convocatorias</b>
+        --
+        {
+            {<b>ID</b> | <b>Título</b> | <b>Estado</b> | <b>Inicio</b> | <b>Fin</b> | <b>Descripción</b>}
+            {"CONV-021" | "Convocatoria Proyectos 2025" | "Abierta" | "01-02-2025" | "31-03-2025" | "Financiación para proyectos..."}
+            {"CONV-018" | "Ayudas a movilidad investigadora" | "En evaluación" | "10-10-2024" | "15-11-2024" | "Apoyo a estancias y..."}
+            {"CONV-015" | "Innovación docente 2024" | "Resuelta" | "01-03-2024" | "30-04-2024" | "Convocatoria para..."}
+        }
+
+        ~~
+
+        {[Aplicar filtros] | [Limpiar filtros] | [Abrir convocatoria] | [Volver]}
+    }
+}
+@endsalt

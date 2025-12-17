@@ -1,0 +1,45 @@
+@startsalt eliminarProyecto-wireframe
+{
+    ====
+    <b>GIPF - ELIMINAR PROYECTO</b>
+    ====
+    {
+        <b>Datos del proyecto:</b>
+        --
+        {
+            {
+            {<b>ID:</b> | "PROY-012                               "
+            <b>Título:</b> | "Sistema de apoyo a la gestión de proyectos..."}
+
+            {<b>Estado:</b> | "En curso                              "
+            <b>Coordinador:</b> | "Carlos Fernández López                 "}
+
+            {<b>Fecha inicio:</b> | "10-01-2025                         "
+            <b>Fecha fin:</b> | "20-12-2025                           "}
+
+            {<b>Descripción:</b> |
+                {"Proyecto orientado al desarrollo de una plataforma para apoyar la
+                gestión, seguimiento y coordinación de proyectos de investigación."}}
+            }
+        }
+
+        --
+
+        <b>Confirmación de eliminación</b>
+        {
+            <b>¿Está seguro de eliminar el proyecto?</b>
+            <i>Advertencia: esta acción no se puede deshacer.</i>
+
+            --
+            <b>Al confirmar:</b>
+            • Se eliminarán los entregables asociados
+            • Se eliminarán las asociaciones con investigadores
+            • Se actualizará el listado general de proyectos
+        }
+
+        ~~
+
+        {[Confirmar eliminación] | [Cancelar]}
+    }
+}
+@endsalt
