@@ -1,0 +1,63 @@
+@startuml abrirPanelPrincipal
+
+skinparam linetype polyline
+
+state abrirPanelPrincipal as "abrirPanelPrincipal()" {
+
+    state " " as PanelPrincipalAbierto
+    state " " as CambioDeVentana
+
+    [*] -[#green]-> PanelPrincipalAbierto 
+    note on link
+    <b>Investigador</b> solicita abrir el panel principal
+    end note    
+    
+    PanelPrincipalAbierto -[#green]-> CambioDeVentana
+    note on link
+    <b>Sistema</b> presenta el panel principal
+    • Permite solicitar abrir las opciones del perfil
+    • Permite solicitar abrir la carga de trabajo
+    • Permite solicitar abrir las recompensas
+    • Permite solicitar abrir los proyectos
+    • Permite solicitar abrir mis publicaciones hechas
+    • Permite ver todas las publicaciones hechas
+    end note
+    
+    CambioDeVentana -[#green]-> [*]
+    note on link
+      <b>Investigador</b> selecciona una de las opciones
+    end note
+    
+}
+
+abrirPanelPrincipal -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+abrirOpcionesPerfil()
+end note
+
+abrirPanelPrincipal -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+abrirOpcionesCargaTrabajo()
+end note
+
+abrirPanelPrincipal -[#green]-> RECOMPENSAS_ABIERTAS
+note on link
+abrirRecompensas
+end note
+
+abrirPanelPrincipal -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
+end note
+
+abrirPanelPrincipal -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
+end note
+
+abrirPanelPrincipal -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+abrirPublicaciones()
+end note
+
+@enduml
