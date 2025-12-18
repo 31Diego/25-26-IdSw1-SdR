@@ -9,67 +9,49 @@ in2 -[#green]-> abrirProyectos
 
 state in3 as "INVESTIGADOR_ABIERTO"
 in3 -[#green]-> abrirProyectos
-note on link
-abrirProyectos(ID)
-end note
-
 
 state abrirProyectos as "abrirProyectos()" {
 
     state " " as MostrandoLista
     state " " as FiltrandoLista
+    state " " as SolicitandoAccion
 
     [*] -[#green]-> MostrandoLista
     note on link
-    <b>Coordinador</b> solicita abrir listado de proyectos
+    <b>Investigador</b> solicita abrir el listado de proyectos propios
     end note
 
     MostrandoLista -[#green]-> FiltrandoLista
     note on link
-    <b>Sistema</b> presenta el listado de proyectos con:
-    • ID
-    • Título
-    • Estado
-    • Coordinador
-    • Fecha de inicio
-    • Fecha de fin
-
-    Permite filtrar y buscar proyectos
-
-    y permite solicitar las siguientes acciones:
-    • Abrir proyecto
-    • Crear proyecto
-    • Aplicar filtros
-    • Limpiar filtros
-    • Abrir panel principal
+    <b>Sistema</b> presenta el listado de proyectos propios del investigador con sus datos
+    principales (ID, título, estado, inicio y fin) y permite solicitar la introducción de criterios de filtrado y búsqueda.
     end note
 
     FiltrandoLista -[#green]-> FiltrandoLista
     note on link
-    <b>Coordinador</b> filtra o busca proyectos
-    <b>Sistema</b> actualiza el listado
+    <b>Investigador</b> solicita introducir filtros y/o solicita introducir búsqueda
+    <b>Sistema</b> muestra el listado actualizado
     end note
 
-    FiltrandoLista -[#green]-> [*]
+    FiltrandoLista -[#green]-> SolicitandoAccion
     note on link
-    <b>Coordinador</b> selecciona una opción de navegación
+    <b>Investigador</b> solicita una acción disponible en el listado
     end note
 
+    SolicitandoAccion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta la navegación solicitada
+    end note
 }
 
 abrirProyectos -[#green]-> PROYECTOS_ABIERTOS
 note on link
-Listado de proyectos visible
+Listado de proyectos propios visible
 end note
 
 abrirProyectos -[#green]-> PROYECTO_ABIERTO
 note on link
 abrirProyecto()
-end note
-
-abrirProyectos -[#green]-> PROYECTO_ABIERTO
-note on link
-crearProyecto()
 end note
 
 abrirProyectos -[#green]-> PANEL_PRINCIPAL_ABIERTO

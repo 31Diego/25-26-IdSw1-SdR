@@ -1,0 +1,94 @@
+@startuml abrirPanelPrincipal
+skinparam linetype polyline
+
+state in1 as "INVESTIGADORES_ABIERTOS"
+in1 -[#green]-> abrirPanelPrincipal
+
+state in2 as "OPCIONES_CARGA_TRABAJO_ABIERTAS"
+in2 -[#green]-> abrirPanelPrincipal
+
+state in3 as "OPCIONES_PERFIL_ABIERTO"
+in3 -[#green]-> abrirPanelPrincipal
+
+state in4 as "MIS_PUBLICACIONES_ABIERTAS"
+in4 -[#green]-> abrirPanelPrincipal
+
+state in5 as "PUBLICACIONES_ABIERTAS"
+in5 -[#green]-> abrirPanelPrincipal
+
+state in6 as "RECOMPENSAS_ABIERTAS"
+in6 -[#green]-> abrirPanelPrincipal
+
+state in7 as "PROYECTOS_ABIERTOS"
+in7 -[#green]-> abrirPanelPrincipal
+
+
+state abrirPanelPrincipal as "abrirPanelPrincipal()" {
+
+    state " " as MostrandoPanel
+
+    [*] -[#green]-> MostrandoPanel
+    note on link
+    <b>Investigador</b> solicita abrir el panel principal
+    end note
+
+    MostrandoPanel -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta el panel principal y permite solicitar las siguientes acciones:
+    • Abrir proyectos
+    • Abrir investigadores
+    • Abrir recompensas
+    • Abrir mis publicaciones
+    • Abrir publicaciones
+    • Abrir opciones de perfil
+    • Abrir opciones de carga de trabajo
+    • Cerrar sesión
+    end note
+}
+
+abrirPanelPrincipal -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+Panel principal visible
+end note
+
+abrirPanelPrincipal -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+abrirOpcionesPerfil()
+end note
+
+abrirPanelPrincipal -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+abrirOpcionesCargaTrabajo()
+end note
+
+abrirPanelPrincipal -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
+end note
+
+abrirPanelPrincipal -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+abrirPanelPrincipal -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
+end note
+
+abrirPanelPrincipal -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+abrirPublicaciones()
+end note
+
+abrirPanelPrincipal -[#green]-> RECOMPENSAS_ABIERTAS
+note on link
+abrirRecompensas()
+end note
+
+abrirPanelPrincipal -[#green]-> SESION_CERRADA
+note on link
+cerrarSesion()
+end note
+
+@enduml
