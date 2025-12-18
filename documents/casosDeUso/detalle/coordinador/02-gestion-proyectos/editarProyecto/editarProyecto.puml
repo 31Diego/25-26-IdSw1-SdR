@@ -19,15 +19,16 @@ state editarProyecto as "editarProyecto()" {
     <b>Sistema</b> presenta datos de edición del proyecto
     • ID
     • Título
-    • Estado del proyecto
-    • Nombre de coordinador
-    • Fechas de inicio y fin
+    • Estado
+    • Coordinador
+    • Fecha de inicio
+    • Fecha de fin
     • Descripción
 
-    <b>Sistema</b> permite solicitar:
-    • modificar campos
-    • guardar proyecto
-    • cancelar edición
+    y permite solicitar las siguientes acciones:
+    • Modificar datos del proyecto
+    • Guardar y salir
+    • Cancelar
     end note
 
     GuardandoDatos -[#green]-> EditandoDatos

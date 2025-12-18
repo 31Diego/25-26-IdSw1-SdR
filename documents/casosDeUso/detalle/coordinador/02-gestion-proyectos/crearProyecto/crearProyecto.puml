@@ -16,13 +16,17 @@ state crearProyecto as "crearProyecto()" {
 
     SolicitandoDatos -[#green]-> RegistrandoProyecto
     note on link
-    <b>Sistema</b> solicita los datos del proyecto:
-    • ID del proyecto
+    <b>Sistema</b> presenta el formulario de creación del proyecto y permite introducir:
     • Título
     • Estado inicial
-    • Nombre del coordinador
-    • Fechas de inicio y fin
+    • Fecha de inicio
+    • Fecha de fin
     • Descripción
+    <i>El ID del proyecto se genera automáticamente
+
+    y permite solicitar las siguientes acciones:
+    • Crear proyecto
+    • Volver
     end note
 
     RegistrandoProyecto -[#green]-> [*]

@@ -20,14 +20,18 @@ state abrirProyecto as "abrirProyecto()" {
 
     MostrandoListaProyectos -[#green]-> FiltrandoBuscando
     note on link
-    <b>Sistema</b> presenta lista de proyectos:
-    • ID, título, estado
+    <b>Sistema</b> presenta la lista de proyectos con:
+    • ID
+    • Título
+    • Estado
     • Coordinador responsable
-    • Fechas inicio/fin
+    • Fechas de inicio y fin
     • Descripción
-    
-    • Permite filtrar/buscar
-    • Permite seleccionar un proyecto
+
+    y permite solicitar las siguientes acciones:
+    • Filtrar proyectos
+    • Buscar proyectos
+    • Seleccionar un proyecto
     end note
 
     FiltrandoBuscando -[#green]-> FiltrandoBuscando
@@ -43,7 +47,18 @@ state abrirProyecto as "abrirProyecto()" {
 
     SeleccionandoProyecto -[#green]-> [*]
     note on link
-    <b>Sistema</b> carga el proyecto seleccionado
+    <b>Sistema</b> visualiza el proyecto seleccionado con:
+    • Datos del proyecto (ID, título, estado, entidad financiadora, coordinador, inicio, fin)
+    • Descripción
+    • Equipo
+
+    y permite solicitar las siguientes acciones:
+    • Editar proyecto
+    • Eliminar proyecto
+    • Abrir entregables
+    • Agregar investigador
+    • Abrir investigadores
+    • Volver a proyectos
     end note
 }
 

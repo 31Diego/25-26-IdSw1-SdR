@@ -26,21 +26,22 @@ state abrirProyectos as "abrirProyectos()" {
 
     MostrandoLista -[#green]-> FiltrandoLista
     note on link
-    <b>Sistema</b> presenta un listado de proyectos de investigación/del investigador
+    <b>Sistema</b> presenta el listado de proyectos con:
     • ID
     • Título
-    • Estado del proyecto
-    • Coordinador responsable
-    • Fechas de inicio y fin
-    • Descripción
-    
-    • Permite filtrar y buscar proyectos
+    • Estado
+    • Coordinador
+    • Fecha de inicio
+    • Fecha de fin
 
-    <b>Regla de presentación del listado:</b>
-    • Si se accede desde PANEL_PRINCIPAL_ABIERTO o PROYECTO_ABIERTO:
-    se muestra el listado global de proyectos
-    • Si se accede desde INVESTIGADOR_ABIERTO:
-    se muestran únicamente los proyectos asociados al investigador
+    Permite filtrar y buscar proyectos
+
+    y permite solicitar las siguientes acciones:
+    • Abrir proyecto
+    • Crear proyecto
+    • Aplicar filtros
+    • Limpiar filtros
+    • Abrir panel principal
     end note
 
     FiltrandoLista -[#green]-> FiltrandoLista

@@ -18,24 +18,39 @@ state eliminarProyecto as "eliminarProyecto()" {
 
     MostrandoProyecto -[#green]-> ConfirmandoEliminacion
     note on link
-    <b>Sistema</b> solicita confirmación
+    <b>Sistema</b> presenta los datos del proyecto:
+    • ID
+    • Título
+    • Estado
+    • Coordinador
+    • Fecha de inicio
+    • Fecha de fin
+    • Descripción
+
+    y presenta la confirmación de eliminación:
     • ¿Está seguro de eliminar el proyecto?
-    • Advertencia: esta acción no se puede deshacer
+    • Advertencia: esta acción no se puede deshacer.
+
+    <b>Al confirmar:</b>
+    • Se eliminarán los entregables asociados
+    • Se eliminarán las asociaciones con investigadores
+    • Se volverá al listado de proyectos actualizado
+
+    y permite solicitar las siguientes acciones:
+    • Confirmar eliminación
+    • Cancelar
     end note
 
     ConfirmandoEliminacion -[#green]-> [*]
     note on link
-    <b>Coordinador</b> confirma eliminación
-    <b>Sistema</b> elimina el proyecto
-    • Elimina entregables asociados
-    • Elimina asociaciones con investigadores
-    • Actualiza el listado de proyectos
+    <b>Coordinador</b> solicita confirmar eliminación
+    <b>Sistema</b> visualiza el listado de proyectos actualizado
     end note
 
     ConfirmandoEliminacion -[#red]-> MostrandoProyecto
     note on link
     <b>Coordinador</b> cancela eliminación
-    <b>Sistema</b> mantiene el proyecto sin cambios
+    <b>Sistema</b> visualiza el proyecto sin cambios
     end note
 }
 
