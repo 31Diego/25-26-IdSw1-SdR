@@ -42,6 +42,7 @@ package "Mis publicaciones" {
 package "Convocatorias" {
     usecase UC_AbrirConvocatorias as "abrirConvocatorias()"
     usecase UC_AbrirConvocatoria as "abrirConvocatoria()"
+    usecase UC_ImportarConvocatoria as "importarConvocatoria()"
 }
 
 package "Recompensas" {
@@ -106,6 +107,7 @@ UC_EliminarMiPublicacion <-- coordinador
 
 coordinador --> UC_AbrirConvocatorias
 coordinador --> UC_AbrirConvocatoria
+coordinador --> UC_ImportarConvocatoria
 
 coordinador --> UC_AbrirRecompensas
 coordinador --> UC_AbrirRecompensa
