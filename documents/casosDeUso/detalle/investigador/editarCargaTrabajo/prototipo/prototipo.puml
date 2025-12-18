@@ -1,0 +1,44 @@
+@startsalt editarCargaTrabajo-wireframe
+{
+    ====
+    <b>GIPF - EDITAR CARGA DE TRABAJO</b>
+    ====
+
+    <b>Datos personales</b>
+    {
+        { <b>Código:</b> | "FNB-1188" (solo lectura) }
+        { <b>Nombre:</b> | "Marta Sánchez Ruiz" (solo lectura) }
+        { <b>Sede:</b> | "Santander" (solo lectura) }
+        { <b>Perfil:</b> | "Investigador-docente" (solo lectura) }
+    }
+
+    --
+
+    <b>Editar horas semanales</b>
+    {
+        { <b>Docencia (0–16):</b> | [ 12 ] }
+        { <b>Investigación:</b> | [ 16 ] }
+        { <b>Actividades académicas:</b> | [ 2  ] }
+    }
+
+    --
+
+    <b>Resumen calculado</b>
+    {
+        { <b>Total:</b> | "30 h/sem" }
+        { <b>Margen docencia:</b> | "4 h" }
+        { <b>Estado:</b> | "OK" }
+    }
+
+    --
+
+    <b>Avisos</b>
+    {
+        "• La docencia no puede superar 16 h/semana."
+    }
+
+    --
+
+    { [Cancelar] | [Guardar cambios] }
+}
+@endsalt

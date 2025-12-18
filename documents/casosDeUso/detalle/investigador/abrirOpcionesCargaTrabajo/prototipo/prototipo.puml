@@ -1,0 +1,51 @@
+@startsalt abrirOpcionesCargaTrabajo-wireframe
+{
+    ====
+    <b>GIPF - CARGA DE TRABAJO</b>
+    ====
+
+    {
+        <b>Resumen personal (semanal)</b>
+        --
+        {
+            {<b>Docencia (h/sem)</b> | <b>Investigación (h/sem)</b> | <b>Actividades académicas (h/sem)</b> | <b>Total (h/sem)</b> | <b>Margen docencia</b>}
+            {"12" | "16" | "2" | "30" | "4"}
+        }
+
+        --
+
+        <b>Detalle propio</b>
+        {
+            <b>Código FUNIBER:</b> FNB-1188
+            <b>Nombre:</b> Marta Sánchez Ruiz
+            <b>Sede:</b> Santander
+            <b>Perfil:</b> Investigador-docente
+            <b>Área:</b> "Educación e innovación"
+
+            --
+            <b>Docencia (máx. 16h/semana)</b>
+            • Asignaturas activas: 3
+            • Horas docentes: 12 / 16
+            • Margen disponible: 4 h
+
+            --
+            <b>Investigación</b>
+            • Proyectos en curso: 1
+            • Proyecto: PRJ-SOD-2024-021
+            • Horas de investigación: 16 h/sem
+
+            --
+            <b>Actividades académicas</b>
+            • Horas de actividades académicas: 2 h/sem
+
+            --
+            <b>Total semanal:</b> 30 h
+            <b>Observación:</b> "No supera el límite docente (12/16)."
+        }
+
+        ~~
+
+        {[Editar carga de trabajo] | [Abrir Panel principal]}
+    }
+}
+@endsalt

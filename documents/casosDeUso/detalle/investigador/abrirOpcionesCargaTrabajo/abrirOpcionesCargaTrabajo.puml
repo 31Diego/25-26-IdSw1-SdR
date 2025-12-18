@@ -1,0 +1,44 @@
+@startuml abrirOpcionesCargaTrabajo
+skinparam linetype polyline
+
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirOpcionesCargaTrabajo
+
+state abrirOpcionesCargaTrabajo as "abrirOpcionesCargaTrabajo()" {
+
+    state " " as CargandoCargaTrabajo
+
+    [*] -[#green]-> CargandoCargaTrabajo
+    note on link
+    <b>Investigador</b> solicita abrir las opciones de carga de trabajo
+    end note
+
+    CargandoCargaTrabajo -[#green]-> [*]
+    note on link
+    <b>Sistema</b> muestra la información de carga de trabajo propia:
+    • Resumen personal
+    • Detalle semanal (docencia, investigación, actividades académicas)
+    • Total semanal y margen docente (si aplica)
+
+    y permite solicitar las siguientes acciones:
+    • Editar carga de trabajo
+    • Abrir panel principal
+    end note
+}
+
+abrirOpcionesCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+Carga de trabajo propia visible
+end note
+
+abrirOpcionesCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+editarCargaTrabajo()
+end note
+
+abrirOpcionesCargaTrabajo -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
+end note
+
+@enduml
