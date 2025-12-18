@@ -13,9 +13,8 @@
             {<b>Campo</b>             | [Inteligencia Artificial] }
             {<b>Carrera</b>           | [Informática] }
             {<b>Máster</b>            | [IA Avanzada] }
-            {<b>Correo electrónico</b> | [ana.lopez@mail.com] }
-            {<b>Teléfono</b>          | [600123456] }
-            {<b>Ubicación</b>         | [Madrid] }
+            {<b>Rol</b>            | [Coordinador] (editable por coordinador) }
+    
         }
 
         ~~

@@ -2,6 +2,12 @@
 
 skinparam linetype polyline
 
+state in1 as "OPCIONES_PERFIL_ABIERTO"
+in1 -[#green]-> editarPerfil
+note on link
+editarPerfil()
+end note
+
 state editarPerfil as "editarPerfil()" {
 
     state " " as EditandoDatos
@@ -15,8 +21,8 @@ state editarPerfil as "editarPerfil()" {
     EditandoDatos -[#green]-> GuardandoDatos
     note on link
     <b>Sistema</b> presenta datos de perfil
-    • ID, nombre, apellido, campo, carrera, master
-    • Correo electrónico, teléfono, ubicación
+    • ID, nombre, apellido, campo, carrera, master, rol
+    
     
     
     <b>Sistema</b> permite solicitar:
@@ -42,10 +48,7 @@ state editarPerfil as "editarPerfil()" {
 
 }
 
-OPCIONES_PERFIL_ABIERTO -[#green]-> editarPerfil
-note on link
-editarPerfil()
-end note
+
 
 editarPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
 note on link

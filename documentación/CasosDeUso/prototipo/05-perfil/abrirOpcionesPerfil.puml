@@ -4,18 +4,26 @@
     <b>GIPF - OPCIONES DE PERFIL</b>
     ====
     {
-        <b>Opciones disponibles para el perfil del investigador</b>
+        <b>Investigador seleccionado</b>
         --
         {
-            {<b>ID</b> | <b>Nombre</b> | <b>Campo</b>}
-            {"INV-001" | "Ana López"   | "Inteligencia Artificial"}
-            {"INV-002" | "Mario García"| "Big Data"}
-            {"INV-003" | "Lucía Pérez" | "Ciberseguridad"}
+            {<b>ID:</b>     | INV-001}
+            {<b>Nombre:</b> | Ana López}
+            {<b>Campo:</b>  | Inteligencia Artificial}
         }
 
         ~~
 
-        {[Editar perfil] | [Resolver solicitud de eliminación] | [Cancelar]}
+        <b>Opciones disponibles</b>
+        --
+        {
+            {[Editar perfil]}
+            {[Resolver solicitudes de eliminación]}
+        }
+
+        ~~
+
+        {[Volver]}
     }
 }
 @endsalt

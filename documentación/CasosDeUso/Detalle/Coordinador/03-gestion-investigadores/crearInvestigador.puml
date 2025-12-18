@@ -2,6 +2,12 @@
 
 skinparam linetype polyline
 
+state in1 as "INVESTIGADORES_ABIERTOS"
+in1 -[#green]-> crearInvestigador
+note on link
+crearInvestigador()
+end note
+
 state crearInvestigador as "crearInvestigador()" {
 
     state " " as SolicitandoDatos
@@ -29,17 +35,18 @@ state crearInvestigador as "crearInvestigador()" {
     end note
 }
 
-INVESTIGADORES_ABIERTOS -[#blue]-> crearInvestigador
-note on link
-crearInvestigador()
-end note
 
 crearInvestigador -[#green]-> OPCIONES_PERFIL_ABIERTO
 note on link
 abrirOpcionesPerfil(investigadorNuevo)
 end note
 
-crearInvestigador -[#blue]-> INVESTIGADORES_ABIERTOS
+OPCIONES_PERFIL_ABIERTO -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+editarPerfil(investigadorNuevo)
+end note
+
+crearInvestigador -[#green]-> INVESTIGADORES_ABIERTOS
 note on link
 cancelar creación
 end note

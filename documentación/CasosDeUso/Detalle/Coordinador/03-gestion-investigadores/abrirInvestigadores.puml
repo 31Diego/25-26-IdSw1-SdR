@@ -2,6 +2,12 @@
 
 skinparam linetype polyline
 
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirInvestigadores
+note on link
+abrirInvestigadores()
+end note
+
 state abrirInvestigadores as "abrirInvestigadores()" {
 
     state " " as MostrandoLista
@@ -38,12 +44,7 @@ state abrirInvestigadores as "abrirInvestigadores()" {
 
 PROYECTO_ABIERTO -[#green]-> abrirInvestigadores
 note on link
-abrirInvestigadores()
-end note
-
-PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirInvestigadores
-note on link
-abrirInvestigadores()
+abrirInvestigadores(ID)
 end note
 
 

@@ -1,31 +1,24 @@
 @startsalt abrirInvestigador-wireframe
 {
     ====
-    <b>GIPF - INVESTIGADORES</b>
+    <b>GIPF - PERFIL DE INVESTIGADOR</b>
     ====
     {
-        <b>Filtrar / buscar:</b>
-        {
-            {<b>ID:</b> | [        ]
-             <b>Nombre:</b> | [                    ]}
-            {<b>Apellido:</b> | [                    ]
-             <b>Campo:</b> | [                    ]}
-        }
-
-        ~~
-
-        <b>Lista de investigadores</b>
+        <b>Datos del investigador</b>
         --
         {
-            {<b>ID</b> | <b>Nombre</b> | <b>Apellido</b> | <b>Campo</b> | <b>Carrera</b>}
-            {"INV-001" | "Ana"   | "López"   | "IA"           | "Informática"}
-            {"INV-002" | "Mario" | "García"  | "Big Data"     | "Teleco"}
-            {"INV-003" | "Lucía" | "Pérez"   | "Ciberseguridad" | "Informática"}
+            {<b>ID:</b>        | INV-001}
+            {<b>Nombre:</b>    | Ana}
+            {<b>Apellido:</b>  | López}
+            {<b>Campo:</b>     | Inteligencia Artificial}
+            {<b>Carrera:</b>   | Ingeniería Informática}
+            {<b>Máster:</b>    | Máster en IA}
+            {<b>Rol:</b>    | Coordinador}
         }
 
         ~~
 
-        {[Abrir perfil] | [Aplicar filtros] | [Limpiar filtros] | [Cancelar]}
+        {[Editar perfil] | [Volver]}
     }
 }
 @endsalt

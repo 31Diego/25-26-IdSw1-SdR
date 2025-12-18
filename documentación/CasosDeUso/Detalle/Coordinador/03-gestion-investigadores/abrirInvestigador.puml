@@ -15,7 +15,7 @@ state abrirInvestigador as "abrirInvestigador()" {
     MostrandoLista -[#green]-> FiltrandoLista
     note on link
     <b>Sistema</b> presenta perfil de investigador
-    • ID, nombre, apellido, campo, dni, carrera, master de investigador
+    • ID, nombre, apellido, campo, carrera, master y rol de cada investigador
     • Permite solicitar editar perfil
     • Permite solicitar abrirInvestigadores
 

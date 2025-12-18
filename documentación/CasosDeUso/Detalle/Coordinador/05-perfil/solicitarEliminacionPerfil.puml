@@ -2,6 +2,13 @@
 
 skinparam linetype polyline
 
+state in1 as "OPCIONES_PERFIL_ABIERTO"
+in1 -[#green]-> solicitarEliminacionPerfil
+note on link
+solicitarEliminacionPerfil()
+end note
+
+
 state solicitarEliminacionPerfil as "solicitarEliminacionPerfil()" {
 
     state " " as SeleccionandoPerfil
@@ -34,6 +41,12 @@ state solicitarEliminacionPerfil as "solicitarEliminacionPerfil()" {
 solicitarEliminacionPerfil -[#green]-> PANEL_PRINCIPAL_ABIERTO
 note on link
 iniciarSesion()
+end note
+
+
+solicitarEliminacionPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+abrirOpcionesPerfil()
 end note
 
 @enduml
