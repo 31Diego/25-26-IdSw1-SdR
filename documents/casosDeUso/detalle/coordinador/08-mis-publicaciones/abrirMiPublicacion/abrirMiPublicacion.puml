@@ -10,12 +10,20 @@ state abrirMiPublicacion as "abrirMiPublicacion()" {
 
     [*] -[#green]-> SeleccionandoPublicacion
     note on link
-    <b>Coordinador</b> selecciona una publicación propia del listado
+    <b>Coordinador</b> solicita abrir una publicación propia del listado
     end note
 
     SeleccionandoPublicacion -[#green]-> [*]
     note on link
-    <b>Sistema</b> abre la publicación seleccionada
+    <b>Sistema</b> muestra la publicación seleccionada con:
+    • Datos de la publicación
+    • Contenido
+    • Visibilidad
+
+    y permite solicitar las siguientes acciones:
+    • Editar publicación
+    • Eliminar publicación
+    • Volver a mis publicaciones
     end note
 }
 

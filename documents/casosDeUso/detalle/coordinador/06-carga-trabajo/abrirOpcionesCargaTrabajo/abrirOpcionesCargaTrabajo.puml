@@ -1,59 +1,47 @@
 @startuml abrirOpcionesCargaTrabajo
-
 skinparam linetype polyline
+
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirOpcionesCargaTrabajo
 
 state abrirOpcionesCargaTrabajo as "abrirOpcionesCargaTrabajo()" {
 
-    state " " as MostrandoCargaTrabajo
-    state " " as ConsultandoDetalle
+    state " " as CargandoCargaTrabajo
 
-    [*] -[#green]-> MostrandoCargaTrabajo
+    [*] -[#green]-> CargandoCargaTrabajo
     note on link
     <b>Coordinador</b> solicita abrir las opciones de carga de trabajo
     end note
 
-    MostrandoCargaTrabajo -[#green]-> ConsultandoDetalle
+    CargandoCargaTrabajo -[#green]-> [*]
     note on link
-    <b>Sistema</b> presenta la información de carga de trabajo del personal investigador/docente
-    • Código interno FUNIBER
-    • Nombre y sede
-    • Tipo de perfil: investigador-docente / solo investigador
-    • Carga semanal de docencia (si aplica)
-    • Carga semanal de investigación (proyectos activos)
-    • Total semanal y horas disponibles
+    <b>Sistema</b> muestra la información de carga de trabajo:
+    • Filtros disponibles
+    • Resumen global
+    • Detalle por persona
+    • Detalle de la persona seleccionada
 
-    <b>Reglas del sistema:</b>
-    • La suma docencia + investigación no puede superar 16h/semana
-    • En sedes donde no se imparte docencia, la carga docente es 0h
-
-    • Permite solicitar filtrar/buscar por sede, perfil, investigador o proyecto
-    • Permite seleccionar una persona para consultar su detalle
-    end note
-
-    ConsultandoDetalle -[#green]-> ConsultandoDetalle
-    note on link
-    <b>Coordinador</b> solicita consultar el detalle de un investigador/docente
-    <b>Sistema</b> muestra el detalle de carga
-    • Desglose de docencia (asignaturas y horas semanales, si aplica)
-    • Desglose de investigación (proyectos en curso y horas asignadas)
-    • Total semanal y horas disponibles (hasta 16h)
-    end note
-
-    ConsultandoDetalle -[#green]-> [*]
-    note on link
-    <b>Coordinador</b> finaliza la consulta de la carga de trabajo
+    y permite solicitar las siguientes acciones:
+    • Aplicar filtros
+    • Limpiar filtros
+    • Editar carga de trabajo
+    • Abrir panel principal
     end note
 }
 
-PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirOpcionesCargaTrabajo
+abrirOpcionesCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
 note on link
-abrirOpcionesCargaTrabajo()
+Pantalla de carga de trabajo mostrada
 end note
 
 abrirOpcionesCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
 note on link
-Opciones de carga de trabajo abiertas
+editarCargaTrabajo()
+end note
+
+abrirOpcionesCargaTrabajo -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
 end note
 
 @enduml
-``

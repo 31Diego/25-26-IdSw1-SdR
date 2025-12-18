@@ -11,30 +11,33 @@ state editarPublicacion as "editarPublicacion()" {
 
     [*] -[#green]-> MostrandoPublicacion
     note on link
-    <b>Coordinador</b> tiene una publicación propia abierta
-    <b>Coordinador</b> solicita editar publicación
+    <b>Coordinador</b> solicita editar una publicación propia
     end note
 
     MostrandoPublicacion -[#green]-> EditandoDatos
     note on link
-    <b>Sistema</b> presenta el formulario de edición con los datos actuales
+    <b>Sistema</b> presenta el formulario de edición con los datos actuales:
     • Título
-    • Estado (borrador / publicada)
-    • Visibilidad (pública / privada)
+    • Estado
+    • Visibilidad
     • Descripción
     • Adjuntos (opcional)
+
+    y permite solicitar las siguientes acciones:
+    • Guardar cambios
+    • Cancelar
     end note
 
     EditandoDatos -[#green]-> [*]
     note on link
-    <b>Coordinador</b> guarda cambios
-    <b>Sistema</b> actualiza la publicación y mantiene la vista abierta
+    <b>Coordinador</b> solicita guardar cambios
+    <b>Sistema</b> visualiza la publicación actualizada
     end note
 
     EditandoDatos -[#red]-> MostrandoPublicacion
     note on link
-    <b>Coordinador</b> cancela la edición
-    <b>Sistema</b> mantiene la publicación sin cambios
+    <b>Coordinador</b> solicita cancelar
+    <b>Sistema</b> visualiza la publicación sin cambios
     end note
 }
 

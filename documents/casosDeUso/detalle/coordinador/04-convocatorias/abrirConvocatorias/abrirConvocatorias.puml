@@ -14,24 +14,40 @@ state abrirConvocatorias as "abrirConvocatorias()" {
 
     [*] -[#green]-> CargandoListado
     note on link
-    <b>Coordinador</b> selecciona "Convocatorias"
+    <b>Coordinador</b> solicita abrir convocatorias
     end note
 
     CargandoListado -[#green]-> MostrandoConvocatorias
     note on link
-    <b>Sistema</b> carga convocatorias
-    <b>Sistema</b> muestra el listado de convocatorias
+    <b>Sistema</b> presenta el bloque de búsqueda y filtrado con:
+    • Texto
+    • Área
+    • Estado
+
+    y permite solicitar las siguientes acciones:
+    • Buscar
+    • Limpiar filtros
+
+    <b>Sistema</b> presenta el listado de convocatorias con:
+    • ID
+    • Título
+    • Área
+    • Estado
+    • Fecha de cierre
+    • abrirConvocatoria()
     end note
 
     CargandoListado -[#red]-> [*]
     note on link
-    <b>Sistema</b> no puede cargar el listado (error)
-    <b>Sistema</b> informa del problema y mantiene la navegación anterior
+    <b>Sistema</b> informa de un problema al cargar el listado
+    y mantiene la navegación anterior
     end note
 
     MostrandoConvocatorias -[#green]-> [*]
     note on link
-    <b>Coordinador</b> puede filtrar/buscar o abrir una convocatoria
+    <b>Sistema</b> permite solicitar las siguientes acciones:
+    • Abrir convocatoria
+    • Abrir panel principal
     end note
 }
 

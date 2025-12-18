@@ -11,26 +11,32 @@ state eliminarPublicacion as "eliminarPublicacion()" {
 
     [*] -[#green]-> ConfirmandoEliminacion
     note on link
-    <b>Coordinador</b> tiene una publicación propia abierta
-    <b>Coordinador</b> solicita eliminar publicación
+    <b>Coordinador</b> solicita eliminar una publicación propia
     end note
 
     ConfirmandoEliminacion -[#green]-> Eliminando
     note on link
-    <b>Sistema</b> solicita confirmación
-    <b>Coordinador</b> confirma la eliminación
+    <b>Sistema</b> presenta la confirmación de eliminación con:
+    • ID
+    • Título
+    • Estado
+    • Visibilidad
+
+    y permite solicitar las siguientes acciones:
+    • Eliminar definitivamente
+    • Cancelar
     end note
 
     Eliminando -[#green]-> [*]
     note on link
     <b>Sistema</b> elimina la publicación
-    <b>Sistema</b> muestra mensaje de éxito
+    y visualiza un mensaje de confirmación
     end note
 
     ConfirmandoEliminacion -[#red]-> [*]
     note on link
-    <b>Coordinador</b> cancela la eliminación
-    <b>Sistema</b> no realiza cambios
+    <b>Coordinador</b> solicita cancelar
+    <b>Sistema</b> mantiene la publicación sin cambios
     end note
 }
 

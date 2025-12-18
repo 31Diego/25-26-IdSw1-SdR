@@ -19,23 +19,37 @@ state abrirMisPublicaciones as "abrirMisPublicaciones()" {
 
     MostrandoLista -[#green]-> FiltrandoLista
     note on link
-    <b>Sistema</b> presenta el listado de publicaciones propias del coordinador
+    <b>Sistema</b> presenta el bloque de filtrar / buscar con:
     • Título
-    • Estado (borrador / publicada)
-    • Fecha de creación o publicación
-    • Descripción
-    • Permite solicitar filtrar/buscar publicaciones
+    • Estado
+    • Fecha (desde)
+    • Fecha (hasta)
+
+    <b>Sistema</b> presenta el listado de mis publicaciones con:
+    • ID
+    • Título
+    • Estado
+    • Fecha
+    • Resumen
+    • abrirMiPublicacion()
+
+    y permite solicitar las siguientes acciones:
+    • Aplicar filtros
+    • Limpiar filtros
+    • Abrir publicación
+    • Crear publicación
+    • Abrir panel principal
     end note
 
     FiltrandoLista -[#green]-> FiltrandoLista
     note on link
-    <b>Coordinador</b> solicita filtrar/buscar sus publicaciones
-    <b>Sistema</b> actualiza el listado según los criterios indicados
+    <b>Coordinador</b> solicita introducir criterios de filtrado o búsqueda
+    <b>Sistema</b> muestra el listado actualizado
     end note
 
     FiltrandoLista -[#green]-> [*]
     note on link
-    <b>Sistema</b> deja el listado de publicaciones listo para su consulta
+    <b>Sistema</b> deja el listado de publicaciones visible
     end note
 }
 

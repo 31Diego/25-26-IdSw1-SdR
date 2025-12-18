@@ -16,18 +16,22 @@ state crearPublicacion as "crearPublicacion()" {
 
     SolicitandoDatos -[#green]-> CreandoPublicacion
     note on link
-    <b>Sistema</b> solicita datos de la nueva publicación
+    <b>Sistema</b> presenta el formulario de creación de la publicación y permite introducir:
     • Título
+    • Estado
+    • Visibilidad
     • Descripción
-    • Estado (borrador / publicada)
-    • Visibilidad (pública / privada)
-    • Archivo adjunto (opcional)
+    • Adjuntos (opcional)
+
+    y permite solicitar las siguientes acciones:
+    • Crear publicación
+    • Volver a mis publicaciones
     end note
 
     CreandoPublicacion -[#green]-> [*]
     note on link
-    <b>Coordinador</b> proporciona los datos solicitados
-    <b>Sistema</b> crea la publicación
+    <b>Coordinador</b> introduce los datos solicitados y solicita crear la publicación
+    <b>Sistema</b> visualiza la publicación creada
     end note
 }
 
