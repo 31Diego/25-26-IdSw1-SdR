@@ -1,55 +1,22 @@
-@startuml abrirOpcionesPerfil
+@startsalt abrirOpcionesPerfil-wireframe
+{
+    ====
+    <b>GIPF - OPCIONES DE PERFIL DE INVESTIGADOR</b>
+    ====
+    {
+        <b>Datos del investigador</b>
+        --
+        {
+            {<b>ID:</b>    | "INV-045"}
+            {<b>Nombre:</b>| "Ana García López"}
+            {<b>Campo:</b> | "Inteligencia Artificial"}
+        }
 
-skinparam linetype polyline
+        ~~
 
-state abrirOpcionesPerfil as "abrirOpcionesPerfil()" {
-
-    state " " as MostrandoLista
-    state " " as FiltrandoLista
-
-    [*] -[#green]-> MostrandoLista 
-    note on link
-    <b>Coordinador</b> solicita abrir opciones perfil
-    end note    
-    
-    MostrandoLista -[#green]-> FiltrandoLista
-    note on link
-    <b>Sistema</b> presenta las opciones disponibles en perfil
-    • ID, nombre, campo de cada investigador
-    • Permite solicitar editar perfil
-    • Permite solicitar resolver solicitud eliminacion
-   
-    
-    
-    end note
-    
-    FiltrandoLista -[#green]-> [*]
-    note on link
-    <b>Coordinador</b> solicita una de las opciones
-    end note
+        <b>Acciones disponibles</b>
+        --
+        {[Editar perfil] | [Resolver solicitud de eliminación] | [Volver a investigadores abiertos]}
+    }
 }
-
-PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirOpcionesPerfil
-note on link
-abrirOpcionesPerfil()
-end note
-
-
-INVESTIGADOR_ABIERTO -[#green]-> abrirOpcionesPerfil
-note on link
-abrirOpcionesPerfil()
-end note
-
-abrirOpcionesPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
-note on link
-editarPerfil()
-end note
-
-
-abrirOpcionesPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
-note on link
-resolverSolicitudEliminacionPerfil()
-end note
-
-
-@enduml
+@endsalt

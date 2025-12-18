@@ -1,51 +1,24 @@
-@startuml abrirInvestigador
+@startsalt abrirInvestigador-wireframe
+{
+    ====
+    <b>GIPF - PERFIL DE INVESTIGADOR</b>
+    ====
+    {
+        <b>Detalles del investigador</b>
+        --
+        {
+            {<b>ID:</b>         | "INV-045"}
+            {<b>Nombre:</b>     | "Ana"}
+            {<b>Apellido:</b>   | "García López"}
+            {<b>Campo:</b>      | "Inteligencia Artificial"}
+            {<b>DNI:</b>        | "12345678X"}
+            {<b>Carrera:</b>    | "Ingeniería Informática"}
+            {<b>Máster:</b>     | "Ciencia de Datos"}
+        }
 
-skinparam linetype polyline
+        ~~
 
-
-state abrirInvestigador as "abrirInvestigador()" {
-
-    state " " as MostrandoLista
-    state " " as FiltrandoLista
-
-    [*] -[#green]-> MostrandoLista 
-    note on link
-    <b>Coordinador</b> solicita abrir investigador
-    end note    
-    
-    MostrandoLista -[#green]-> FiltrandoLista
-    note on link
-    <b>Sistema</b> presenta perfil de investigador
-    • ID, nombre, apellido, campo, dni, carrera, master de investigador
-    • Permite solicitar editar perfil
-    • Permite solicitar abrir investigadores
-
-  
-    
-
-    end note
-    FiltrandoLista -[#green]-> [*]
-    note on link
-    <b>Coordinador</b> solicita una de las opciones
-    end note
+        {[Editar perfil] | [Volver ]}
+    }
 }
-
-
-INVESTIGADORES_ABIERTOS -[#green]-> abrirInvestigador
-note on link
-abrirInvestigador()
-end note
-
-abrirInvestigador -[#green]-> OPCIONES_PERFIL_ABIERTO
-note on link
-abrirOpcionesPerfil()
-end note
-
-abrirInvestigador -[#green]-> INVESTIGADORES_ABIERTOS
-note on link
-abrirInvestigadores()
-end note
-
-
-
-@enduml
+@endsalt
