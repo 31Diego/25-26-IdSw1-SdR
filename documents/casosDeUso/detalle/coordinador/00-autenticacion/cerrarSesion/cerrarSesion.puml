@@ -2,8 +2,8 @@
 
 skinparam linetype polyline
 
-PANEL_PRINCIPAL_ABIERTO -[hidden]-> cerrarSesion
-PANEL_PRINCIPAL_ABIERTO -[#green]-> cerrarSesion
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> cerrarSesion
 
 state cerrarSesion as "cerrarSesion()" {
 
