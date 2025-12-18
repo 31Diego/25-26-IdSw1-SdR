@@ -9,6 +9,9 @@ in2 -[#green]-> abrirProyectos
 
 state in3 as "INVESTIGADOR_ABIERTO"
 in3 -[#green]-> abrirProyectos
+note on link
+abrirProyectos(ID)
+end note
 
 
 state abrirProyectos as "abrirProyectos()" {
@@ -18,12 +21,12 @@ state abrirProyectos as "abrirProyectos()" {
 
     [*] -[#green]-> MostrandoLista
     note on link
-    <b>Coordinador</b> solicita abrir proyectos
+    <b>Coordinador</b> solicita abrir listado de proyectos
     end note
 
     MostrandoLista -[#green]-> FiltrandoLista
     note on link
-    <b>Sistema</b> presenta un listado de proyectos de investigación
+    <b>Sistema</b> presenta un listado de proyectos de investigación/del investigador
     • ID
     • Título
     • Estado del proyecto

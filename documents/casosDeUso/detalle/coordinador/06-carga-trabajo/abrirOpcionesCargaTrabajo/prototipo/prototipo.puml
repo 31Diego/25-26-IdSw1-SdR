@@ -34,7 +34,7 @@
         <b>Detalle de carga por persona (semanal)</b>
         --
         {
-            {<b>Código          </b> | <b>Nombre                                              </b> | <b>Sede                 </b> | <b>Perfil                        </b> | <b>Docencia (h/sem)</b> | <b>Investigación (h/sem)</b> | <b>Gestión (h/sem)</b> | <b>Total (h/sem)</b> | <b>Margen docencia</b>}
+            {<b>Código          </b> | <b>Nombre                                              </b> | <b>Sede                 </b> | <b>Perfil                        </b> | <b>Docencia (h/sem)</b> | <b>Investigación (h/sem)</b> | <b>Actividades académicas (h/sem)</b> | <b>Total (h/sem)</b> | <b>Margen docencia</b>}
             {"FNB-1023" | "Carlos Fernández López" | "Santander" | "Investigador-docente" | "16" | "10" | "2" | "28" | "0"}
             {"FNB-1188" | "Marta Sánchez Ruiz"     | "Santander" | "Investigador-docente" | "12" | "16"  | "2" | "30" | "4"}
             {"FNB-0902" | "Luis Gómez Pérez"       | "Barcelona" | "Solo investigador"     | "0"  | "20" | "4" | "24" | "16"}
@@ -63,8 +63,8 @@
             • Horas de investigación: 16 h/sem
 
             --
-            <b>Gestión académica</b>
-            • Horas de gestión: 2 h/sem
+            <b>Actividades académicas</b>
+            • Horas de actividades académicas: 2 h/sem
 
             --
             <b>Total semanal:</b> 30 h

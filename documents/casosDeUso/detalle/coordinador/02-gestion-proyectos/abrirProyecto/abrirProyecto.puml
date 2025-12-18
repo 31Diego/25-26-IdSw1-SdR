@@ -25,6 +25,7 @@ state abrirProyecto as "abrirProyecto()" {
     • Coordinador responsable
     • Fechas inicio/fin
     • Descripción
+    
     • Permite filtrar/buscar
     • Permite seleccionar un proyecto
     end note

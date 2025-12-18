@@ -8,59 +8,51 @@ state editarCargaTrabajo as "editarCargaTrabajo()" {
 
     state " " as MostrandoCarga
     state " " as EditandoCarga
-    state " " as Validando
+    state " " as ValidandoDatos
 
     [*] -[#green]-> MostrandoCarga
     note on link
-    <b>Coordinador</b> selecciona a un investigador
+    <b>Coordinador</b> solicita editar la carga de trabajo de una persona
     end note
 
     MostrandoCarga -[#green]-> EditandoCarga
     note on link
-    <b>Coordinador</b> pulsa "Editar carga de trabajo"
-    <b>Sistema</b> habilita el formulario con los datos actuales
+    <b>Sistema</b> presenta la carga de trabajo actual
+    <b>Sistema</b> permite introducir modificaciones
     end note
 
-    EditandoCarga -[#green]-> Validando
+    EditandoCarga -[#green]-> ValidandoDatos
     note on link
-    <b>Coordinador</b> guarda cambios
+    <b>Coordinador</b> solicita guardar los cambios
     end note
 
-    Validando -[#green]-> MostrandoCarga
+    ValidandoDatos -[#green]-> [*]
     note on link
-    <b>Sistema</b> valida y actualiza la carga:
-    • Docencia ≤ 16 h/semana
-    • No permite valores negativos
-    • Recalcula total y margen docente
-    <b>Sistema</b> muestra confirmación y mantiene la pantalla abierta
+    <b>Sistema</b> permite solicitar la actualización de la carga de trabajo
+    <b>Sistema</b> presenta la carga de trabajo actualizada
     end note
 
-    Validando -[#red]-> EditandoCarga
+    ValidandoDatos -[#red]-> EditandoCarga
     note on link
-    <b>Sistema</b> detecta errores (p.ej. docencia > 16)
-    <b>Sistema</b> informa y mantiene el formulario para corregir
+    <b>Sistema</b> muestra errores de introducción
+    <b>Sistema</b> permite introducir correcciones
     end note
 
-    EditandoCarga -[#red]-> MostrandoCarga
+    EditandoCarga -[#red]-> [*]
     note on link
-    <b>Coordinador</b> cancela la edición
-    <b>Sistema</b> descarta cambios
+    <b>Coordinador</b> solicita cancelar la edición
+    <b>Sistema</b> presenta la carga de trabajo sin cambios
     end note
 }
 
 editarCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
 note on link
-Carga de trabajo actualizada
+Edición finalizada
 end note
 
 editarCargaTrabajo -[#red]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
 note on link
 Edición cancelada
-end note
-
-editarCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
-note on link
-editarCargaTrabajo()
 end note
 
 editarCargaTrabajo -[#green]-> PANEL_PRINCIPAL_ABIERTO
@@ -69,3 +61,4 @@ abrirPanelPrincipal()
 end note
 
 @enduml
+

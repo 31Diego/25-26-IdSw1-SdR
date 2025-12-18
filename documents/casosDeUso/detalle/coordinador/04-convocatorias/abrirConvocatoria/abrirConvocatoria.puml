@@ -10,18 +10,27 @@ state abrirConvocatoria as "abrirConvocatoria()" {
 
     [*] -[#green]-> CargandoDetalle
     note on link
-    <b>Coordinador</b> selecciona una convocatoria
+    <b>Coordinador</b> solicita abrir una convocatoria
     end note
 
     CargandoDetalle -[#green]-> [*]
     note on link
-    <b>Sistema</b> recupera los datos de la convocatoria y muestra:
-    • Información general (identificador, título, área, estado y fechas)
-    • Descripción de la convocatoria
-    • Requisitos y condiciones de participación
+    <b>Sistema</b> presenta y visualiza la convocatoria solicitada
+    <b>Sistema</b> muestra:
+    • Título
+    • Área
+    • Estado
+    • Fechas relevantes
+    • Descripción
+    • Requisitos y condiciones
     • Criterios de evaluación y dotación
     • Documentación asociada
     • Información de contacto
+
+    <b>Sistema</b> permite solicitar:
+    • Importar convocatoria
+    • Volver a convocatorias
+    • Volver al panel principal
     end note
 }
 

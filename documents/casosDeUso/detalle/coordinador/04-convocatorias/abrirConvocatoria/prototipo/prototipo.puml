@@ -81,6 +81,13 @@
 
     --
 
+    <b>Acciones</b>
+    {
+        [Importar convocatoria]
+    }
+
+    ~~
+
     { [Volver a Convocatorias] | [Abrir Panel principal] }
 }
 @endsalt

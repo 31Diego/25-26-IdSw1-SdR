@@ -9,15 +9,16 @@
         {
             {
             {<b>ID:</b> | "PROY-012                      "
-            <b>Título:</b> | "Sistema de apoyo a la gestión de proyectos de investigación"}
+            <b>Título:</b> | "Sistema de apoyo al desarrollo de proyectos de investigación"}
             {<b>Estado:</b> | "En curso                      "
             <b>Coordinador:</b> | "Carlos Fernández López              "}
             {<b>Fecha inicio:</b> | "10-01-2025                 "
             <b>Fecha fin:</b> | "20-12-2025                   "}
             {<b>Descripción:</b> |
                 {"Proyecto orientado al desarrollo de una plataforma
-                para apoyar la gestión, seguimiento y coordinación de
-                proyectos de investigación en el ámbito universitario."}}
+                para apoyar el seguimiento, la coordinación y el control
+                de proyectos de investigación en el ámbito universitario."}
+            }
             }
         }
 
