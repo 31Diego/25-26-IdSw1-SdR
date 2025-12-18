@@ -2,6 +2,13 @@
 
 skinparam linetype polyline
 
+state in2 as "PUBLICACION_ABIERTA"
+in2 -[#green]-> editarPublicacion
+note on link
+editarPublicacion()
+end note
+
+
 state editarPublicacion as "editarPublicacion()" {
 
     state " " as EditandoContenido
@@ -33,14 +40,13 @@ state editarPublicacion as "editarPublicacion()" {
 }
 
 
-PUBLICACION_ABIERTA -[#green]-> editarPublicacion
+editarPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
 note on link
-abrirPublicacion()
+abrirPublicaciones()
 end note
 
-editarPublicacion -[#green]-> PUBLICACION_ABIERTA
-note on link
-abrirPublicacion()
-end note
+
+
+
 
 @enduml

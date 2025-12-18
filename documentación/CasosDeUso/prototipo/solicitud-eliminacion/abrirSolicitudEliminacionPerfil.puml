@@ -1,0 +1,29 @@
+@startsalt resolverSolicitudEliminacionPerfil-wireframe
+{
+    ====
+    <b>GIPF - RESOLVER SOLICITUD DE ELIMINACIÓN</b>
+    ====
+    {
+        <b>Datos de la solicitud</b>
+        --
+        {
+            {<b>ID Investigador:</b> | INV-001}
+            {<b>Nombre:</b>          | Ana López}
+            {<b>Campo:</b>           | Inteligencia Artificial}
+            
+        }
+
+        ~~
+
+        <b>Decisión</b>
+        --
+        {
+            {[Aprobar eliminación] | [Rechazar solicitud]}
+        }
+
+        ~~
+
+        {[Cancelar] | [Volver]}
+    }
+}
+@endsalt

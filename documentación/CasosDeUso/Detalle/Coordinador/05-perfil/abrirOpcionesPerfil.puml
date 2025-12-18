@@ -16,6 +16,13 @@ abrirOpcionesPerfil()
 end note
 
 
+state in3 as "SOLICITUDES_ELIMINACION_PERFIL_ABIERTAS"
+in3 -[#Black]-> abrirOpcionesPerfil
+note on link
+abrirOpcionesPerfil()
+end note
+
+
 
 state abrirOpcionesPerfil as "abrirOpcionesPerfil()" {
 
@@ -49,9 +56,9 @@ editarPerfil()
 end note
 
 
-abrirOpcionesPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
+abrirOpcionesPerfil -[#green]-> SESION_CERRADA
 note on link
-resolverSolicitudEliminacionPerfil()
+solicitarEliminacionPerfil()
 end note
 
 
@@ -65,6 +72,13 @@ abrirOpcionesPerfil -[#blue]-> INVESTIGADOR_ABIERTO
 note on link
 abrirInvestigador(ID)
 end note
+
+
+abrirOpcionesPerfil -[#Black]-> SOLICITUDES_ELIMINACION_PERFIL_ABIERTAS
+note on link
+abrirSolicitudesEliminacionPerfil()
+end note
+
 
 
 

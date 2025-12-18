@@ -1,0 +1,21 @@
+@startsalt abrirSolicitudesEliminacionPerfil-wireframe
+{
+    ====
+    <b>GIPF - SOLICITUDES DE ELIMINACIÓN DE PERFIL</b>
+    ====
+    {
+        <b>Solicitudes pendientes</b>
+        --
+        {
+            {<b>ID</b> | <b>Nombre</b> | <b>Campo</b>}
+            {"INV-001" | "Ana López"   | "Inteligencia Artificial"}
+            {"INV-004" | "Mario Ruiz"  | "Big Data"}
+            {"INV-007" | "Lucía Pérez" | "Ciberseguridad"}
+        }
+
+        ~~
+
+        {[Abrir solicitud] | [Volver]}
+    }
+}
+@endsalt

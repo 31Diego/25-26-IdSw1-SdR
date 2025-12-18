@@ -2,6 +2,12 @@
 
 skinparam linetype polyline
 
+state in1 as "SOLICITUD_ELIMINACION_PERFIL_ABIERTA"
+in1 -[#green]-> resolverSolicitudEliminacionPerfil
+note on link
+resolverSolicitudEliminacionPerfil()
+end note
+
 state resolverSolicitudEliminacionPerfil as "resolverSolicitudEliminacionPerfil()" {
 
     state " " as ListandoSolicitudes
@@ -16,7 +22,7 @@ state resolverSolicitudEliminacionPerfil as "resolverSolicitudEliminacionPerfil(
     ListandoSolicitudes -[#green]-> EvaluandoSolicitud
     note on link
     <b>Sistema</b> muestra lista de solicitudes de eliminación de perfil
-    • ID, nombre
+    • ID, nombre, campo
     end note
 
     EvaluandoSolicitud -[#green]-> Resultado
@@ -35,14 +41,11 @@ state resolverSolicitudEliminacionPerfil as "resolverSolicitudEliminacionPerfil(
 }
 
 
-OPCIONES_PERFIL_ABIERTO -[#green]-> resolverSolicitudEliminacionPerfil
-note on link
-resolverSolicitudEliminacionPerfil()
-end note
-
 resolverSolicitudEliminacionPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
 note on link
 abrirOpcionesPerfil()
 end note
+
+
 
 @enduml

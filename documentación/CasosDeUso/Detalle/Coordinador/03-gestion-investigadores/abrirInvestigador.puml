@@ -2,6 +2,19 @@
 
 skinparam linetype polyline
 
+state in1 as "OPCIONES_PERFIL_ABIERTO"
+in1 -[#green]-> abrirInvestigador
+note on link
+abrirInvestigador(ID)
+end note
+
+state in2 as "INVESTIGADORES_ABIERTOS"
+in2 -[#green]-> abrirInvestigador
+note on link
+abrirInvestigador()
+end note
+
+
 state abrirInvestigador as "abrirInvestigador()" {
 
     state " " as MostrandoLista

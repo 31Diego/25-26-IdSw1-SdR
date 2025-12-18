@@ -18,7 +18,8 @@
         --
         {
             {[Editar perfil]}
-            {[Resolver solicitudes de eliminación]}
+            {[Abrir solicitudes de eliminación]}
+            {[Solicitar eliminación perfil]}
         }
 
         ~~
