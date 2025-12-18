@@ -32,6 +32,12 @@ state editarPublicacion as "editarPublicacion()" {
     end note
 }
 
+
+PUBLICACION_ABIERTA -[#green]-> editarPublicacion
+note on link
+abrirPublicacion()
+end note
+
 editarPublicacion -[#green]-> PUBLICACION_ABIERTA
 note on link
 abrirPublicacion()

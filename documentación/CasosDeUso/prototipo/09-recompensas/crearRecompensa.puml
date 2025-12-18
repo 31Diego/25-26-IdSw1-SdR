@@ -1,0 +1,27 @@
+@startsalt crearRecompensa-wireframe
+{
+    ====
+    <b>GIPF - CREAR RECOMPENSA</b>
+    ====
+    {
+        <b>Formulario de nueva recompensa</b>
+        --
+        {
+            {<b>Tipo</b>     | [                              ]}
+            {<b>Cantidad</b> | [                              ]}
+        }
+
+        ~~
+
+        {[Guardar] | [Cancelar]}
+
+        ~~
+
+        <b>Resultado</b>
+        --
+        {
+            "La recompensa ha sido creada correctamente."
+        }
+    }
+}
+@endsalt

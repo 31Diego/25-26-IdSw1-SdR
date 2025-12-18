@@ -31,6 +31,12 @@ state editarRecompensa as "editarRecompensa()" {
     end note
 }
 
+
+RECOMPENSA_ABIERTA -[#green]-> RECOMPENSA_ABIERTA
+note on link
+editarRecompensa()
+end note
+
 editarRecompensa -[#green]-> RECOMPENSA_ABIERTA
 note on link
 abrirRecompensa()

@@ -30,6 +30,11 @@ state eliminarPublicacion as "eliminarPublicacion()" {
     end note
 }
 
+PUBLICACION_ABIERTA -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+eliminarPublicacion()
+end note
+
 eliminarPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
 note on link
 abrirPublicaciones()

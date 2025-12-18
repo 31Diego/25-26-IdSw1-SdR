@@ -1,0 +1,30 @@
+@startsalt abrirPublicaciones-wireframe
+{
+    ====
+    <b>GIPF - LISTADO DE PUBLICACIONES</b>
+    ====
+    {
+        <b>Filtrar / buscar publicaciones</b>
+        {
+            {<b>Título:</b> | [                              ]}
+            {<b>Autor:</b>  | [                              ]}
+            {<b>Fecha:</b>  | [dd-mm-aaaa] }
+        }
+
+        ~~
+
+        <b>Listado de publicaciones</b>
+        --
+        {
+            {<b>Título</b> | <b>Autor</b> | <b>Fecha</b>}
+            {"Nuevas políticas de investigación" | "Carlos Fernández" | "10-01-2025"}
+            {"Análisis de productividad"         | "Marta Sánchez"   | "05-03-2025"}
+            {"Plataforma de seguimiento"         | "Luis Gómez"      | "12-02-2024"}
+        }
+
+        ~~
+
+        {[Abrir publicación] | [Aplicar filtros] | [Limpiar filtros] | [Cancelar]}
+    }
+}
+@endsalt

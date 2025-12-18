@@ -29,6 +29,12 @@ state abrirPublicaciones as "abrirPublicaciones()" {
     end note
 }
 
+
+PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirPublicaciones
+note on link
+abrirPublicaciones()
+end note
+
 abrirPublicaciones -[#green]-> PUBLICACIONES_ABIERTAS
 note on link
 abrirPublicacion()

@@ -33,6 +33,11 @@ state crearRecompensa as "crearRecompensa()" {
     end note
 }
 
+RECOMPENSAS_ABIERTAS -[#green]-> RECOMPENSA_ABIERTA
+note on link
+crearRecompensa()
+end note
+
 crearRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
 note on link
 abrirRecompensas()

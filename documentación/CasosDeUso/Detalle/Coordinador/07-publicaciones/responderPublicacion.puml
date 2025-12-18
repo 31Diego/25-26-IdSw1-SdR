@@ -29,6 +29,11 @@ state responderPublicacion as "responderPublicacion()" {
     end note
 }
 
+PUBLICACION_ABIERTA -[#green]-> PUBLICACION_ABIERTA
+note on link
+responderPublicacion()
+end note
+
 responderPublicacion -[#green]-> PUBLICACION_ABIERTA
 note on link
 abrirPublicacion()

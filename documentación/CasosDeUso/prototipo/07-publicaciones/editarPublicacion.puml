@@ -1,0 +1,19 @@
+@startsalt editarPublicacion-wireframe
+{
+    ====
+    <b>GIPF - EDITAR PUBLICACIÓN</b>
+    ====
+    {
+        <b>Contenido editable de la publicación</b>
+        --
+        {
+            {<b>Título</b> | "Nuevas políticas de investigación"}
+            {<b>Texto</b>  | "Se implementarán nuevos criterios para proyectos..."}
+        }
+
+        ~~
+
+        {[Guardar cambios] | [Cancelar]}
+    }
+}
+@endsalt

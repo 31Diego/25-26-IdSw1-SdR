@@ -28,6 +28,11 @@ state abrirRecompensas as "abrirRecompensas()" {
     end note
 }
 
+PANEL_PRINCIPAL_ABIERTO -[#green]-> RECOMPENSAS_ABIERTAS
+note on link
+abrirRecompensas()
+end note
+
 abrirRecompensas -[#green]-> RECOMPENSAS_ABIERTAS
 note on link
 abrirRecompensa()

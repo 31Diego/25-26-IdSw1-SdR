@@ -1,0 +1,26 @@
+@startsalt eliminarRecompensa-wireframe
+{
+    ====
+    <b>GIPF - ELIMINAR RECOMPENSA</b>
+    ====
+    {
+        <b>Confirmación de eliminación</b>
+        --
+        {
+            "¿Está seguro de que desea eliminar esta recompensa?"
+        }
+
+        ~~
+
+        {[Confirmar] | [Cancelar]}
+
+        ~~
+
+        <b>Resultado</b>
+        --
+        {
+            "La recompensa ha sido eliminada correctamente."
+        }
+    }
+}
+@endsalt
