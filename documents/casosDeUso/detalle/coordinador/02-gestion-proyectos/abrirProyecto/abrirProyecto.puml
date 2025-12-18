@@ -40,11 +40,6 @@ state abrirProyecto as "abrirProyecto()" {
     <b>Coordinador</b> selecciona un proyecto del listado
     end note
 
-    MostrandoListaProyectos -[#green]-> SeleccionandoProyecto
-    note on link
-    <b>Coordinador</b> selecciona un proyecto del listado
-    end note
-
     SeleccionandoProyecto -[#green]-> [*]
     note on link
     <b>Sistema</b> carga el proyecto seleccionado
