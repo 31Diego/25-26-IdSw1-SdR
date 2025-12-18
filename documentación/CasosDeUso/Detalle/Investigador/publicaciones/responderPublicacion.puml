@@ -15,13 +15,13 @@ state responderPublicacion as "responderPublicacion()" {
 
     [*] -[#green]-> IntroduciendoRespuesta
     note on link
-    <b>Coordinador</b> solicita responder publicación
+    <b>Investigador</b> solicita responder publicación
     end note
 
     IntroduciendoRespuesta -[#green]-> RespuestaRegistrada
     note on link
     <b>Sistema</b> permite introducir respuesta
-    <b>Coordinador</b> introduce contenido y solicita enviar
+    <b>Investigador</b> introduce contenido y solicita enviar
     end note
 
     IntroduciendoRespuesta -[#red]-> [*]
@@ -34,6 +34,7 @@ state responderPublicacion as "responderPublicacion()" {
     <b>Sistema</b> presenta confirmación de respuesta publicada
     end note
 }
+
 
 responderPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
 note on link

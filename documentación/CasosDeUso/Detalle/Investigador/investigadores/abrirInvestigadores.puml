@@ -1,0 +1,63 @@
+@startuml abrirInvestigadores
+
+skinparam linetype polyline
+
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirInvestigadores
+note on link
+abrirInvestigadores()
+end note
+
+state in2 as "PROYECTO_ABIERTO"
+in2 -[#green]-> abrirInvestigadores
+note on link
+abrirInvestigadores(ID)
+end note
+
+state abrirInvestigadores as "abrirInvestigadores()" {
+
+    state " " as MostrandoLista
+    state " " as FiltrandoLista
+
+    [*] -[#green]-> MostrandoLista 
+    note on link
+    <b>Investigadores</b> solicita abrir investigadores
+    end note    
+    
+    MostrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta lista de investigadores
+    • ID, nombre, campo de cada investigador
+    • Permite solicitar filtrar lista
+    • Permite solicitar abrir investigador
+    • Permite solicitar abrir panel principal
+    
+    end note
+    
+    FiltrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Investigador</b> solicita filtrar lista
+    <b>Sistema</b> presenta lista filtrada
+    end note
+    
+    FiltrandoLista -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita una de las opciones
+    end note
+}
+
+
+
+abrirInvestigadores -[#green]-> INVESTIGADOR_ABIERTO
+note on link
+abrirInvestigador()
+end note
+
+
+
+abrirInvestigadores -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
+end note
+
+@enduml

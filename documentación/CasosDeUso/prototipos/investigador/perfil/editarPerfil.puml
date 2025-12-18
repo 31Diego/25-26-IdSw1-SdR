@@ -1,0 +1,25 @@
+@startsalt editarPerfil-wireframe
+{
+    ====
+    <b>GIPF - EDITAR PERFIL DE INVESTIGADOR</b>
+    ====
+    {
+        <b>Datos del investigador</b>
+        --
+        {
+            {<b>ID</b>                | [INV-001] (no editable)}
+            {<b>Nombre</b>            | [Ana] }
+            {<b>Apellido</b>          | [López] }
+            {<b>Campo</b>             | [Inteligencia Artificial] }
+            {<b>Carrera</b>           | [Informática] }
+            {<b>Máster</b>            | [IA Avanzada] }
+            {<b>Rol</b>            | [Coordinador] (editable por coordinador) }
+    
+        }
+
+        ~~
+
+        {[Modificar atributos] | [Guardar cambios] | [Cancelar]}
+    }
+}
+@endsalt

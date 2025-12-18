@@ -1,0 +1,26 @@
+@startsalt responderPublicacion-wireframe
+{
+    ====
+    <b>GIPF - RESPONDER PUBLICACIÓN</b>
+    ====
+    {
+        <b>Introducir respuesta</b>
+        --
+        {
+            {<b>Respuesta:</b> | [                                   ]}
+        }
+
+        ~~
+
+        {[Enviar] | [Cancelar]}
+
+        ~~
+
+        <b>Resultado</b>
+        --
+        {
+            "Su respuesta ha sido publicada correctamente."
+        }
+    }
+}
+@endsalt

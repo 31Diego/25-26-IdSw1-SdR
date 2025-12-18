@@ -1,0 +1,21 @@
+@startsalt abrirPublicacion-wireframe
+{
+    ====
+    <b>GIPF - PUBLICACIÓN</b>
+    ====
+    {
+        <b>Contenido de la publicación</b>
+        --
+        {
+            {<b>Título</b> | "Nuevas políticas de investigación"}
+            {<b>Texto</b>  | "Se implementarán nuevos criterios para proyectos..."}
+            {<b>Autor</b>  | "Carlos Fernández"}
+            {<b>Respuestas asociadas</b> | "Respuesta 1, Respuesta 2, ..."}
+        }
+
+        ~~
+
+        {[Responder] | [Cancelar]}
+    }
+}
+@endsalt
