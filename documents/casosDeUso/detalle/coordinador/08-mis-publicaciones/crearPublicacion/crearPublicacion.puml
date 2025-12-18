@@ -1,0 +1,42 @@
+@startuml crearPublicacion
+
+skinparam linetype polyline
+
+state crearPublicacion as "crearPublicacion()" {
+
+    state " " as SolicitandoDatos
+    state " " as CreandoPublicacion
+
+    [*] -[#green]-> SolicitandoDatos
+    note on link
+    <b>Coordinador</b> solicita crear publicación
+    end note
+
+    SolicitandoDatos -[#green]-> CreandoPublicacion
+    note on link
+    <b>Sistema</b> solicita datos de la nueva publicación
+    • Título
+    • Descripción
+    • Estado (borrador / publicada)
+    • Visibilidad (pública / privada)
+    • Archivo adjunto (opcional)
+    end note
+
+    CreandoPublicacion -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> proporciona los datos solicitados
+    <b>Sistema</b> crea la publicación
+    end note
+}
+
+MIS_PUBLICACIONES_ABIERTAS -[#green]-> crearPublicacion
+note on link
+crearPublicacion()
+end note
+
+crearPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+Publicación creada
+end note
+
+@enduml

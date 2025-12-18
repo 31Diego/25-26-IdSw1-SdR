@@ -1,0 +1,37 @@
+@startsalt abrirMisPublicaciones-wireframe
+{
+    ====
+    <b>GIPF - MIS PUBLICACIONES</b>
+    ====
+    {
+        <b>Filtrar / buscar publicaciones</b>
+        --
+        {
+            {
+            <b>Título:</b> | [                              ]}
+
+            {<b>Estado:</b> | { "Todas" | "Borrador" | "Publicada" }
+            <b>Fecha (desde):</b> | [            ]}
+
+            {<b>Fecha (hasta):</b> | [            ]
+            <b> </b> | " " }
+            }
+        }
+
+        ~~
+
+        <b>Listado de mis publicaciones</b>
+        --
+        {
+            {<b>ID</b> | <b>Título</b> | <b>Estado</b> | <b>Fecha</b> | <b>Resumen</b>}
+            {"PUB-031" | "Resultados preliminares del proyecto..." | "Borrador"  | "12-01-2025" | "Síntesis de hallazgos iniciales..."}
+            {"PUB-028" | "Informe final de innovación docente..."  | "Publicada" | "20-12-2024" | "Conclusiones y recomendaciones..."}
+            {"PUB-024" | "Avances en colaboración intersede..."    | "Publicada" | "05-11-2024" | "Logros y metodología empleada..."}
+        }
+
+        ~~
+
+        {[Aplicar filtros] | [Limpiar filtros] | [Abrir publicación] | [Crear publicación] | [Volver]}
+    }
+}
+@endsalt

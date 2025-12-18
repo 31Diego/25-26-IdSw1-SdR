@@ -1,0 +1,52 @@
+@startuml abrirMisPublicaciones
+
+skinparam linetype polyline
+
+state abrirMisPublicaciones as "abrirMisPublicaciones()" {
+
+    state " " as MostrandoLista
+    state " " as FiltrandoLista
+
+    [*] -[#green]-> MostrandoLista
+    note on link
+    <b>Coordinador</b> solicita abrir el listado de sus publicaciones
+    end note
+
+    MostrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta el listado de publicaciones propias del coordinador
+    • Título
+    • Estado (borrador / publicada)
+    • Fecha de creación o publicación
+    • Descripción
+    • Permite solicitar filtrar/buscar publicaciones
+    end note
+
+    FiltrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Coordinador</b> solicita filtrar/buscar sus publicaciones
+    <b>Sistema</b> actualiza el listado según los criterios indicados
+    end note
+
+    FiltrandoLista -[#green]-> [*]
+    note on link
+    <b>Sistema</b> deja el listado de publicaciones listo para su consulta
+    end note
+}
+
+PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirMisPublicaciones
+note on link
+abrirMisPublicaciones()
+end note
+
+MI_PUBLICACION_ABIERTA -[#green]-> abrirMisPublicaciones
+note on link
+abrirMisPublicaciones()
+end note
+
+abrirMisPublicaciones -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+Listado de mis publicaciones abierto
+end note
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml abrirMiPublicacion
+
+skinparam linetype polyline
+
+state abrirMiPublicacion as "abrirMiPublicacion()" {
+
+    state " " as SeleccionandoPublicacion
+
+    [*] -[#green]-> SeleccionandoPublicacion
+    note on link
+    <b>Coordinador</b> selecciona una publicación propia del listado
+    end note
+
+    SeleccionandoPublicacion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> abre la publicación seleccionada
+    end note
+}
+
+MIS_PUBLICACIONES_ABIERTAS -[#green]-> abrirMiPublicacion
+note on link
+abrirMiPublicacion()
+end note
+
+abrirMiPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+Mi publicación abierta
+end note
+
+@enduml
