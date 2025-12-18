@@ -1,6 +1,6 @@
 @startuml CDUInvestigador
 
-title Casos de uso del actor Investigador
+title Casos de uso de Investigador
 left to right direction
 
 actor "Investigador" as investigador
@@ -38,6 +38,12 @@ package "Mis publicaciones" {
 package "Proyectos" {
     usecase UC_AbrirProyectos as "abrirProyectos()"
     usecase UC_AbrirProyecto as "abrirProyecto()"
+    usecase UC_AbrirEntregables as "abrirEntregables()"
+    usecase UC_AbrirEntregable as "abrirEntregable()"
+    usecase UC_CrearEntregable as "crearEntregable()"
+    usecase UC_EditarEntregable as "editarEntregable()"
+    usecase UC_EliminarEntregable as "eliminarEntregable()"
+    usecase UC_AbrirProyectoDesdeEntregables as "abrirProyecto()"
 }
 
 package "Recompensas" {
@@ -45,13 +51,7 @@ package "Recompensas" {
     usecase UC_AbrirRecompensa as "abrirRecompensa()"
 }
 
-package "Entregables" {
-    usecase UC_AbrirEntregables as "abrirEntregables()"
-    usecase UC_CrearEntregable as "crearEntregable()"
-    usecase UC_EditarEntregable as "editarEntregable()"
-    usecase UC_EliminarEntregable as "eliminarEntregable()"
-    usecase UC_AbrirProyectoDesdeEntregables as "abrirProyecto()"
-}
+
 
 package "Investigadores" {
     usecase UC_AbrirInvestigadores as "abrirInvestigadores()"

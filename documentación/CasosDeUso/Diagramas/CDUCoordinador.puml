@@ -13,8 +13,9 @@ package "Gestión de sesión" {
 package "Gestión de perfil" {
     usecase UC_AbrirOpcionesPerfil as "abrirOpcionesPerfil()"
     usecase UC_EditarPerfil as "editarPerfil()"
-    usecase UC_ResolverSolicitudEliminacionPerfil as "resolverSolicitudEliminacionPerfil()"
     usecase UC_SolicitarEliminacionPerfil as "solicitarEliminacionPerfil()"
+    usecase UC_abrirSolicitudesEliminacionPerfil as "abrirSolicitudesEliminacionPerfil()"
+    usecase UC_abrirSolicitudEliminacionPerfil as "abrirSolicitudEliminacionPerfil()"
 }
 
 package "Gestión de carga de trabajo" {
@@ -59,14 +60,14 @@ package "Proyectos" {
     usecase UC_EliminarProyecto as "eliminarProyecto()"
     usecase UC_AgregarInvestigador as "agregarInvestigador()"
     usecase UC_EliminarInvestigador as "eliminarInvestigador()"
+    usecase UC_EditarEntregable as "editarEntregable()"
+    usecase UC_EliminarEntregable as "eliminarEntregable()"
+    usecase UC_AbrirEntregable as "abrirEntregable()"
     usecase UC_AbrirEntregables as "abrirEntregables()"
     usecase UC_CrearEntregable as "crearEntregable()"
 }
 
-package "Entregables" {
-    usecase UC_EditarEntregable as "editarEntregable()"
-    usecase UC_EliminarEntregable as "eliminarEntregable()"
-}
+
 
 package "Investigadores" {
     usecase UC_AbrirInvestigadores as "abrirInvestigadores()"
@@ -84,8 +85,9 @@ coordinador --> UC_CerrarSesion
 
 coordinador --> UC_AbrirOpcionesPerfil
 coordinador --> UC_EditarPerfil
-coordinador --> UC_ResolverSolicitudEliminacionPerfil
 coordinador --> UC_SolicitarEliminacionPerfil
+coordinador --> UC_abrirSolicitudEliminacionPerfil
+coordinador --> UC_abrirSolicitudesEliminacionPerfil
 
 coordinador --> UC_AbrirOpcionesCargaTrabajo
 coordinador --> UC_EditarCargaTrabajo
@@ -123,6 +125,9 @@ UC_CrearEntregable <-- coordinador
 
 UC_EditarEntregable <-- coordinador
 UC_EliminarEntregable <-- coordinador
+UC_AbrirEntregable <-- coordinador
+UC_AbrirEntregables <-- coordinador
+
 
 coordinador --> UC_AbrirInvestigadores
 coordinador --> UC_AbrirInvestigador
