@@ -1,0 +1,30 @@
+@startsalt eliminarInvestigador-wireframe
+{
+    ====
+    <b>GIPF - ELIMINAR INVESTIGADOR DEL PROYECTO</b>
+    ====
+    {
+        <b>Investigador seleccionado</b>
+        --
+        {
+            <b>ID:</b> 12345
+            <b>Nombre:</b> Juan Pérez
+            <b>Campo:</b> Inteligencia Artificial
+        }
+
+        ~~
+
+        <b>Confirmación</b>
+        --
+        {
+            ¿Está seguro de que desea eliminar este investigador del proyecto?
+        }
+
+        ~~
+
+        <b>Acciones</b>
+        --
+        {[Confirmar eliminación] | [Cancelar]}
+    }
+}
+@endsalt
