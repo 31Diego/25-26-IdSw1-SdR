@@ -1,0 +1,125 @@
+@startuml
+title Instancia del sistema de gestión de proyectos
+
+object Convocatoria <<Convocatoria>> {
+    id = "CONV-INV-2025-003"
+    titulo = "Proyectos de investigación 2025"
+    area = "Investigación"
+    estado = "Abierta"
+    fechaCierre = "20/03/2025"
+}
+
+object Propuesta <<Propuesta>> {
+    id = "PROP-2025-001"
+    titulo = "Sistema de apoyo al seguimiento de proyectos"
+    estado = "En curso"
+    entidadFinanciadora = "Unión Europea"
+    fechaInicio = "10/01/2025"
+    fechaFin = "20/12/2025"
+    descripcion = "Propuesta vinculada a la convocatoria."
+}
+
+object Proyecto <<Proyecto>> #FFAAAA {
+    id = "PROY-012"
+    titulo = "Sistema de apoyo al seguimiento de proyectos"
+    estado = "En curso"
+    entidadFinanciadora = "Unión Europea"
+    fechaInicio = "10/01/2025"
+    fechaFin = "20/12/2025"
+    descripcion = "Plataforma interna para seguimiento de convocatorias, proyectos y carga de trabajo"
+}
+
+object Marta <<InvestigadorDocente>> {
+    codigoFUNIBER = "FNB-1188"
+    nombre = "Marta Sánchez Ruiz"
+    sede = "Santander"
+    perfil = "Investigador-docente"
+    area = "Educación e innovación"
+}
+
+object Luis <<InvestigadorDocente>> {
+    codigoFUNIBER = "FNB-0902"
+    nombre = "Luis Gómez Pérez"
+    sede = "Barcelona"
+    perfil = "Solo investigador"
+    area = "Informática"
+}
+
+object Carlos <<Coordinador>> {
+    codigoFUNIBER = "FNB-1023"
+    nombre = "Carlos Fernández López"
+    sede = "Santander"
+    perfil = "Investigador-docente"
+}
+
+object Mariano <<Colaborador>> {
+    nombre = "Mariano"
+    asociacion = "Universidad de Cantabria"
+}
+
+object Entregable1 <<Entregables>> {
+    titulo = "Informe inicial"
+    estado = "En curso"
+    fechaLimite = "31/12/2026"
+    adjunto = "(opcional)"
+}
+
+object Entregable2 <<Entregables>> {
+    titulo = "Primera implementación"
+    estado = "En curso"
+    fechaLimite = "31/12/2026"
+    adjunto = "(opcional)"
+}
+
+object RecompensaMarta <<Recompensa>> {
+    tipo = "Bono de productividad"
+    cantidad = "20000 €"
+}
+
+object RecompensaLuis <<Recompensa>> {
+    tipo = "Reducción de docencia"
+    cantidad = "4 h"
+}
+
+object CargaTrabajoMarta <<CargaTrabajo>> {
+    docencia_h_sem = 12
+    investigacion_h_sem = 16
+    actividadesAcademicas_h_sem = 2
+    total_h_sem = 30
+    margenDocencia_h = 4
+}
+
+object CargaTrabajoLuis <<CargaTrabajo>> {
+    docencia_h_sem = 0
+    investigacion_h_sem = 20
+    actividadesAcademicas_h_sem = 4
+    total_h_sem = 24
+    margenDocencia_h = 16
+}
+
+Convocatoria --> Propuesta : genera
+Propuesta --> Proyecto : genera
+
+Proyecto o-- Marta : investigador
+Proyecto o-- Luis : investigador
+
+Proyecto *-- Entregable1 : tiene
+Proyecto *-- Entregable2 : tiene
+
+Proyecto *-- RecompensaMarta : genera
+Proyecto *-- RecompensaLuis : genera
+
+Carlos --> Proyecto : coordina
+Carlos --> Convocatoria : busca
+
+Mariano --> Proyecto : participa
+
+Marta --> CargaTrabajoMarta : tiene
+Marta --> Entregable1 : genera
+Luis --> CargaTrabajoLuis : tiene
+Luis --> Entregable2 : genera
+
+RecompensaMarta --> Marta : beneficia
+RecompensaLuis --> Luis : beneficia
+
+@enduml
