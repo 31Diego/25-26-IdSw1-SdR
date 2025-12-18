@@ -2,6 +2,12 @@
 
 skinparam linetype polyline
 
+state in1 as "RECOMPENSA_ABIERTA"
+in1 -[#green]-> editarRecompensa
+note on link
+editarRecompensa()
+end note
+
 state editarRecompensa as "editarRecompensa()" {
 
     state " " as EditandoDatos
@@ -32,14 +38,16 @@ state editarRecompensa as "editarRecompensa()" {
 }
 
 
-RECOMPENSA_ABIERTA -[#green]-> RECOMPENSA_ABIERTA
+editarRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
 note on link
-editarRecompensa()
+eliminarRecompensa()
 end note
 
-editarRecompensa -[#green]-> RECOMPENSA_ABIERTA
+
+editarRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
 note on link
-abrirRecompensa()
+abrirRecompensas()
 end note
+
 
 @enduml

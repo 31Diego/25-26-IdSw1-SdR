@@ -2,6 +2,12 @@
 
 skinparam linetype polyline
 
+state in2 as "PUBLICACION_ABIERTA"
+in2 -[#green]-> eliminarPublicacion
+note on link
+eliminarPublicacion()
+end note
+
 state eliminarPublicacion as "eliminarPublicacion()" {
 
     state " " as ConfirmandoEliminacion
@@ -30,10 +36,7 @@ state eliminarPublicacion as "eliminarPublicacion()" {
     end note
 }
 
-PUBLICACION_ABIERTA -[#green]-> PUBLICACIONES_ABIERTAS
-note on link
-eliminarPublicacion()
-end note
+
 
 eliminarPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
 note on link

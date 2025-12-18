@@ -8,6 +8,12 @@ note on link
 abrirPublicaciones()
 end note
 
+state in1 as "PUBLICACION_ABIERTA"
+in1 -[#green]-> abrirPublicaciones
+note on link
+abrirPublicaciones()
+end note
+
 state abrirPublicaciones as "abrirPublicaciones()" {
 
     state " " as MostrandoListado

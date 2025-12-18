@@ -2,6 +2,12 @@
 
 skinparam linetype polyline
 
+state in1 as "RECOMPENSA_ABIERTA"
+in1 -[#green]-> eliminarRecompensa
+note on link
+eliminarRecompensa()
+end note
+
 state eliminarRecompensa as "eliminarRecompensa()" {
 
     state " " as ConfirmandoEliminacion
@@ -31,14 +37,13 @@ state eliminarRecompensa as "eliminarRecompensa()" {
 }
 
 
-RECOMPENSA_ABIERTA -[#green]-> RECOMPENSAS_ABIERTAS
-note on link
-eliminarRecompensa()
-end note
-
 eliminarRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
 note on link
 abrirRecompensas()
 end note
+
+
+
+
 
 @enduml

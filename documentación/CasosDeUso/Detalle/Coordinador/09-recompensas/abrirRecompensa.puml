@@ -2,6 +2,12 @@
 
 skinparam linetype polyline
 
+state in2 as "RECOMPENSAS_ABIERTAS"
+in2 -[#green]-> abrirRecompensa
+note on link
+abrirRecompensa()
+end note
+
 state abrirRecompensa as "abrirRecompensa()" {
 
     state " " as MostrandoRecompensa
@@ -22,10 +28,6 @@ state abrirRecompensa as "abrirRecompensa()" {
     end note
 }
 
-RECOMPENSA_ABIERTA -[#green]-> RECOMPENSAS_ABIERTAS
-note on link
-abrirRecompensa()
-end note
 
 abrirRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
 note on link
