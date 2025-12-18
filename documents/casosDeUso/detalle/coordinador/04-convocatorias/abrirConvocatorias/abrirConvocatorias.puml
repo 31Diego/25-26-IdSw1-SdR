@@ -1,0 +1,42 @@
+@startuml abrirConvocatorias
+skinparam linetype polyline
+
+state abrirConvocatorias as "abrirConvocatorias()" {
+
+    state " " as CargandoListado
+    state " " as MostrandoConvocatorias
+
+    [*] -[#green]-> CargandoListado
+    note on link
+    <b>Coordinador</b> selecciona "Convocatorias"
+    end note
+
+    CargandoListado -[#green]-> MostrandoConvocatorias
+    note on link
+    <b>Sistema</b> carga convocatorias
+    <b>Sistema</b> muestra el listado de convocatorias
+    end note
+
+    CargandoListado -[#red]-> [*]
+    note on link
+    <b>Sistema</b> no puede cargar el listado (error)
+    <b>Sistema</b> informa del problema y mantiene la navegación anterior
+    end note
+
+    MostrandoConvocatorias -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> puede filtrar/buscar o abrir una convocatoria
+    end note
+}
+
+PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirConvocatorias
+note on link
+abrirConvocatorias()
+end note
+
+abrirConvocatorias -[#green]-> CONVOCATORIAS_ABIERTAS
+note on link
+Listado de convocatorias mostrado
+end note
+
+@enduml

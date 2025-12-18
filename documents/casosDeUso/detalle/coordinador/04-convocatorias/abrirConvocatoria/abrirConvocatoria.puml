@@ -1,38 +1,24 @@
 @startuml abrirConvocatoria
-
 skinparam linetype polyline
 
 state abrirConvocatoria as "abrirConvocatoria()" {
 
-    state " " as MostrandoListaConvocatorias
-    state " " as SeleccionandoConvocatoria
+    state " " as CargandoDetalle
 
-    [*] -[#green]-> MostrandoListaConvocatorias
+    [*] -[#green]-> CargandoDetalle
     note on link
-    <b>Coordinador</b> solicita abrir convocatorias
+    <b>Coordinador</b> selecciona una convocatoria
     end note
 
-    MostrandoListaConvocatorias -[#green]-> SeleccionandoConvocatoria
+    CargandoDetalle -[#green]-> [*]
     note on link
-    <b>Sistema</b> presenta lista de convocatorias
-    • ID
-    • Título
-    • Estado de la convocatoria
-    • Fecha de inicio y fin
-    • Descripción
-    • Permite solicitar filtrar/buscar convocatorias
-    • Permite solicitar abrir una convocatoria
-    end note
-
-    SeleccionandoConvocatoria -[#green]-> SeleccionandoConvocatoria
-    note on link
-    <b>Coordinador</b> solicita filtrar/buscar convocatorias
-    <b>Sistema</b> presenta lista filtrada
-    end note
-
-    SeleccionandoConvocatoria -[#green]-> [*]
-    note on link
-    <b>Coordinador</b> solicita abrir una convocatoria de la lista
+    <b>Sistema</b> recupera los datos de la convocatoria y muestra:
+    • Información general (identificador, título, área, estado y fechas)
+    • Descripción de la convocatoria
+    • Requisitos y condiciones de participación
+    • Criterios de evaluación y dotación
+    • Documentación asociada
+    • Información de contacto
     end note
 }
 
@@ -43,7 +29,7 @@ end note
 
 abrirConvocatoria -[#green]-> CONVOCATORIA_ABIERTA
 note on link
-Convocatoria abierta
+Convocatoria mostrada
 end note
 
 @enduml

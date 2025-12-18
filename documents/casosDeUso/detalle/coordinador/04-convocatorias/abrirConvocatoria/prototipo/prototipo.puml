@@ -1,38 +1,86 @@
-@startsalt abrirConvocatoria-wireframe
+@startsalt convocatoriaAbierta-wireframe
 {
     ====
-    <b>GIPF - CONVOCATORIAS</b>
+    <b>FUNIBER · CONVOCATORIA</b>
     ====
+
     {
-        <b>Filtrar / buscar convocatorias</b>
-        --
-        {
-            {
-            {<b>ID:</b> | [            ]
-            <b>Título:</b> | [                              ]}
-
-            {<b>Estado:</b> | { "Todos" | "Abierta" | "Cerrada" | "En evaluación" | "Resuelta" }
-            <b>Fecha inicio:</b> | [            ]}
-
-            {<b>Fecha fin:</b> | [            ]
-            <b> </b> | " " }
-            }
-        }
-
-        ~~
-
-        <b>Listado de convocatorias</b>
-        --
-        {
-            {<b>ID</b> | <b>Título</b> | <b>Estado</b> | <b>Inicio</b> | <b>Fin</b> | <b>Descripción</b>}
-            {"CONV-021" | "Convocatoria Proyectos 2025" | "Abierta" | "01-02-2025" | "31-03-2025" | "Financiación para proyectos..."}
-            {"CONV-018" | "Ayudas a movilidad investigadora" | "En evaluación" | "10-10-2024" | "15-11-2024" | "Apoyo a estancias y..."}
-            {"CONV-015" | "Innovación docente 2024" | "Resuelta" | "01-03-2024" | "30-04-2024" | "Convocatoria para..."}
-        }
-
-        ~~
-
-        {[Aplicar filtros] | [Limpiar filtros] | [Abrir convocatoria] | [Volver]}
+        { <b>ID:</b> | "CONV-INV-2025-003" }
+        { <b>Título:</b> | "Proyectos de investigación 2025" }
+        { <b>Área:</b> | "Investigación" }
+        { <b>Estado:</b> | "Abierta" }
+        { <b>Apertura:</b> | "10/02/2025" }
+        { <b>Cierre:</b> | "20/03/2025 23:59" }
+        { <b>Publica:</b> | "Coordinación de Investigación FUNIBER" }
     }
+
+    --
+
+    <b>Descripción</b>
+    {
+        [ Convocatoria interna para la financiación de proyectos de investigación.
+        Las propuestas deberán alinearse con las líneas estratégicas de FUNIBER y
+        presentar objetivos, metodología, cronograma y presupuesto estimado. ]
+    }
+
+    --
+
+    <b>Requisitos</b>
+    {
+        "• Investigador principal adscrito a FUNIBER"
+        "• Equipo mínimo: 2 investigadores"
+        "• Duración del proyecto: 6–12 meses"
+        "• Entregables obligatorios: informe intermedio + memoria final"
+    }
+
+    --
+
+    <b>Dotación y condiciones</b>
+    {
+        "• Financiación máxima por proyecto: 8.000 €"
+        "• Nº estimado de proyectos financiables: 3–5"
+        "• Gastos elegibles: material, software, difusión y publicación"
+        "• Gastos no elegibles: retribuciones salariales"
+    }
+
+    --
+
+    <b>Criterios de evaluación</b>
+    {
+        "• Adecuación a líneas estratégicas (30%)"
+        "• Calidad metodológica y viabilidad (30%)"
+        "• Impacto académico/social (20%)"
+        "• Plan de difusión y transferencia (20%)"
+    }
+
+    --
+
+    <b>Presentación de propuestas</b>
+    {
+        "• Enviar la propuesta completa a través de la plataforma"
+        "• Formato: plantilla + anexos (presupuesto) + CV abreviado del equipo"
+        "• Confirmación automática de recepción"
+    }
+
+    --
+
+    <b>Documentación</b>
+    {
+        { "📎 Bases_CONV-INV-2025-003.pdf" | [Ver] }
+        { "📎 Plantilla_Propuesta_Investigacion.docx" | [Ver] }
+        { "📎 Anexo_Presupuesto.xlsx" | [Ver] }
+    }
+
+    --
+
+    <b>Contacto</b>
+    {
+        "investigacion@funiber.org"
+        "Horario: L–V 09:00–14:00 (CET)"
+    }
+
+    --
+
+    { [Volver a Convocatorias] | [Abrir Panel principal] }
 }
 @endsalt

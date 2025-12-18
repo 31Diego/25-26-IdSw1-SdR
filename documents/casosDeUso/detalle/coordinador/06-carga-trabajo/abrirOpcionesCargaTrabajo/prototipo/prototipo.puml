@@ -1,8 +1,9 @@
 @startsalt abrirOpcionesCargaTrabajo-wireframe
 {
     ====
-    <b>GIPF - CARGA DE TRABAJO
+    <b>FUNIBER - CARGA DE TRABAJO</b>
     ====
+
     {
         <b>Filtros</b>
         --
@@ -24,19 +25,19 @@
         <b>Resumen global</b>
         --
         {
-            {<b>Total personas</b> | <b>Con carga completa (16h)</b> | <b>Con margen (<16h)</b>}
-            {"     32   " | "          9       " | "          23 "}
+            {<b>Total personas</b> | <b>Con docencia al máximo (16h)</b> | <b>Con margen docente (<16h)</b>}
+            {"32        " | "9                    " | "23                 "}
         }
 
         ~~
 
-        <b>Detalle de carga por investigador/docente (semanal)</b>
+        <b>Detalle de carga por persona (semanal)</b>
         --
         {
-            {<b>Código           </b> | <b>Nombre                                             </b> | <b>Sede                 </b> | <b>Perfil    </b> | <b>Docencia (h)  </b> | <b>Investigación (h)  </b> | <b>Total (h)  </b> | <b>Disponible</b>}
-            {"FNB-1023" | "Carlos Fernández López" | "Santander" | "Investigador-docente" | "12" | "4" | "16" | "0"}
-            {"FNB-1188" | "Marta Sánchez Ruiz"     | "Santander" | "Investigador-docente" | "8"  | "4" | "12" | "4"}
-            {"FNB-0902" | "Luis Gómez Pérez"       | "Barcelona" | "Solo investigador"     | "0"  | "10" | "10" | "6"}
+            {<b>Código          </b> | <b>Nombre                                              </b> | <b>Sede                 </b> | <b>Perfil                        </b> | <b>Docencia (h/sem)</b> | <b>Investigación (h/sem)</b> | <b>Gestión (h/sem)</b> | <b>Total (h/sem)</b> | <b>Margen docencia</b>}
+            {"FNB-1023" | "Carlos Fernández López" | "Santander" | "Investigador-docente" | "16" | "10" | "2" | "28" | "0"}
+            {"FNB-1188" | "Marta Sánchez Ruiz"     | "Santander" | "Investigador-docente" | "12" | "8"  | "2" | "22" | "4"}
+            {"FNB-0902" | "Luis Gómez Pérez"       | "Barcelona" | "Solo investigador"     | "0"  | "20" | "4" | "24" | "16"}
         }
 
         --
@@ -47,17 +48,27 @@
             <b>Nombre:</b> Marta Sánchez Ruiz
             <b>Sede:</b> Santander
             <b>Perfil:</b> Investigador-docente
+            <b>Área:</b> "Educación e innovación"
 
-            <b>Docencia:</b>
-            • Asignaturas activas: 2
-            • Horas docentes: 8 / 16
+            --
+            <b>Docencia (máx. 16h/semana)</b>
+            • Asignaturas activas: 3
+            • Horas docentes: 12 / 16
+            • Margen disponible: 4 h
 
-            <b>Investigación:</b>
+            --
+            <b>Investigación</b>
             • Proyectos en curso: 1
-            • Horas de investigación: 4
+            • Proyecto: PRJ-SOD-2024-021
+            • Horas de investigación: 16 h/sem
 
-            <b>Total semanal:</b> 12 horas
-            <b>Horas disponibles:</b> 4
+            --
+            <b>Gestión académica</b>
+            • Horas de gestión: 2 h/sem
+
+            --
+            <b>Total semanal:</b> 30 h
+            <b>Observación:</b> "No supera el límite docente (12/16)."
         }
 
         ~~

@@ -1,0 +1,58 @@
+@startuml editarCargaTrabajo
+skinparam linetype polyline
+
+state editarCargaTrabajo as "editarCargaTrabajo()" {
+
+    state " " as MostrandoCarga
+    state " " as EditandoCarga
+    state " " as Validando
+
+    [*] -[#green]-> MostrandoCarga
+    note on link
+    <b>Coordinador</b> selecciona a una persona
+    end note
+
+    MostrandoCarga -[#green]-> EditandoCarga
+    note on link
+    <b>Coordinador</b> pulsa "Editar carga de trabajo"
+    <b>Sistema</b> habilita el formulario con los datos actuales
+    end note
+
+    EditandoCarga -[#green]-> Validando
+    note on link
+    <b>Coordinador</b> guarda cambios
+    end note
+
+    Validando -[#green]-> MostrandoCarga
+    note on link
+    <b>Sistema</b> valida y actualiza la carga:
+    • Docencia ≤ 16 h/semana
+    • No permite valores negativos
+    • Recalcula total y margen docente
+    <b>Sistema</b> muestra confirmación y mantiene la pantalla abierta
+    end note
+
+    Validando -[#red]-> EditandoCarga
+    note on link
+    <b>Sistema</b> detecta errores (p.ej. docencia > 16)
+    <b>Sistema</b> informa y mantiene el formulario para corregir
+    end note
+
+    EditandoCarga -[#red]-> MostrandoCarga
+    note on link
+    <b>Coordinador</b> cancela la edición
+    <b>Sistema</b> descarta cambios
+    end note
+}
+
+OPCIONES_CARGA_TRABAJO_ABIERTAS -[#green]-> editarCargaTrabajo
+note on link
+editarCargaTrabajo()
+end note
+
+editarCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+Carga de trabajo actualizada
+end note
+
+@enduml
