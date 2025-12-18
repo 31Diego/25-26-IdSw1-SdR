@@ -37,7 +37,16 @@ state abrirPanelPrincipal as "abrirPanelPrincipal()" {
 
     MostrandoPanel -[#green]-> [*]
     note on link
-    <b>Sistema</b> muestra el panel principal con las opciones disponibles
+    <b>Sistema</b> muestra el panel principal y permite solicitar las siguientes acciones:
+    • Consultar proyectos
+    • Consultar investigadores
+    • Consultar convocatorias
+    • Consultar recompensas
+    • Consultar mis publicaciones
+    • Consultar publicaciones
+    • Acceder a opciones de perfil
+    • Acceder a opciones de carga de trabajo de investigadores
+    • Cerrar sesión
     end note
 }
 
