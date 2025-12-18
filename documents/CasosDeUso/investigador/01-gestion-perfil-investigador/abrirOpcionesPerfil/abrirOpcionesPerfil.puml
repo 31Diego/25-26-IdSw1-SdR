@@ -1,0 +1,40 @@
+@startuml abrirOpcionesPerfil
+
+skinparam linetype polyline
+
+state abrirOpcionesPerfil as "abrirOpcionesPerfil()" {
+
+    state " " as MostrandoOpcionesPerfil
+    state " " as OpcionSelecionado
+
+    [*] -[#green]-> MostrandoOpcionesPerfil 
+    note on link
+    <b>Investigador</b> solicita ver su perfil
+    end note    
+    
+    MostrandoOpcionesPerfil -[#green]-> OpcionSelecionado
+    note on link
+    <b>Sistema</b> presenta el perfil
+    • ID, nombre, apellido, proyectos activos, publicaciones hechas
+    • Permite solicitar editar opciones de perfil
+    • Permite solicitar abrir el panel principal
+    end note
+    
+    OpcionSelecionado -[#green]-> [*]
+    note on link
+      <b>Investigador</b> selecciona una de las opciones
+    end note
+    
+}
+
+abrirOpcionesPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+editarPerfil()
+end note
+
+abrirOpcionesPerfil -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
+end note
+
+@enduml
