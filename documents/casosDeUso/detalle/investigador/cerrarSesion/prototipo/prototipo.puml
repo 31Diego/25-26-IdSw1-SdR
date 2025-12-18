@@ -1,0 +1,20 @@
+@startsalt cerrarSesion-wireframe
+{
+    ====
+    <b>GIPF - CERRAR SESIÓN</b>
+    ====
+    {^ <b>Cerrar sesión</b>
+        ¿Desea cerrar la sesión activa?
+
+        Usuario actual: <b>Investigador</b>
+
+        .
+        {
+            [Cancelar] | [Cerrar sesión]
+        }
+    }
+    ====
+    Sistema: Activo
+    ====
+}
+@endsalt
