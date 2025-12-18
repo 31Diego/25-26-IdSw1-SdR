@@ -32,7 +32,7 @@
 
         ~~
 
-        {[Crear publicación] | [Guardar como borrador] | [Cancelar]}
+        {[Crear publicación] | [Volver a mis publicaciones]}
     }
 }
 @endsalt

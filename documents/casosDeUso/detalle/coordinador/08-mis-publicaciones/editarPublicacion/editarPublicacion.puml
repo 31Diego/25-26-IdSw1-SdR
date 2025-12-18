@@ -1,6 +1,8 @@
 @startuml editarPublicacion
-
 skinparam linetype polyline
+
+state in1 as "MI_PUBLICACION_ABIERTA"
+in1 -[#green]-> editarPublicacion
 
 state editarPublicacion as "editarPublicacion()" {
 
@@ -36,14 +38,29 @@ state editarPublicacion as "editarPublicacion()" {
     end note
 }
 
-MI_PUBLICACION_ABIERTA -[#green]-> editarPublicacion
+editarPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
 note on link
-editarPublicacion()
+Publicación actualizada
+end note
+
+editarPublicacion -[#red]-> MI_PUBLICACION_ABIERTA
+note on link
+Edición cancelada
 end note
 
 editarPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
 note on link
-Publicación actualizada
+editarPublicacion()
+end note
+
+editarPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+eliminarPublicacion()
+end note
+
+editarPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
 end note
 
 @enduml

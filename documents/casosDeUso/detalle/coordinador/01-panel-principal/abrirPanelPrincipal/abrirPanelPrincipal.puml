@@ -1,14 +1,30 @@
 @startuml abrirPanelPrincipal
-
 skinparam linetype polyline
 
-INVESTIGADORES_ABIERTOS -[#green]-> abrirPanelPrincipal
-OPCIONES_CARGA_TRABAJO_ABIERTAS -[#green]-> abrirPanelPrincipal
-OPCIONES_PERFIL_ABIERTO -[#green]-> abrirPanelPrincipal
-MIS_PUBLICACIONES_ABIERTAS -[#green]-> abrirPanelPrincipal
-PUBLICACIONES_ABIERTAS -[#green]-> abrirPanelPrincipal
-CONVOCATORIAS_ABIERTAS -[#green]-> abrirPanelPrincipal
-RECOMPENSAS_ABIERTAS -[#green]-> abrirPanelPrincipal
+state in1 as "INVESTIGADORES_ABIERTOS"
+in1 -[#green]-> abrirPanelPrincipal
+
+state in2 as "OPCIONES_CARGA_TRABAJO_ABIERTAS"
+in2 -[#green]-> abrirPanelPrincipal
+
+state in3 as "OPCIONES_PERFIL_ABIERTO"
+in3 -[#green]-> abrirPanelPrincipal
+
+state in4 as "MIS_PUBLICACIONES_ABIERTAS"
+in4 -[#green]-> abrirPanelPrincipal
+
+state in5 as "PUBLICACIONES_ABIERTAS"
+in5 -[#green]-> abrirPanelPrincipal
+
+state in6 as "CONVOCATORIAS_ABIERTAS"
+in6 -[#green]-> abrirPanelPrincipal
+
+state in7 as "RECOMPENSAS_ABIERTAS"
+in7 -[#green]-> abrirPanelPrincipal
+
+state in8 as "PROYECTOS_ABIERTOS"
+in8 -[#green]-> abrirPanelPrincipal
+
 
 state abrirPanelPrincipal as "abrirPanelPrincipal()" {
 
@@ -21,13 +37,58 @@ state abrirPanelPrincipal as "abrirPanelPrincipal()" {
 
     MostrandoPanel -[#green]-> [*]
     note on link
-    <b>Sistema</b> muestra el panel principal
+    <b>Sistema</b> muestra el panel principal con las opciones disponibles
     end note
 }
 
 abrirPanelPrincipal -[#green]-> PANEL_PRINCIPAL_ABIERTO
 note on link
-panel principal visible
+Panel principal visible
+end note
+
+abrirPanelPrincipal -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+abrirOpcionesPerfil()
+end note
+
+abrirPanelPrincipal -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+abrirOpcionesCargaTrabajo()
+end note
+
+abrirPanelPrincipal -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
+end note
+
+abrirPanelPrincipal -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+abrirPanelPrincipal -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
+end note
+
+abrirPanelPrincipal -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+abrirPublicaciones()
+end note
+
+abrirPanelPrincipal -[#green]-> CONVOCATORIAS_ABIERTAS
+note on link
+abrirConvocatorias()
+end note
+
+abrirPanelPrincipal -[#green]-> RECOMPENSAS_ABIERTAS
+note on link
+abrirRecompensas()
+end note
+
+abrirPanelPrincipal -[#green]-> SESION_CERRADA
+note on link
+cerrarSesion()
 end note
 
 @enduml

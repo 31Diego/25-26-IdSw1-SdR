@@ -1,6 +1,9 @@
 @startuml eliminarPublicacion
 skinparam linetype polyline
 
+state in1 as "MI_PUBLICACION_ABIERTA"
+in1 -[#green]-> eliminarPublicacion
+
 state eliminarPublicacion as "eliminarPublicacion()" {
 
     state " " as ConfirmandoEliminacion
@@ -29,22 +32,16 @@ state eliminarPublicacion as "eliminarPublicacion()" {
     <b>Coordinador</b> cancela la eliminación
     <b>Sistema</b> no realiza cambios
     end note
-
-    Eliminando -[#red]-> ConfirmandoEliminacion
-    note on link
-    <b>Sistema</b> detecta error (p.ej. publicación no encontrada / permiso)
-    <b>Sistema</b> informa del error y mantiene la confirmación
-    end note
 }
-
-MI_PUBLICACION_ABIERTA -[#green]-> eliminarPublicacion
-note on link
-eliminarPublicacion()
-end note
 
 eliminarPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
 note on link
 Publicación eliminada
+end note
+
+eliminarPublicacion -[#red]-> MI_PUBLICACION_ABIERTA
+note on link
+Eliminación cancelada
 end note
 
 @enduml

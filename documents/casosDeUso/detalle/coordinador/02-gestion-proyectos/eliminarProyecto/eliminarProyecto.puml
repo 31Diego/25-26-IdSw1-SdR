@@ -1,8 +1,9 @@
 @startuml eliminarProyecto
-
 skinparam linetype polyline
 
-PROYECTO_ABIERTO -[#green]-> eliminarProyecto
+state in1 as "PROYECTO_ABIERTO"
+in1 -[#green]-> eliminarProyecto
+
 
 state eliminarProyecto as "eliminarProyecto()" {
 
@@ -41,6 +42,11 @@ state eliminarProyecto as "eliminarProyecto()" {
 eliminarProyecto -[#green]-> PROYECTOS_ABIERTOS
 note on link
 abrirProyectos()
+end note
+
+eliminarProyecto -[#red]-> PROYECTO_ABIERTO
+note on link
+Eliminación cancelada
 end note
 
 @enduml

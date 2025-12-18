@@ -1,55 +1,99 @@
 @startuml abrirProyecto
-
 skinparam linetype polyline
+
+state in1 as "PROYECTOS_ABIERTOS"
+in1 -[#green]-> abrirProyecto
+
+state in2 as "ENTREGABLES_ABIERTOS"
+in2 -[#green]-> abrirProyecto
 
 state abrirProyecto as "abrirProyecto()" {
 
     state " " as MostrandoListaProyectos
+    state " " as FiltrandoBuscando
     state " " as SeleccionandoProyecto
 
     [*] -[#green]-> MostrandoListaProyectos
     note on link
-    <b>Coordinador</b> solicita abrir proyectos
+    <b>Coordinador</b> solicita abrir un proyecto
+    end note
+
+    MostrandoListaProyectos -[#green]-> FiltrandoBuscando
+    note on link
+    <b>Sistema</b> presenta lista de proyectos:
+    • ID, título, estado
+    • Coordinador responsable
+    • Fechas inicio/fin
+    • Descripción
+    • Permite filtrar/buscar
+    • Permite seleccionar un proyecto
+    end note
+
+    FiltrandoBuscando -[#green]-> FiltrandoBuscando
+    note on link
+    <b>Coordinador</b> aplica filtros/búsqueda
+    <b>Sistema</b> muestra la lista filtrada
+    end note
+
+    FiltrandoBuscando -[#green]-> SeleccionandoProyecto
+    note on link
+    <b>Coordinador</b> selecciona un proyecto del listado
     end note
 
     MostrandoListaProyectos -[#green]-> SeleccionandoProyecto
     note on link
-    <b>Sistema</b> presenta lista de proyectos de investigación
-    • ID
-    • Título
-    • Estado del proyecto
-    • Nombre del coordinador
-    • Fechas de inicio y fin
-    • Descripción
-    • Permite solicitar filtrar/buscar
-    • Permite solicitar abrir un proyecto
-    end note
-
-    SeleccionandoProyecto -[#green]-> SeleccionandoProyecto
-    note on link
-    <b>Coordinador</b> solicita filtrar/buscar proyectos
-    <b>Sistema</b> presenta lista filtrada
+    <b>Coordinador</b> selecciona un proyecto del listado
     end note
 
     SeleccionandoProyecto -[#green]-> [*]
     note on link
-    <b>Coordinador</b> solicita abrir un proyecto de la lista
+    <b>Sistema</b> carga el proyecto seleccionado
     end note
 }
 
-PROYECTOS_ABIERTOS -[#green]-> abrirProyecto
+abrirProyecto -[#green]-> PROYECTO_ABIERTO
 note on link
-abrirProyecto()
-end note
-
-ENTREGABLES_ABIERTOS -[#green]-> abrirProyecto
-note on link
-abrirProyecto()
+Proyecto abierto
 end note
 
 abrirProyecto -[#green]-> PROYECTO_ABIERTO
 note on link
-proyecto abierto
+editarProyecto()
+end note
+
+abrirProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+eliminarProyecto()
+end note
+
+abrirProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+agregarInvestigador()
+end note
+
+abrirProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+eliminarInvestigador()
+end note
+
+abrirProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+abrirProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+crearEntregable()
+end note
+
+abrirProyecto -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+abrirProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
 end note
 
 @enduml

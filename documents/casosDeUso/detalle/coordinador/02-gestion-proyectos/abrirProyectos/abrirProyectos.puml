@@ -1,6 +1,15 @@
 @startuml abrirProyectos
-
 skinparam linetype polyline
+
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirProyectos
+
+state in2 as "PROYECTO_ABIERTO"
+in2 -[#green]-> abrirProyectos
+
+state in3 as "INVESTIGADOR_ABIERTO"
+in3 -[#green]-> abrirProyectos
+
 
 state abrirProyectos as "abrirProyectos()" {
 
@@ -18,48 +27,54 @@ state abrirProyectos as "abrirProyectos()" {
     • ID
     • Título
     • Estado del proyecto
-    • Nombre del coordinador
+    • Coordinador responsable
     • Fechas de inicio y fin
     • Descripción
-    • Permite solicitar filtrar/buscar proyectos
+    
+    • Permite filtrar y buscar proyectos
 
     <b>Regla de presentación del listado:</b>
     • Si se accede desde PANEL_PRINCIPAL_ABIERTO o PROYECTO_ABIERTO:
     se muestra el listado global de proyectos
     • Si se accede desde INVESTIGADOR_ABIERTO:
-    se muestra únicamente el listado de proyectos asociados al investigador
+    se muestran únicamente los proyectos asociados al investigador
     end note
 
     FiltrandoLista -[#green]-> FiltrandoLista
     note on link
-    <b>Coordinador</b> solicita filtrar/buscar proyectos
-    <b>Sistema</b> actualiza el listado según los criterios indicados
+    <b>Coordinador</b> filtra o busca proyectos
+    <b>Sistema</b> actualiza el listado
     end note
 
     FiltrandoLista -[#green]-> [*]
     note on link
-    <b>Coordinador</b> finaliza la consulta del listado
+    <b>Coordinador</b> selecciona una opción de navegación
+    end note
+
+    MostrandoLista -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> selecciona una opción de navegación
     end note
 }
 
-PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirProyectos
-note on link
-abrirProyectos()
-end note
-
-PROYECTO_ABIERTO -[#green]-> abrirProyectos
-note on link
-abrirProyectos()
-end note
-
-INVESTIGADOR_ABIERTO -[#green]-> abrirProyectos
-note on link
-abrirProyectos()
-end note
-
 abrirProyectos -[#green]-> PROYECTOS_ABIERTOS
 note on link
-Listado de proyectos abierto
+Listado de proyectos visible
+end note
+
+abrirProyectos -[#green]-> PROYECTO_ABIERTO
+note on link
+abrirProyecto()
+end note
+
+abrirProyectos -[#green]-> PROYECTO_ABIERTO
+note on link
+crearProyecto()
+end note
+
+abrirProyectos -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
 end note
 
 @enduml

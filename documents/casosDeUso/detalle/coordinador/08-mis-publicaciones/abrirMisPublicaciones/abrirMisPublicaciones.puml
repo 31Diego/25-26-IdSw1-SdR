@@ -1,6 +1,11 @@
 @startuml abrirMisPublicaciones
-
 skinparam linetype polyline
+
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirMisPublicaciones
+
+state in2 as "MI_PUBLICACION_ABIERTA"
+in2 -[#green]-> abrirMisPublicaciones
 
 state abrirMisPublicaciones as "abrirMisPublicaciones()" {
 
@@ -34,19 +39,24 @@ state abrirMisPublicaciones as "abrirMisPublicaciones()" {
     end note
 }
 
-PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirMisPublicaciones
-note on link
-abrirMisPublicaciones()
-end note
-
-MI_PUBLICACION_ABIERTA -[#green]-> abrirMisPublicaciones
-note on link
-abrirMisPublicaciones()
-end note
-
 abrirMisPublicaciones -[#green]-> MIS_PUBLICACIONES_ABIERTAS
 note on link
 Listado de mis publicaciones abierto
+end note
+
+abrirMisPublicaciones -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+abrirMiPublicacion()
+end note
+
+abrirMisPublicaciones -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+crearPublicacion()
+end note
+
+abrirMisPublicaciones -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
 end note
 
 @enduml

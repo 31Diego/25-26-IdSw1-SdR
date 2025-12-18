@@ -1,8 +1,8 @@
 @startuml editarProyecto
-
 skinparam linetype polyline
 
-PROYECTO_ABIERTO -[#green]-> editarProyecto
+state in1 as "PROYECTO_ABIERTO"
+in1 -[#green]-> editarProyecto
 
 state editarProyecto as "editarProyecto()" {
 
@@ -48,12 +48,52 @@ state editarProyecto as "editarProyecto()" {
 
 editarProyecto -[#green]-> PROYECTO_ABIERTO
 note on link
-proyecto actualizado
+Proyecto actualizado
 end note
 
 editarProyecto -[#red]-> PROYECTO_ABIERTO
 note on link
-edición cancelada
+Edición cancelada
+end note
+
+editarProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+editarProyecto()
+end note
+
+editarProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+eliminarProyecto()
+end note
+
+editarProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+agregarInvestigador()
+end note
+
+editarProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+eliminarInvestigador()
+end note
+
+editarProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+editarProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+crearEntregable()
+end note
+
+editarProyecto -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+editarProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
 end note
 
 @enduml

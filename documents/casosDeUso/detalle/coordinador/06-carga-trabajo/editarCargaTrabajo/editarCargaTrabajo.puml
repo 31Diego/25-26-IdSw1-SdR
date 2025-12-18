@@ -1,6 +1,9 @@
 @startuml editarCargaTrabajo
 skinparam linetype polyline
 
+state in1 as "OPCIONES_CARGA_TRABAJO_ABIERTAS"
+in1 -[#green]-> editarCargaTrabajo
+
 state editarCargaTrabajo as "editarCargaTrabajo()" {
 
     state " " as MostrandoCarga
@@ -9,7 +12,7 @@ state editarCargaTrabajo as "editarCargaTrabajo()" {
 
     [*] -[#green]-> MostrandoCarga
     note on link
-    <b>Coordinador</b> selecciona a una persona
+    <b>Coordinador</b> selecciona a un investigador
     end note
 
     MostrandoCarga -[#green]-> EditandoCarga
@@ -45,14 +48,24 @@ state editarCargaTrabajo as "editarCargaTrabajo()" {
     end note
 }
 
-OPCIONES_CARGA_TRABAJO_ABIERTAS -[#green]-> editarCargaTrabajo
+editarCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
 note on link
-editarCargaTrabajo()
+Carga de trabajo actualizada
+end note
+
+editarCargaTrabajo -[#red]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+Edición cancelada
 end note
 
 editarCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
 note on link
-Carga de trabajo actualizada
+editarCargaTrabajo()
+end note
+
+editarCargaTrabajo -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
 end note
 
 @enduml

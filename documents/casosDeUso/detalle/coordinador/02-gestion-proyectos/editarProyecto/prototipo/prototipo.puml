@@ -23,7 +23,7 @@
 
         ~~
 
-        {[Guardar cambios] | [Continuar editando] | [Cancelar]}
+        {[Guardar y salir] | | [Cancelar]}
     }
 }
 @endsalt

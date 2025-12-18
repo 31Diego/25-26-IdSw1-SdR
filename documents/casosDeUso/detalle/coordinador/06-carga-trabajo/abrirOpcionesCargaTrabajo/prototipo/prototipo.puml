@@ -1,7 +1,7 @@
 @startsalt abrirOpcionesCargaTrabajo-wireframe
 {
     ====
-    <b>FUNIBER - CARGA DE TRABAJO</b>
+    <b>GIPF - CARGA DE TRABAJO</b>
     ====
 
     {
@@ -36,7 +36,7 @@
         {
             {<b>Código          </b> | <b>Nombre                                              </b> | <b>Sede                 </b> | <b>Perfil                        </b> | <b>Docencia (h/sem)</b> | <b>Investigación (h/sem)</b> | <b>Gestión (h/sem)</b> | <b>Total (h/sem)</b> | <b>Margen docencia</b>}
             {"FNB-1023" | "Carlos Fernández López" | "Santander" | "Investigador-docente" | "16" | "10" | "2" | "28" | "0"}
-            {"FNB-1188" | "Marta Sánchez Ruiz"     | "Santander" | "Investigador-docente" | "12" | "8"  | "2" | "22" | "4"}
+            {"FNB-1188" | "Marta Sánchez Ruiz"     | "Santander" | "Investigador-docente" | "12" | "16"  | "2" | "30" | "4"}
             {"FNB-0902" | "Luis Gómez Pérez"       | "Barcelona" | "Solo investigador"     | "0"  | "20" | "4" | "24" | "16"}
         }
 
@@ -73,7 +73,7 @@
 
         ~~
 
-        {[Aplicar filtros] | [Limpiar filtros] | [Editar carga de trabajo] | [Volver]}
+        {[Aplicar filtros] | [Limpiar filtros] | [Editar carga de trabajo] | [Abrir Panel principal]}
     }
 }
 @endsalt

@@ -1,6 +1,8 @@
 @startuml abrirMiPublicacion
-
 skinparam linetype polyline
+
+state in1 as "MIS_PUBLICACIONES_ABIERTAS"
+in1 -[#green]-> abrirMiPublicacion
 
 state abrirMiPublicacion as "abrirMiPublicacion()" {
 
@@ -17,14 +19,24 @@ state abrirMiPublicacion as "abrirMiPublicacion()" {
     end note
 }
 
-MIS_PUBLICACIONES_ABIERTAS -[#green]-> abrirMiPublicacion
+abrirMiPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
 note on link
-abrirMiPublicacion()
+Mi publicación abierta
 end note
 
 abrirMiPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
 note on link
-Mi publicación abierta
+editarPublicacion()
+end note
+
+abrirMiPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+eliminarPublicacion()
+end note
+
+abrirMiPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
 end note
 
 @enduml

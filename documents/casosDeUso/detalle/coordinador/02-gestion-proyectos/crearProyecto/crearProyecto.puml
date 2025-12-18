@@ -1,40 +1,80 @@
 @startuml crearProyecto
-
 skinparam linetype polyline
 
-PROYECTOS_ABIERTOS -[#green]-> crearProyecto
+state in1 as "PROYECTOS_ABIERTOS"
+in1 -[#green]-> crearProyecto
 
 state crearProyecto as "crearProyecto()" {
 
     state " " as SolicitandoDatos
-    state " " as CreandoProyecto
+    state " " as RegistrandoProyecto
 
     [*] -[#green]-> SolicitandoDatos
     note on link
-    <b>Coordinador</b> solicita crear proyecto
+    <b>Coordinador</b> solicita crear un nuevo proyecto
     end note
 
-    SolicitandoDatos -[#green]-> CreandoProyecto
+    SolicitandoDatos -[#green]-> RegistrandoProyecto
     note on link
-    <b>Sistema</b> solicita datos del nuevo proyecto
-    • ID
+    <b>Sistema</b> solicita los datos del proyecto:
+    • ID del proyecto
     • Título
-    • Estado del proyecto
+    • Estado inicial
     • Nombre del coordinador
     • Fechas de inicio y fin
     • Descripción
     end note
 
-    CreandoProyecto -[#green]-> [*]
+    RegistrandoProyecto -[#green]-> [*]
     note on link
-    <b>Coordinador</b> proporciona los datos solicitados
+    <b>Coordinador</b> introduce los datos solicitados
     <b>Sistema</b> registra el nuevo proyecto
     end note
 }
 
 crearProyecto -[#green]-> PROYECTO_ABIERTO
 note on link
-Proyecto creado correctamente
+Proyecto creado y abierto
+end note
+
+crearProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+editarProyecto()
+end note
+
+crearProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+eliminarProyecto()
+end note
+
+crearProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+agregarInvestigador()
+end note
+
+crearProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+eliminarInvestigador()
+end note
+
+crearProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+crearProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+crearEntregable()
+end note
+
+crearProyecto -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+crearProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
 end note
 
 @enduml

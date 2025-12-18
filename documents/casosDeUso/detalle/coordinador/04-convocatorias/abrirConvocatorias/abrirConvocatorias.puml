@@ -1,6 +1,12 @@
 @startuml abrirConvocatorias
 skinparam linetype polyline
 
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirConvocatorias
+
+state in2 as "CONVOCATORIA_ABIERTA"
+in2 -[#green]-> abrirConvocatorias
+
 state abrirConvocatorias as "abrirConvocatorias()" {
 
     state " " as CargandoListado
@@ -29,14 +35,19 @@ state abrirConvocatorias as "abrirConvocatorias()" {
     end note
 }
 
-PANEL_PRINCIPAL_ABIERTO -[#green]-> abrirConvocatorias
-note on link
-abrirConvocatorias()
-end note
-
 abrirConvocatorias -[#green]-> CONVOCATORIAS_ABIERTAS
 note on link
 Listado de convocatorias mostrado
+end note
+
+abrirConvocatorias -[#green]-> CONVOCATORIA_ABIERTA
+note on link
+abrirConvocatoria()
+end note
+
+abrirConvocatorias -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
 end note
 
 @enduml

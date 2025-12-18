@@ -1,7 +1,7 @@
 @startsalt miPublicacionAbierta-wireframe
 {
     ====
-    <b>FUNIBER · MI PUBLICACIÓN</b>
+    <b>GIPF - MI PUBLICACIÓN</b>
     ====
 
     {
@@ -32,12 +32,13 @@
 
     { [Volver a Mis publicaciones] | [Editar publicación] | [Eliminar publicación] }
 }
+
 @endsalt
 
     @startsalt eliminarPublicacion-wireframe
     {
     ====
-    <b>FUNIBER · ELIMINAR PUBLICACIÓN</b>
+    <b>GIPF - ELIMINAR PUBLICACIÓN</b>
     ====
 
     <b>Confirmación</b>
@@ -58,4 +59,4 @@
 
     { [Cancelar] | [Eliminar definitivamente] }
     }
-    @endsalt
+@endsalt

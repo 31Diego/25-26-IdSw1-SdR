@@ -1,31 +1,51 @@
-@startsalt abrirProyecto-wireframe
+@startsalt proyectoAbierto-wireframe
 {
     ====
-    <b>GIPF - PROYECTOS</b>
+    <b>GIPF - PROYECTO</b>
     ====
+
+    <b>Datos del proyecto</b>
     {
-        <b>Filtrar / buscar:</b>
-        {
-            {<b>ID:</b> | [         ]
-            <b>Título:</b> | [                              ]}
-            {<b>Estado:</b> | { "Todos" | "Borrador" | "En curso" | "Finalizado" }
-            <b>Coordinador:</b> | [                    ]}
-        }
-
-        ~~
-
-        <b>Lista de proyectos de investigación</b>
-        --
-        {
-            {<b>ID</b>  | <b>Título</b> | <b>Estado</b> | <b>Coordinador</b> | <b>Fecha inicio</b> | <b>Fecha fin</b>}
-            {"PROY-012" | "Sistema de apoyo a la gestión..." | "En curso" | "Carlos Fernández López" | "10-01-2025" | "20-12-2025"}
-            {"PROY-013" | "Análisis de productividad..."      | "Borrador" | "Marta Sánchez Ruiz"     | "05-03-2025" | "—"}
-            {"PROY-014" | "Plataforma de seguimiento..."      | "Finalizado" | "Luis Gómez Pérez"     | "12-02-2024" | "30-11-2024"}
-        }
-
-        ~~
-
-        {[Abrir proyecto] | [Aplicar filtros] | [Limpiar filtros] | [Cancelar]}
+        { <b>ID:</b> | "PROY-012" }
+        { <b>Título:</b> | "Sistema de apoyo a la gestión de investigación" }
+        { <b>Estado:</b> | "En curso" }
+        { <b>Entidad financiadora:</b> | "Unión Europea" }
+        { <b>Coordinador:</b> | "Carlos Fernández López" }
+        { <b>Inicio:</b> | "10/01/2025" }
+        { <b>Fin:</b> | "20/12/2025" }
     }
+
+    --
+
+    <b>Descripción</b>
+    {
+        Proyecto orientado al desarrollo de una plataforma interna para
+        el seguimiento de convocatorias, proyectos y carga de trabajo
+        de investigadores FUNIBER.
+    }
+
+    --
+
+    <b>Equipo</b>
+    {
+        "• Investigador principal: Carlos Fernández López"
+        "• Investigadores asociados: Marta Sánchez Ruiz"
+        "• Colaboradores externos: —"
+    }
+
+    --
+
+    <b>Acciones</b>
+    {
+        [Editar proyecto]
+        [Eliminar proyecto]
+        [Abrir entregables]
+        [Agregar investigador]
+        [Abrir investigadores]
+    }
+
+    --
+
+    { [Volver a Proyectos] }
 }
 @endsalt
