@@ -15,8 +15,9 @@ state abrirOpcionesCargaTrabajo as "abrirOpcionesCargaTrabajo()" {
     MostrandoEntregable -[#green]-> FiltrandoEntregable
     note on link
     <b>Sistema</b> presenta opciones de carga de trabajo
-    • Carga de trabajo
+    •<b>Sistema</b> presenta la carga de trabajo del investigador
     • Permite solicitar editar carga de trabajo
+    • Permite solicitar abrir el panel principal
     end note
     
     FiltrandoEntregable -[#green]-> [*]
@@ -28,6 +29,11 @@ state abrirOpcionesCargaTrabajo as "abrirOpcionesCargaTrabajo()" {
 abrirOpcionesCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
 note on link
 editarCargaTrabajo()
+end note
+
+abrirOpcionesCargaTrabajo -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
 end note
 
 @enduml
