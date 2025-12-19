@@ -1,62 +1,49 @@
-#  Glosario de Términos – Gestor Investigadores y Proyectos Funiber (GIPF)
+<h1 align="center">FUNIBER — Plataforma Interna de Investigación</h1>
 
-Este glosario define los términos principales utilizados en el desarrollo y operación del sistema de gestión de convocatorias e investigaciones de FUNIBER.
+<div align="center">
 
----
+[![](https://img.shields.io/badge/-Inicio-0A3B64?style=for-the-badge&logo=github&logoColor=white)](/README.md)
+[![](https://img.shields.io/badge/-Modelo_del_Dominio-0A3B64?style=for-the-badge&logo=drawio&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/modeloDominio.md)
+[![](https://img.shields.io/badge/-Actores_y_casos_de_uso-0A3B64?style=for-the-badge&logo=group&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/casosDeUso.md)
+[![](https://img.shields.io/badge/-Glosario-0A3B64?style=for-the-badge&logo=notepad&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/edit/main/documentos/modeloDelDominio/documentos/vocabulario.md)
 
-##  Estados de un proyecto
+[![](https://img.shields.io/badge/-Detallado_y_Prototipos-0A3B64?style=for-the-badge&logo=notepad&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/detalladoYPrototipos.md)
+[![](https://img.shields.io/badge/-Diagrama_de_Contexto-0A3B64?style=for-the-badge&logo=flowchart&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/diagramas/diagramasContexto.md)
+[![](https://img.shields.io/badge/-Reuniones-0A3B64?style=for-the-badge&logo=google-meet&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/reuniones/reuniones.md)
+[![](https://img.shields.io/badge/-Priorización-0A3B64?style=for-the-badge&logo=priority&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/priorizacionCasosDeUso.md)
+[![](https://img.shields.io/badge/-Rúbrica-0A3B64?style=for-the-badge&logo=checklist&logoColor=white)](https://github.com/mmasias/25-26-IdSw1-SdR/blob/main/documents/l'Rubrica.md)
 
-| **Término** | **Definición** | **Notas / Ejemplo** |
-|--------------|----------------|----------------------|
-| **Entidad convocante** | Organización o institución que emite una convocatoria. | Puede ser la Unión Europea, el Ministerio de Ciencia, el Gobierno de Cantabria, etc. |
-| **Convocatoria** | Anuncio oficial de una oportunidad de financiación o participación en un proyecto de investigación. | Ejemplo: “Convocatoria Horizonte Europa 2025”. |
-| **Propuesta** | Siguiente fase de una convocatoria, en donde se concretan los detalles de la misma | Ejemplo: Investigación sobre enfermedad rara.|
-| **Proyecto** | Última fase de una convocatoria, en donde se tienen unos objetivos, un grupo de investigadores/docentes, una fecha de entrega y una documentación/entregables del mismo| ----- |
+</div>
 
----
+# Glosario
 
-##  Usuarios y Roles
+Breve glosario unificado de términos y conceptos utilizados en la Plataforma Interna de Investigación de FUNIBER.  
+La tabla recoge la definición y ejemplos o características clave asociadas a cada término, garantizando coherencia con los diagramas de contexto, casos de uso y prototipos del sistema.
 
-| **Término** | **Definición** | **Notas / Ejemplo** |
-|--------------|----------------|----------------------|
-| **Investigador / Docente** | Usuario registrado que participa en proyectos de investigación. | Incluye personal académico afiliado a FUNIBER. |
-| **Perfil de investigador** | Conjunto de datos que describen la especialización, intereses, experiencia y criterios de elegibilidad del usuario. | Se utiliza para filtrar y recomendar convocatorias. |
-| **Coordinador** | Rol o proceso encargado de reclutar a los investigadores de un proyecto y de verificar si los entregables que estos entregan son correctos. | Puede ser un rol administrativo dentro del sistema. |
-| **Antena** | Labor de un coordinador, en donde se está al tanto de nuevas convocatorias| Rol de coordinador|
-|**Colaborador**| Entidad externa al sistema del que solo se tienen datos básicos, la cual puede colaborar en un proyecto si asi se requiere| Investigador de la Universidad de Cantabria |
-
----
-
-
-##  Gestión de Convocatorias y Proyectos
-
-| **Término** | **Definición** | **Notas / Ejemplo** |
-|--------------|----------------|----------------------|
-| **Estado de convocatoria** | Etapa en la que se encuentra una convocatoria dentro del sistema. | Ejemplos: “Pendiente de validación”, “Aprobada”, “Archivada”. |
-| **Línea de tiempo de investigación** | Registro cronológico de la documentación, avances y entregables de un proyecto. | Permite consultar la evolución del trabajo de cada investigador. |
-| **Entregables** | Conjunto de archivos y reportes que registran el progreso y resultados de un proyecto. | Ejemplo: informes técnicos, publicaciones, memorias de avance. |
-| **Seguimiento de proyecto** | Proceso mediante el cual se supervisa la ejecución y cumplimiento de las metas del proyecto. | Incluye revisión de hitos, entregas y plazos. |
-| **Carga de trabajo** | Conjunto de labores que el investigador/docente tiene que realizar. | Impartir clase, formar parte de un proyecto u otros. |
-
----
-
-##  Recompensas y Evaluación
-
-| **Término** | **Definición** | **Notas / Ejemplo** |
-|--------------|----------------|----------------------|
-| **Finalización de proyecto** | Estado que indica que el proyecto de investigación ha concluido. | Puede ser con resultado exitoso o no exitoso. |
-| **Evaluación de resultados** | Proceso mediante el cual se determina si un proyecto finalizado cumple con los objetivos establecidos. | Puede realizarlo el administrador o un comité evaluador. |
-| **Recompensa** | Beneficio otorgado al investigador tras la finalización exitosa de un proyecto. | Puede ser remuneración económica o reducción de carga docente. |
-
-
----
-
-##  Otros Términos Relevantes
-
-| **Término** | **Definición** | **Notas / Ejemplo** |
-|--------------|----------------|----------------------|
-| **Área temática** | Categoría o campo de investigación asociado a una convocatoria o perfil. | Ejemplo: Ciencias Sociales, Ingeniería, Educación, etc. |
-| **Plazo de solicitud** | Periodo durante el cual una convocatoria está abierta para recibir candidaturas. | Se muestra en cada ficha de convocatoria. |
-| **Integración externa** | Conexión con fuentes de convocatorias externas o sistemas institucionales. | Ejemplo: APIs de la UE o del Ministerio de Ciencia. |
-
----
+| Término | Definición | Ejemplos / Características |
+|--|--|--|
+| Investigador | Usuario del sistema que desarrolla actividades de investigación y puede publicar contenidos propios. | Accede a proyectos propios, crea y edita publicaciones, consulta recompensas, gestiona sus entregables. |
+| Investigador-docente | Investigador que, además de investigación, imparte docencia y tiene límites de carga docente. | Máx. 16 h/semana de docencia; combinación de docencia, investigación y actividades académicas. |
+| Coordinador | Usuario responsable de coordinar y supervisar la actividad investigadora. | Define proyectos, asigna investigadores, controla carga de trabajo, gestiona convocatorias y recompensas. |
+| Panel principal | Pantalla central de navegación del sistema tras iniciar sesión. | Accesos a proyectos, investigadores, publicaciones, recompensas, perfil y cierre de sesión. |
+| Perfil | Conjunto de datos identificativos y académicos de un usuario. | Datos personales, sede, área de investigación, rol, información profesional. |
+| Proyecto | Entidad que agrupa actividades de investigación con un objetivo común. | Estado (borrador, en curso, finalizado), fechas, coordinador, equipo investigador. |
+| Proyecto abierto | Estado en el que se visualiza el detalle completo de un proyecto. | Datos generales, descripción, equipo, acceso a entregables e investigadores asociados. |
+| Entregable | Resultado parcial o final asociado a un proyecto. | Informe, dataset, presentación u otro; tiene fecha límite y estado. |
+| Entregables abiertos | Listado de entregables asociados a un proyecto concreto. | Permite filtrar, abrir o crear entregables según permisos. |
+| Publicación | Contenido generado por un investigador dentro de la plataforma. | Puede estar en borrador o publicada; tiene visibilidad pública o privada. |
+| Mis publicaciones | Listado de publicaciones creadas por un investigador. | Incluye filtros por estado, fecha y título; acceso a creación y edición. |
+| Publicaciones | Listado general de publicaciones visibles en la plataforma. | Acceso común para investigadores y coordinadores; permite abrir y responder. |
+| Convocatoria | Llamada institucional para la presentación de proyectos de investigación. | Fechas de apertura y cierre, área, entidad financiadora, estado. |
+| Recompensa | Reconocimiento económico o académico asociado a la actividad investigadora. | Compensación económica o reducción de carga docente. |
+| Carga de trabajo | Distribución semanal de horas de una persona. | Docencia, investigación y actividades académicas; total semanal y márgenes. |
+| Opciones de carga de trabajo | Pantalla de consulta y edición de la carga de trabajo. | Vista individual o global según rol; edición controlada por el coordinador. |
+| Estado | Situación en la que se encuentra una entidad del sistema. | Proyecto en curso, entregable pendiente, publicación en borrador, etc. |
+| Visibilidad | Ámbito de acceso de una publicación. | Pública (comunidad FUNIBER) o privada (autor). |
+| Listado | Vista que presenta múltiples entidades de un mismo tipo. | Proyectos, entregables, publicaciones, investigadores. |
+| Objeto abierto | Vista detallada de una entidad concreta. | Proyecto abierto, publicación abierta, entregable abierto. |
+| Filtro | Criterio aplicado a un listado para acotar resultados. | Por estado, fecha, título, proyecto, investigador. |
+| Sesión | Periodo de interacción autenticada de un usuario con el sistema. | Se inicia con iniciarSesion() y finaliza con cerrarSesion(). |
+| Transición | Cambio de estado dentro del sistema según el diagrama de contexto. | Ej.: PANEL_PRINCIPAL_ABIERTO → PROYECTOS_ABIERTOS. |
+| Caso de uso | Descripción estructurada de una interacción entre actor y sistema. | abrirProyectos(), crearPublicacion(), editarEntregable(). |
+| Prototipo | Representación visual de una pantalla del sistema. | Wireframes en notación SALT coherentes con los casos de uso. |
