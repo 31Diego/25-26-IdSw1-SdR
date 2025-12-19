@@ -18,7 +18,7 @@ Los casos de uso están organizados por **actor** y por **módulo funcional**, s
 ## Coordinador
 
 ### Gestión de sesión
-- [iniciarSesion](documentos/casosDeUso/detalle/coordinador/iniciarSesion/iniciarSesion.md) — Acceso autenticado al sistema
+- [iniciarSesion](/documentos/casosDeUso/detalle/coordinador/iniciarSesion/iniciarSesion.md) — Acceso autenticado al sistema
 - [cerrarSesion](cerrarSesion/) — Cierre de sesión
 
 ### Navegación general
