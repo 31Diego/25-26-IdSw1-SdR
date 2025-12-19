@@ -10,7 +10,6 @@ state editarEntregable as "editarEntregable()" {
 
     [*] -[#green]-> MostrandoEntregable
     note on link
-    <b>Invstigador</b> tiene un entregable abierto
     <b>Invstigador</b> solicita editar entregable
     end note
 
