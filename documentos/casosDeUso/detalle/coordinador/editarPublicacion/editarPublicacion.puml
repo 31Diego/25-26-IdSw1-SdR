@@ -1,0 +1,69 @@
+@startuml editarPublicacion
+skinparam linetype polyline
+
+state in1 as "MI_PUBLICACION_ABIERTA"
+in1 -[#green]-> editarPublicacion
+
+state editarPublicacion as "editarPublicacion()" {
+
+    state " " as MostrandoPublicacion
+    state " " as EditandoDatos
+
+    [*] -[#green]-> MostrandoPublicacion
+    note on link
+    <b>Coordinador</b> solicita editar una publicación propia
+    end note
+
+    MostrandoPublicacion -[#green]-> EditandoDatos
+    note on link
+    <b>Sistema</b> presenta el formulario de edición con los datos actuales:
+    • Título
+    • Estado
+    • Visibilidad
+    • Descripción
+    • Adjuntos (opcional)
+
+    y permite solicitar las siguientes acciones:
+    • Guardar cambios
+    • Cancelar
+    end note
+
+    EditandoDatos -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita guardar cambios
+    <b>Sistema</b> visualiza la publicación actualizada
+    end note
+
+    EditandoDatos -[#red]-> MostrandoPublicacion
+    note on link
+    <b>Coordinador</b> solicita cancelar
+    <b>Sistema</b> visualiza la publicación sin cambios
+    end note
+}
+
+editarPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+Publicación actualizada
+end note
+
+editarPublicacion -[#red]-> MI_PUBLICACION_ABIERTA
+note on link
+Edición cancelada
+end note
+
+editarPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+editarPublicacion()
+end note
+
+editarPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+eliminarPublicacion()
+end note
+
+editarPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
+end note
+
+@enduml

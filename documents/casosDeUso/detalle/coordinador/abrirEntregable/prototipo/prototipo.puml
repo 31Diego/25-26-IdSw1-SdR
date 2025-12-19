@@ -1,0 +1,42 @@
+@startsalt entregableAbierto-wireframe
+{
+====
+<b>GIPF - ENTREGABLE</b>
+====
+
+<b>Datos del entregable</b>
+{
+    { <b>ID:</b> | "ENT-045" }
+    { <b>Título:</b> | "Memoria técnica - versión 1" }
+    { <b>Tipo:</b> | "Informe" }
+    { <b>Estado:</b> | "Pendiente" }
+    { <b>Fecha límite:</b> | "30/06/2025" }
+}
+
+--
+
+<b>Descripción</b>
+{
+    "Entregable inicial con la estructura de la memoria."
+}
+
+--
+
+<b>Adjunto / enlace</b>
+{
+    "Archivo/enlace (opcional): —"
+}
+
+--
+
+<b>Acciones</b>
+{
+    [Editar entregable]
+    [Eliminar entregable]
+}
+
+--
+
+{ [Volver a entregables] }
+}
+@endsalt

@@ -1,0 +1,40 @@
+@startsalt editarEntregable-wireframe
+{
+====
+<b>GIPF - EDITAR ENTREGABLE</b>
+====
+
+{
+<b>Datos del entregable</b>
+--
+{
+    { <b>ID:</b> | "ENT-045" }
+    --
+    { <b>Título:</b> | [ Memoria técnica - versión 1 ] }
+    --
+    { <b>Tipo:</b> | { "Informe" | "Dataset" | "Presentación" | "Otro" } }
+    --
+    { <b>Estado:</b> | { "Pendiente" | "En curso" | "Entregado" } }
+    --
+    { <b>Fecha límite:</b> | [ 30/06/2025 ] }
+    --
+    { <b>Descripción (si aplica):</b> | {[                                      ]} }
+}
+
+~~
+
+<b>Adjunto (si aplica)</b>
+{
+    {[ Añadir / modificar archivo o enlace ]}
+}
+
+~~
+
+{ [Guardar cambios] | [Cancelar edición] }
+
+--
+
+<i>El ID del entregable no es editable</i>
+}
+}
+@endsalt

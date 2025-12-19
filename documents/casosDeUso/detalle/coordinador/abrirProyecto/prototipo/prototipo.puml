@@ -1,0 +1,51 @@
+@startsalt proyectoAbierto-wireframe
+{
+    ====
+    <b>GIPF - PROYECTO</b>
+    ====
+
+    <b>Datos del proyecto</b>
+    {
+        { <b>ID:</b> | "PROY-012" }
+        { <b>Título:</b> | "Sistema de apoyo a la gestión de investigación" }
+        { <b>Estado:</b> | "En curso" }
+        { <b>Entidad financiadora:</b> | "Unión Europea" }
+        { <b>Coordinador:</b> | "Carlos Fernández López" }
+        { <b>Inicio:</b> | "10/01/2025" }
+        { <b>Fin:</b> | "20/12/2025" }
+    }
+
+    --
+
+    <b>Descripción</b>
+    {
+        Proyecto orientado al desarrollo de una plataforma interna para
+        el seguimiento de convocatorias, proyectos y carga de trabajo
+        de investigadores FUNIBER.
+    }
+
+    --
+
+    <b>Equipo</b>
+    {
+        "• Investigador principal: Carlos Fernández López"
+        "• Investigadores asociados: Marta Sánchez Ruiz"
+        "• Colaboradores externos: —"
+    }
+
+    --
+
+    <b>Acciones</b>
+    {
+        [Editar proyecto]
+        [Eliminar proyecto]
+        [Abrir entregables]
+        [Agregar investigador]
+        [Abrir investigadores]
+    }
+
+    --
+
+    { [Volver a Proyectos] }
+}
+@endsalt

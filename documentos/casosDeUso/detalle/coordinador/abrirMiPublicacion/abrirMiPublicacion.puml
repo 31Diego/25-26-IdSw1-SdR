@@ -1,0 +1,50 @@
+@startuml abrirMiPublicacion
+skinparam linetype polyline
+
+state in1 as "MIS_PUBLICACIONES_ABIERTAS"
+in1 -[#green]-> abrirMiPublicacion
+
+state abrirMiPublicacion as "abrirMiPublicacion()" {
+
+    state " " as SeleccionandoPublicacion
+
+    [*] -[#green]-> SeleccionandoPublicacion
+    note on link
+    <b>Coordinador</b> solicita abrir una publicación propia del listado
+    end note
+
+    SeleccionandoPublicacion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> muestra la publicación seleccionada con:
+    • Datos de la publicación
+    • Contenido
+    • Visibilidad
+
+    y permite solicitar las siguientes acciones:
+    • Editar publicación
+    • Eliminar publicación
+    • Volver a mis publicaciones
+    end note
+}
+
+abrirMiPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+Mi publicación abierta
+end note
+
+abrirMiPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+editarPublicacion()
+end note
+
+abrirMiPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+eliminarPublicacion()
+end note
+
+abrirMiPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
+end note
+
+@enduml

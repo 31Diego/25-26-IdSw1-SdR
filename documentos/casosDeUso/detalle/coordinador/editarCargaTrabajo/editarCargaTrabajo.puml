@@ -1,0 +1,64 @@
+@startuml editarCargaTrabajo
+skinparam linetype polyline
+
+state in1 as "OPCIONES_CARGA_TRABAJO_ABIERTAS"
+in1 -[#green]-> editarCargaTrabajo
+
+state editarCargaTrabajo as "editarCargaTrabajo()" {
+
+    state " " as MostrandoCarga
+    state " " as EditandoCarga
+    state " " as ValidandoDatos
+
+    [*] -[#green]-> MostrandoCarga
+    note on link
+    <b>Coordinador</b> solicita editar la carga de trabajo de una persona
+    end note
+
+    MostrandoCarga -[#green]-> EditandoCarga
+    note on link
+    <b>Sistema</b> presenta la carga de trabajo actual
+    <b>Sistema</b> permite introducir modificaciones
+    end note
+
+    EditandoCarga -[#green]-> ValidandoDatos
+    note on link
+    <b>Coordinador</b> solicita guardar los cambios
+    end note
+
+    ValidandoDatos -[#green]-> [*]
+    note on link
+    <b>Sistema</b> permite solicitar la actualización de la carga de trabajo
+    <b>Sistema</b> presenta la carga de trabajo actualizada
+    end note
+
+    ValidandoDatos -[#red]-> EditandoCarga
+    note on link
+    <b>Sistema</b> muestra errores de introducción
+    <b>Sistema</b> permite introducir correcciones
+    end note
+
+    EditandoCarga -[#red]-> [*]
+    note on link
+    <b>Coordinador</b> solicita cancelar la edición
+    <b>Sistema</b> presenta la carga de trabajo sin cambios
+    end note
+}
+
+editarCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+Edición finalizada
+end note
+
+editarCargaTrabajo -[#red]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+Edición cancelada
+end note
+
+editarCargaTrabajo -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
+end note
+
+@enduml
+

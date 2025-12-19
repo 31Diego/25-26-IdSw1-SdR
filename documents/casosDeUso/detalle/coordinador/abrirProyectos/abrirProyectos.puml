@@ -1,0 +1,80 @@
+@startuml abrirProyectos
+skinparam linetype polyline
+
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirProyectos
+
+state in2 as "PROYECTO_ABIERTO"
+in2 -[#green]-> abrirProyectos
+
+state in3 as "INVESTIGADOR_ABIERTO"
+in3 -[#green]-> abrirProyectos
+note on link
+abrirProyectos(ID)
+end note
+
+
+state abrirProyectos as "abrirProyectos()" {
+
+    state " " as MostrandoLista
+    state " " as FiltrandoLista
+
+    [*] -[#green]-> MostrandoLista
+    note on link
+    <b>Coordinador</b> solicita abrir listado de proyectos
+    end note
+
+    MostrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta el listado de proyectos con:
+    • ID
+    • Título
+    • Estado
+    • Coordinador
+    • Fecha de inicio
+    • Fecha de fin
+
+    Permite filtrar y buscar proyectos
+
+    y permite solicitar las siguientes acciones:
+    • Abrir proyecto
+    • Crear proyecto
+    • Aplicar filtros
+    • Limpiar filtros
+    • Abrir panel principal
+    end note
+
+    FiltrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Coordinador</b> filtra o busca proyectos
+    <b>Sistema</b> actualiza el listado
+    end note
+
+    FiltrandoLista -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> selecciona una opción de navegación
+    end note
+
+}
+
+abrirProyectos -[#green]-> PROYECTOS_ABIERTOS
+note on link
+Listado de proyectos visible
+end note
+
+abrirProyectos -[#green]-> PROYECTO_ABIERTO
+note on link
+abrirProyecto()
+end note
+
+abrirProyectos -[#green]-> PROYECTO_ABIERTO
+note on link
+crearProyecto()
+end note
+
+abrirProyectos -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
+end note
+
+@enduml

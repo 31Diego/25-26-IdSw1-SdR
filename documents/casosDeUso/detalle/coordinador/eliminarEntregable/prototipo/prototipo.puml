@@ -1,0 +1,26 @@
+@startsalt eliminarEntregable-wireframe
+{
+====
+<b>GIPF - ELIMINAR ENTREGABLE</b>
+====
+
+<b>Confirmación</b>
+{
+    "¿Seguro que deseas eliminar este entregable?"
+
+    --
+    <b>ID:</b> "ENT-045"
+    <b>Título:</b> "Memoria técnica - versión 1"
+    <b>Tipo:</b> "Informe"
+    <b>Estado:</b> "Pendiente"
+
+    --
+    "Esta acción es irreversible."
+}
+
+--
+
+{[Eliminar entregable] |  [Cancelar]}
+
+}
+@endsalt

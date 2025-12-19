@@ -1,0 +1,47 @@
+@startuml abrirOpcionesCargaTrabajo
+skinparam linetype polyline
+
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirOpcionesCargaTrabajo
+
+state abrirOpcionesCargaTrabajo as "abrirOpcionesCargaTrabajo()" {
+
+    state " " as CargandoCargaTrabajo
+
+    [*] -[#green]-> CargandoCargaTrabajo
+    note on link
+    <b>Coordinador</b> solicita abrir las opciones de carga de trabajo
+    end note
+
+    CargandoCargaTrabajo -[#green]-> [*]
+    note on link
+    <b>Sistema</b> muestra la información de carga de trabajo:
+    • Filtros disponibles
+    • Resumen global
+    • Detalle por persona
+    • Detalle de la persona seleccionada
+
+    y permite solicitar las siguientes acciones:
+    • Aplicar filtros
+    • Limpiar filtros
+    • Editar carga de trabajo
+    • Abrir panel principal
+    end note
+}
+
+abrirOpcionesCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+Pantalla de carga de trabajo mostrada
+end note
+
+abrirOpcionesCargaTrabajo -[#green]-> OPCIONES_CARGA_TRABAJO_ABIERTAS
+note on link
+editarCargaTrabajo()
+end note
+
+abrirOpcionesCargaTrabajo -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
+end note
+
+@enduml

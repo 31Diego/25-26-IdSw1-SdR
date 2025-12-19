@@ -1,0 +1,100 @@
+@startuml editarProyecto
+skinparam linetype polyline
+
+state in1 as "PROYECTO_ABIERTO"
+in1 -[#green]-> editarProyecto
+
+state editarProyecto as "editarProyecto()" {
+
+    state " " as EditandoDatos
+    state " " as GuardandoDatos
+
+    [*] -[#green]-> EditandoDatos
+    note on link
+    <b>Coordinador</b> solicita editar proyecto
+    end note
+
+    EditandoDatos -[#green]-> GuardandoDatos
+    note on link
+    <b>Sistema</b> presenta datos de edición del proyecto
+    • ID
+    • Título
+    • Estado
+    • Coordinador
+    • Fecha de inicio
+    • Fecha de fin
+    • Descripción
+
+    y permite solicitar las siguientes acciones:
+    • Modificar datos del proyecto
+    • Guardar y salir
+    • Cancelar
+    end note
+
+    GuardandoDatos -[#green]-> EditandoDatos
+    note on link
+    <b>Coordinador</b> solicita modificar campos
+    end note
+
+    GuardandoDatos -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita guardar y salir
+    end note
+
+    GuardandoDatos -[#red]-> [*]
+    note on link
+    <b>Coordinador</b> solicita cancelar edición
+    end note
+}
+
+editarProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+Proyecto actualizado
+end note
+
+editarProyecto -[#red]-> PROYECTO_ABIERTO
+note on link
+Edición cancelada
+end note
+
+editarProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+editarProyecto()
+end note
+
+editarProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+eliminarProyecto()
+end note
+
+editarProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+agregarInvestigador()
+end note
+
+editarProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+eliminarInvestigador()
+end note
+
+editarProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+editarProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+crearEntregable()
+end note
+
+editarProyecto -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+editarProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
+end note
+
+@enduml

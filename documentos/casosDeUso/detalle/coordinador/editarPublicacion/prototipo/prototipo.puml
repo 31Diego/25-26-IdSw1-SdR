@@ -1,0 +1,38 @@
+@startsalt editarPublicacion-wireframe
+{
+    ====
+    <b>GIPF - EDITAR PUBLICACIÓN</b>
+    ====
+
+    {
+        { <b>ID:</b> | "PUB-INV-2025-014" (solo lectura) }
+        { <b>Título:</b> | [ Convocatoria interna de proyectos de investigación 2025 ] }
+        { <b>Estado:</b> | { "Borrador" | "Publicada" } }
+        { <b>Visibilidad:</b> | { "Pública" | "Privada" } }
+    }
+
+    --
+
+    <b>Descripción</b>
+    {
+        Se abre la convocatoria interna para la presentación de proyectos de investigación correspondientes al curso académico 2025.
+
+        Podrán participar investigadores adscritos a FUNIBER.
+        Las propuestas deberán alinearse con las líneas estratégicas de investigación de la Fundación.
+    }
+
+    --
+
+    <b>Adjuntos (opcional)</b>
+    {
+        { [Añadir adjunto] }
+        --
+        { "📎 Bases_Convocatoria_Investigacion_2025.pdf" | [Ver] | [Quitar] }
+        { "📎 Plantilla_Propuesta_Proyecto.docx"         | [Ver] | [Quitar] }
+    }
+
+    --
+
+    { [Guardar cambios] | [Cancelar] }
+}
+@endsalt

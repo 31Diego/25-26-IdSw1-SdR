@@ -1,0 +1,79 @@
+@startsalt abrirOpcionesCargaTrabajo-wireframe
+{
+    ====
+    <b>GIPF - CARGA DE TRABAJO</b>
+    ====
+
+    {
+        <b>Filtros</b>
+        --
+        {
+            {
+            {<b>Sede:</b> | { "Todas" | "Santander" | "Barcelona" | "Madrid" | "Quito" | "Guayaquil" | "Panamá" | "México DF" | "Lima" | "Bogotá" | "Santiago de Chile" | "Buenos Aires"  }
+            <b>Perfil:</b> | { "Todos" | "Investigador-docente" | "Solo investigador" }}
+
+            {<b>Investigador/docente:</b> | [                              ]
+            <b>Área de investigación:</b> | [                    ]}
+
+            {<b>Proyecto:</b> | [                              ]
+            <b>Estado del proyecto:</b> | { "Todos" | "En curso" | "Finalizado" | "Rechazado" }}
+            }
+        }
+
+        ~~
+
+        <b>Resumen global</b>
+        --
+        {
+            {<b>Total personas</b> | <b>Con docencia al máximo (16h)</b> | <b>Con margen docente (<16h)</b>}
+            {"32        " | "9                    " | "23                 "}
+        }
+
+        ~~
+
+        <b>Detalle de carga por persona (semanal)</b>
+        --
+        {
+            {<b>Código          </b> | <b>Nombre                                              </b> | <b>Sede                 </b> | <b>Perfil                        </b> | <b>Docencia (h/sem)</b> | <b>Investigación (h/sem)</b> | <b>Actividades académicas (h/sem)</b> | <b>Total (h/sem)</b> | <b>Margen docencia</b>}
+            {"FNB-1023" | "Carlos Fernández López" | "Santander" | "Investigador-docente" | "16" | "10" | "2" | "28" | "0"}
+            {"FNB-1188" | "Marta Sánchez Ruiz"     | "Santander" | "Investigador-docente" | "12" | "16"  | "2" | "30" | "4"}
+            {"FNB-0902" | "Luis Gómez Pérez"       | "Barcelona" | "Solo investigador"     | "0"  | "20" | "4" | "24" | "16"}
+        }
+
+        --
+
+        <b>Persona seleccionada</b>
+        {
+            <b>Código FUNIBER:</b> FNB-1188
+            <b>Nombre:</b> Marta Sánchez Ruiz
+            <b>Sede:</b> Santander
+            <b>Perfil:</b> Investigador-docente
+            <b>Área:</b> "Educación e innovación"
+
+            --
+            <b>Docencia (máx. 16h/semana)</b>
+            • Asignaturas activas: 3
+            • Horas docentes: 12 / 16
+            • Margen disponible: 4 h
+
+            --
+            <b>Investigación</b>
+            • Proyectos en curso: 1
+            • Proyecto: PRJ-SOD-2024-021
+            • Horas de investigación: 16 h/sem
+
+            --
+            <b>Actividades académicas</b>
+            • Horas de actividades académicas: 2 h/sem
+
+            --
+            <b>Total semanal:</b> 30 h
+            <b>Observación:</b> "No supera el límite docente (12/16)."
+        }
+
+        ~~
+
+        {[Aplicar filtros] | [Limpiar filtros] | [Editar carga de trabajo] | [Abrir Panel principal]}
+    }
+}
+@endsalt
