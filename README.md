@@ -29,7 +29,7 @@ La Plataforma Interna de Investigación de FUNIBER es un sistema integral diseñ
 ### Modelo del Dominio
 Define las entidades principales y sus relaciones dentro del sistema.
 
-[Ver Modelo del Dominio](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/modeloDominio.md)
+[Ver Modelo del Dominio](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/modeloDominio.md#diagramas-de-clases)
 
 ---
 
