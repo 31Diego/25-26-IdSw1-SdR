@@ -1,0 +1,18 @@
+@startuml
+
+title Diagrama de estados de un proyecto (contexto de red de investigadores)
+
+[*] --> Disponible
+
+Disponible -->EnReclutamiento: iniciarReclutamiento
+Disponible --> Inactivo: cancelar
+
+EnReclutamiento --> Activo: asignarInvestigadores
+
+Activo --> Inactivo: pausar
+Activo --> Inactivo: terminar
+
+
+Inactivo --> Activo: reactivar
+Inactivo --> [*]: finalizar
+

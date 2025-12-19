@@ -1,0 +1,95 @@
+@startuml
+
+title Instancia del sistema de gestión de proyectos
+
+object ID2025 <<Convocatoria>> {
+    descripcion = "Convocatoria de investigación sobre IA..."
+}
+
+object DeepVision <<Propuesta>> {
+    descripcion = "Un sistema capaz de realizar análisis mediante IA..."
+}
+
+object ProyectoIA <<Proyecto>> #FFAAAA {
+    descripcion = "Implementar un modelo de lenguaje..."
+    fechaLimite = "31/12/2026"
+}
+
+object Manuel <<InvestigadorDocente>> {
+    nombre = "Manuel"
+    id = 1234567
+    campo = "Informática"
+}
+
+object Lazaro <<InvestigadorDocente>> {
+    nombre = "Lázaro"
+    id = 12345678
+    campo = "Sistemas"
+}
+
+object Mar <<Coordinador>> {
+    nombre = "Mar"
+    ubicacion = "Santander"
+    id = 12345
+}
+
+object Mariano <<Colaborador>> {
+    nombre = "Mariano"
+    id = 123456
+    asociacion = "Universidad de Cantabria"
+}
+
+object Entregable01Manuel <<Entregables>> {
+    descripcion = "Informe inicial"
+}
+
+object Entregable02Lazaro <<Entregables>> {
+    descripcion = "Primera implementación"
+}
+
+object RemuneracionManuel <<Recompensa>> {
+    cantidad = 20000
+}
+
+object ReduccionHorarioLazaro <<Recompensa>> {
+    reduccion = -4
+}
+
+object CargaTrabajoManuel <<CargaTrabajo>> {
+    horasClase = 40
+    horasInvestigacion = 10
+}
+
+object CargaTrabajoLazaro <<CargaTrabajo>> {
+    horasClase = 30
+    horasInvestigacion = 20
+}
+
+
+
+ID2025 --> DeepVision : genera
+DeepVision --> ProyectoIA : genera
+
+ProyectoIA o-- Manuel : investigador
+ProyectoIA o-- Lazaro : investigador
+
+ProyectoIA *-- Entregable01Manuel : tiene
+ProyectoIA *-- Entregable02Lazaro : tiene
+
+ProyectoIA *-- RemuneracionManuel : genera
+ProyectoIA *-- ReduccionHorarioLazaro : genera
+
+Mar --> ProyectoIA : coordina
+Mar --> ID2025 : busca
+
+Mariano --> ProyectoIA : participa
+
+Manuel --> CargaTrabajoManuel : tiene
+Manuel --> Entregable01Manuel : genera
+Lazaro --> CargaTrabajoLazaro : tiene
+Lazaro --> Entregable02Lazaro : genera
+
+RemuneracionManuel --> Manuel : beneficia
+ReduccionHorarioLazaro --> Lazaro : beneficia
+
+@enduml

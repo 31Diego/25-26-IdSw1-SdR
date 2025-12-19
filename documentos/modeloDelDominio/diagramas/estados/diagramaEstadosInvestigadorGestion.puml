@@ -1,0 +1,16 @@
+@startuml DiagramaEstadosInvestigadorDocente
+
+title Diagrama de estados de un investigador/docente (contexto de gestión de un proyecto)
+
+[*] --> EnProyecto
+
+EnProyecto --> Investigando : iniciarProyecto
+Investigando --> PreparandoEntregables : resultadosListos
+PreparandoEntregables --> RevisandoEntregables : enviarResultados
+Investigando --> Pausado : pausarPorRecursos
+PreparandoEntregables --> Pausado : esperarRevision
+Pausado --> EnProyecto : reanudarProyecto
+RevisandoEntregables --> Investigando : solicitarCorrecciones
+RevisandoEntregables --> [*] : aceptarEntregables
+
+@enduml

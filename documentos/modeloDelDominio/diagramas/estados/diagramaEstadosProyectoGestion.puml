@@ -1,0 +1,20 @@
+@startuml EstadoProyecto
+
+title Diagrama de estados de un proyecto (contexto de gestión de proyectos)
+
+[*] --> Creado
+
+Creado --> Aprobado : definirPlan
+Aprobado --> EnCurso : iniciar
+EnCurso --> EnRevision : entregarDocumentacion
+EnRevision --> EnCurso : solicitarCorrecciones
+EnRevision --> Finalizado : aprobar
+Creado --> Denegado : cancelar
+Aprobado --> Denegado : cancelar
+EnCurso --> Denegado : cancelar
+EnRevision --> Denegado : cancelar
+
+Finalizado --> [*]
+Denegado --> [*]
+
+@enduml

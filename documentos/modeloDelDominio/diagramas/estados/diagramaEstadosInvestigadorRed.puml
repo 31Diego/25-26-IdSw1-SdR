@@ -1,0 +1,19 @@
+@startuml EstadoInvestigador
+
+title Diagrama de estados de un investigador/docente (contexto de red de investigadores)
+
+[*] --> Registrado
+
+Registrado --> Activo : validarPerfil
+Activo --> Inactivo : pausarActividad
+Inactivo --> Activo : reactivarActividad
+
+
+
+Registrado --> Eliminado : eliminarCuenta
+Activo --> Eliminado : eliminarCuenta
+
+
+Eliminado --> [*]
+
+@enduml
