@@ -5,6 +5,7 @@
 [![](https://img.shields.io/badge/-Inicio-0A3B64?style=for-the-badge&logo=github&logoColor=white)](/README.md)
 [![](https://img.shields.io/badge/-Modelo_del_Dominio-0A3B64?style=for-the-badge&logo=drawio&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/modeloDominio.md)
 [![](https://img.shields.io/badge/-Actores_y_casos_de_uso-0A3B64?style=for-the-badge&logo=group&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/casosDeUso.md)
+[![](https://img.shields.io/badge/-Glosario-0A3B64?style=for-the-badge&logo=notepad&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/edit/main/documentos/modeloDelDominio/documentos/vocabulario.md)
 
 [![](https://img.shields.io/badge/-Detallado_y_Prototipos-0A3B64?style=for-the-badge&logo=notepad&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/detalladoYPrototipos.md)
 [![](https://img.shields.io/badge/-Diagrama_de_Contexto-0A3B64?style=for-the-badge&logo=flowchart&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/diagramas/diagramasContexto.md)
@@ -66,5 +67,6 @@ Las reuniones han sido fundamentales para:
   [Reunión 3 — Revisión y validación del modelo del sistema](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/reuniones/reunion03.md)
 
 ---
+
 
 
