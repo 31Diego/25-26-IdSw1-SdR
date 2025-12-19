@@ -1,0 +1,31 @@
+@startsalt abrirInvestigadores-wireframe
+{
+    ====
+    <b>GIPF - INVESTIGADORES</b>
+    ====
+    {
+        <b>Filtrar / buscar:</b>
+        {
+            {<b>ID:</b> | [        ]
+             <b>Nombre:</b> | [                    ]}
+            {<b>Campo:</b> | [                    ]
+             <b>Estado:</b> | { "Todos" | "Activo" | "Inactivo" }}
+        }
+
+        ~~
+
+        <b>Lista de investigadores</b>
+        --
+        {
+            {<b>ID</b> | <b>Nombre</b> | <b>Campo</b>}
+            {"INV-001" | "Ana López"   | "Inteligencia Artificial"}
+            {"INV-002" | "Mario García" | "Big Data"}
+            {"INV-003" | "Lucía Pérez" | "Ciberseguridad"}
+        }
+
+        ~~
+
+        {[Abrir investigador] |  [Aplicar filtros] | [Limpiar filtros] | [Panel principal]}
+    }
+}
+@endsalt

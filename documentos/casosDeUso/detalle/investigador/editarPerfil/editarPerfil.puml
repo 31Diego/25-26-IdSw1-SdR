@@ -1,0 +1,60 @@
+@startuml editarPerfil
+
+skinparam linetype polyline
+
+state in1 as "OPCIONES_PERFIL_ABIERTO"
+in1 -[#green]-> editarPerfil
+note on link
+editarPerfil()
+end note
+
+state editarPerfil as "editarPerfil()" {
+
+    state " " as EditandoDatos
+    state " " as GuardandoDatos 
+
+    [*] -[#green]-> EditandoDatos 
+    note on link
+    <b>Investigador</b> solicita editar perfil
+    end note    
+    
+    EditandoDatos -[#green]-> GuardandoDatos
+    note on link
+    <b>Sistema</b> presenta datos de perfil
+    • ID, nombre, apellido, campo, carrera, master, rol
+    
+    
+    
+    <b>Sistema</b> permite solicitar:
+    • modificar atributos
+    • guardar cambios
+    • cancelar edición
+    end note
+    
+    GuardandoDatos -[#green]-> EditandoDatos
+    note on link
+    <b>Investigador</b> solicita modificar atributos
+    end note
+    
+    GuardandoDatos -[#green]-> [*]
+    note on link
+    <b>Investigador</b> solicita guardar y salir
+    end note
+
+    GuardandoDatos -[#red]-> [*]
+    note on link
+    <b>Investigador</b> solicita cancelar edición
+    end note
+
+}
+
+
+
+editarPerfil -[#green]-> OPCIONES_PERFIL_ABIERTO
+note on link
+abrirOpcionesPerfil()
+end note
+
+
+
+@enduml

@@ -1,0 +1,29 @@
+@startsalt abrirRecompensas-wireframe
+{
+    ====
+    <b>GIPF - LISTADO DE RECOMPENSAS</b>
+    ====
+    {
+        <b>Filtrar / buscar recompensas</b>
+        {
+            {<b>Tipo:</b> | [                              ]}
+            {<b>Cantidad:</b> | [                          ]}
+        }
+
+        ~~
+
+        <b>Listado de recompensas</b>
+        --
+        {
+            {<b>Tipo</b>               | <b>Cantidad</b>}
+            {"Bono de productividad"     | "500 €"}
+            {"Premio a la innovación"    | "1000 €"}
+            {"Reconocimiento especial"   | "Trofeo"}
+        }
+
+        ~~
+
+        {[Abrir recompensa] | [Aplicar filtros] | [Limpiar filtros] | [Cancelar]}
+    }
+}
+@endsalt
