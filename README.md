@@ -7,7 +7,7 @@
 <div align="center">
 
 [![](https://img.shields.io/badge/-Inicio-0A3B64?style=for-the-badge&logo=github&logoColor=white)](/README.md)
-[![](https://img.shields.io/badge/-Modelo_del_Dominio-0A3B64?style=for-the-badge&logo=drawio&logoColor=white)](/documentos/modeloDelDominio/README.md)
+[![](https://img.shields.io/badge/-Modelo_del_Dominio-0A3B64?style=for-the-badge&logo=drawio&logoColor=white)](/documentos/modeloDelDominio/modeloDominio.md)
 [![](https://img.shields.io/badge/-Actores-0A3B64?style=for-the-badge&logo=group&logoColor=white)](/documentos/casosDeUso/actores/README.md)
 [![](https://img.shields.io/badge/-Casos_de_Uso-0A3B64?style=for-the-badge&logo=use-case&logoColor=white)](/documentos/casosDeUso/README.md)
 [![](https://img.shields.io/badge/-Detallado_Casos_de_Uso-0A3B64?style=for-the-badge&logo=notepad&logoColor=white)](/documents/CasosDeUso/DetalladoCasosDeUso/)
@@ -23,7 +23,7 @@
 
 ## Descripción General
 
-La Plataforma Interna de Investigación de FUNIBER es un sistema integral diseñado para coordinar, conectar y optimizar las actividades de investigación dentro de la Fundación Universitaria Iberoamericana. Inspirada en el modelo de LinkedIn, esta herramienta permite a investigadores y docentes administrar sus perfiles, proyectos, convocatorias y compensaciones, mientras que el Departamento de Proyectos mantiene un control centralizado de toda la actividad académica e investigadora.
+##### La Plataforma Interna de Investigación de FUNIBER es un sistema integral diseñado para coordinar, conectar y optimizar las actividades de investigación dentro de la Fundación Universitaria Iberoamericana. Inspirada en el modelo de LinkedIn, esta herramienta permite a investigadores y docentes administrar sus perfiles, proyectos, convocatorias y compensaciones, mientras que el Departamento de Proyectos mantiene un control centralizado de toda la actividad académica e investigadora.
 ---
 
 ### Modelo del Dominio
