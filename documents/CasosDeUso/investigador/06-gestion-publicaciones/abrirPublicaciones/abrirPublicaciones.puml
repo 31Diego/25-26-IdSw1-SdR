@@ -26,7 +26,7 @@ state abrirPublicaciones as "abrirPublicaciones()" {
     end note
 }
 
-abrirPublicaciones -[#green]-> PUBLICACIONES_ABIERTAS
+abrirPublicaciones -[#green]-> PUBLICACION_ABIERTA
 note on link
 abrirPublicacion()
 end note
