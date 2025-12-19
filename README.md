@@ -22,7 +22,7 @@
 
 ## Descripción General
 
-##### La Plataforma Interna de Investigación de FUNIBER es un sistema integral diseñado para coordinar, conectar y optimizar las actividades de investigación dentro de la Fundación Universitaria Iberoamericana. Inspirada en el modelo de LinkedIn, esta herramienta permite a investigadores y docentes administrar sus perfiles, proyectos, convocatorias y compensaciones, mientras que el Departamento de Proyectos mantiene un control centralizado de toda la actividad académica e investigadora.
+La Plataforma Interna de Investigación de FUNIBER es un sistema integral diseñado para coordinar, conectar y optimizar las actividades de investigación dentro de la Fundación Universitaria Iberoamericana. Inspirada en el modelo de LinkedIn, esta herramienta permite a investigadores y docentes administrar sus perfiles, proyectos, convocatorias y compensaciones, mientras que el Departamento de Proyectos mantiene un control centralizado de toda la actividad académica e investigadora.
 ---
 
 ### Modelo del Dominio
