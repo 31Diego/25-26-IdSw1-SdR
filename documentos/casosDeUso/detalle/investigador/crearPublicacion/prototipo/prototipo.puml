@@ -1,0 +1,38 @@
+@startsalt crearPublicacion-wireframe
+{
+    ====
+    <b>GIPF - CREAR PUBLICACIÓN</b>
+    ====
+    {
+        <b>Datos de la publicación</b>
+        --
+        {
+            {
+            {<b>Título:</b> | [                                      ]
+            <b>Estado:</b> | { "Borrador" | "Publicada" }}
+
+            {<b>Visibilidad:</b> | { "Pública" | "Privada" }
+            <b>Autor:</b> | "Investigador actual" }
+            }
+        }
+
+        --
+
+        <b>Descripción</b>
+        {
+            {[                                      ]}
+        }
+
+        ~~
+
+        <b>Adjuntos (opcional)</b>
+        {
+            {[ Añadir archivo / imagen / enlace ]}
+        }
+
+        ~~
+
+        {[Crear publicación] | [Volver a mis publicaciones]}
+    }
+}
+@endsalt

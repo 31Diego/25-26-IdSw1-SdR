@@ -1,0 +1,25 @@
+@startsalt eliminarPublicacion-wireframe
+{
+    ====
+    <b>GIPF - ELIMINAR PUBLICACIÓN</b>
+    ====
+
+    <b>Confirmación</b>
+    {
+        "¿Seguro que deseas eliminar esta publicación?"
+
+        --
+        <b>ID:</b> "PUB-INV-2025-014"
+        <b>Título:</b> "Resultados preliminares de investigación 2025"
+        <b>Estado:</b> "Publicada"
+        <b>Visibilidad:</b> "Pública"
+
+        --
+        "Esta acción es irreversible."
+    }
+
+    --
+
+    { [Cancelar] | [Eliminar definitivamente] }
+}
+@endsalt

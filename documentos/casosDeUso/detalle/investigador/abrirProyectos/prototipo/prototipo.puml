@@ -1,0 +1,39 @@
+@startsalt abrirProyectos-wireframe
+{
+    ====
+    <b>GIPF - MIS PROYECTOS</b>
+    ====
+    {
+        <b>Listado de mis proyectos</b>
+        --
+        {
+            {<b>ID</b> | <b>Título</b> | <b>Estado</b> | <b>Inicio</b> | <b>Fin</b> | <b>Acción</b>}
+            {"PROY-012" | "Plataforma de seguimiento..."     | "En curso"   | "10-01-2025" | "20-12-2025" | [Abrir proyecto]}
+            {"PROY-018" | "Análisis de productividad..."     | "Borrador"   | "05-03-2025" | "—"          | [Abrir proyecto]}
+            {"PROY-021" | "Modelo predictivo de demanda..."  | "Finalizado" | "12-02-2024" | "30-11-2024" | [Abrir proyecto]}
+        }
+
+        ~~
+
+        <b>Filtrar / buscar proyectos</b>
+        --
+        {
+            {
+            {<b>ID:</b> | [            ]
+            <b>Título:</b> | [                              ]}
+
+            {<b>Estado:</b> | { "Todos" | "Borrador" | "En curso" | "Finalizado" }
+            <b> </b> | " " }
+
+            {<b>Fecha inicio:</b> | [            ]
+            <b>Fecha fin:</b> | [            ]}
+            }
+        }
+
+        ~~
+
+        {[Aplicar filtros] | [Limpiar filtros] | [Abrir Panel principal]}
+    }
+}
+@endsalt
+

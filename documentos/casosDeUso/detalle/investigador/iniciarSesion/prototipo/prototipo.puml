@@ -1,0 +1,48 @@
+@startsalt iniciarSesion-wireframe
+{
+    ====
+    <b>GIPF - INICIAR SESIÓN</b>
+    ====
+    {^<b>Iniciar sesión</b>
+        Usuario    | "investigador@funiber.org  "
+        Contraseña | "********                  "
+        {
+            [Cancelar] | [  OK  ]
+        }
+    }
+}
+@endsalt
+
+@startsalt iniciarSesion-credenciales-incorrectas-wireframe
+{
+    ====
+    <b>GIPF - INICIAR SESIÓN</b>
+    ====
+    {^<b>Iniciar sesión</b>
+        Usuario    | "investigador@funiber.org  "
+        Contraseña | "********                  "
+        {
+            [Cancelar] | [  OK  ]
+        }
+    }
+    **Credenciales incorrectas**
+    ====
+}
+@endsalt
+
+@startsalt iniciarSesion-credenciales-correctas-wireframe
+{
+    ====
+    <b>GIPF - INICIAR SESIÓN</b>
+    ====
+    {^<b>Iniciar sesión</b>
+        Usuario    | "investigador@funiber.org  "
+        Contraseña | "********                  "
+        {
+            [Cancelar] | [  OK  ]
+        }
+    }
+    **Acceso correcto. Redirigiendo al Panel Principal...**
+    ====
+}
+@endsalt

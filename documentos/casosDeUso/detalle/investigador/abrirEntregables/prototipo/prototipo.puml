@@ -1,0 +1,39 @@
+@startsalt abrirEntregables-wireframe
+{
+====
+<b>GIPF - ENTREGABLES</b>
+====
+
+{ [Volver al proyecto] }
+
+--
+
+<b>Filtrar / buscar entregables</b>
+{
+    {
+        { <b>ID:</b> | [            ] }
+        { <b>Título:</b> | [                              ] }
+        { <b>Tipo:</b> | { "Todos" | "Informe" | "Dataset" | "Presentación" | "Otro" } }
+        { <b>Estado:</b> | { "Todos" | "Pendiente" | "En curso" | "Entregado" } }
+        { <b>Fecha límite (desde):</b> | [            ] }
+        { <b>Fecha límite (hasta):</b> | [            ] }
+    }
+    { [Limpiar] | [Buscar] }
+}
+
+--
+
+<b>Listado</b>
+    {
+    { <b>ID</b> | <b>Título</b> | <b>Tipo</b> | <b>Fecha límite</b> | <b>Estado</b> | <b>Acción</b> }
+    { "ENT-045" | "Memoria técnica - versión 1" | "Informe" | "30/06/2025" | "Pendiente" | [Abrir] }
+    { "ENT-052" | "Dataset resultados encuesta" | "Dataset" | "15/07/2025" | "En curso" | [Abrir] }
+    { "ENT-060" | "Presentación de avance" | "Presentación" | "01/08/2025" | "Entregado" | [Abrir] }
+}
+
+--
+
+{ [Crear entregable] }
+
+}
+@endsalt

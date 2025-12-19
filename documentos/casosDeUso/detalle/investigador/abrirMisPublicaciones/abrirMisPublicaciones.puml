@@ -1,0 +1,76 @@
+@startuml abrirMisPublicaciones
+skinparam linetype polyline
+
+state in1 as "PANEL_PRINCIPAL_ABIERTO"
+in1 -[#green]-> abrirMisPublicaciones
+
+state in2 as "MI_PUBLICACION_ABIERTA"
+in2 -[#green]-> abrirMisPublicaciones
+
+state abrirMisPublicaciones as "abrirMisPublicaciones()" {
+
+    state " " as MostrandoLista
+    state " " as FiltrandoLista
+
+    [*] -[#green]-> MostrandoLista
+    note on link
+    <b>Investigador</b> solicita abrir el listado de sus publicaciones
+    end note
+
+    MostrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Sistema</b> presenta el bloque de filtrar / buscar con:
+    • Título
+    • Estado
+    • Fecha (desde)
+    • Fecha (hasta)
+
+    <b>Sistema</b> presenta el listado de mis publicaciones con:
+    • ID
+    • Título
+    • Estado
+    • Fecha
+    • Resumen
+    • Permite abrir una publicación
+
+    y permite solicitar las siguientes acciones:
+    • Aplicar filtros
+    • Limpiar filtros
+    • Abrir publicación
+    • Crear publicación
+    • Abrir panel principal
+    end note
+
+    FiltrandoLista -[#green]-> FiltrandoLista
+    note on link
+    <b>Investigador</b> solicita introducir criterios de filtrado o búsqueda
+    <b>Sistema</b> muestra el listado actualizado
+    end note
+
+    FiltrandoLista -[#green]-> [*]
+    note on link
+    <b>Sistema</b> deja el listado de publicaciones visible
+    end note
+}
+
+abrirMisPublicaciones -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+Listado de mis publicaciones abierto
+end note
+
+abrirMisPublicaciones -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+abrirMiPublicacion()
+end note
+
+abrirMisPublicaciones -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+crearPublicacion()
+end note
+
+abrirMisPublicaciones -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
+end note
+
+@enduml

@@ -1,0 +1,65 @@
+@startuml abrirProyecto
+skinparam linetype polyline
+
+state in1 as "PROYECTOS_ABIERTOS"
+in1 -[#green]-> abrirProyecto
+
+state in2 as "ENTREGABLES_ABIERTOS"
+in2 -[#green]-> abrirProyecto
+
+
+state abrirProyecto as "abrirProyecto()" {
+
+    state " " as MostrandoListaProyectos
+    state " " as FiltrandoBuscando
+    state " " as SolicitandoProyecto
+
+    [*] -[#green]-> MostrandoListaProyectos
+    note on link
+    <b>Investigador</b> solicita abrir un proyecto
+    end note
+
+    MostrandoListaProyectos -[#green]-> FiltrandoBuscando
+    note on link
+    <b>Sistema</b> presenta la lista de proyectos con sus datos principales y permite solicitar
+    la introducción de criterios de filtrado y búsqueda, así como solicitar la apertura de un proyecto del listado.
+    end note
+
+    FiltrandoBuscando -[#green]-> FiltrandoBuscando
+    note on link
+    <b>Investigador</b> solicita introducir filtros y/o solicita introducir búsqueda
+    <b>Sistema</b> muestra el listado actualizado según los criterios introducidos
+    end note
+
+    FiltrandoBuscando -[#green]-> SolicitandoProyecto
+    note on link
+    <b>Investigador</b> solicita abrir un proyecto del listado
+    end note
+
+    SolicitandoProyecto -[#green]-> [*]
+    note on link
+    <b>Sistema</b> visualiza el proyecto solicitado, presentando sus datos, la descripción y el equipo, y permite solicitar acciones disponibles sobre el proyecto abierto.
+    end note
+}
+
+abrirProyecto -[#green]-> PROYECTO_ABIERTO
+note on link
+Proyecto abierto
+end note
+
+abrirProyecto -[#green]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+abrirProyecto -[#green]-> INVESTIGADORES_ABIERTOS
+note on link
+abrirInvestigadores()
+end note
+
+abrirProyecto -[#green]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
+end note
+
+@enduml
