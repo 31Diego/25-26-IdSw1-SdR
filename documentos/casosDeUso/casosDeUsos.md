@@ -1,7 +1,7 @@
 <h1 align="center">FUNIBER — Plataforma Interna de Investigación</h1>
 
 <p align="center">
-  <img src="./documentos/imagenes/LogoGIPF.png" alt="Logo GIPF - FUNIBER Platform" width="200">
+  <img src="https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/imagenes/LogoGIPF.png" alt="Logo GIPF - FUNIBER Platform" width="200">
 </p>
 
 <div align="center">
