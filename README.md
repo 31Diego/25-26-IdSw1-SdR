@@ -7,11 +7,11 @@
 <div align="center">
 
 [![](https://img.shields.io/badge/-Inicio-0A3B64?style=for-the-badge&logo=github&logoColor=white)](/README.md)
-[![](https://img.shields.io/badge/-Modelo_del_Dominio-0A3B64?style=for-the-badge&logo=drawio&logoColor=white)](/documentos/modeloDelDominio/modeloDominio.md)
+[![](https://img.shields.io/badge/-Modelo_del_Dominio-0A3B64?style=for-the-badge&logo=drawio&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/modeloDominio.md)
 [![](https://img.shields.io/badge/-Actores_y_casos_de_uso-0A3B64?style=for-the-badge&logo=group&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/casosDeUso.md)
 
 [![](https://img.shields.io/badge/-Detallado_y_Prototipos-0A3B64?style=for-the-badge&logo=notepad&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/detalladoYPrototipos.md)
-[![](https://img.shields.io/badge/-Diagrama_de_Contexto-0A3B64?style=for-the-badge&logo=flowchart&logoColor=white)](/documents/CasosDeUso/DiagramaDeContexto/)
+[![](https://img.shields.io/badge/-Diagrama_de_Contexto-0A3B64?style=for-the-badge&logo=flowchart&logoColor=white)](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/diagramas/diagramasContexto.md)
 [![](https://img.shields.io/badge/-Reuniones-0A3B64?style=for-the-badge&logo=google-meet&logoColor=white)](/documents/Reuniones/)
 [![](https://img.shields.io/badge/-Priorización-0A3B64?style=for-the-badge&logo=priority&logoColor=white)](/documents/CasosDeUso/PriorizaciónCasosDeUso.md)
 [![](https://img.shields.io/badge/-Rúbrica-0A3B64?style=for-the-badge&logo=checklist&logoColor=white)](https://github.com/mmasias/25-26-IdSw1-SdR/blob/main/documents/Rubrica.md)
@@ -28,7 +28,7 @@ La Plataforma Interna de Investigación de FUNIBER es un sistema integral diseñ
 ### Modelo del Dominio
 Define las entidades principales y sus relaciones dentro del sistema.
 
-[Ver Modelo del Dominio](/documentos/modeloDelDominio/modeloDominio.md)
+[Ver Modelo del Dominio](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/modeloDominio.md)
 
 ---
 
@@ -37,9 +37,8 @@ Descripción de las funcionalidades principales del sistema divididas por actor:
 
 - [Actores](/documents/CasosDeUso/Actores/) — Roles y agentes que interactúan con el sistema  
 - [Casos de Uso](/documents/CasosDeUso/) — Diagramas y descripciones funcionales  
-- [Detallado de Casos de Uso](/documents/CasosDeUso/DetalladoCasosDeUso/) — Flujos, escenarios y reglas de negocio  
-- [Diagrama de Contexto](/documents/CasosDeUso/DiagramaDeContexto/) — Sistema en relación con su entorno  
-- [Prototipos](/documents/CasosDeUso/Prototipos/) — Interfaces preliminares  
+- [Detallado y Prototipos](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/detalladoYPrototipos.md) — Flujos, escenarios, reglas de negocio e interfaces preeliminares
+- [Diagrama de Contexto](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/diagramas/diagramasContexto.md) — Sistema en relación con su entorno  
 - [Priorización](/documents/CasosDeUso/PriorizaciónCasosDeUso.md) — Orden de implementación recomendado  
 
 ---
@@ -47,14 +46,14 @@ Descripción de las funcionalidades principales del sistema divididas por actor:
 ### Reuniones
 Registro de sesiones de requisitado: decisiones, observaciones y cambios en requerimientos.
 
-[Ver Reuniones](/documents/Reuniones/)
+[Ver Reuniones](/documentos/reuniones/reuniones.md)
 
 ---
 
 ### Recursos Visuales
 Imágenes, diagramas y materiales de apoyo utilizados en la documentación.
 
-[Ver Recursos](/documents/images/)
+[Ver Recursos](/documentos/imagenes/)
 
 ---
 
