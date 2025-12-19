@@ -8,8 +8,8 @@
 
 [![](https://img.shields.io/badge/-Inicio-0A3B64?style=for-the-badge&logo=github&logoColor=white)](/README.md)
 [![](https://img.shields.io/badge/-Modelo_del_Dominio-0A3B64?style=for-the-badge&logo=drawio&logoColor=white)](/documentos/modeloDelDominio/modeloDominio.md)
-[![](https://img.shields.io/badge/-Actores-0A3B64?style=for-the-badge&logo=group&logoColor=white)](/documentos/casosDeUso/actores/README.md)
-[![](https://img.shields.io/badge/-Casos_de_Uso-0A3B64?style=for-the-badge&logo=use-case&logoColor=white)](/documentos/casosDeUso/README.md)
+[![](https://img.shields.io/badge/-Actores_y_casos_de_uso-0A3B64?style=for-the-badge&logo=group&logoColor=white)](/documentos/casosDeUso/casosDeUso.ms)
+
 [![](https://img.shields.io/badge/-Detallado_Casos_de_Uso-0A3B64?style=for-the-badge&logo=notepad&logoColor=white)](/documents/CasosDeUso/DetalladoCasosDeUso/)
 [![](https://img.shields.io/badge/-Diagrama_de_Contexto-0A3B64?style=for-the-badge&logo=flowchart&logoColor=white)](/documents/CasosDeUso/DiagramaDeContexto/)
 [![](https://img.shields.io/badge/-Prototipos-0A3B64?style=for-the-badge&logo=figma&logoColor=white)](/documents/CasosDeUso/Prototipos/)
