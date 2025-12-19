@@ -5,7 +5,7 @@
 
 <div align=center>
 
-|![Caso de uso: abrirPanelPrincipal()](/documentos/casosDeUso/detalle/coordinador/abrirPanelPrincipal/eliminarPublicacion.svg)|
+|![Caso de uso: abrirPanelPrincipal()](/documentos/casosDeUso/detalle/coordinador/abrirPanelPrincipal/abrirPanelPrincipal.svg)|
 |-|
 |Código fuente: [abrirPanelPrincipal.puml](/documentos/casosDeUso/detalle/coordinador/abrirPanelPrincipal/abrirPanelPrincipal.puml)|
 
