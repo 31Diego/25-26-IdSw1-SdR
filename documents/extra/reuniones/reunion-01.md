@@ -1,5 +1,6 @@
 # Reunión 1 — Plataforma Interna de Investigación de FUNIBER
- 
+
+**Fecha:** 24/10/2025  
 **Tema:** Organización del departamento de proyectos e investigación  
 
 ---
