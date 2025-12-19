@@ -36,12 +36,12 @@ state abrirInvestigadores as "abrirInvestigadores()" {
 
 abrirInvestigadores -[#green]-> INVESTIGADOR_ABIERTO
 note on link
-abrirInvestigadores()
+abrirInvestigador()
 end note
 
-abrirInvestigadores -[#green]-> PERFIL
+abrirInvestigadores -[#green]-> PANEL_PRINCIPAL_ABIERTO
 note on link
-abrirPerfil()
+abrirPanelPrincipal()
 end note
 
 @enduml
