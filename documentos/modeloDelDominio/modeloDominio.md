@@ -15,7 +15,7 @@
 
 </div>
 
-# Modelo del dominio Gestor Investigadores y Proyectos Funiber (GIPF)
+# Modelo del dominio
 
 ## Objetivo
 
