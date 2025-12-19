@@ -23,6 +23,7 @@ state editarCargaTrabajo as "editarCargaTrabajo()" {
     Datos de carga de trabajo no válidos
     <b>Sistema</b> muestra mensajes de error
     • Carga de trabajo menor a lo requerido
+    • Carga de trabajo mayor a lo requerido
     end note
 
     ValidandoDatos -[#green]-> [*]
@@ -37,9 +38,9 @@ note on link
 carga de trabajo editada
 end note
 
-editarCargaTrabajo -[#green]-> PERFIL
+editarCargaTrabajo -[#green]-> PANEL_PRINCIPAL_ABIERTO
 note on link
-abrirPerfil()
+abrirPanelPrincipal()
 end note
 
 @enduml
