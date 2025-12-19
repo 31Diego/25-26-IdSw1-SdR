@@ -1,13 +1,12 @@
 # Reunión 1 — Plataforma Interna de Investigación de FUNIBER
-
-**Ponente:** Mar Pacheco  
+ 
 **Tema:** Organización del departamento de proyectos e investigación  
 
 ---
 
 ## Contexto de la reunión
 
-En esta primera reunión, Mar Pacheco nos explicó el **marco general del proyecto** que se iba a desarrollar a lo largo de la asignatura.  
+En esta primera reunión, nuestro cliente nos explicó el **marco general del proyecto** que se iba a desarrollar a lo largo de la asignatura.  
 El objetivo principal era comprender cómo funciona actualmente el **departamento de proyectos de investigación de FUNIBER**, qué actores intervienen y qué necesidades existen a nivel de coordinación, seguimiento y control de la actividad investigadora.
 
 Durante la sesión se describió el **ciclo completo de los proyectos de investigación**, desde la detección de convocatorias hasta la gestión de entregables y la carga de trabajo de los investigadores, destacando la necesidad de una **herramienta interna** que permita centralizar la información y mantener un histórico consultable de toda la actividad académica e investigadora.
@@ -152,3 +151,4 @@ Intervienen o deben tener visibilidad:
 Debe quedar registrado:
 - Cuántas propuestas se presentan.
 - Cuántos proyectos se aceptan.
+
