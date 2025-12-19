@@ -17,7 +17,8 @@
 #### Pantalla: abrirEntregable
 
 <div align=center>
-|![Wireframe: abrirEntregable](/documentos/casosDeUso/prototipos/investigador/abrirEntregables/abrirEntregables-wireframe.svg)|
+|![Wireframe: abrirEntregable](documentos/casosDeUso/prototipos/investigador/abrirEntregable/entregableAbierto-wireframe.svg)|
 |-|
 
 </div>
+
