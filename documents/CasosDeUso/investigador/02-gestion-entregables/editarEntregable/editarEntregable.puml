@@ -28,7 +28,7 @@ state editarEntregable as "editarEntregable()" {
     <b>Sistema</b> valida la información modificada
     end note
 
-    ValidandoCambios -[#green]-> EditandoEntregable
+    ValidandoCambios -[#red]-> EditandoEntregable
     note on link
     Cambios no válidos
     <b>Sistema</b> muestra mensajes de error
