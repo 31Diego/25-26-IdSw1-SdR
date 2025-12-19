@@ -50,13 +50,6 @@ Registro de sesiones de requisitado: decisiones, observaciones y cambios en requ
 
 ---
 
-### Recursos Visuales
-Imágenes, diagramas y materiales de apoyo utilizados en la documentación.
-
-[Ver Recursos](/documentos/imagenes/)
-
----
-
 ## Estructura del Análisis
 
 El sistema se organiza en cuatro áreas funcionales clave:
