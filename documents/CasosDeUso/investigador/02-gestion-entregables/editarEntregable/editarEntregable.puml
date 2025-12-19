@@ -46,7 +46,7 @@ state editarEntregable as "editarEntregable()" {
     end note
 }
 
-editarEntregable -[#green]-> ENTREGABLE_ABIERTO
+editarEntregable -[#green]-> ENTREGABLES_ABIERTOS
 note on link
 entregable actualizado
 end note
