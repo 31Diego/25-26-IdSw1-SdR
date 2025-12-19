@@ -14,6 +14,7 @@
 [![](https://img.shields.io/badge/-Rúbrica-0A3B64?style=for-the-badge&logo=checklist&logoColor=white)](https://github.com/mmasias/25-26-IdSw1-SdR/blob/main/documents/l'Rubrica.md)
 
 </div>
+
 #Diagramas de contexto
 
 Este documento recoge los **diagramas de contexto** del sistema para los dos actores principales: **Coordinador** e **Investigador**.  
@@ -60,6 +61,7 @@ Cada diagrama define los **estados de pantalla** y las **transiciones** permitid
 - Subpantallas de detalle: `PUBLICACION_ABIERTA`, `MI_PUBLICACION_ABIERTA`, `PROYECTO_ABIERTO`, `ENTREGABLES_ABIERTOS`, `ENTREGABLE_ABIERTO`, `RECOMPENSA_ABIERTA`, `INVESTIGADOR_ABIERTO`
 
 ---
+
 
 
 
