@@ -45,8 +45,8 @@ La identificación y estructuración de estos casos de uso sirve como base para 
 
 - [Diagrama de actores y casos de uso del Coordinador](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/imagenes/cduCoordinador.svg)
 - [Diagrama de actores y casos de uso del Investigador](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/imagenes/cduInvestigador.svg)
-- [Diagrama de contexto del Coordinador](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/imagenes/diagramaContextoCoordinador.svg)
-- [Diagrama de contexto del Investigador](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/imagenes/diagramaContextoInvestigador.svg)
+  > Los **diagramas de contexto** se documentan en el apartado:  
+  > [Diagramas de contexto](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/diagramas/diagramasContexto.md)
 
 ---
 
