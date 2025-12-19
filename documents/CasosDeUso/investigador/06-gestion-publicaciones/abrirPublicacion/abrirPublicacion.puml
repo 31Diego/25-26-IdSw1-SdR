@@ -1,0 +1,39 @@
+@startuml abrirPublicacion
+
+skinparam linetype polyline
+
+state abrirPublicacion as "abrirPublicacion()" {
+
+    state " " as MostrandoPublicacion
+    state " " as OpcionSelecionada
+
+    [*] -[#green]-> MostrandoPublicacion 
+    note on link
+    <b>Investigador</b> solicita abrir una publicacion
+    end note    
+    
+    MostrandoPublicacion -[#green]-> OpcionSelecionada
+    note on link
+    <b>Sistema</b> presenta la publicacion
+    • Titulo de publicacion, Descripcion, Respuestas hechas
+    • Permite solicitar abrir todas las publicaciones
+    • Permite solicitar crear una respuesta a la publicacion
+    end note
+    
+    OpcionSelecionada -[#green]-> [*]
+    note on link
+    <b>Investigador</b> solicita una de las opciones
+    end note
+}
+
+abrirPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+abrirPublicaciones()
+end note
+
+abrirPublicacion -[#green]-> PUBLICACION_ABIERTA
+note on link
+crearRespuestaPublicacion()
+end note
+
+@enduml
