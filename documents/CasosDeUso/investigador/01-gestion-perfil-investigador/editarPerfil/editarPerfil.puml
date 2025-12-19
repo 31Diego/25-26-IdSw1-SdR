@@ -17,8 +17,8 @@ state editarPerfil as "editarPerfil()" {
     note on link
     <b>Sistema</b> presenta datos a modificar del perfil
     • Nombre
+    • Apellidos
     • Correo
-    • Descripción
     • Numero de telefono
     end note
 
