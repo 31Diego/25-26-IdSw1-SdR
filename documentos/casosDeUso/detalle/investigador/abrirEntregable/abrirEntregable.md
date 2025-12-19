@@ -15,12 +15,13 @@
 ### Wireframes
 
 #### Pantalla: abrirEntregable
-
 <div align=center>
+  
 |![Wireframe: abrirEntregable](/documentos/casosDeUso/prototipos/investigador/abrirEntregable/prototipo.puml)|
 |-|
 
 </div>
+
 
 
 
