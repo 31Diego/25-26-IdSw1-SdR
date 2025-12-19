@@ -17,6 +17,7 @@
 #### Pantalla: abrirInvestigador
 
 <div align=center>
+
 |![Wireframe: abrirInvestigador](/documentos/casosDeUso/prototipos/investigador/abrirInvestigador/abrirInvestigador-wireframe.svg)|
 |-|
 
