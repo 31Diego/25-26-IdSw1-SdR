@@ -75,9 +75,9 @@ Los casos de uso están organizados por **actor** y por **módulo funcional**, s
 - [eliminarEntregable](/documentos/casosDeUso/detalle/coordinador/eliminarEntregable/eliminarEntregable.md) — Eliminación de entregable
 
 ### Investigadores
-- [abrirInvestigadores](/documentos/casosDeUso/detalle/investigador/abrirInvestigadores/abrirInvestigadores.md) — Listado de investigadores
-- [abrirInvestigador](/documentos/casosDeUso/detalle/investigador/abrirInvestigador/abrirInvestigador.md) — Consulta de un investigador
-- [crearInvestigador](/documentos/casosDeUso/detalle/investigador/crearInvestigador/crearInvestigador.md) — Registro de investigador
+- [abrirInvestigadores](/documentos/casosDeUso/detalle/coordinador/abrirInvestigadores/abrirInvestigadores.md) — Listado de investigadores
+- [abrirInvestigador](/documentos/casosDeUso/detalle/coordinador/abrirInvestigador/abrirInvestigador.md) — Consulta de un investigador
+- [crearInvestigador](/documentos/casosDeUso/detalle/coordinador/crearInvestigador/crearInvestigador.md) — Registro de investigador
 
 ---
 
