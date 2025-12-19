@@ -1,0 +1,39 @@
+@startuml abrirPublicaciones
+
+skinparam linetype polyline
+
+state abrirPublicaciones as "abrirPublicaciones()" {
+
+    state " " as MostrandoPublicaciones
+    state " " as PublicacionSelecionada
+
+    [*] -[#green]-> MostrandoPublicaciones 
+    note on link
+    <b>Investigador</b> solicita abrir todas las publicaciones
+    end note    
+    
+    MostrandoPublicaciones -[#green]-> PublicacionSelecionada
+    note on link
+    <b>Sistema</b> presenta las publicaciones
+    • Titulo de publicacion, Descripcion
+    • Permite solicitar abrir una publicacion
+    • Permite solicitar abrir el panel principal
+    end note
+    
+    PublicacionSelecionada -[#green]-> [*]
+    note on link
+    <b>Investigador</b> solicita una de las opciones
+    end note
+}
+
+abrirPublicaciones -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+abrirPublicacion()
+end note
+
+abrirPublicaciones -[#green]-> PANEL_PRINCIPAL_ABIERTO
+note on link
+abrirPanelPrincipal()
+end note
+
+@enduml
