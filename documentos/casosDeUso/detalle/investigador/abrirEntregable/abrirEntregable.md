@@ -17,10 +17,11 @@
 #### Pantalla: abrirEntregable
 <div align=center>
   
-|![Wireframe: abrirEntregable](/documentos/casosDeUso/prototipos/investigador/abrirEntregable/prototipo.puml)|
+|![Wireframe: abrirEntregable](documentos/casosDeUso/prototipos/investigador/abrirEntregable/entregableAbierto-wireframe.svg)|
 |-|
 
 </div>
+
 
 
 
