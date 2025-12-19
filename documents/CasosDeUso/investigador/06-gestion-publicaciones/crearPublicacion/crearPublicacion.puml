@@ -1,0 +1,53 @@
+@startuml crearPublicacion
+
+skinparam linetype polyline
+
+state crearPublicacion as "crearPublicacion()" {
+
+    state " " as RellenandoPublicacion
+    state " " as ValidandoDatos
+
+    [*] -[#green]-> RellenandoPublicacion
+    note on link
+    <b>Investigador</b> solicita crear una nueva publicacion
+    end note
+
+    RellenandoPublicacion -[#green]-> ValidandoDatos
+    note on link
+    <b>Investigador</b> solicita guardar la publicacion nueva
+    <b>Sistema</b> valida los datos introducidos
+    end note
+
+    ValidandoDatos -[#red]-> RellenandoPublicacion
+    note on link
+    Datos de publicacion no válidos
+    <b>Sistema</b> muestra mensajes de error
+    • Campos obligatorios vacíos
+    • Formato incorrecto en algún campo
+    end note
+
+    ValidandoDatos -[#green]-> [*]
+    note on link
+    Datos de publicacion válidos
+    <b>Sistema</b> crea la publicacion
+    • Guarda título, Descripción
+    • Muestra publicacion creado
+    end note
+}
+
+crearPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+eliminarPublicacion()
+end note
+
+crearPublicacion -[#green]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
+end note
+
+crearPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+editarPublicacion()
+end note
+
+@enduml
