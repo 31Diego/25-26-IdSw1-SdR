@@ -1,6 +1,6 @@
 # Reuniones con el cliente — Plataforma Interna de Investigación de FUNIBER (GIPF)
 
-Este documento recoge un **resumen estructurado de las reuniones mantenidas con el cliente**, así como enlaces directos a la **documentación completa de cada sesión**.
+Este documento recoge un **resumen estructurado de las reuniones mantenidas con Mar Pacheco, el cliente**, así como enlaces directos a la **documentación completa de cada sesión**.
 
 Las reuniones han sido fundamentales para:
 - Comprender el funcionamiento real del Departamento de Proyectos de FUNIBER.
@@ -50,3 +50,4 @@ Las reuniones han sido fundamentales para:
   [Reunión 3 — Revisión y validación del modelo del sistema](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/reuniones/reunion03.md)
 
 ---
+
