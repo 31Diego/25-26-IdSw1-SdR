@@ -1,0 +1,48 @@
+@startuml crearPublicacion
+skinparam linetype polyline
+
+state in1 as "MIS_PUBLICACIONES_ABIERTAS"
+in1 -[#green]-> crearPublicacion
+
+state crearPublicacion as "crearPublicacion()" {
+
+    state " " as SolicitandoDatos
+    state " " as CreandoPublicacion
+
+    [*] -[#green]-> SolicitandoDatos
+    note on link
+    <b>Investigador</b> solicita crear una publicación
+    end note
+
+    SolicitandoDatos -[#green]-> CreandoPublicacion
+    note on link
+    <b>Sistema</b> presenta el formulario de creación de la publicación y permite introducir:
+    • Título
+    • Estado
+    • Visibilidad
+    • Descripción
+    • Adjuntos (opcional)
+
+    y permite solicitar las siguientes acciones:
+    • Crear publicación
+    • Volver a mis publicaciones
+    end note
+
+    CreandoPublicacion -[#green]-> [*]
+    note on link
+    <b>Investigador</b> introduce los datos solicitados y solicita crear la publicación
+    <b>Sistema</b> visualiza la publicación creada
+    end note
+}
+
+crearPublicacion -[#green]-> MI_PUBLICACION_ABIERTA
+note on link
+Publicación creada y abierta
+end note
+
+crearPublicacion -[#red]-> MIS_PUBLICACIONES_ABIERTAS
+note on link
+abrirMisPublicaciones()
+end note
+
+@enduml

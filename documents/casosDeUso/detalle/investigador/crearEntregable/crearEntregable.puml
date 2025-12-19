@@ -1,0 +1,66 @@
+@startuml crearEntregable
+skinparam linetype polyline
+
+state in1 as "ENTREGABLES_ABIERTOS"
+in1 -[#green]-> crearEntregable
+
+state crearEntregable as "crearEntregable()" {
+
+    state " " as SolicitandoDatos
+    state " " as RegistrandoEntregable
+    state " " as ValidandoDatos
+
+    [*] -[#green]-> SolicitandoDatos
+    note on link
+    <b>Investigador</b> solicita crear un entregable
+    end note
+
+    SolicitandoDatos -[#green]-> RegistrandoEntregable
+    note on link
+    <b>Sistema</b> muestra y permite introducir los datos del nuevo entregable:
+    • Título
+    • Tipo (informe / dataset / presentación / otro)
+    • Fecha límite
+    • Estado inicial (pendiente / en curso / entregado)
+    • Descripción (opcional)
+    • Archivo adjunto (opcional)
+
+    <b>Sistema</b> permite solicitar:
+    • Crear entregable
+    • Volver a entregables
+    end note
+
+    RegistrandoEntregable -[#green]-> ValidandoDatos
+    note on link
+    <b>Investigador</b> solicita crear el entregable
+    end note
+
+    ValidandoDatos -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta y visualiza el entregable creado
+    end note
+
+    ValidandoDatos -[#red]-> RegistrandoEntregable
+    note on link
+    <b>Sistema</b> muestra errores de introducción
+    <b>Sistema</b> permite introducir correcciones
+    end note
+
+    RegistrandoEntregable -[#red]-> [*]
+    note on link
+    <b>Investigador</b> solicita cancelar la creación
+    <b>Sistema</b> presenta el listado de entregables sin cambios
+    end note
+}
+
+crearEntregable -[#green]-> ENTREGABLE_ABIERTO
+note on link
+Entregable creado y abierto
+end note
+
+crearEntregable -[#red]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+@enduml

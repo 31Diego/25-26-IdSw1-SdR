@@ -1,0 +1,35 @@
+@startsalt editarPublicacion-wireframe
+{
+    ====
+    <b>GIPF - EDITAR PUBLICACIÓN</b>
+    ====
+
+    {
+        { <b>ID:</b> | "PUB-INV-2025-014" (solo lectura) }
+        { <b>Título:</b> | [ Resultados preliminares de investigación 2025 ] }
+        { <b>Estado:</b> | { "Borrador" | "Publicada" } }
+        { <b>Visibilidad:</b> | { "Pública" | "Privada" } }
+    }
+
+    --
+
+    <b>Descripción</b>
+    {
+        {[                                                          ]}
+    }
+
+    --
+
+    <b>Adjuntos (opcional)</b>
+    {
+        { [Añadir adjunto] }
+        --
+        { "📎 Informe_Resultados_2025.pdf" | [Ver] | [Quitar] }
+        { "📎 Dataset_Resumen.xlsx"        | [Ver] | [Quitar] }
+    }
+
+    --
+
+    { [Guardar cambios] | [Cancelar] }
+}
+@endsalt
