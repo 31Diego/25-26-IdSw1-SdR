@@ -18,10 +18,11 @@
 
 <div align=center>
 
-|![Wireframe: abrirEntregable](../../prototipos/investigador/abrirEntregable/entregableAbierto-wireframe.svg)|
+|![Wireframe: abrirEntregable](../../prototipos/investigador/abrirEntregable/prototipo.puml)|
 |-|
 
 </div>
+
 
 
 
