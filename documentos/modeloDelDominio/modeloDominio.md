@@ -89,7 +89,7 @@
 
 |![](/documentos/modeloDelDominio/imagenes/estados/diagramaEstadosProyectoGestion.svg)|![](/documentos/modeloDelDominio/imagenes/estados/diagramaEstadosProyectoRed.svg)|
 |:-:|:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosProyectoGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaEstadosProyectoRed.puml)**|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosProyectoGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/diagramas/estados/diagramaEstadosProyectoRed.puml)**|
 </div>
 
 
@@ -99,7 +99,7 @@
 
 |![](/documentos/modeloDelDominio/imagenes/estados/diagramaEstadosInvestigadorGestion.svg)|![](/documentos/modeloDelDominio/imagenes/estados/diagramaEstadosInvestigadorRed.svg)|
 |:-:|:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosInvestigadorGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Clases/DiagramaEstadosInvestigadorRed.puml)**|
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Estados/DiagramaEstadosInvestigadorGestion.puml)**| **[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/diagramas/estados/diagramaEstadosInvestigadorRed.puml)**|
 </div>
 
 
@@ -112,7 +112,7 @@
 
 |![](/documentos/modeloDelDominio/imagenes/objetos/diagramaObjetosProyecto.svg)|
 |:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosProyecto)**| 
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/diagramas/objetos/diagramaObjetosProyecto.puml)**| 
 </div>
 
 
@@ -122,7 +122,7 @@
 
 |![](/documentos/modeloDelDominio/imagenes/objetos/diagramaObjetosInvestigador.svg)|
 |:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosInvestigador)**| 
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/diagramas/objetos/diagramaObjetosInvestigador.puml)**| 
 </div>
 
 
@@ -134,7 +134,7 @@
 
 |![](/documentos/modeloDelDominio/imagenes/objetos/diagramaObjetosInvestigadorProyecto.svg)|
 |:-:|
-|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/Desarrollo/documentaci%C3%B3n/ModeloDelDominio/Diagramas/Objetos/DiagramaObjetosInvestigadorProyecto)**| 
+|**[código](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/modeloDelDominio/diagramas/objetos/diagramaObjetosInvestigadorProyecto.puml)**| 
 </div>
 
 
