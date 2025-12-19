@@ -1,0 +1,51 @@
+@startuml agregarInvestigador
+
+skinparam linetype polyline
+
+state in1 as "PROYECTOS_ABIERTOS"
+in1 -[#green]-> agregarInvestigador
+note on link
+abrirProyecto()
+end note
+
+state agregarInvestigador as "agregarInvestigador()" {
+
+    state " " as SolicitandoDatos
+    state " " as CreandoInvestigador
+
+    [*] -[#green]-> SolicitandoDatos 
+    note on link
+    <b>Coordinador</b> solicita agregar un investigador a un proyecto
+    end note    
+    
+    SolicitandoDatos -[#green]-> CreandoInvestigador
+    note on link
+    <b>Sistema</b> presenta solicitud de datos mínimos del investigador
+    • ID del investigador (obligatorio)
+    • Nombre del investigador (obligatorio)
+    • Campo del investigador (obligatorio)
+    • Permite solicitar agregar investigador
+    • Permite solicitar cancelar la agregacion
+    end note
+    
+    CreandoInvestigador -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> proporciona datos mínimos
+    <b>Sistema</b> agrega investigador
+    end note
+}
+
+
+agregarInvestigador -[#blue]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+agregarInvestigador -[#blue]-> PROYECTOS_ABIERTOS
+note on link
+abrirProyectos()
+end note
+
+
+
+@enduml

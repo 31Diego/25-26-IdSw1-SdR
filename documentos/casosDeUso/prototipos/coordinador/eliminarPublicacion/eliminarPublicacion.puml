@@ -1,0 +1,26 @@
+@startsalt eliminarPublicacion-wireframe
+{
+    ====
+    <b>GIPF - ELIMINAR PUBLICACIÓN</b>
+    ====
+    {
+        <b>Confirmación de eliminación</b>
+        --
+        {
+            "¿Está seguro de que desea eliminar esta publicación?"
+        }
+
+        ~~
+
+        {[Confirmar] | [Cancelar]}
+
+        ~~
+
+        <b>Resultado</b>
+        --
+        {
+            "La publicación ha sido eliminada correctamente."
+        }
+    }
+}
+@endsalt

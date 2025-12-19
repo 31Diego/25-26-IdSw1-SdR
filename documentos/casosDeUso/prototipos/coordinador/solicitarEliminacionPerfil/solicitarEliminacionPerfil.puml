@@ -1,0 +1,31 @@
+@startsalt solicitarEliminacionPerfil-wireframe
+{
+    ====
+    <b>GIPF - SOLICITAR ELIMINACIÓN DE PERFIL</b>
+    ====
+    {
+        <b>Perfil a eliminar</b>
+        --
+        {
+            {<b>ID</b> | <b>Nombre</b>}
+            {"COO-001" | "Carlos Fernández"}
+        }
+
+        ~~
+
+        <b>Confirmación de solicitud</b>
+        --
+        {
+            {<b>Acción</b> | [Confirmar] | [Cancelar]}
+        }
+
+        ~~
+
+        <b>Solicitud enviada</b>
+        --
+        {
+            "Su solicitud de eliminación ha sido enviada correctamente."
+        }
+    }
+}
+@endsalt

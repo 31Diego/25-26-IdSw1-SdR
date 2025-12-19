@@ -1,0 +1,19 @@
+@startsalt abrirRecompensa-wireframe
+{
+    ====
+    <b>GIPF - RECOMPENSA</b>
+    ====
+    {
+        <b>Información de la recompensa</b>
+        --
+        {
+            {<b>Tipo</b>     | "Bono de productividad"}
+            {<b>Cantidad</b> | "500 €"}
+        }
+
+        ~~
+
+        {[Editar] | [Eliminar] | [Cancelar]}
+    }
+}
+@endsalt

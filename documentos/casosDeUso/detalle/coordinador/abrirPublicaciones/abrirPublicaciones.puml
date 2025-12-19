@@ -1,0 +1,50 @@
+@startuml abrirPublicaciones
+
+skinparam linetype polyline
+
+state in2 as "PANEL_PRINCIPAL_ABIERTO"
+in2 -[#green]-> abrirPublicaciones
+note on link
+abrirPublicaciones()
+end note
+
+state in1 as "PUBLICACION_ABIERTA"
+in1 -[#green]-> abrirPublicaciones
+note on link
+abrirPublicaciones()
+end note
+
+state abrirPublicaciones as "abrirPublicaciones()" {
+
+    state " " as MostrandoListado
+    state " " as FiltrandoListado
+
+    [*] -[#green]-> MostrandoListado
+    note on link
+    <b>Coordinador</b> solicita abrir publicaciones
+    end note
+
+    MostrandoListado -[#green]-> FiltrandoListado
+    note on link
+    <b>Sistema</b> presenta listado de publicaciones
+    • Título
+    • Autor
+    • Fecha
+    <b>Sistema</b> permite solicitar:
+    • abrir publicación
+    • filtrar listado
+    end note
+
+    FiltrandoListado -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita una opción del listado
+    end note
+}
+
+
+abrirPublicaciones -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+abrirPublicacion()
+end note
+
+@enduml

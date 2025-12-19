@@ -1,28 +1,28 @@
-@startuml eliminarPublicacion
+@startuml eliminarInvestigador
 
 skinparam linetype polyline
 
-state in2 as "PUBLICACION_ABIERTA"
-in2 -[#green]-> eliminarPublicacion
+state in1 as "PROYECTOS_ABIERTOS"
+in1 -[#green]-> eliminarInvestigador
 note on link
-eliminarPublicacion()
+abrirProyecto()
 end note
 
-state eliminarPublicacion as "eliminarPublicacion()" {
+state eliminarInvestigador as "eliminarInvestigador()" {
 
     state " " as ConfirmandoEliminacion
     state " " as PublicacionEliminada
 
     [*] -[#green]-> ConfirmandoEliminacion
     note on link
-    <b>Coordinador</b> solicita eliminar publicación
+    <b>Coordinador</b> solicita eliminar investigador de proyecto
     end note
 
     ConfirmandoEliminacion -[#green]-> PublicacionEliminada
     note on link
     <b>Sistema</b> presenta confirmación de eliminación
     <b>Coordinador</b> solicita confirmar eliminación
-    <b>Sistema</b> presenta la eliminación de la publicación
+    <b>Sistema</b> presenta la eliminación del investigador
     end note
 
     ConfirmandoEliminacion -[#red]-> [*]
@@ -37,10 +37,26 @@ state eliminarPublicacion as "eliminarPublicacion()" {
 }
 
 
-
-eliminarPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
+eliminarInvestigador -[#blue]-> PROYECTOS_ABIERTOS
 note on link
-abrirPublicaciones()
+abrirProyecto()
 end note
+
+
+eliminarInvestigador -[#blue]-> ENTREGABLES_ABIERTOS
+note on link
+abrirEntregables()
+end note
+
+
+
+
+
+
+
+
+
+
+
 
 @enduml

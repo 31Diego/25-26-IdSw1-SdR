@@ -1,0 +1,51 @@
+@startuml abrirPublicacion
+
+skinparam linetype polyline
+
+state in2 as "PUBLICACIONES_ABIERTAS"
+in2 -[#green]-> abrirPublicacion
+note on link
+abrirPublicacion()
+end note
+
+state abrirPublicacion as "abrirPublicacion()" {
+
+    state " " as MostrandoPublicacion
+
+    [*] -[#green]-> MostrandoPublicacion
+    note on link
+    <b>Coordinador</b> solicita abrir una publicación
+    end note
+
+    MostrandoPublicacion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta contenido de la publicación
+    • Título
+    • Texto
+    • Autor
+    • Respuestas asociadas
+    <b>Sistema</b> permite solicitar:
+    • responder
+    • editar
+    • eliminar
+    end note
+}
+
+
+
+abrirPublicacion -[#green]-> PUBLICACION_ABIERTA
+note on link
+responderPublicacion()
+end note
+
+abrirPublicacion -[#green]-> PUBLICACION_ABIERTA
+note on link
+editarPublicacion()
+end note
+
+abrirPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
+note on link
+eliminarPublicacion()
+end note
+
+@enduml

@@ -1,0 +1,20 @@
+@startsalt crearInvestigador-wireframe
+{
+    ====
+    <b>GIPF - CREAR INVESTIGADOR</b>
+    ====
+    {
+        <b>Datos mínimos del investigador</b>
+        --
+        {
+            {<b>ID del investigador *</b> | [                ]}
+            {<b>Nombre *</b>              | [                ]}
+            {<b>Campo de investigación *</b> | [                ]}
+        }
+
+        ~~
+
+        {[Crear investigador] | [Cancelar]}
+    }
+}
+@endsalt

@@ -1,0 +1,54 @@
+@startuml abrirRecompensas
+
+skinparam linetype polyline
+
+state in1 as "RECOMPENSA_ABIERTA"
+in1 -[#green]-> abrirRecompensas
+note on link
+abrirRecompensa()
+end note
+
+state in2 as "PANEL_PRINCIPAL_ABIERTO"
+in2 -[#green]-> abrirRecompensas
+note on link
+abrirRecompensa()
+end note
+
+state abrirRecompensas as "abrirRecompensas()" {
+
+    state " " as MostrandoListado
+    state " " as FiltrandoListado
+
+    [*] -[#green]-> MostrandoListado
+    note on link
+    <b>Coordinador</b> solicita abrir recompensas
+    end note
+
+    MostrandoListado -[#green]-> FiltrandoListado
+    note on link
+    <b>Sistema</b> presenta listado de recompensas
+    • Tipo
+    • Cantidad
+    <b>Sistema</b> permite solicitar:
+    • abrir recompensa
+    • crear recompensa
+    end note
+
+    FiltrandoListado -[#green]-> [*]
+    note on link
+    <b>Coordinador</b> solicita una opción del listado
+    end note
+}
+
+
+abrirRecompensas -[#green]-> RECOMPENSA_ABIERTA
+note on link
+abrirRecompensa()
+end note
+
+abrirRecompensas -[#green]-> RECOMPENSA_ABIERTA
+note on link
+crearRecompensa()
+end note
+
+@enduml

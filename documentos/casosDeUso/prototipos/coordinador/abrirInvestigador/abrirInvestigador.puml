@@ -1,0 +1,24 @@
+@startsalt abrirInvestigador-wireframe
+{
+    ====
+    <b>GIPF - PERFIL DE INVESTIGADOR</b>
+    ====
+    {
+        <b>Datos del investigador</b>
+        --
+        {
+            {<b>ID:</b>        | INV-001}
+            {<b>Nombre:</b>    | Ana}
+            {<b>Apellido:</b>  | López}
+            {<b>Campo:</b>     | Inteligencia Artificial}
+            {<b>Carrera:</b>   | Ingeniería Informática}
+            {<b>Máster:</b>    | Máster en IA}
+            {<b>Rol:</b>    | Coordinador}
+        }
+
+        ~~
+
+        {[Editar perfil] | [Volver]}
+    }
+}
+@endsalt

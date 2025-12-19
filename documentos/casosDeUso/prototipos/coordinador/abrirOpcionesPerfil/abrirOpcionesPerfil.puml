@@ -1,0 +1,30 @@
+@startsalt abrirOpcionesPerfil-wireframe
+{
+    ====
+    <b>GIPF - OPCIONES DE PERFIL</b>
+    ====
+    {
+        <b>Investigador seleccionado</b>
+        --
+        {
+            {<b>ID:</b>     | INV-001}
+            {<b>Nombre:</b> | Ana López}
+            {<b>Campo:</b>  | Inteligencia Artificial}
+        }
+
+        ~~
+
+        <b>Opciones disponibles</b>
+        --
+        {
+            {[Editar perfil]}
+            {[Abrir solicitudes de eliminación]}
+            {[Solicitar eliminación perfil]}
+        }
+
+        ~~
+
+        {[Volver]}
+    }
+}
+@endsalt

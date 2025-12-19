@@ -1,0 +1,47 @@
+@startuml abrirRecompensa
+
+skinparam linetype polyline
+
+state in2 as "RECOMPENSAS_ABIERTAS"
+in2 -[#green]-> abrirRecompensa
+note on link
+abrirRecompensa()
+end note
+
+state abrirRecompensa as "abrirRecompensa()" {
+
+    state " " as MostrandoRecompensa
+
+    [*] -[#green]-> MostrandoRecompensa
+    note on link
+    <b>Coordinador</b> solicita abrir una recompensa
+    end note
+
+    MostrandoRecompensa -[#green]-> [*]
+    note on link
+    <b>Sistema</b> presenta información de la recompensa
+    • Tipo
+    • Cantidad
+    <b>Sistema</b> permite solicitar:
+    • editar recompensa
+    • eliminar recompensa
+    end note
+}
+
+
+abrirRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
+note on link
+abrirRecompensas()
+end note
+
+abrirRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
+note on link
+eliminarRecompensa()
+end note
+
+abrirRecompensa -[#green]-> RECOMPENSA_ABIERTA
+note on link
+editarRecompensa()
+end note
+
+@enduml

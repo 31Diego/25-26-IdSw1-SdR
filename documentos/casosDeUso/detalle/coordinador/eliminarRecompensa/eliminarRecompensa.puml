@@ -1,28 +1,28 @@
-@startuml eliminarPublicacion
+@startuml eliminarRecompensa
 
 skinparam linetype polyline
 
-state in2 as "PUBLICACION_ABIERTA"
-in2 -[#green]-> eliminarPublicacion
+state in1 as "RECOMPENSA_ABIERTA"
+in1 -[#green]-> eliminarRecompensa
 note on link
-eliminarPublicacion()
+eliminarRecompensa()
 end note
 
-state eliminarPublicacion as "eliminarPublicacion()" {
+state eliminarRecompensa as "eliminarRecompensa()" {
 
     state " " as ConfirmandoEliminacion
-    state " " as PublicacionEliminada
+    state " " as RecompensaEliminada
 
     [*] -[#green]-> ConfirmandoEliminacion
     note on link
-    <b>Coordinador</b> solicita eliminar publicación
+    <b>Coordinador</b> solicita eliminar recompensa
     end note
 
-    ConfirmandoEliminacion -[#green]-> PublicacionEliminada
+    ConfirmandoEliminacion -[#green]-> RecompensaEliminada
     note on link
     <b>Sistema</b> presenta confirmación de eliminación
     <b>Coordinador</b> solicita confirmar eliminación
-    <b>Sistema</b> presenta la eliminación de la publicación
+    <b>Sistema</b> presenta la eliminacion de la recompensa
     end note
 
     ConfirmandoEliminacion -[#red]-> [*]
@@ -30,17 +30,20 @@ state eliminarPublicacion as "eliminarPublicacion()" {
     <b>Coordinador</b> solicita cancelar la operación
     end note
 
-    PublicacionEliminada -[#green]-> [*]
+    RecompensaEliminada -[#green]-> [*]
     note on link
     <b>Sistema</b> presenta confirmación de eliminación
     end note
 }
 
 
-
-eliminarPublicacion -[#green]-> PUBLICACIONES_ABIERTAS
+eliminarRecompensa -[#green]-> RECOMPENSAS_ABIERTAS
 note on link
-abrirPublicaciones()
+abrirRecompensas()
 end note
+
+
+
+
 
 @enduml

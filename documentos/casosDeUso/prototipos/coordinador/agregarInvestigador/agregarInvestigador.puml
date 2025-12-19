@@ -1,0 +1,22 @@
+@startsalt agregarInvestigador-wireframe
+{
+    ====
+    <b>GIPF - AGREGAR INVESTIGADOR A PROYECTO</b>
+    ====
+    {
+        <b>Datos mínimos del investigador</b>
+        --
+        {
+            {<b>ID investigador *</b>     | " "}
+            {<b>Nombre *</b>              | " "}
+            {<b>Campo *</b>               | " "}
+        }
+
+        ~~
+
+        <b>Acciones</b>
+        --
+        {[Agregar investigador] | [Cancelar]}
+    }
+}
+@endsalt

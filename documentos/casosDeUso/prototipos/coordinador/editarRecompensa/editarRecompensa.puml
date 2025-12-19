@@ -1,0 +1,27 @@
+@startsalt editarRecompensa-wireframe
+{
+    ====
+    <b>GIPF - EDITAR RECOMPENSA</b>
+    ====
+    {
+        <b>Datos editables de la recompensa</b>
+        --
+        {
+            {<b>Tipo</b>     | "Bono de productividad"}
+            {<b>Cantidad</b> | "500 €"}
+        }
+
+        ~~
+
+        {[Guardar cambios] | [Cancelar]}
+
+        ~~
+
+        <b>Resultado</b>
+        --
+        {
+            "Los cambios en la recompensa se han guardado correctamente."
+        }
+    }
+}
+@endsalt
