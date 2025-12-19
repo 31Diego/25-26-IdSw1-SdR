@@ -5,9 +5,9 @@
 
 <div align=center>
 
-| ![Caso de uso: abrirConvocatoria()]() |
+| ![Caso de uso: ]() |
 |-|
-| Código fuente: [especificacion.puml]() |
+| [codigo fuente:]() |
 
 </div>
 
@@ -19,7 +19,7 @@
 
 <div align=center>
 
-| ![Wireframe: convocatoria abierta]() |
+| ![Wireframe: ]() |
 |-|
 
 </div>

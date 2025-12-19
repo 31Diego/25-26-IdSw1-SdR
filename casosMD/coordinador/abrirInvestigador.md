@@ -7,7 +7,7 @@
 
 | ![Caso de uso: ](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirInvestigador/abrirInvestigador.svg) |
 |-|
-| Código fuente: [especificacion.puml](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirInvestigador/abrirInvestigador.puml) |
+| [codigo fuente:](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirInvestigador/abrirInvestigador.puml) |
 
 </div>
 

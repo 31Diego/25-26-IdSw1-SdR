@@ -7,7 +7,7 @@
 
 | ![Caso de uso: ](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirEntregables/abrirEntregables.svg) |
 |-|
-| Código fuente: [especificacion.puml](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirEntregables/abrirEntregables.puml) |
+| [codigo fuente:](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirEntregables/abrirEntregables.puml) |
 
 </div>
 

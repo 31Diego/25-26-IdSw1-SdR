@@ -8,7 +8,7 @@
 
 | ![Caso de uso: abrirConvocatoria()](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirConvocatoria/abrirConvocatoria.svg) |
 |-|
-| Código fuente: [especificacion.puml](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirConvocatoria/abrirConvocatoria.puml) |
+| [codigo fuente:](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/detalle/coordinador/abrirConvocatoria/abrirConvocatoria.puml) |
 
 </div>
 
