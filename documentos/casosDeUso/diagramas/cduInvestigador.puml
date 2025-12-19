@@ -1,0 +1,104 @@
+@startuml CDUInvestigador
+
+title Casos de uso de Investigador
+left to right direction
+
+actor "Investigador" as investigador
+
+package "Gestión de sesión" {
+    usecase UC_IniciarSesion as "iniciarSesion()"
+    usecase UC_CerrarSesion as "cerrarSesion()"
+}
+
+package "Gestión de perfil" {
+    usecase UC_AbrirOpcionesPerfil as "abrirOpcionesPerfil()"
+    usecase UC_EditarPerfil as "editarPerfil()"
+    usecase UC_SolicitarEliminacionPerfil as "solicitarEliminacionPerfil()"
+}
+
+package "Gestión de carga de trabajo" {
+    usecase UC_AbrirOpcionesCargaTrabajo as "abrirOpcionesCargaTrabajo()"
+    usecase UC_EditarCargaTrabajo as "editarCargaTrabajo()"
+}
+
+package "Publicaciones" {
+    usecase UC_AbrirPublicaciones as "abrirPublicaciones()"
+    usecase UC_AbrirPublicacion as "abrirPublicacion()"
+    usecase UC_ResponderPublicacion as "responderPublicacion()"
+}
+
+package "Mis publicaciones" {
+    usecase UC_AbrirMisPublicaciones as "abrirMisPublicaciones()"
+    usecase UC_AbrirMiPublicacion as "abrirMiPublicacion()"
+    usecase UC_CrearPublicacion as "crearPublicacion()"
+    usecase UC_EditarPublicacion as "editarPublicacion()"
+    usecase UC_EliminarPublicacion as "eliminarPublicacion()"
+}
+
+package "Proyectos" {
+    usecase UC_AbrirProyectos as "abrirProyectos()"
+    usecase UC_AbrirProyecto as "abrirProyecto()"
+    usecase UC_AbrirEntregables as "abrirEntregables()"
+    usecase UC_AbrirEntregable as "abrirEntregable()"
+    usecase UC_CrearEntregable as "crearEntregable()"
+    usecase UC_EditarEntregable as "editarEntregable()"
+    usecase UC_EliminarEntregable as "eliminarEntregable()"
+    usecase UC_AbrirProyectoDesdeEntregables as "abrirProyecto()"
+}
+
+package "Recompensas" {
+    usecase UC_AbrirRecompensas as "abrirRecompensas()"
+    usecase UC_AbrirRecompensa as "abrirRecompensa()"
+}
+
+
+
+package "Investigadores" {
+    usecase UC_AbrirInvestigadores as "abrirInvestigadores()"
+    usecase UC_AbrirInvestigador as "abrirInvestigador()"
+}
+
+package "Navegación general" {
+    usecase UC_AbrirPanelPrincipal as "abrirPanelPrincipal()"
+}
+
+' ================= ASOCIACIONES =================
+
+investigador --> UC_IniciarSesion
+investigador --> UC_CerrarSesion
+
+investigador --> UC_AbrirOpcionesPerfil
+investigador --> UC_EditarPerfil
+investigador --> UC_SolicitarEliminacionPerfil
+
+investigador --> UC_AbrirOpcionesCargaTrabajo
+investigador --> UC_EditarCargaTrabajo
+
+UC_AbrirPublicaciones <-- investigador
+UC_AbrirPublicacion <-- investigador
+UC_ResponderPublicacion <-- investigador
+
+UC_AbrirMisPublicaciones <-- investigador
+UC_AbrirMiPublicacion <-- investigador
+UC_CrearPublicacion <-- investigador
+UC_EditarPublicacion <-- investigador
+UC_EliminarPublicacion <-- investigador
+
+UC_AbrirProyectos <-- investigador
+UC_AbrirProyecto <-- investigador
+
+investigador --> UC_AbrirRecompensas
+investigador --> UC_AbrirRecompensa
+
+UC_AbrirEntregables <-- investigador
+UC_CrearEntregable <-- investigador
+UC_EditarEntregable <-- investigador
+UC_EliminarEntregable <-- investigador
+UC_AbrirProyectoDesdeEntregables <-- investigador
+
+investigador --> UC_AbrirInvestigadores
+investigador --> UC_AbrirInvestigador
+
+investigador --> UC_AbrirPanelPrincipal
+
+@enduml

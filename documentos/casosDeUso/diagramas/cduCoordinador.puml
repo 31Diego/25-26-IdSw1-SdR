@@ -1,0 +1,140 @@
+@startuml CDUCoordinadorCompleto
+
+title Casos de uso del Coordinador
+left to right direction
+
+actor "Coordinador" as coordinador
+
+package "Gestión de sesión" {
+    usecase UC_IniciarSesion as "iniciarSesion()"
+    usecase UC_CerrarSesion as "cerrarSesion()"
+}
+
+package "Gestión de perfil" {
+    usecase UC_AbrirOpcionesPerfil as "abrirOpcionesPerfil()"
+    usecase UC_EditarPerfil as "editarPerfil()"
+    usecase UC_SolicitarEliminacionPerfil as "solicitarEliminacionPerfil()"
+    usecase UC_abrirSolicitudesEliminacionPerfil as "abrirSolicitudesEliminacionPerfil()"
+    usecase UC_abrirSolicitudEliminacionPerfil as "abrirSolicitudEliminacionPerfil()"
+}
+
+package "Gestión de carga de trabajo" {
+    usecase UC_AbrirOpcionesCargaTrabajo as "abrirOpcionesCargaTrabajo()"
+    usecase UC_EditarCargaTrabajo as "editarCargaTrabajo()"
+}
+
+package "Publicaciones" {
+    usecase UC_AbrirPublicaciones as "abrirPublicaciones()"
+    usecase UC_AbrirPublicacion as "abrirPublicacion()"
+    usecase UC_ResponderPublicacion as "responderPublicacion()"
+    usecase UC_EditarPublicacion as "editarPublicacion()"
+    usecase UC_EliminarPublicacion as "eliminarPublicacion()"
+}
+
+package "Mis publicaciones" {
+    usecase UC_AbrirMisPublicaciones as "abrirMisPublicaciones()"
+    usecase UC_AbrirMiPublicacion as "abrirMiPublicacion()"
+    usecase UC_CrearPublicacion as "crearPublicacion()"
+    usecase UC_EditarMiPublicacion as "editarPublicacion()"
+    usecase UC_EliminarMiPublicacion as "eliminarPublicacion()"
+}
+
+package "Convocatorias" {
+    usecase UC_AbrirConvocatorias as "abrirConvocatorias()"
+    usecase UC_AbrirConvocatoria as "abrirConvocatoria()"
+    usecase UC_ImportarConvocatoria as "importarConvocatoria()"
+}
+
+package "Recompensas" {
+    usecase UC_AbrirRecompensas as "abrirRecompensas()"
+    usecase UC_AbrirRecompensa as "abrirRecompensa()"
+    usecase UC_CrearRecompensa as "crearRecompensa()"
+    usecase UC_EditarRecompensa as "editarRecompensa()"
+    usecase UC_EliminarRecompensa as "eliminarRecompensa()"
+}
+
+package "Proyectos" {
+    usecase UC_AbrirProyectos as "abrirProyectos()"
+    usecase UC_AbrirProyecto as "abrirProyecto()"
+    usecase UC_CrearProyecto as "crearProyecto()"
+    usecase UC_EditarProyecto as "editarProyecto()"
+    usecase UC_EliminarProyecto as "eliminarProyecto()"
+    usecase UC_AgregarInvestigador as "agregarInvestigador()"
+    usecase UC_EliminarInvestigador as "eliminarInvestigador()"
+    usecase UC_EditarEntregable as "editarEntregable()"
+    usecase UC_EliminarEntregable as "eliminarEntregable()"
+    usecase UC_AbrirEntregable as "abrirEntregable()"
+    usecase UC_AbrirEntregables as "abrirEntregables()"
+    usecase UC_CrearEntregable as "crearEntregable()"
+}
+
+
+
+package "Investigadores" {
+    usecase UC_AbrirInvestigadores as "abrirInvestigadores()"
+    usecase UC_AbrirInvestigador as "abrirInvestigador()"
+    usecase UC_CrearInvestigador as "crearInvestigador()"
+}
+
+package "Navegación general" {
+    usecase UC_AbrirPanelPrincipal as "abrirPanelPrincipal()"
+}
+
+' Asociaciones (todas)
+coordinador --> UC_IniciarSesion
+coordinador --> UC_CerrarSesion
+
+coordinador --> UC_AbrirOpcionesPerfil
+coordinador --> UC_EditarPerfil
+coordinador --> UC_SolicitarEliminacionPerfil
+coordinador --> UC_abrirSolicitudEliminacionPerfil
+coordinador --> UC_abrirSolicitudesEliminacionPerfil
+
+coordinador --> UC_AbrirOpcionesCargaTrabajo
+coordinador --> UC_EditarCargaTrabajo
+
+UC_AbrirPublicaciones <-- coordinador
+UC_AbrirPublicacion <-- coordinador
+UC_ResponderPublicacion <-- coordinador
+UC_EditarPublicacion <-- coordinador
+UC_EliminarPublicacion <-- coordinador
+
+UC_AbrirMisPublicaciones <-- coordinador
+UC_AbrirMiPublicacion <-- coordinador
+UC_CrearPublicacion <-- coordinador
+UC_EditarMiPublicacion <-- coordinador
+UC_EliminarMiPublicacion <-- coordinador
+
+coordinador --> UC_AbrirConvocatorias
+coordinador --> UC_AbrirConvocatoria
+coordinador --> UC_ImportarConvocatoria
+
+coordinador --> UC_AbrirRecompensas
+coordinador --> UC_AbrirRecompensa
+coordinador --> UC_CrearRecompensa
+coordinador --> UC_EditarRecompensa
+coordinador --> UC_EliminarRecompensa
+
+UC_AbrirProyectos <-- coordinador
+UC_AbrirProyecto <-- coordinador
+UC_CrearProyecto <-- coordinador
+UC_EditarProyecto <-- coordinador
+UC_EliminarProyecto <-- coordinador
+UC_AgregarInvestigador <-- coordinador
+UC_EliminarInvestigador <-- coordinador
+UC_AbrirEntregables <-- coordinador
+UC_CrearEntregable <-- coordinador
+
+UC_EditarEntregable <-- coordinador
+UC_EliminarEntregable <-- coordinador
+UC_AbrirEntregable <-- coordinador
+UC_AbrirEntregables <-- coordinador
+
+
+coordinador --> UC_AbrirInvestigadores
+coordinador --> UC_AbrirInvestigador
+coordinador --> UC_CrearInvestigador
+
+coordinador --> UC_AbrirPanelPrincipal
+
+@enduml
