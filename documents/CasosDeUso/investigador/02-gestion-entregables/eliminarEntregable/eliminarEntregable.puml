@@ -32,14 +32,14 @@ state eliminarEntregable as "eliminarEntregable()" {
     end note
 }
 
-eliminarEntregable -[#green]-> PROYECTOS_ABIERTOS
+eliminarEntregable -[#green]-> PROYECTO_ABIERTO
 note on link
-abrirEntregables() - entregable actualizado
+entregable eliminado
 end note
 
-eliminarEntregable -[#blue]-> PROYECTOS_ABIERTOS
+eliminarEntregable -[#blue]-> PROYECTO_ABIERTO
 note on link
-abrirEntregables() - eliminacion cancelada
+eliminacion cancelada
 end note
 
 @enduml
