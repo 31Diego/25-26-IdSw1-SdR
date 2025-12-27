@@ -1,3 +1,7 @@
+# eliminarPublicacion() -> Detalle y prototipado
+
+## Diagrama de especificación
+
 <div align=center>
 
 |![Caso de uso: eliminarPublicacion()](/documentos/casosDeUso/detalle/coordinador/eliminarPublicacion/eliminarPublicacion.svg)|
@@ -16,5 +20,6 @@
 
 |![Wireframe: eliminarPublicacion](/documentos/casosDeUso/prototipos/coordinador/eliminarPublicacion/eliminarPublicacion-wireframe.svg)|
 |-|
+
 
 </div>
