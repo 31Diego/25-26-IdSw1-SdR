@@ -26,6 +26,19 @@ La Plataforma Interna de Investigación de FUNIBER es un sistema integral diseñ
 
 ---
 
+## Estructura del Análisis
+
+El sistema se organiza en cuatro áreas funcionales clave:
+
+| Área | Descripción |
+|------|-------------|
+| Gestión de Perfiles | Control de información académica, carga laboral y compatibilidad con convocatorias |
+| Gestión de Convocatorias | Detección, registro y asignación de oportunidades de financiación |
+| Gestión de Proyectos | Seguimiento del ciclo de vida: desde la propuesta hasta la finalización |
+| Gestión Financiera | Control de compensaciones, reducciones de carga y registro de gastos |
+
+---
+
 ### Modelo del Dominio
 Define las entidades principales y sus relaciones dentro del sistema.
 
@@ -47,19 +60,6 @@ Descripción de las funcionalidades principales del sistema divididas por actor:
 Registro de sesiones de requisitado: decisiones, observaciones y cambios en requerimientos.
 
 [Ver Reuniones](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/reuniones/reuniones.md)
-
----
-
-## Estructura del Análisis
-
-El sistema se organiza en cuatro áreas funcionales clave:
-
-| Área | Descripción |
-|------|-------------|
-| Gestión de Perfiles | Control de información académica, carga laboral y compatibilidad con convocatorias |
-| Gestión de Convocatorias | Detección, registro y asignación de oportunidades de financiación |
-| Gestión de Proyectos | Seguimiento del ciclo de vida: desde la propuesta hasta la finalización |
-| Gestión Financiera | Control de compensaciones, reducciones de carga y registro de gastos |
 
 ---
 
