@@ -43,15 +43,17 @@ La identificación y estructuración de estos casos de uso sirve como base para 
 ---
 
 ## Diagramas
-- Diagrama de actores y casos de uso del Coordinador:
+- Diagrama de actores y casos de uso del **Investigador**:
+  
+![Diagrama de actores y casos de uso del Investigador](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/imagenes/cduInvestigador.svg)
+
+  - Código fuente: [abrirPanelPrincipal.puml](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/diagramas/cduInvestigador.puml)
+---
+- Diagrama de actores y casos de uso del **Coordinador**:
+  
 ![Diagrama de actores y casos de uso del Coordinador](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/imagenes/cduCoordinador.svg)
 
   - Código fuente: [abrirPanelPrincipal.puml](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/diagramas/cduCoordinador.puml)
-    
-- Diagrama de actores y casos de uso del Investigador:
-![Diagrama de actores y casos de uso del Investigador](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/imagenes/cduInvestigador.svg)
-
-  - Código fuente: [abrirPanelPrincipal.puml](https://github.com/31Diego/25-26-IdSw1-SdR/blob/main/documentos/casosDeUso/diagramas/cduInvestigador.puml)|
 ---
 
   > Los **diagramas de contexto** se documentan en el apartado:  
@@ -63,13 +65,63 @@ La identificación y estructuración de estos casos de uso sirve como base para 
 
 | Actor | Descripción | Responsabilidades principales |
 |--|--|--|
-| **Coordinador** | Usuario con funciones de coordinación y supervisión del departamento de proyectos de investigación. | Supervisar proyectos y convocatorias.<br>Gestionar investigadores y su carga de trabajo.<br>Controlar recompensas, entregables y seguimiento global. |
 | **Investigador** | Usuario que participa activamente en proyectos de investigación y genera contenidos propios. | Gestionar su perfil y publicaciones.<br>Consultar proyectos propios y entregables.<br>Registrar y actualizar resultados de investigación. |
+| **Coordinador** | Usuario con funciones de coordinación y supervisión del departamento de proyectos de investigación. | Supervisar proyectos y convocatorias.<br>Gestionar investigadores y su carga de trabajo.<br>Controlar recompensas, entregables y seguimiento global. |
 
 ---
 
 ## Casos de uso por actor
 
+### Investigador
+
+El Investigador opera sobre **información propia**, con acceso limitado a consultas globales cuando procede.
+
+#### Gestión de sesión
+- iniciarSesion()
+- cerrarSesion()
+
+#### Navegación general
+- abrirPanelPrincipal()
+
+#### Perfil
+- abrirOpcionesPerfil()
+- editarPerfil()
+- solicitarEliminacionPerfil()
+
+#### Carga de trabajo (individual)
+- abrirOpcionesCargaTrabajo()
+- editarCargaTrabajo()
+
+#### Publicaciones (común)
+- abrirPublicaciones()
+- abrirPublicacion()
+- responderPublicacion()
+
+#### Mis publicaciones
+- abrirMisPublicaciones()
+- abrirMiPublicacion()
+- crearPublicacion()
+- editarPublicacion()
+- eliminarPublicacion()
+
+#### Proyectos propios
+- abrirProyectos()
+- abrirProyecto()
+- abrirEntregables()
+- abrirEntregable()
+- crearEntregable()
+- editarEntregable()
+- eliminarEntregable()
+
+#### Recompensas
+- abrirRecompensas()
+- abrirRecompensa()
+
+#### Investigadores (consulta)
+- abrirInvestigadores()
+- abrirInvestigador()
+
+---
 ### Coordinador
 
 El Coordinador dispone de una visión **global del sistema** y puede actuar sobre todas las entidades relevantes del dominio.
@@ -136,57 +188,6 @@ El Coordinador dispone de una visión **global del sistema** y puede actuar sobr
 - abrirInvestigadores()
 - abrirInvestigador()
 - crearInvestigador()
-
----
-
-### Investigador
-
-El Investigador opera sobre **información propia**, con acceso limitado a consultas globales cuando procede.
-
-#### Gestión de sesión
-- iniciarSesion()
-- cerrarSesion()
-
-#### Navegación general
-- abrirPanelPrincipal()
-
-#### Perfil
-- abrirOpcionesPerfil()
-- editarPerfil()
-- solicitarEliminacionPerfil()
-
-#### Carga de trabajo (individual)
-- abrirOpcionesCargaTrabajo()
-- editarCargaTrabajo()
-
-#### Publicaciones (común)
-- abrirPublicaciones()
-- abrirPublicacion()
-- responderPublicacion()
-
-#### Mis publicaciones
-- abrirMisPublicaciones()
-- abrirMiPublicacion()
-- crearPublicacion()
-- editarPublicacion()
-- eliminarPublicacion()
-
-#### Proyectos propios
-- abrirProyectos()
-- abrirProyecto()
-- abrirEntregables()
-- abrirEntregable()
-- crearEntregable()
-- editarEntregable()
-- eliminarEntregable()
-
-#### Recompensas
-- abrirRecompensas()
-- abrirRecompensa()
-
-#### Investigadores (consulta)
-- abrirInvestigadores()
-- abrirInvestigador()
 
 ---
 
